@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+      <title>Peter Brinson — Teaching</title>
+      <link>https://peterbrinson.github.io/teach</link>
+      <description>Last 10 notes on Peter Brinson — Teaching</description>
+      <generator>Quartz -- quartz.jzhao.xyz</generator>
+      <item>
+    <title>Peter Brinson — Teaching</title>
+    <link>https://peterbrinson.github.io/teach/</link>
+    <guid>https://peterbrinson.github.io/teach/</guid>
+    <description><![CDATA[ Course materials and talks. Personal site: peterbrinson.com. ]]></description>
+    <pubDate>Fri, 31 Jul 2026 23:28:25 GMT</pubDate>
+  </item><item>
+    <title>Unity - Walking Wonders</title>
+    <link>https://peterbrinson.github.io/teach/geidai/Unity---Walking-Wonders</link>
+    <guid>https://peterbrinson.github.io/teach/geidai/Unity---Walking-Wonders</guid>
+    <description><![CDATA[  Components, Interface, and MonoBehavior functions 下記Walking Wondersをダウンロードし、Unityで開いてみる。 3つの世界があるので、それぞれを探求してみてください。浮かんでいるオブジェクトに近づいてEキーを押すと、テキストまたは画像が出てくるような仕掛けになっています。これはまだテンプレートの状態です。 — Download and play Walking Wonders on this class’s google drive. ]]></description>
+    <pubDate>Fri, 31 Jul 2026 23:22:01 GMT</pubDate>
+  </item><item>
+    <title>Worldbuilding Intensive</title>
+    <link>https://peterbrinson.github.io/teach/geidai/</link>
+    <guid>https://peterbrinson.github.io/teach/geidai/</guid>
+    <description><![CDATA[  Tokyo University of the Arts (Geidai) · July 7–10, 2026 Instructor: Peter Brinson, Professor of Practice, University of Southern California Through lectures, exercises, and workshops, students explore worldbuilding as a foundation for game design and development. ]]></description>
+    <pubDate>Fri, 31 Jul 2026 23:22:01 GMT</pubDate>
+  </item><item>
+    <title>Unity - Maze And Doors</title>
+    <link>https://peterbrinson.github.io/teach/geidai/Unity---Maze-And-Doors</link>
+    <guid>https://peterbrinson.github.io/teach/geidai/Unity---Maze-And-Doors</guid>
+    <description><![CDATA[  Components, Interface, and MonoBehavior functions — Download and play Maze and Doors on this class’s google drive. ]]></description>
+    <pubDate>Fri, 31 Jul 2026 23:22:01 GMT</pubDate>
+  </item><item>
+    <title>Assignment C - From Maze to Labyrinth</title>
+    <link>https://peterbrinson.github.io/teach/geidai/Assignment-C---From-Maze-to-Labyrinth</link>
+    <guid>https://peterbrinson.github.io/teach/geidai/Assignment-C---From-Maze-to-Labyrinth</guid>
+    <description><![CDATA[ Continue with your project. From Assignment B - Bounded World, keep your closed world’s boundary as a primary element in the experience. ]]></description>
+    <pubDate>Fri, 31 Jul 2026 23:22:01 GMT</pubDate>
+  </item><item>
+    <title>Assignment B - Bounded World</title>
+    <link>https://peterbrinson.github.io/teach/geidai/Assignment-B---Bounded-World</link>
+    <guid>https://peterbrinson.github.io/teach/geidai/Assignment-B---Bounded-World</guid>
+    <description><![CDATA[ Continue with your Assignment A - Playable Maze project. Make your world Closed, as defined by Bounded Worlds. ]]></description>
+    <pubDate>Fri, 31 Jul 2026 23:22:01 GMT</pubDate>
+  </item><item>
+    <title>Assignment A - Playable Maze</title>
+    <link>https://peterbrinson.github.io/teach/geidai/Assignment-A---Playable-Maze</link>
+    <guid>https://peterbrinson.github.io/teach/geidai/Assignment-A---Playable-Maze</guid>
+    <description><![CDATA[ Construct a small labyrinth in Unity based on your thinking during Day 1. ]]></description>
+    <pubDate>Fri, 31 Jul 2026 23:22:01 GMT</pubDate>
+  </item><item>
+    <title>CTIN 389</title>
+    <link>https://peterbrinson.github.io/teach/389/</link>
+    <guid>https://peterbrinson.github.io/teach/389/</guid>
+    <description><![CDATA[ Game Development Principles — lecture pages for USC’s CTIN 389, converted from the course slide decks. ]]></description>
+    <pubDate>Fri, 31 Jul 2026 19:41:22 GMT</pubDate>
+  </item><item>
+    <title>Week 7.1 - Game Engines</title>
+    <link>https://peterbrinson.github.io/teach/389/4_lectures/Week-7.1---Game-Engines</link>
+    <guid>https://peterbrinson.github.io/teach/389/4_lectures/Week-7.1---Game-Engines</guid>
+    <description><![CDATA[ Week 7.1 — Game Engines Today’s agenda — Game Engines (logistics for our next projects), Playtesting the Anticipation project, and a current-issue announcement. ]]></description>
+    <pubDate>Fri, 31 Jul 2026 19:41:20 GMT</pubDate>
+  </item><item>
+    <title>Week 8.1 - Unreal Tutorial</title>
+    <link>https://peterbrinson.github.io/teach/389/4_lectures/Week-8.1---Unreal-Tutorial</link>
+    <guid>https://peterbrinson.github.io/teach/389/4_lectures/Week-8.1---Unreal-Tutorial</guid>
+    <description><![CDATA[ Week 8.1 — Unreal Tutorial A tour of the Unreal Editor and Blueprints — orienting Unity-trained designers in a second engine. ]]></description>
+    <pubDate>Fri, 31 Jul 2026 19:41:20 GMT</pubDate>
+  </item>
+    </channel>
+  </rss>
