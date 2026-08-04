@@ -1,0 +1,641 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Peter AI-Upgraded During His Sabbatical  {bg:#000000}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #202228;
+    --accent: #0288a8;
+    --muted: #7b8794;
+    --card: #fff;
+    --backdrop: #34383f; /* dark, so the pastel cards read as the lit surface */
+    --pad: clamp(2rem, 5vw, 5rem);
+    --font: "Lexend", "Segoe UI", -apple-system, system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--backdrop);
+    color: var(--ink);
+    font: 400 16px/1.6 var(--font);
+    /* the scroll container: one frame at a time */
+    height: 100vh;
+    overflow-y: scroll;
+    /* proximity, not mandatory: a {.tall} page is longer than the window, so
+       you can rest partway down one instead of being yanked to its edge. */
+    scroll-snap-type: y proximity;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  body::-webkit-scrollbar,
+  .card::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+  /* every heading makes one of these: full screen, 16:9, snaps */
+  .frame {
+    display: grid;
+    place-items: center;
+    padding: clamp(1rem, 3vh, 2.5rem);
+    height: 100vh;
+    scroll-snap-align: center;
+    padding-bottom: clamp(.5rem, 1.5vh, 1.25rem);
+  }
+  .card {
+    position: relative;
+    width: min(100%, 1280px);
+    background: var(--pastel, var(--card));
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / .18), 0 16px 40px rgb(0 0 0 / .28);
+    padding: var(--pad);
+    display: flex;
+    flex-direction: column;
+    container-type: inline-size;
+    aspect-ratio: 16 / 9;
+    max-height: 100%;
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    justify-content: center;
+  }
+  .frame.dark .card {
+    --ink: #f2f4f8;
+    --muted: #aeb7c4;
+    --accent: #16c4e3;
+    color: var(--ink);
+  }
+  .frame.dark .card strong,
+  .frame.dark .card th { color: #ffffff; }
+  .frame.dark .card em,
+  .frame.dark .card h5,
+  .frame.dark .card blockquote { color: #cbd3dd; }
+  .frame.dark .card a { color: #62dcf2; }
+  /* Two-column frame marker: image on the left, explanatory copy on the right. */
+  .frame.twocol .card {
+    display: grid;
+    grid-template-columns: minmax(0, .56fr) minmax(300px, .44fr);
+    grid-template-rows: auto auto 1fr;
+    column-gap: clamp(1.25rem, 3cqi, 2.5rem);
+    align-items: start;
+    justify-content: stretch;
+  }
+  .frame.twocol .card > h1,
+  .frame.twocol .card > h2 {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+  .frame.twocol .card > p:first-of-type {
+    grid-column: 1;
+    grid-row: 2 / 4;
+    align-self: center;
+    margin: 0;
+  }
+  .frame.twocol .card > h3,
+  .frame.twocol .card > h4 {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: end;
+  }
+  .frame.twocol .card > ul,
+  .frame.twocol .card > ol {
+    grid-column: 2;
+    grid-row: 3;
+    align-self: start;
+  }
+  /* Image-right variant: every piece of copy, including the title, stays left. */
+  .frame.image-right .card {
+    display: grid;
+    grid-template-columns: minmax(0, .62fr) minmax(240px, .38fr);
+    grid-template-rows: auto auto 1fr;
+    column-gap: clamp(1.5rem, 4cqi, 3.5rem);
+    align-items: start;
+    justify-content: stretch;
+  }
+  .frame.image-right .card > h1,
+  .frame.image-right .card > h2 {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .frame.image-right .card > h3,
+  .frame.image-right .card > h4 {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: end;
+  }
+  .frame.image-right .card > ul,
+  .frame.image-right .card > ol {
+    grid-column: 1;
+    grid-row: 3;
+    align-self: start;
+  }
+  .frame.image-right .card > p:first-of-type {
+    grid-column: 2;
+    grid-row: 1 / 4;
+    align-self: center;
+    margin: 0;
+  }
+  /* Frame marker {.tall} — for a page carrying more than a 16:9 card holds.
+     Drops the fixed height so the card grows to its content and scrolls in the
+     flow of the deck, rather than scrolling inside itself. Still a slide. */
+  .frame.tall {
+    height: auto;
+    scroll-snap-align: start;
+    padding-block: clamp(2rem, 6vh, 4rem);
+  }
+  .frame.tall .card {
+    aspect-ratio: auto;
+    max-height: none;
+    overflow: visible;
+    justify-content: flex-start;
+  }
+  /* type scales with the card, not the window, so frames stay slide-like */
+  .card h1 {
+    font-size: clamp(1.4rem, 3.7cqi, 2.5rem);
+    line-height: 1.15;
+    margin: 0 0 .7em;
+    color: var(--accent);
+    font-weight: 700;
+  }
+  /* ## — the same title one size down, for a page continuing the point above */
+  .card h2 {
+    font-size: clamp(1.2rem, 3cqi, 2rem);
+    line-height: 1.2;
+    margin: 0 0 .7em;
+    color: var(--accent);
+    font-weight: 700;
+  }
+  .card a { color: #0a6e8a; overflow-wrap: anywhere; }
+  .card p, .card li { font-size: clamp(.95rem, 1.9cqi, 1.5rem); }
+  .card p { margin: 0 0 .8em; }
+  /* Frame marker {.big} — scales body copy up for a slide carrying few,
+     important lines (a handful of bullets standing in for the whole point). */
+  .frame.big .card p,
+  .frame.big .card li { font-size: clamp(1.3rem, 3cqi, 2.2rem); }
+  /* {.notitle} hides the slide's title but keeps the heading (page break +
+     colour), so a full-bleed image or dense page reclaims the space it took. */
+  .frame.notitle .card > h1,
+  .frame.notitle .card > h2 { display: none; }
+  /* Frame marker: add {.indent} to the heading to inset everything below it.
+     Topics sit at the base inset; their bullets nest further right. Listed by
+     element (not *:not) so the two rules carry equal specificity and the list
+     inset actually wins on lists. */
+  .frame.indent .card > h3,
+  .frame.indent .card > h4,
+  .frame.indent .card > h5,
+  .frame.indent .card > h6,
+  .frame.indent .card > p,
+  .frame.indent .card > blockquote { margin-left: 1.5rem; }
+  .frame.indent .card > ul,
+  .frame.indent .card > ol { margin-left: 3rem; }
+  /* Size tiers on a slide — NOT structural, so they never start a slide/note.
+     Use them to make a line big without it becoming a heading:
+       ###  big lead line      ####  medium      #####  small caption
+     Normal weight, ink colour, so an inline **bold** still stands out. */
+  .card h3 {
+    font-size: clamp(1.2rem, 2.9cqi, 2.2rem);
+    line-height: 1.25;
+    font-weight: 400;
+    color: var(--ink);
+    margin-block: 0 .5em;
+  }
+  .card h4 {
+    font-size: clamp(1.05rem, 2.3cqi, 1.7rem);
+    line-height: 1.3;
+    font-weight: 400;
+    color: var(--ink);
+    margin-block: 0 .5em; /* vertical only — leave margin-left for {.indent} */
+  }
+  .card h5 {
+    font-size: clamp(.9rem, 1.6cqi, 1.2rem);
+    font-weight: 400;
+    color: #4a5260;
+    margin-block: 0 .5em;
+  }
+  .card ul { margin: 0 0 .8em; padding-left: 1.4em; }
+  .card li { margin-bottom: .35em; }
+  .card li ul { margin: .35em 0 .5em; }
+  .card li li { opacity: .8; font-size: .88em; }
+  .card blockquote {
+    margin: 0;
+    padding: .6em 0 .6em 1.1em;
+    border-left: 4px solid var(--accent);
+    color: #3c4450;
+    font-style: italic;
+  }
+  .card strong { color: #101418; }
+  .card em { color: #4a5260; }
+  /* tables — usually two columns of parallel points. A browser centres <th> by
+     default, which floats the headings off the left edge their column sits on;
+     these share one alignment so a heading reads as the label for what's under
+     it. Cell type is the same cqi scale as body text, not a fixed 16px. */
+  .card table { border-collapse: collapse; width: 100%; margin: 0 0 .8em; }
+  .card th,
+  .card td {
+    font-size: clamp(.95rem, 1.9cqi, 1.5rem);
+    text-align: left;
+    vertical-align: top;
+    padding: .2em 1.5em .2em 0;
+  }
+  .card th { color: #101418; padding-bottom: .7em; }
+  .card img { max-width: 100%; height: auto; }
+  .num {
+    position: absolute;
+    right: calc(var(--pad) * .55);
+    bottom: calc(var(--pad) * .4);
+    font-size: .85rem;
+    color: var(--muted);
+  }
+  /* jump dots */
+  nav.dots {
+    position: fixed;
+    right: .9rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    z-index: 10;
+  }
+  nav.dots a {
+    width: 9px; height: 9px;
+    border-radius: 50%;
+    background: var(--pastel);
+    box-shadow: inset 0 0 0 1px rgb(0 0 0 / .35);
+    transition: transform .2s;
+  }
+  /* extra air where the colour changes, so the dots show the sections too */
+  nav.dots a.newsec { margin-top: .5rem; }
+  nav.dots a.newsec:first-child { margin-top: 0; }
+  nav.dots a:hover { transform: scale(1.6); }
+  @media (max-width: 900px) {
+    .card { aspect-ratio: auto; height: 100%; justify-content: flex-start; }
+    nav.dots { display: none; }
+  }
+  @media print {
+    body { height: auto; overflow: visible; background: #fff; }
+    .frame { height: auto; page-break-after: always; padding: 0; }
+    .card { box-shadow: none; border-radius: 0; }
+    nav.dots { display: none; }
+  }
+</style>
+</head>
+<body>
+<section class="frame sub tall" id="s1" style="--pastel:#f8dcd6">
+  <article class="card">
+<h2>My Theory</h2>
+<p>If I don&#39;t craft an overt and working ai practice, it will craft me.  Currently, I&#39;m putting my ai in a transparent place.  It&#39;s not magic.  I&#39;m on the quest to write a philosophy for myself.  How I&#39;m in control of the ai, my own mind.  This is the fundamentals on the task of not being replaced by ai.<br>This transparency goal is the precondition to being inventive in the future.<br>Screenshot of browser chatting; &quot;I find this experience to be opaque.  I don&#39;t feel in control.&quot;
+Finding the right philosophy for me and my students, I&#39;m uncertain that assessing through the output is the way.<br>And using browser chat for a stretch - I suspect I&#39;m becoming less imaginative.  Such ai is a stage after true tortoise mind.  I think the best ideas will still happen when the human mind is disconnected from ai.  And the ability to disconnect depends on how I use it (am connected); this workspace approach makes that possible.</p>
+    <span class="num">1</span>
+  </article>
+</section>
+<section class="frame dark" id="s2" style="--pastel:#000000">
+  <article class="card">
+<h1>Peter AI-Upgraded During His Sabbatical</h1>
+    <span class="num">2</span>
+  </article>
+</section>
+<section class="frame sub dark" id="s3" style="--pastel:#000000">
+  <article class="card">
+<h2><span style="color:#999999">Conversing With AI in the Browser </span></h2>
+<p><br><br></p>
+<p style="text-align:center"><img src="/attachments/ChatGPT_Chat.png" style="width:62.50cqw" alt=""></p>
+    <span class="num">3</span>
+  </article>
+</section>
+<section class="frame sub dark" id="s4" style="--pastel:#100e17">
+  <article class="card">
+<h2><span style="color:#999999">Working With Agents in a Persistent Workspace</span></h2>
+<p style="text-align:center;max-width:none"><img src="/attachments/ObsidianWide.png" style="width:50.78cqw" alt=""></p>
+
+<p style="text-align:center;max-width:none;margin-bottom:0"><img src="/attachments/ClaudeCode_type.png" style="width:50.78cqw" alt=""></p>
+    <span class="num">4</span>
+  </article>
+</section>
+<section class="frame dark" id="s5" style="--pastel:#100e17">
+  <article class="card">
+<h1>The Three Surfaces</h1>
+<p style="text-align:center;max-width:none;margin-bottom:0"><img src="/attachments/claude_chat_cowork.png" style="width:39.06cqw" alt=""> <img src="/attachments/claude_code.png" style="width:39.06cqw" alt=""></p>
+    <span class="num">5</span>
+  </article>
+</section>
+<section class="frame" id="s6" style="--pastel:#f9ecc9">
+  <article class="card">
+<h1>Established Uses</h1>
+<ul>
+<li>Generative AI</li>
+<li>Coding/Software Development</li>
+</ul>
+    <span class="num">6</span>
+  </article>
+</section>
+<section class="frame" id="s7" style="--pastel:#d9e7f5">
+  <article class="card">
+<h1>Guiding Question</h1>
+<h3><em>When I use AI, am I thinking more or less?</em></h3>
+<p><br><br>
+<em>About what matters -&gt; New ideas and solutions</em></p>
+    <span class="num">7</span>
+  </article>
+</section>
+<section class="frame" id="s8" style="--pastel:#e3ecd0">
+  <article class="card">
+<h1>Peter&#39;s Takes</h1>
+<ul>
+<li>USC Accounts</li>
+<li>Frontier vs Chinese LLMs</li>
+<li>Model Settings</li>
+<li>Perplexity</li>
+<li>Best Practices</li>
+</ul>
+    <span class="num">8</span>
+  </article>
+</section>
+<section class="frame sub tall" id="s9" style="--pastel:#e3ecd0">
+  <article class="card">
+<h2>Peter&#39;s Takes (Details)</h2>
+<ul>
+<li>USC Accounts <ul>
+<li>Have privacy but weak model &quot;effort&quot; options</li>
+<li>Can&#39;t do CLI&#39;s - <em>agents in a persistent workspace</em> - that I&#39;m arguing for in this slideshow</li>
+</ul>
+</li>
+<li>LLM&#39;s Have Compute Levels, &quot;effort&quot;.  Constructively toggling among them is a learned skill<br>
+  <img src="/attachments/ClaudeModels.png" style="width:21.09cqw" alt="">&nbsp;&nbsp;&nbsp;&nbsp;<img src="/attachments/ClaudeEfforts.png" style="width:25.78cqw" alt="">&nbsp;&nbsp;&nbsp;&nbsp;<img src="/attachments/CodexModels.png" style="width:31.25cqw" alt=""></li>
+<li>U.S. Frontier Models<ul>
+<li>Claude and Codex are peers.  Gemini is right there with them</li>
+<li>Their &quot;CLI&#39;s&quot; are Claude Code, Codex (ChatGPT), and Antigravity (Gemini)</li>
+<li>Peter pays for - Claude, Codex, Gemini, Perplexity, Deepseek (per token)</li>
+<li>Get to know Claude&#39;s &quot;Plan Mode&quot;</li>
+<li>Google:  Google search, AI Mode, and Gemini are not the same thing</li>
+</ul>
+</li>
+<li>Chinese LLM&#39;s. <em><strong>Our Chinese students use these.</strong></em> <ul>
+<li>Deepseek, Qwan, Kimi, etc (in the browser) compete with U.S. models and are cheap.  </li>
+<li>Often can be downloaded for privacy and control.  So can Meta&#39;s (Llama).</li>
+</ul>
+</li>
+<li>Perplexity <ul>
+<li>To research AI itself</li>
+<li>Broader search too: $20/month for best alternative - ever - to Google search</li>
+</ul>
+</li>
+<li>Popular - Obsidian, VS Code, Github</li>
+<li>Tokens and Context - learn how to conserve </li>
+<li>Ask your LLM to response with an html page - easier to read helps Guiding Question, above</li>
+</ul>
+    <span class="num">9</span>
+  </article>
+</section>
+<section class="frame" id="s10" style="--pastel:#f7dcea">
+  <article class="card">
+<h1>Challenges to Address</h1>
+<ul>
+<li>Transparency<ul>
+<li>Incentivising student to be honest</li>
+<li>Guiding and understanding our students&#39; AI use</li>
+</ul>
+</li>
+<li>Learning<ul>
+<li>The learning-game-development-with-AI-plus-youtube problem</li>
+<li>Unreal 6.0 is coming; Unity is agent ready</li>
+</ul>
+</li>
+<li>Creativity<ul>
+<li>Keep it in the human mind</li>
+<li>Students make the crucial decisions</li>
+</ul>
+</li>
+</ul>
+    <span class="num">10</span>
+  </article>
+</section>
+<section class="frame" id="s11" style="--pastel:#dcdcf0">
+  <article class="card">
+<h1>Context Engineering</h1>
+<h3>Claude, ChatGPT, etc are black boxes we can&#39;t train.</h3>
+<br>
+
+<h3><em>What if you could shape an LLM around your needs, refine it over time, and share it with others?</em></h3>
+    <span class="num">11</span>
+  </article>
+</section>
+<section class="frame" id="s12" style="--pastel:#dcdcf0">
+  <article class="card">
+<h1>Providing Context in the Chat</h1>
+<img src="/attachments/PromptExample.png" style="width:70.31cqw" alt="">
+
+<br>
+
+<h4>It also has memory, but it&#39;s hidden on their servers.</h4>
+    <span class="num">12</span>
+  </article>
+</section>
+<section class="frame" id="s13" style="--pastel:#dcdcf0">
+  <article class="card">
+<h1>Instead of this kind of prompt, provide many documents, perhaps hundreds.</h1>
+<ul>
+<li>Loaded intelligently</li>
+<li>Any memories are readable and writeable</li>
+</ul>
+    <span class="num">13</span>
+  </article>
+</section>
+<section class="frame" id="s14" style="--pastel:#f9e0cd">
+  <article class="card">
+<h1>My Project: Peter&#39;s Office Hours</h1>
+    <span class="num">14</span>
+  </article>
+</section>
+<section class="frame dark" id="s15" style="--pastel:#100e17">
+  <article class="card">
+<h1>Converted My Slides to a Wiki (Web)</h1>
+<img src="/attachments/webGETscreenshot.png" style="width:62.50cqw" alt="">
+    <span class="num">15</span>
+  </article>
+</section>
+<section class="frame dark" id="s16" style="--pastel:#100e17">
+  <article class="card">
+<h1>A Corpus of Markdown Files</h1>
+<p><img src="/attachments/obsidianScreenshot1.png" style="width:62.50cqw" alt="">!</p>
+    <span class="num">16</span>
+  </article>
+</section>
+<section class="frame dark" id="s17" style="--pastel:#100e17">
+  <article class="card">
+<h1>Maintained on GitHub</h1>
+<img src="/attachments/obsidianScreenshot2.png" style="width:66.41cqw" alt="">
+    <span class="num">17</span>
+  </article>
+</section>
+<section class="frame" id="s18" style="--pastel:#00000">
+  <article class="card">
+<h1>In Context Learning</h1>
+<img src="/attachments/LLMtoICL.png" style="width:74.22cqw" alt="">
+
+
+<br>
+
+<h3><span style="color:#ffffff">Sharable</span></h3>
+    <span class="num">18</span>
+  </article>
+</section>
+<section class="frame" id="s19" style="--pastel:#f8dcd6">
+  <article class="card">
+<h1>Project: Peter&#39;s GD Office Hours</h1>
+<ul>
+<li><strong>Course content</strong> — storytelling and worldbuilding concepts, terms, definitions, explanations</li>
+<li><strong>Unreal</strong> - tutorials and wiki</li>
+<li><strong>References</strong> - currated game and film references </li>
+<li><strong>Examples</strong> - quality conversations</li>
+<li>*<strong>Instructions</strong> - how to talk to the student
+<br><br></li>
+<li><strong>LLM agnostic</strong></li>
+</ul>
+    <span class="num">19</span>
+  </article>
+</section>
+<section class="frame" id="s20" style="--pastel:#f8dcd6">
+  <article class="card">
+<h1>What It&#39;s For</h1>
+<ul>
+<li>Before students begin prototyping one of <em>my assignments</em> </li>
+<li>It encourages them to clarify their idea</li>
+<li>Discusses their idea the way I do</li>
+</ul>
+    <span class="num">20</span>
+  </article>
+</section>
+<section class="frame dark" id="s21" style="--pastel:#100e17">
+  <article class="card">
+<h1>Output a Doc Pushed to Our Github</h1>
+<img src="/attachments/projectOutputExample0.png" style="width:62.50cqw" alt="">
+    <span class="num">21</span>
+  </article>
+</section>
+<section class="frame notitle dark" id="s22" style="--pastel:#100e17">
+  <article class="card">
+<h1>Nothing</h1>
+<img src="/attachments/projectOutputExample.png" style="width:62.50cqw" alt="">
+    <span class="num">22</span>
+  </article>
+</section>
+<section class="frame notitle dark" id="s23" style="--pastel:#100e17">
+  <article class="card">
+<h1>Nothing</h1>
+<img src="/attachments/projectOutputExample2.png" style="width:62.50cqw" alt="">
+    <span class="num">23</span>
+  </article>
+</section>
+<section class="frame notitle dark" id="s24" style="--pastel:#100e17">
+  <article class="card">
+<h1>Nothing</h1>
+<img src="/attachments/projectOutputExample3.png" style="width:62.50cqw" alt="">
+    <span class="num">24</span>
+  </article>
+</section>
+<section class="frame" id="s25" style="--pastel:#e7dcf3">
+  <article class="card">
+<h1>Pushed to GitHub</h1>
+    <span class="num">25</span>
+  </article>
+</section>
+<section class="frame" id="s26" style="--pastel:#e7dcf3">
+  <article class="card">
+<h1>Subsequent Conversation With Peter</h1>
+<ul>
+<li><p>Focused on ideas and unknowns</p>
+</li>
+<li><p>English learners - they speak with more confidence and clarity</p>
+</li>
+<li><p>Next: they drafted excellent macros</p>
+</li>
+</ul>
+    <span class="num">26</span>
+  </article>
+</section>
+<section class="frame notitle" id="s27" style="--pastel:#aaaaaa">
+  <article class="card">
+<h1>Nothing</h1>
+<h3>And so.</h3>
+<h3>For example.</h3>
+<h3>Game engines are changing.</h3>
+    <span class="num">27</span>
+  </article>
+</section>
+<section class="frame" id="s28" style="--pastel:#d9e7f5">
+  <article class="card">
+<h1>Unity</h1>
+<ul>
+<li>Command line does a ton </li>
+<li>In terms of AI integration, it is ahead</li>
+<li>Unity games can be islands in Fortnite</li>
+</ul>
+    <span class="num">28</span>
+  </article>
+</section>
+<section class="frame" id="s29" style="--pastel:#d9e7f5">
+  <article class="card">
+<h1>Unreal 6.0</h1>
+<ul>
+<li><p>Rolling out 2027 - 2029.  </p>
+</li>
+<li><p>Blueprints scripting is going away</p>
+</li>
+<li><p>Verse is the new language</p>
+</li>
+<li><p>&quot;Entities&quot; (things in the scene) will be defined differently</p>
+</li>
+<li><p>Let&#39;s embrace experimental features</p>
+</li>
+</ul>
+    <span class="num">29</span>
+  </article>
+</section>
+<section class="frame" id="s30" style="--pastel:#d9e7f5">
+  <article class="card">
+<h1>Land the Plane, Peter</h1>
+<br>
+
+<h3>In my class, they will <em><strong>branch</strong></em> Peter&#39;s Office Hours into their own version - that teams shape towards their wants and needs.  At minimum, this</h3>
+<p><br><br></p>
+<h3>For large teams all design and development documents, meeting notes, research, examples, build iteration details, playtest notes, calendars, and difference of opinions are in their LLM&#39;s head, ready to access.  And all of that <em><strong>context and memory</strong></em> is readable and writable - to the humans - in a central, shared place.</h3>
+    <span class="num">30</span>
+  </article>
+</section>
+<nav class="dots"><a href="#s1" class="newsec" style="--pastel:#f8dcd6" aria-label="Slide 1"></a><a href="#s2" class="newsec" style="--pastel:#000000" aria-label="Slide 2"></a><a href="#s3" class="newsec" style="--pastel:#000000" aria-label="Slide 3"></a><a href="#s4" class="" style="--pastel:#100e17" aria-label="Slide 4"></a><a href="#s5" class="" style="--pastel:#100e17" aria-label="Slide 5"></a><a href="#s6" class="newsec" style="--pastel:#f9ecc9" aria-label="Slide 6"></a><a href="#s7" class="newsec" style="--pastel:#d9e7f5" aria-label="Slide 7"></a><a href="#s8" class="newsec" style="--pastel:#e3ecd0" aria-label="Slide 8"></a><a href="#s9" class="" style="--pastel:#e3ecd0" aria-label="Slide 9"></a><a href="#s10" class="newsec" style="--pastel:#f7dcea" aria-label="Slide 10"></a><a href="#s11" class="newsec" style="--pastel:#dcdcf0" aria-label="Slide 11"></a><a href="#s12" class="" style="--pastel:#dcdcf0" aria-label="Slide 12"></a><a href="#s13" class="" style="--pastel:#dcdcf0" aria-label="Slide 13"></a><a href="#s14" class="newsec" style="--pastel:#f9e0cd" aria-label="Slide 14"></a><a href="#s15" class="" style="--pastel:#100e17" aria-label="Slide 15"></a><a href="#s16" class="" style="--pastel:#100e17" aria-label="Slide 16"></a><a href="#s17" class="" style="--pastel:#100e17" aria-label="Slide 17"></a><a href="#s18" class="" style="--pastel:#00000" aria-label="Slide 18"></a><a href="#s19" class="newsec" style="--pastel:#f8dcd6" aria-label="Slide 19"></a><a href="#s20" class="" style="--pastel:#f8dcd6" aria-label="Slide 20"></a><a href="#s21" class="newsec" style="--pastel:#100e17" aria-label="Slide 21"></a><a href="#s22" class="" style="--pastel:#100e17" aria-label="Slide 22"></a><a href="#s23" class="" style="--pastel:#100e17" aria-label="Slide 23"></a><a href="#s24" class="" style="--pastel:#100e17" aria-label="Slide 24"></a><a href="#s25" class="newsec" style="--pastel:#e7dcf3" aria-label="Slide 25"></a><a href="#s26" class="" style="--pastel:#e7dcf3" aria-label="Slide 26"></a><a href="#s27" class="newsec" style="--pastel:#aaaaaa" aria-label="Slide 27"></a><a href="#s28" class="newsec" style="--pastel:#d9e7f5" aria-label="Slide 28"></a><a href="#s29" class="" style="--pastel:#d9e7f5" aria-label="Slide 29"></a><a href="#s30" class="" style="--pastel:#d9e7f5" aria-label="Slide 30"></a></nav>
+<script>
+  // Presenting: arrows / space / PageDown move slide to slide. Plain scrolling
+  // still walks through everything.
+  const slides = [...document.querySelectorAll(".frame")];
+  const initialSlide = location.hash && document.querySelector(location.hash);
+  if (initialSlide) scrollTo({ top: initialSlide.offsetTop, behavior: "instant" });
+  const current = () => {
+    const mid = scrollY + innerHeight / 2;
+    let best = 0;
+    slides.forEach((el, i) => {
+      if (el.offsetTop <= mid) best = i;
+    });
+    return best;
+  };
+  addEventListener("keydown", (e) => {
+    const fwd = ["ArrowRight", "PageDown", " "].includes(e.key);
+    const back = ["ArrowLeft", "PageUp"].includes(e.key);
+    if (!fwd && !back) return;
+    e.preventDefault();
+    const i = current();
+    // parked partway down a {.tall} page? back returns to its top, not the one before
+    const parked = scrollY > slides[i].offsetTop + innerHeight / 2;
+    const next = fwd ? i + 1 : parked ? i : i - 1;
+    slides[Math.max(0, Math.min(slides.length - 1, next))]
+      .scrollIntoView({ behavior: "smooth", block: "center" });
+  });
+</script>
+</body>
+</html>
