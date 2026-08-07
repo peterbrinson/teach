@@ -6,65 +6,65 @@
       <description>Last 10 notes on PB Teach</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>CTIN 534</title>
-    <link>https://peterbrinson.github.io/teach/534/</link>
-    <guid>https://peterbrinson.github.io/teach/534/</guid>
-    <description><![CDATA[ Units: 4 Fall 2026 Breakfast Section: Tue, Thu, 10:00 am–12:20 pm Lunch Section: Tue, Thu, 1:00–3:20 pm Instructor: Peter Brinson Student Assistant: Yinuo Chen Student Assistant: George Zou Course Description Is Life A Story or a Game? We will study and practice how narrative video games express mea... ]]></description>
-    <pubDate>Thu, 06 Aug 2026 22:47:10 GMT</pubDate>
+    <title>Week 1.2 - Lost Woods</title>
+    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-1.2---Lost-Woods</link>
+    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-1.2---Lost-Woods</guid>
+    <description><![CDATA[ Week 1.2 — Lost Woods Today’s agenda — Discussion (the Explore/Exploit reading), Unity Review, Ideation &amp; Design (group brainwriting toward the Lost Woods project). ]]></description>
+    <pubDate>Fri, 07 Aug 2026 01:38:15 GMT</pubDate>
   </item><item>
-    <title>Due Week 2b — The Investigator Premise</title>
-    <link>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Week-2b</link>
-    <guid>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Week-2b</guid>
-    <description><![CDATA[ For Project 1, write a 4–6 sentence premise. Your priority is envisioning the situation the character(s) are in (or were in). ]]></description>
-    <pubDate>Thu, 06 Aug 2026 22:23:30 GMT</pubDate>
+    <title>Assignments</title>
+    <link>https://peterbrinson.github.io/teach/389/Assignments/Assignments</link>
+    <guid>https://peterbrinson.github.io/teach/389/Assignments/Assignments</guid>
+    <description><![CDATA[ Assignments Project briefs now live in this folder. Readings remain with the lecture where they are introduced. ]]></description>
+    <pubDate>Fri, 07 Aug 2026 01:36:05 GMT</pubDate>
   </item><item>
-    <title>Project 1 — The Investigator</title>
-    <link>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Project-1</link>
-    <guid>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Project-1</guid>
-    <description><![CDATA[ Situated Player Role Reading: The Investigator — World as Evidence Learning Goals: Color theory and lighting; interactive storytelling; arc of experience; game engine literacy; camera principles; materials and textures; sound design; ideation, brainstorming, and prototyping; self-direction; critique... ]]></description>
-    <pubDate>Thu, 06 Aug 2026 22:15:07 GMT</pubDate>
+    <title>Week 15.2 - Final Games, Intermediate</title>
+    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-15.2---Final-Games,-Intermediate</link>
+    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-15.2---Final-Games,-Intermediate</guid>
+    <description><![CDATA[ Week 15.2 — Final Games, Intermediate Playtesting the final project, with a tour of past Intermediate-level (489) games as scope reference. ]]></description>
+    <pubDate>Fri, 07 Aug 2026 01:34:49 GMT</pubDate>
   </item><item>
-    <title>Project 2 — The Traveler</title>
-    <link>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Project-2</link>
-    <guid>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Project-2</guid>
-    <description><![CDATA[ Situated Player Role Reading: The Traveler — World as Presence Learning Goals: Color theory and lighting; interactive storytelling; arc of experience; game engine literacy; camera principles; materials and textures; sound design; ideation, brainstorming, and prototyping; self-direction; critique. ]]></description>
-    <pubDate>Thu, 06 Aug 2026 02:26:36 GMT</pubDate>
+    <title>Week 13.1 - Level Design, Emotion Prototype 2</title>
+    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-13.1---Level-Design,-Emotion-Prototype-2</link>
+    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-13.1---Level-Design,-Emotion-Prototype-2</guid>
+    <description><![CDATA[ Week 13.1 — Level Design, Emotion Prototype 2 Playtesting the Divergent Prototype + a level-design overview by IMGD alum Steven Atha. ]]></description>
+    <pubDate>Fri, 07 Aug 2026 01:34:48 GMT</pubDate>
   </item><item>
-    <title>Project 3 — The Dreamer</title>
-    <link>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Project-3</link>
-    <guid>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Project-3</guid>
-    <description><![CDATA[ Situated Player Role Reading: The Dreamer — World as Enigma Learning Goals: Color theory and lighting; interactive storytelling; arc of experience; game engine literacy; camera principles; materials and textures; sound design; ideation, brainstorming, and prototyping; self-direction; critique. ]]></description>
-    <pubDate>Thu, 06 Aug 2026 02:26:36 GMT</pubDate>
+    <title>Week 12.1 - Divergent Prototyping</title>
+    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-12.1---Divergent-Prototyping</link>
+    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-12.1---Divergent-Prototyping</guid>
+    <description><![CDATA[ Week 12.1 — Divergent Prototyping Playtesting the Evoking Emotion project + introducing divergent prototyping for the next iteration. ]]></description>
+    <pubDate>Fri, 07 Aug 2026 01:34:47 GMT</pubDate>
   </item><item>
-    <title>Due Week 1 — Walkable Artist Gallery</title>
-    <link>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Week-1</link>
-    <guid>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Week-1</guid>
-    <description><![CDATA[ Using the “Walking Wonders Unity 6” template, create a small art gallery featuring a visual artist’s work. ]]></description>
-    <pubDate>Thu, 06 Aug 2026 02:26:36 GMT</pubDate>
+    <title>Week 11.1 - Engine Exploration</title>
+    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-11.1---Engine-Exploration</link>
+    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-11.1---Engine-Exploration</guid>
+    <description><![CDATA[ Week 11.1 — Engine Exploration Playtesting the Engine Exploration project, then a survey of Designed Experiences in non-game media — leading into the Evoking Emotion assignment. ]]></description>
+    <pubDate>Fri, 07 Aug 2026 01:34:46 GMT</pubDate>
   </item><item>
-    <title>Due Week 2 — The Exit 8</title>
-    <link>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Week-2</link>
-    <guid>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Week-2</guid>
-    <description><![CDATA[ Prompt: Play The Exit 8 with classmates. Learning goals: Attention, environmental storytelling, anticipation and surprise. ]]></description>
-    <pubDate>Thu, 06 Aug 2026 02:26:36 GMT</pubDate>
+    <title>Week 10.1 - Technology and Development</title>
+    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-10.1---Technology-and-Development</link>
+    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-10.1---Technology-and-Development</guid>
+    <description><![CDATA[ Week 10.1 — Technology and Development A tour through one developer’s ever-changing toolset — and why learning new tools is the real skill. ]]></description>
+    <pubDate>Fri, 07 Aug 2026 01:34:45 GMT</pubDate>
   </item><item>
-    <title>In Class — Blade Runner</title>
-    <link>https://peterbrinson.github.io/teach/534/In-Class/534-In-Class-Blade-Runner</link>
-    <guid>https://peterbrinson.github.io/teach/534/In-Class/534-In-Class-Blade-Runner</guid>
-    <description><![CDATA[ Blade Runner is a detective story, a science fiction film that features The Investigator role. Look for the details in the film’s images. ]]></description>
-    <pubDate>Thu, 06 Aug 2026 02:26:36 GMT</pubDate>
+    <title>Week 9.1 - Unreal Interaction Project</title>
+    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-9.1---Unreal-Interaction-Project</link>
+    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-9.1---Unreal-Interaction-Project</guid>
+    <description><![CDATA[ Week 9.1 — Unreal Interaction Project Unreal Engine postmortem + Make an Argument exercise + Interaction Project assignment. ]]></description>
+    <pubDate>Fri, 07 Aug 2026 01:34:43 GMT</pubDate>
   </item><item>
-    <title>Workshop — Creative ML Balderdash</title>
-    <link>https://peterbrinson.github.io/teach/534/In-Class/534-In-Class-Creative-ML-Balderdash</link>
-    <guid>https://peterbrinson.github.io/teach/534/In-Class/534-In-Class-Creative-ML-Balderdash</guid>
-    <description><![CDATA[ AI image generation tools for the workshop: Midjourney ChatGPT (Dall-E 3) Leonardo.Ai Canva AI Image Generator (works with a USC email) In your group, play this version of Balderdash: During each round, one person is the Dasher. ]]></description>
-    <pubDate>Thu, 06 Aug 2026 02:26:36 GMT</pubDate>
+    <title>Week 8.1 - Unreal Tutorial</title>
+    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-8.1---Unreal-Tutorial</link>
+    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-8.1---Unreal-Tutorial</guid>
+    <description><![CDATA[ Week 8.1 — Unreal Tutorial A tour of the Unreal Editor and Blueprints — orienting Unity-trained designers in a second engine. ]]></description>
+    <pubDate>Fri, 07 Aug 2026 01:34:42 GMT</pubDate>
   </item><item>
-    <title>In Class — Investigator Milestone Playtest</title>
-    <link>https://peterbrinson.github.io/teach/534/In-Class/534-In-Class-Investigator-Milestone</link>
-    <guid>https://peterbrinson.github.io/teach/534/In-Class/534-In-Class-Investigator-Milestone</guid>
-    <description><![CDATA[ After each playtest round, write an answer to these 3 questions on your own private document. ]]></description>
-    <pubDate>Thu, 06 Aug 2026 02:26:36 GMT</pubDate>
+    <title>Week 7.1 - Game Engines</title>
+    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-7.1---Game-Engines</link>
+    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-7.1---Game-Engines</guid>
+    <description><![CDATA[ Week 7.1 — Game Engines Today’s agenda — Game Engines (logistics for our next projects), Playtesting the Anticipation project, and a current-issue announcement. ]]></description>
+    <pubDate>Fri, 07 Aug 2026 01:34:41 GMT</pubDate>
   </item>
     </channel>
   </rss>
