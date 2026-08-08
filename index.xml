@@ -6,64 +6,64 @@
       <description>Last 10 notes on PB Teach</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>CTIN 389</title>
+    <link>https://peterbrinson.github.io/teach/389/</link>
+    <guid>https://peterbrinson.github.io/teach/389/</guid>
+    <description><![CDATA[ Units: 4 Fall 2026 Section: Tue, Thu, 4:00–5:50 pm Room: SCI 113 Instructor: Peter Brinson Student Assistant: Luke Pannell Course Description This is a course that teaches many of the fundamental skills of digital game development, and which in addition teaches the basic principles of level design. ]]></description>
+    <pubDate>Fri, 07 Aug 2026 17:27:12 GMT</pubDate>
+  </item><item>
+    <title>Peter Brinson — Teaching</title>
+    <link>https://peterbrinson.github.io/teach/</link>
+    <guid>https://peterbrinson.github.io/teach/</guid>
+    <description><![CDATA[ Course materials and talks. Personal site: peterbrinson.com. ]]></description>
+    <pubDate>Fri, 07 Aug 2026 17:27:12 GMT</pubDate>
+  </item><item>
     <title>Assignments</title>
     <link>https://peterbrinson.github.io/teach/389/Assignments/Assignments</link>
     <guid>https://peterbrinson.github.io/teach/389/Assignments/Assignments</guid>
-    <description><![CDATA[ Assignments Project briefs now live in this folder. Readings remain with the lecture where they are introduced. ]]></description>
+    <description><![CDATA[ Project briefs now live in this folder. Readings remain with the lecture where they are introduced. ]]></description>
     <pubDate>Fri, 07 Aug 2026 16:02:50 GMT</pubDate>
   </item><item>
-    <title>W02-Assignment - Lost Woods Project</title>
+    <title>Lost Woods Project</title>
     <link>https://peterbrinson.github.io/teach/389/Assignments/W02-Assignment---Lost-Woods-Project</link>
     <guid>https://peterbrinson.github.io/teach/389/Assignments/W02-Assignment---Lost-Woods-Project</guid>
-    <description><![CDATA[ Lost Woods Project Introduced in Week 1.2 - Lost Woods. ]]></description>
+    <description><![CDATA[ Introduced in Week 1.2 - Lost Woods. ]]></description>
     <pubDate>Fri, 07 Aug 2026 16:02:50 GMT</pubDate>
   </item><item>
-    <title>W03-Assignment - Sequencing Project</title>
+    <title>Sequencing Project</title>
     <link>https://peterbrinson.github.io/teach/389/Assignments/W03-Assignment---Sequencing-Project</link>
     <guid>https://peterbrinson.github.io/teach/389/Assignments/W03-Assignment---Sequencing-Project</guid>
-    <description><![CDATA[ Sequencing Project Introduced in Week 2.1 - Keys and Doors. ]]></description>
+    <description><![CDATA[ Introduced in Week 2.1 - Keys and Doors. ]]></description>
     <pubDate>Fri, 07 Aug 2026 16:02:50 GMT</pubDate>
   </item><item>
-    <title>W04-Assignment - Racing Project</title>
+    <title>Racing Project</title>
     <link>https://peterbrinson.github.io/teach/389/Assignments/W04-Assignment---Racing-Project</link>
     <guid>https://peterbrinson.github.io/teach/389/Assignments/W04-Assignment---Racing-Project</guid>
-    <description><![CDATA[ Racing Project Introduced in Week 3.1 - Movement and Speed. ]]></description>
+    <description><![CDATA[ Introduced in Week 3.1 - Movement and Speed. ]]></description>
     <pubDate>Fri, 07 Aug 2026 16:02:50 GMT</pubDate>
   </item><item>
-    <title>W06-Assignment - Quandary Project</title>
+    <title>Quandary Project</title>
     <link>https://peterbrinson.github.io/teach/389/Assignments/W06-Assignment---Quandary-Project</link>
     <guid>https://peterbrinson.github.io/teach/389/Assignments/W06-Assignment---Quandary-Project</guid>
-    <description><![CDATA[ Quandary Project Introduced in Week 5.1 - Quandaries. ]]></description>
+    <description><![CDATA[ Introduced in Week 5.1 - Quandaries. ]]></description>
     <pubDate>Fri, 07 Aug 2026 16:02:50 GMT</pubDate>
   </item><item>
-    <title>W07-Assignment - Anticipation Project</title>
+    <title>Anticipation Project</title>
     <link>https://peterbrinson.github.io/teach/389/Assignments/W07-Assignment---Anticipation-Project</link>
     <guid>https://peterbrinson.github.io/teach/389/Assignments/W07-Assignment---Anticipation-Project</guid>
-    <description><![CDATA[ Anticipation Project Introduced in Week 6.1 - Anticipation and Surprise. ]]></description>
+    <description><![CDATA[ Introduced in Week 6.1 - Anticipation and Surprise. ]]></description>
     <pubDate>Fri, 07 Aug 2026 16:02:50 GMT</pubDate>
   </item><item>
-    <title>W08-Assignment - Prepare for Unreal Development</title>
+    <title>Prepare for Unreal Development</title>
     <link>https://peterbrinson.github.io/teach/389/Assignments/W08-Assignment---Prepare-for-Unreal-Development</link>
     <guid>https://peterbrinson.github.io/teach/389/Assignments/W08-Assignment---Prepare-for-Unreal-Development</guid>
-    <description><![CDATA[ Prepare for Unreal Development Introduced in Week 7.1 - Game Engines. ]]></description>
+    <description><![CDATA[ Introduced in Week 7.1 - Game Engines. ]]></description>
     <pubDate>Fri, 07 Aug 2026 16:02:50 GMT</pubDate>
   </item><item>
-    <title>W09-Assignment - Unreal Tutorial</title>
+    <title>Unreal Tutorial</title>
     <link>https://peterbrinson.github.io/teach/389/Assignments/W09-Assignment---Unreal-Tutorial</link>
     <guid>https://peterbrinson.github.io/teach/389/Assignments/W09-Assignment---Unreal-Tutorial</guid>
-    <description><![CDATA[ Unreal Tutorial Introduced in Week 8.1 - Unreal Tutorial. ]]></description>
-    <pubDate>Fri, 07 Aug 2026 16:02:50 GMT</pubDate>
-  </item><item>
-    <title>W10-Assignment - Unreal Interaction Project</title>
-    <link>https://peterbrinson.github.io/teach/389/Assignments/W10-Assignment---Unreal-Interaction-Project</link>
-    <guid>https://peterbrinson.github.io/teach/389/Assignments/W10-Assignment---Unreal-Interaction-Project</guid>
-    <description><![CDATA[ Unreal Interaction Project Introduced in Week 9.1 - Unreal Interaction Project. ]]></description>
-    <pubDate>Fri, 07 Aug 2026 16:02:50 GMT</pubDate>
-  </item><item>
-    <title>W11-Assignment - Engine Exploration Project</title>
-    <link>https://peterbrinson.github.io/teach/389/Assignments/W11-Assignment---Engine-Exploration-Project</link>
-    <guid>https://peterbrinson.github.io/teach/389/Assignments/W11-Assignment---Engine-Exploration-Project</guid>
-    <description><![CDATA[ Engine Exploration Project Introduced in Week 10.1 - Technology and Development. ]]></description>
+    <description><![CDATA[ Introduced in Week 8.1 - Unreal Tutorial. ]]></description>
     <pubDate>Fri, 07 Aug 2026 16:02:50 GMT</pubDate>
   </item>
     </channel>
