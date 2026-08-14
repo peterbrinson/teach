@@ -10,61 +10,61 @@
     <link>https://peterbrinson.github.io/teach/389/Assignments/Assignments-and-Readings</link>
     <guid>https://peterbrinson.github.io/teach/389/Assignments/Assignments-and-Readings</guid>
     <description><![CDATA[ Assignments and Readings DueAssignment or readingTypeTeamEngine1.2Exploit (Christian &amp; Griffiths)Reading——2.1The Other Shoe — Expectation and PayoffProjectSoloUnity URP2.2Codex + GDOH SetupSetupSoloCodex + GDOH2.2Locked Doors, Headaches, and Intellectual Need (Kreminski)Reading——3.2SequencingPro... ]]></description>
-    <pubDate>Fri, 14 Aug 2026 21:25:07 GMT</pubDate>
+    <pubDate>Fri, 14 Aug 2026 21:26:20 GMT</pubDate>
   </item><item>
     <title>W02 — The Other Shoe — Expectation and Payoff</title>
     <link>https://peterbrinson.github.io/teach/389/Assignments/W02-Assignment---The-Other-Shoe</link>
     <guid>https://peterbrinson.github.io/teach/389/Assignments/W02-Assignment---The-Other-Shoe</guid>
     <description><![CDATA[ Introduced in Week 1.1 and developed in Week 1.2 - The Other Shoe. ]]></description>
-    <pubDate>Fri, 14 Aug 2026 20:30:10 GMT</pubDate>
+    <pubDate>Fri, 14 Aug 2026 21:26:20 GMT</pubDate>
+  </item><item>
+    <title>W03 — Sequencing</title>
+    <link>https://peterbrinson.github.io/teach/389/Assignments/W03-Assignment---Sequencing-Project</link>
+    <guid>https://peterbrinson.github.io/teach/389/Assignments/W03-Assignment---Sequencing-Project</guid>
+    <description><![CDATA[ Introduced in Week 2.1 - Keys and Doors. ]]></description>
+    <pubDate>Fri, 14 Aug 2026 21:26:20 GMT</pubDate>
   </item><item>
     <title>W04 — Racing / Constrained Movement</title>
     <link>https://peterbrinson.github.io/teach/389/Assignments/W04-Assignment---Racing-Project</link>
     <guid>https://peterbrinson.github.io/teach/389/Assignments/W04-Assignment---Racing-Project</guid>
     <description><![CDATA[ Introduced in Week 3.2 - Workspaces and Splines. See Study - Movement and Speed for the supporting design study. ]]></description>
-    <pubDate>Fri, 14 Aug 2026 20:30:10 GMT</pubDate>
+    <pubDate>Fri, 14 Aug 2026 21:26:20 GMT</pubDate>
+  </item><item>
+    <title>W06 — Quandary</title>
+    <link>https://peterbrinson.github.io/teach/389/Assignments/W06-Assignment---Quandary-Project</link>
+    <guid>https://peterbrinson.github.io/teach/389/Assignments/W06-Assignment---Quandary-Project</guid>
+    <description><![CDATA[ Introduced in Week 5.1 - Quandaries. ]]></description>
+    <pubDate>Fri, 14 Aug 2026 21:26:20 GMT</pubDate>
+  </item><item>
+    <title>W07 — Anticipation</title>
+    <link>https://peterbrinson.github.io/teach/389/Assignments/W07-Assignment---Anticipation-Project</link>
+    <guid>https://peterbrinson.github.io/teach/389/Assignments/W07-Assignment---Anticipation-Project</guid>
+    <description><![CDATA[ Introduced in Week 6.1 - Anticipation and Surprise. ]]></description>
+    <pubDate>Fri, 14 Aug 2026 21:26:20 GMT</pubDate>
+  </item><item>
+    <title>W08 — Prepare for Unreal Development</title>
+    <link>https://peterbrinson.github.io/teach/389/Assignments/W08-Assignment---Prepare-for-Unreal-Development</link>
+    <guid>https://peterbrinson.github.io/teach/389/Assignments/W08-Assignment---Prepare-for-Unreal-Development</guid>
+    <description><![CDATA[ Introduced in Week 7.1 - Game Engines. ]]></description>
+    <pubDate>Fri, 14 Aug 2026 21:26:20 GMT</pubDate>
+  </item><item>
+    <title>W09 — Unreal Tutorial</title>
+    <link>https://peterbrinson.github.io/teach/389/Assignments/W09-Assignment---Unreal-Tutorial</link>
+    <guid>https://peterbrinson.github.io/teach/389/Assignments/W09-Assignment---Unreal-Tutorial</guid>
+    <description><![CDATA[ Introduced in Week 8.1 - Unreal Tutorial. ]]></description>
+    <pubDate>Fri, 14 Aug 2026 21:26:20 GMT</pubDate>
   </item><item>
     <title>W10 — Unreal Interaction</title>
     <link>https://peterbrinson.github.io/teach/389/Assignments/W10-Assignment---Unreal-Interaction-Project</link>
     <guid>https://peterbrinson.github.io/teach/389/Assignments/W10-Assignment---Unreal-Interaction-Project</guid>
     <description><![CDATA[ Introduced in Week 9.1 - Unreal Interaction Project. ]]></description>
-    <pubDate>Fri, 14 Aug 2026 20:30:10 GMT</pubDate>
+    <pubDate>Fri, 14 Aug 2026 21:26:20 GMT</pubDate>
   </item><item>
-    <title>Affordances of Movement</title>
-    <link>https://peterbrinson.github.io/teach/389/Concepts/Affordances-of-Movement</link>
-    <guid>https://peterbrinson.github.io/teach/389/Concepts/Affordances-of-Movement</guid>
-    <description><![CDATA[ How it feels to traverse the world. ]]></description>
-    <pubDate>Fri, 14 Aug 2026 20:30:10 GMT</pubDate>
-  </item><item>
-    <title>Constrained Movement</title>
-    <link>https://peterbrinson.github.io/teach/389/Concepts/Constrained-Movement</link>
-    <guid>https://peterbrinson.github.io/teach/389/Concepts/Constrained-Movement</guid>
-    <description><![CDATA[ Racing games, rail shooters, dark rides, minecart sections — all use vehicular conventions to lock the player onto a track. ]]></description>
-    <pubDate>Fri, 14 Aug 2026 20:30:10 GMT</pubDate>
-  </item><item>
-    <title>Constraints Create Challenge</title>
-    <link>https://peterbrinson.github.io/teach/389/Concepts/Constraints-Create-Challenge</link>
-    <guid>https://peterbrinson.github.io/teach/389/Concepts/Constraints-Create-Challenge</guid>
-    <description><![CDATA[ Another parable: golf is a game with the goal of putting a ball in a hole. That would be easy and boring if you could just pick it up and drop it in. ]]></description>
-    <pubDate>Fri, 14 Aug 2026 20:30:10 GMT</pubDate>
-  </item><item>
-    <title>Controlled Perspective</title>
-    <link>https://peterbrinson.github.io/teach/389/Concepts/Controlled-Perspective</link>
-    <guid>https://peterbrinson.github.io/teach/389/Concepts/Controlled-Perspective</guid>
-    <description><![CDATA[ Dark rides — Disney’s Haunted Mansion, classic Pirates of the Caribbean — exploit the visitor’s constrained position to control pacing, stage surprises, and pull off visual tricks that only work from one angle: the hollow-mask illusion, infinity mirrors, Pepper’s ghost. ]]></description>
-    <pubDate>Fri, 14 Aug 2026 20:30:10 GMT</pubDate>
-  </item><item>
-    <title>Defining Paths and Sightlines</title>
-    <link>https://peterbrinson.github.io/teach/389/Concepts/Defining-Paths-and-Sightlines</link>
-    <guid>https://peterbrinson.github.io/teach/389/Concepts/Defining-Paths-and-Sightlines</guid>
-    <description><![CDATA[ A level isn’t just a space — it’s a set of paths through the space, with focal points, sightlines, and bottlenecks shaping how the player moves. ]]></description>
-    <pubDate>Fri, 14 Aug 2026 20:30:10 GMT</pubDate>
-  </item><item>
-    <title>Explore-Exploit</title>
-    <link>https://peterbrinson.github.io/teach/389/Concepts/Explore-Exploit</link>
-    <guid>https://peterbrinson.github.io/teach/389/Concepts/Explore-Exploit</guid>
-    <description><![CDATA[ From Algorithms to Live By (Brian Christian &amp; Tom Griffiths), Chapter 2. ]]></description>
-    <pubDate>Fri, 14 Aug 2026 20:30:10 GMT</pubDate>
+    <title>W11 — Engine Exploration</title>
+    <link>https://peterbrinson.github.io/teach/389/Assignments/W11-Assignment---Engine-Exploration-Project</link>
+    <guid>https://peterbrinson.github.io/teach/389/Assignments/W11-Assignment---Engine-Exploration-Project</guid>
+    <description><![CDATA[ Introduced in Week 10.1 - Technology and Development. ]]></description>
+    <pubDate>Fri, 14 Aug 2026 21:26:20 GMT</pubDate>
   </item>
     </channel>
   </rss>
