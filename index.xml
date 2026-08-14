@@ -6,65 +6,65 @@
       <description>Last 10 notes on PB Teach</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>Study — Movement and Speed</title>
-    <link>https://peterbrinson.github.io/teach/389/Lectures/Study---Movement-and-Speed</link>
-    <guid>https://peterbrinson.github.io/teach/389/Lectures/Study---Movement-and-Speed</guid>
-    <description><![CDATA[ How it feels to traverse the world — constrained movement, controlled perspective, and the AI that drives your opponents. ]]></description>
-    <pubDate>Fri, 14 Aug 2026 20:11:22 GMT</pubDate>
+    <title>Assignments</title>
+    <link>https://peterbrinson.github.io/teach/389/Assignments/Assignments-and-Readings</link>
+    <guid>https://peterbrinson.github.io/teach/389/Assignments/Assignments-and-Readings</guid>
+    <description><![CDATA[ Assignments and Readings DueAssignment or readingTypeTeamEngine1.2Exploit (Christian &amp; Griffiths)Reading——2.1The Other Shoe — Expectation and PayoffProjectSoloUnity URP2.2Codex + GDOH SetupSetupSoloCodex + GDOH2.2Locked Doors, Headaches, and Intellectual Need (Kreminski)Reading——3.2SequencingPro... ]]></description>
+    <pubDate>Fri, 14 Aug 2026 21:25:07 GMT</pubDate>
   </item><item>
-    <title>Week 3.1 — AI Workshop</title>
-    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-3.1---AI-Workshop</link>
-    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-3.1---AI-Workshop</guid>
-    <description><![CDATA[ A section-specific AI orientation using GDOH. The shared project sequence resumes on Thursday. ]]></description>
-    <pubDate>Fri, 14 Aug 2026 20:11:20 GMT</pubDate>
-  </item><item>
-    <title>Week 1.2 Extracted</title>
-    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-1.2-Extracted</link>
-    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-1.2-Extracted</guid>
-    <description><![CDATA[ Defining Paths Here is a discussion of creating paths through a level. ]]></description>
-    <pubDate>Fri, 14 Aug 2026 19:48:01 GMT</pubDate>
-  </item><item>
-    <title>Week 1.2 — The Other Shoe</title>
-    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-1.2---The-Other-Shoe</link>
-    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-1.2---The-Other-Shoe</guid>
-    <description><![CDATA[ Today’s agenda — Explore/Exploit discussion, Unity review, and a design workshop for The Other Shoe. ]]></description>
-    <pubDate>Fri, 14 Aug 2026 19:47:49 GMT</pubDate>
-  </item><item>
-    <title>The Other Shoe — Expectation and Payoff</title>
+    <title>W02 — The Other Shoe — Expectation and Payoff</title>
     <link>https://peterbrinson.github.io/teach/389/Assignments/W02-Assignment---The-Other-Shoe</link>
     <guid>https://peterbrinson.github.io/teach/389/Assignments/W02-Assignment---The-Other-Shoe</guid>
     <description><![CDATA[ Introduced in Week 1.1 and developed in Week 1.2 - The Other Shoe. ]]></description>
-    <pubDate>Fri, 14 Aug 2026 19:44:30 GMT</pubDate>
+    <pubDate>Fri, 14 Aug 2026 20:30:10 GMT</pubDate>
   </item><item>
-    <title>Week 1.1 — Course Introduction</title>
-    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-1.1---Course-Introduction</link>
-    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-1.1---Course-Introduction</guid>
-    <description><![CDATA[ Share examples of playful things in this world, that aren’t games. ]]></description>
-    <pubDate>Fri, 14 Aug 2026 15:40:31 GMT</pubDate>
+    <title>W04 — Racing / Constrained Movement</title>
+    <link>https://peterbrinson.github.io/teach/389/Assignments/W04-Assignment---Racing-Project</link>
+    <guid>https://peterbrinson.github.io/teach/389/Assignments/W04-Assignment---Racing-Project</guid>
+    <description><![CDATA[ Introduced in Week 3.2 - Workspaces and Splines. See Study - Movement and Speed for the supporting design study. ]]></description>
+    <pubDate>Fri, 14 Aug 2026 20:30:10 GMT</pubDate>
   </item><item>
-    <title>CTIN 389</title>
-    <link>https://peterbrinson.github.io/teach/389/</link>
-    <guid>https://peterbrinson.github.io/teach/389/</guid>
-    <description><![CDATA[ Units: 4 Fall 2026 Section: Tue, Thu, 4:00–5:50 pm Room: SCI 113 Instructor: Peter Brinson Student Assistant: Luke Pannell Course Description This course teaches fundamental skills of digital game development alongside the basic principles of level design. ]]></description>
-    <pubDate>Fri, 14 Aug 2026 15:40:31 GMT</pubDate>
+    <title>W10 — Unreal Interaction</title>
+    <link>https://peterbrinson.github.io/teach/389/Assignments/W10-Assignment---Unreal-Interaction-Project</link>
+    <guid>https://peterbrinson.github.io/teach/389/Assignments/W10-Assignment---Unreal-Interaction-Project</guid>
+    <description><![CDATA[ Introduced in Week 9.1 - Unreal Interaction Project. ]]></description>
+    <pubDate>Fri, 14 Aug 2026 20:30:10 GMT</pubDate>
   </item><item>
-    <title>CTIN 389</title>
-    <link>https://peterbrinson.github.io/teach/389/index_backup-8-13</link>
-    <guid>https://peterbrinson.github.io/teach/389/index_backup-8-13</guid>
-    <description><![CDATA[ Units: 4 Fall 2026 Section: Tue, Thu, 4:00–5:50 pm Room: SCI 113 Instructor: Peter Brinson Student Assistant: Luke Pannell Course Description This course teaches fundamental skills of digital game development alongside the basic principles of level design. ]]></description>
-    <pubDate>Fri, 14 Aug 2026 15:40:31 GMT</pubDate>
+    <title>Affordances of Movement</title>
+    <link>https://peterbrinson.github.io/teach/389/Concepts/Affordances-of-Movement</link>
+    <guid>https://peterbrinson.github.io/teach/389/Concepts/Affordances-of-Movement</guid>
+    <description><![CDATA[ How it feels to traverse the world. ]]></description>
+    <pubDate>Fri, 14 Aug 2026 20:30:10 GMT</pubDate>
   </item><item>
-    <title>Assignments</title>
-    <link>https://peterbrinson.github.io/teach/389/Assignments/Assignments</link>
-    <guid>https://peterbrinson.github.io/teach/389/Assignments/Assignments</guid>
-    <description><![CDATA[ Project briefs now live in this folder. Readings remain with the lecture where they are introduced. ]]></description>
-    <pubDate>Sat, 08 Aug 2026 00:30:27 GMT</pubDate>
+    <title>Constrained Movement</title>
+    <link>https://peterbrinson.github.io/teach/389/Concepts/Constrained-Movement</link>
+    <guid>https://peterbrinson.github.io/teach/389/Concepts/Constrained-Movement</guid>
+    <description><![CDATA[ Racing games, rail shooters, dark rides, minecart sections — all use vehicular conventions to lock the player onto a track. ]]></description>
+    <pubDate>Fri, 14 Aug 2026 20:30:10 GMT</pubDate>
   </item><item>
-    <title>Sequencing Project</title>
-    <link>https://peterbrinson.github.io/teach/389/Assignments/W03-Assignment---Sequencing-Project</link>
-    <guid>https://peterbrinson.github.io/teach/389/Assignments/W03-Assignment---Sequencing-Project</guid>
-    <description><![CDATA[ Introduced in Week 2.1 - Keys and Doors. ]]></description>
-    <pubDate>Sat, 08 Aug 2026 00:30:27 GMT</pubDate>
+    <title>Constraints Create Challenge</title>
+    <link>https://peterbrinson.github.io/teach/389/Concepts/Constraints-Create-Challenge</link>
+    <guid>https://peterbrinson.github.io/teach/389/Concepts/Constraints-Create-Challenge</guid>
+    <description><![CDATA[ Another parable: golf is a game with the goal of putting a ball in a hole. That would be easy and boring if you could just pick it up and drop it in. ]]></description>
+    <pubDate>Fri, 14 Aug 2026 20:30:10 GMT</pubDate>
+  </item><item>
+    <title>Controlled Perspective</title>
+    <link>https://peterbrinson.github.io/teach/389/Concepts/Controlled-Perspective</link>
+    <guid>https://peterbrinson.github.io/teach/389/Concepts/Controlled-Perspective</guid>
+    <description><![CDATA[ Dark rides — Disney’s Haunted Mansion, classic Pirates of the Caribbean — exploit the visitor’s constrained position to control pacing, stage surprises, and pull off visual tricks that only work from one angle: the hollow-mask illusion, infinity mirrors, Pepper’s ghost. ]]></description>
+    <pubDate>Fri, 14 Aug 2026 20:30:10 GMT</pubDate>
+  </item><item>
+    <title>Defining Paths and Sightlines</title>
+    <link>https://peterbrinson.github.io/teach/389/Concepts/Defining-Paths-and-Sightlines</link>
+    <guid>https://peterbrinson.github.io/teach/389/Concepts/Defining-Paths-and-Sightlines</guid>
+    <description><![CDATA[ A level isn’t just a space — it’s a set of paths through the space, with focal points, sightlines, and bottlenecks shaping how the player moves. ]]></description>
+    <pubDate>Fri, 14 Aug 2026 20:30:10 GMT</pubDate>
+  </item><item>
+    <title>Explore-Exploit</title>
+    <link>https://peterbrinson.github.io/teach/389/Concepts/Explore-Exploit</link>
+    <guid>https://peterbrinson.github.io/teach/389/Concepts/Explore-Exploit</guid>
+    <description><![CDATA[ From Algorithms to Live By (Brian Christian &amp; Tom Griffiths), Chapter 2. ]]></description>
+    <pubDate>Fri, 14 Aug 2026 20:30:10 GMT</pubDate>
   </item>
     </channel>
   </rss>
