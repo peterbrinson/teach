@@ -6,11 +6,53 @@
       <description>Last 10 notes on PB Teach</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Study — Movement and Speed</title>
+    <link>https://peterbrinson.github.io/teach/389/Lectures/Study---Movement-and-Speed</link>
+    <guid>https://peterbrinson.github.io/teach/389/Lectures/Study---Movement-and-Speed</guid>
+    <description><![CDATA[ How it feels to traverse the world — constrained movement, controlled perspective, and the AI that drives your opponents. ]]></description>
+    <pubDate>Fri, 14 Aug 2026 20:11:22 GMT</pubDate>
+  </item><item>
+    <title>Week 3.1 — AI Workshop</title>
+    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-3.1---AI-Workshop</link>
+    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-3.1---AI-Workshop</guid>
+    <description><![CDATA[ A section-specific AI orientation using GDOH. The shared project sequence resumes on Thursday. ]]></description>
+    <pubDate>Fri, 14 Aug 2026 20:11:20 GMT</pubDate>
+  </item><item>
+    <title>Week 1.2 Extracted</title>
+    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-1.2-Extracted</link>
+    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-1.2-Extracted</guid>
+    <description><![CDATA[ Defining Paths Here is a discussion of creating paths through a level. ]]></description>
+    <pubDate>Fri, 14 Aug 2026 19:48:01 GMT</pubDate>
+  </item><item>
+    <title>Week 1.2 — The Other Shoe</title>
+    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-1.2---The-Other-Shoe</link>
+    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-1.2---The-Other-Shoe</guid>
+    <description><![CDATA[ Today’s agenda — Explore/Exploit discussion, Unity review, and a design workshop for The Other Shoe. ]]></description>
+    <pubDate>Fri, 14 Aug 2026 19:47:49 GMT</pubDate>
+  </item><item>
+    <title>The Other Shoe — Expectation and Payoff</title>
+    <link>https://peterbrinson.github.io/teach/389/Assignments/W02-Assignment---The-Other-Shoe</link>
+    <guid>https://peterbrinson.github.io/teach/389/Assignments/W02-Assignment---The-Other-Shoe</guid>
+    <description><![CDATA[ Introduced in Week 1.1 and developed in Week 1.2 - The Other Shoe. ]]></description>
+    <pubDate>Fri, 14 Aug 2026 19:44:30 GMT</pubDate>
+  </item><item>
+    <title>Week 1.1 — Course Introduction</title>
+    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-1.1---Course-Introduction</link>
+    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-1.1---Course-Introduction</guid>
+    <description><![CDATA[ Share examples of playful things in this world, that aren’t games. ]]></description>
+    <pubDate>Fri, 14 Aug 2026 15:40:31 GMT</pubDate>
+  </item><item>
+    <title>CTIN 389</title>
+    <link>https://peterbrinson.github.io/teach/389/</link>
+    <guid>https://peterbrinson.github.io/teach/389/</guid>
+    <description><![CDATA[ Units: 4 Fall 2026 Section: Tue, Thu, 4:00–5:50 pm Room: SCI 113 Instructor: Peter Brinson Student Assistant: Luke Pannell Course Description This course teaches fundamental skills of digital game development alongside the basic principles of level design. ]]></description>
+    <pubDate>Fri, 14 Aug 2026 15:40:31 GMT</pubDate>
+  </item><item>
     <title>CTIN 389</title>
     <link>https://peterbrinson.github.io/teach/389/index_backup-8-13</link>
     <guid>https://peterbrinson.github.io/teach/389/index_backup-8-13</guid>
     <description><![CDATA[ Units: 4 Fall 2026 Section: Tue, Thu, 4:00–5:50 pm Room: SCI 113 Instructor: Peter Brinson Student Assistant: Luke Pannell Course Description This course teaches fundamental skills of digital game development alongside the basic principles of level design. ]]></description>
-    <pubDate>Thu, 13 Aug 2026 21:06:59 GMT</pubDate>
+    <pubDate>Fri, 14 Aug 2026 15:40:31 GMT</pubDate>
   </item><item>
     <title>Assignments</title>
     <link>https://peterbrinson.github.io/teach/389/Assignments/Assignments</link>
@@ -18,52 +60,10 @@
     <description><![CDATA[ Project briefs now live in this folder. Readings remain with the lecture where they are introduced. ]]></description>
     <pubDate>Sat, 08 Aug 2026 00:30:27 GMT</pubDate>
   </item><item>
-    <title>Lost Woods Project</title>
-    <link>https://peterbrinson.github.io/teach/389/Assignments/W02-Assignment---Lost-Woods-Project</link>
-    <guid>https://peterbrinson.github.io/teach/389/Assignments/W02-Assignment---Lost-Woods-Project</guid>
-    <description><![CDATA[ Introduced in Week 1.2 - Lost Woods. ]]></description>
-    <pubDate>Sat, 08 Aug 2026 00:30:27 GMT</pubDate>
-  </item><item>
     <title>Sequencing Project</title>
     <link>https://peterbrinson.github.io/teach/389/Assignments/W03-Assignment---Sequencing-Project</link>
     <guid>https://peterbrinson.github.io/teach/389/Assignments/W03-Assignment---Sequencing-Project</guid>
     <description><![CDATA[ Introduced in Week 2.1 - Keys and Doors. ]]></description>
-    <pubDate>Sat, 08 Aug 2026 00:30:27 GMT</pubDate>
-  </item><item>
-    <title>Racing Project</title>
-    <link>https://peterbrinson.github.io/teach/389/Assignments/W04-Assignment---Racing-Project</link>
-    <guid>https://peterbrinson.github.io/teach/389/Assignments/W04-Assignment---Racing-Project</guid>
-    <description><![CDATA[ Introduced in Week 3.1 - Movement and Speed. ]]></description>
-    <pubDate>Sat, 08 Aug 2026 00:30:27 GMT</pubDate>
-  </item><item>
-    <title>Quandary Project</title>
-    <link>https://peterbrinson.github.io/teach/389/Assignments/W06-Assignment---Quandary-Project</link>
-    <guid>https://peterbrinson.github.io/teach/389/Assignments/W06-Assignment---Quandary-Project</guid>
-    <description><![CDATA[ Introduced in Week 5.1 - Quandaries. ]]></description>
-    <pubDate>Sat, 08 Aug 2026 00:30:27 GMT</pubDate>
-  </item><item>
-    <title>Anticipation Project</title>
-    <link>https://peterbrinson.github.io/teach/389/Assignments/W07-Assignment---Anticipation-Project</link>
-    <guid>https://peterbrinson.github.io/teach/389/Assignments/W07-Assignment---Anticipation-Project</guid>
-    <description><![CDATA[ Introduced in Week 6.1 - Anticipation and Surprise. ]]></description>
-    <pubDate>Sat, 08 Aug 2026 00:30:27 GMT</pubDate>
-  </item><item>
-    <title>Prepare for Unreal Development</title>
-    <link>https://peterbrinson.github.io/teach/389/Assignments/W08-Assignment---Prepare-for-Unreal-Development</link>
-    <guid>https://peterbrinson.github.io/teach/389/Assignments/W08-Assignment---Prepare-for-Unreal-Development</guid>
-    <description><![CDATA[ Introduced in Week 7.1 - Game Engines. ]]></description>
-    <pubDate>Sat, 08 Aug 2026 00:30:27 GMT</pubDate>
-  </item><item>
-    <title>Unreal Tutorial</title>
-    <link>https://peterbrinson.github.io/teach/389/Assignments/W09-Assignment---Unreal-Tutorial</link>
-    <guid>https://peterbrinson.github.io/teach/389/Assignments/W09-Assignment---Unreal-Tutorial</guid>
-    <description><![CDATA[ Introduced in Week 8.1 - Unreal Tutorial. ]]></description>
-    <pubDate>Sat, 08 Aug 2026 00:30:27 GMT</pubDate>
-  </item><item>
-    <title>Unreal Interaction Project</title>
-    <link>https://peterbrinson.github.io/teach/389/Assignments/W10-Assignment---Unreal-Interaction-Project</link>
-    <guid>https://peterbrinson.github.io/teach/389/Assignments/W10-Assignment---Unreal-Interaction-Project</guid>
-    <description><![CDATA[ Introduced in Week 9.1 - Unreal Interaction Project. ]]></description>
     <pubDate>Sat, 08 Aug 2026 00:30:27 GMT</pubDate>
   </item>
     </channel>
