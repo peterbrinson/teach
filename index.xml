@@ -6,10 +6,16 @@
       <description>Last 10 notes on PB Teach</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Peter Brinson — Teaching</title>
+    <link>https://peterbrinson.github.io/teach/</link>
+    <guid>https://peterbrinson.github.io/teach/</guid>
+    <description><![CDATA[ Course materials and talks. Personal site: peterbrinson.com. ]]></description>
+    <pubDate>Tue, 18 Aug 2026 04:38:43 GMT</pubDate>
+  </item><item>
     <title>Assignments</title>
     <link>https://peterbrinson.github.io/teach/389/Assignments/Assignments-and-Readings</link>
     <guid>https://peterbrinson.github.io/teach/389/Assignments/Assignments-and-Readings</guid>
-    <description><![CDATA[ Assignments and Readings DueAssignment or readingTypeTeamEngine1.2A Dark RoomPlay / read——1.2Student Details formForm / setupSolo—2.1The Other Shoe — Expectation and PayoffProjectSoloUnity URP2.2Codex + GDOH SetupSetupSoloCodex + GDOH3.2SequencingProjectSoloUnity4.1 Constrained MovementProjectPairsU... ]]></description>
+    <description><![CDATA[ Assignments and Readings DueAssignment or readingTypeTeamEngine1.2A Dark RoomPlay / read——1.2Student Details formForm / setupSolo—2.1The Other Shoe — Expectation and PayoffProjectSoloUnity URP2.2Codex + PBOH SetupSetupSoloCodex + PBOH3.2SequencingProjectSoloUnity4.1 Constrained MovementProjectPairsU... ]]></description>
     <pubDate>Mon, 17 Aug 2026 22:28:55 GMT</pubDate>
   </item><item>
     <title>W02 — The Other Shoe — Expectation and Payoff</title>
@@ -58,12 +64,6 @@
     <link>https://peterbrinson.github.io/teach/534/Lectures/Week-1---Narrative-Roles</link>
     <guid>https://peterbrinson.github.io/teach/534/Lectures/Week-1---Narrative-Roles</guid>
     <description><![CDATA[ Video games use image, sound, and text to communicate. ]]></description>
-    <pubDate>Sun, 16 Aug 2026 16:33:46 GMT</pubDate>
-  </item><item>
-    <title>Week 1 - The Value of Uncertainty</title>
-    <link>https://peterbrinson.github.io/teach/534/Lectures/Week-1---The-Value-of-Uncertainty</link>
-    <guid>https://peterbrinson.github.io/teach/534/Lectures/Week-1---The-Value-of-Uncertainty</guid>
-    <description><![CDATA[ Three topics we’ll be juggling for Project 1 Investigator, Protagonist, Visual Grammar Sources The Value of Uncertainty Four Authors – philosophers and psychologist aeon.co/essays/use-uncertainty-to-leverage-the-power-of-your-predictive-brain keywords Certainty, uncertainty, volatility, surprise, ex... ]]></description>
     <pubDate>Sun, 16 Aug 2026 16:33:46 GMT</pubDate>
   </item>
     </channel>
