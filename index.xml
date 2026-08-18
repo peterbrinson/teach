@@ -6,6 +6,12 @@
       <description>Last 10 notes on PB Teach</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Week 1.2 — The Other Shoe</title>
+    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-1.2---The-Other-Shoe</link>
+    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-1.2---The-Other-Shoe</guid>
+    <description><![CDATA[ On This Page Today’s agenda Unity Essentials Render pipelines — what are they? Render pipelines — why? Render pipelines — the three options Importing 3D models Manipulating materials Lighting a scene Playing audio Setting up a camera Creating a particle system Creating and instantiating prefabs Play... ]]></description>
+    <pubDate>Tue, 18 Aug 2026 15:27:39 GMT</pubDate>
+  </item><item>
     <title>Assignments</title>
     <link>https://peterbrinson.github.io/teach/389/Assignments/Assignments-and-Readings</link>
     <guid>https://peterbrinson.github.io/teach/389/Assignments/Assignments-and-Readings</guid>
@@ -58,12 +64,6 @@
     <link>https://peterbrinson.github.io/teach/geidai/Assignment-B---Bounded-World</link>
     <guid>https://peterbrinson.github.io/teach/geidai/Assignment-B---Bounded-World</guid>
     <description><![CDATA[ Continue with your Assignment A - Playable Maze project. Make your world Closed, as defined by Bounded Worlds. ]]></description>
-    <pubDate>Tue, 18 Aug 2026 14:12:04 GMT</pubDate>
-  </item><item>
-    <title>Assignment C - From Maze to Labyrinth</title>
-    <link>https://peterbrinson.github.io/teach/geidai/Assignment-C---From-Maze-to-Labyrinth</link>
-    <guid>https://peterbrinson.github.io/teach/geidai/Assignment-C---From-Maze-to-Labyrinth</guid>
-    <description><![CDATA[ Continue with your project. From Assignment B - Bounded World, keep your closed world’s boundary as a primary element in the experience. ]]></description>
     <pubDate>Tue, 18 Aug 2026 14:12:04 GMT</pubDate>
   </item>
     </channel>
