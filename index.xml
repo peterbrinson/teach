@@ -6,65 +6,65 @@
       <description>Last 10 notes on PB Teach</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>Peter Brinson — Teaching</title>
-    <link>https://peterbrinson.github.io/teach/</link>
-    <guid>https://peterbrinson.github.io/teach/</guid>
-    <description><![CDATA[ Course materials and talks. Personal site: peterbrinson.com. ]]></description>
-    <pubDate>Tue, 18 Aug 2026 04:38:43 GMT</pubDate>
-  </item><item>
     <title>Assignments</title>
     <link>https://peterbrinson.github.io/teach/389/Assignments/Assignments-and-Readings</link>
     <guid>https://peterbrinson.github.io/teach/389/Assignments/Assignments-and-Readings</guid>
     <description><![CDATA[ Assignments and Readings DueAssignment or readingTypeTeamEngine1.2A Dark RoomPlay / read——1.2Student Details formForm / setupSolo—2.1The Other Shoe — Expectation and PayoffProjectSoloUnity URP2.2Codex + PBOH SetupSetupSoloCodex + PBOH3.2SequencingProjectSoloUnity4.1 Constrained MovementProjectPairsU... ]]></description>
-    <pubDate>Mon, 17 Aug 2026 22:28:55 GMT</pubDate>
-  </item><item>
-    <title>W02 — The Other Shoe — Expectation and Payoff</title>
-    <link>https://peterbrinson.github.io/teach/389/Assignments/W02-Assignment---The-Other-Shoe</link>
-    <guid>https://peterbrinson.github.io/teach/389/Assignments/W02-Assignment---The-Other-Shoe</guid>
-    <description><![CDATA[ Due: Tuesday, September 1 at 1:00 pm Team: Solo Engine: Unity Create a short playable experience that establishes an expectation about its world, lets the player act within that expectation, and then delivers a payoff. ]]></description>
-    <pubDate>Mon, 17 Aug 2026 22:28:55 GMT</pubDate>
-  </item><item>
-    <title>W03 — Sequencing</title>
-    <link>https://peterbrinson.github.io/teach/389/Assignments/W03-Assignment---Sequencing-Project</link>
-    <guid>https://peterbrinson.github.io/teach/389/Assignments/W03-Assignment---Sequencing-Project</guid>
-    <description><![CDATA[ Introduced in Week 2.1 - Keys and Doors. ]]></description>
-    <pubDate>Mon, 17 Aug 2026 22:28:55 GMT</pubDate>
+    <pubDate>Tue, 18 Aug 2026 14:12:04 GMT</pubDate>
   </item><item>
     <title>Week 1.1 — Course Introduction</title>
     <link>https://peterbrinson.github.io/teach/389/Lectures/Week-1.1---Course-Introduction</link>
     <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-1.1---Course-Introduction</guid>
     <description><![CDATA[ On This Page Course overview Introductions Course structure and projects Resources From pattern to prediction Assignment Share examples of playful things in this world, that aren’t games. ]]></description>
-    <pubDate>Mon, 17 Aug 2026 22:28:55 GMT</pubDate>
+    <pubDate>Tue, 18 Aug 2026 14:12:04 GMT</pubDate>
   </item><item>
-    <title>Week 1.2 — The Other Shoe</title>
-    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-1.2---The-Other-Shoe</link>
-    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-1.2---The-Other-Shoe</guid>
-    <description><![CDATA[ On This Page Today’s agenda Unity Essentials Render pipelines — what are they? Render pipelines — why? Render pipelines — the three options Importing 3D models Manipulating materials Lighting a scene Playing audio Setting up a camera Creating a particle system Creating and instantiating prefabs Play... ]]></description>
-    <pubDate>Mon, 17 Aug 2026 22:28:55 GMT</pubDate>
-  </item><item>
-    <title>Week 2.1 — Keys and Doors</title>
-    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-2.1---Keys-and-Doors</link>
-    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-2.1---Keys-and-Doors</guid>
-    <description><![CDATA[ The Keys, the Doors, and All Those Problems — doing things that let you do other things. ]]></description>
-    <pubDate>Mon, 17 Aug 2026 22:28:55 GMT</pubDate>
+    <title>Week 3.1 — AI Workshop</title>
+    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-3.1---AI-Workshop</link>
+    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-3.1---AI-Workshop</guid>
+    <description><![CDATA[ A section-specific AI orientation using PBOH. The shared project sequence resumes on Thursday. ]]></description>
+    <pubDate>Tue, 18 Aug 2026 14:12:04 GMT</pubDate>
   </item><item>
     <title>CTIN 389</title>
     <link>https://peterbrinson.github.io/teach/389/</link>
     <guid>https://peterbrinson.github.io/teach/389/</guid>
     <description><![CDATA[ Units: 4 Fall 2026 Section: Tue, Thu, 4:00–5:50 pm Room: SCI 113 Instructor: Peter Brinson Student Assistant: Luke Pannell Course Description This course teaches fundamental skills of digital game development alongside the basic principles of level design. ]]></description>
-    <pubDate>Mon, 17 Aug 2026 22:28:55 GMT</pubDate>
+    <pubDate>Tue, 18 Aug 2026 14:12:04 GMT</pubDate>
+  </item><item>
+    <title>Project 1 — The Investigator</title>
+    <link>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Project-1</link>
+    <guid>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Project-1</guid>
+    <description><![CDATA[ Situated Player Role Reading: The Investigator — World as Evidence Learning Goals: Color theory and lighting; interactive storytelling; arc of experience; game engine literacy; camera principles; materials and textures; sound design; ideation, brainstorming, and prototyping; self-direction; critique... ]]></description>
+    <pubDate>Tue, 18 Aug 2026 14:12:04 GMT</pubDate>
+  </item><item>
+    <title>Project 2 — The Traveler</title>
+    <link>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Project-2</link>
+    <guid>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Project-2</guid>
+    <description><![CDATA[ Situated Player Role Reading: The Traveler — World as Presence Learning Goals: Color theory and lighting; interactive storytelling; arc of experience; game engine literacy; camera principles; materials and textures; sound design; ideation, brainstorming, and prototyping; self-direction; critique. ]]></description>
+    <pubDate>Tue, 18 Aug 2026 14:12:04 GMT</pubDate>
+  </item><item>
+    <title>Project 3 — The Dreamer</title>
+    <link>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Project-3</link>
+    <guid>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Project-3</guid>
+    <description><![CDATA[ Situated Player Role Reading: The Dreamer — World as Enigma Learning Goals: Color theory and lighting; interactive storytelling; arc of experience; game engine literacy; camera principles; materials and textures; sound design; ideation, brainstorming, and prototyping; self-direction; critique. ]]></description>
+    <pubDate>Tue, 18 Aug 2026 14:12:04 GMT</pubDate>
   </item><item>
     <title>CTIN 534</title>
     <link>https://peterbrinson.github.io/teach/534/</link>
     <guid>https://peterbrinson.github.io/teach/534/</guid>
     <description><![CDATA[ Units: 4 Fall 2026 Breakfast Section: Tue, Thu, 10:00 am–12:20 pm Lunch Section: Tue, Thu, 1:00–3:20 pm Instructor: Peter Brinson Student Assistant: Yinuo Chen Student Assistant: George Zou Course Description Is Life A Story or a Game? We will study and practice how narrative video games express mea... ]]></description>
-    <pubDate>Sun, 16 Aug 2026 16:57:51 GMT</pubDate>
+    <pubDate>Tue, 18 Aug 2026 14:12:04 GMT</pubDate>
   </item><item>
-    <title>Week 1 - Narrative Roles</title>
-    <link>https://peterbrinson.github.io/teach/534/Lectures/Week-1---Narrative-Roles</link>
-    <guid>https://peterbrinson.github.io/teach/534/Lectures/Week-1---Narrative-Roles</guid>
-    <description><![CDATA[ Video games use image, sound, and text to communicate. ]]></description>
-    <pubDate>Sun, 16 Aug 2026 16:33:46 GMT</pubDate>
+    <title>Assignment B - Bounded World</title>
+    <link>https://peterbrinson.github.io/teach/geidai/Assignment-B---Bounded-World</link>
+    <guid>https://peterbrinson.github.io/teach/geidai/Assignment-B---Bounded-World</guid>
+    <description><![CDATA[ Continue with your Assignment A - Playable Maze project. Make your world Closed, as defined by Bounded Worlds. ]]></description>
+    <pubDate>Tue, 18 Aug 2026 14:12:04 GMT</pubDate>
+  </item><item>
+    <title>Assignment C - From Maze to Labyrinth</title>
+    <link>https://peterbrinson.github.io/teach/geidai/Assignment-C---From-Maze-to-Labyrinth</link>
+    <guid>https://peterbrinson.github.io/teach/geidai/Assignment-C---From-Maze-to-Labyrinth</guid>
+    <description><![CDATA[ Continue with your project. From Assignment B - Bounded World, keep your closed world’s boundary as a primary element in the experience. ]]></description>
+    <pubDate>Tue, 18 Aug 2026 14:12:04 GMT</pubDate>
   </item>
     </channel>
   </rss>
