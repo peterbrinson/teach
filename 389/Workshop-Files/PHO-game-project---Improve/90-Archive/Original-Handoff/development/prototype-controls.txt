@@ -1,0 +1,21 @@
+CONTROLS IN BUILD 0.3 (Anthony machine)
+
+WASD move
+MOUSE look
+LEFT SHIFT sprint
+E inspect / pick up / use
+LEFT MOUSE chop
+RIGHT MOUSE pour
+R reset held ingredient
+TAB show current ticket
+ESC pause
+
+GAMEPAD
+left stick move
+right stick look
+A interact
+X chop
+Y ticket
+B currently does nothing
+
+NOTE: design/controls.md is target, not implementation. It says no sprint and no chop. Build still has both.

@@ -1,0 +1,11 @@
+id,display_name,category,flavor_tags,story_tags,status
+broth_clear,Clear broth,broth,light|familiar,routine|memory,current
+broth_spiced,Spiced broth,broth,warm|sharp,change|care,current
+noodle_thin,Thin noodles,noodle,light,routine,auto-fill?
+protein_beef,Beef,protein,rich,familiar,auto-fill?
+herb_mint,Mint,herb,fresh,change,in build
+herb_basil,Thai basil,herb,fresh|sharp,memory,in narrative only
+herb_cilantro,Cilantro,herb,fresh,first_visit,current
+garnish_lime,Lime,garnish,sharp,interruption|unfinished,current
+garnish_chili,Chili oil,garnish,warm|sharp,risk|change,current
+garnish_scallion,Scallion,garnish,fresh,routine,requires chop in old prototype

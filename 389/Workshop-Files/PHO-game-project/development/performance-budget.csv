@@ -1,0 +1,7 @@
+area,target,current measurement,source/date,notes
+frame rate,60 fps,48-72 fps,Anthony PC 9/27,lighting scene dips near window
+draw calls,<250,412,Deloris lighting scene 9/25,maybe SRP batcher disabled
+texture memory,<1 GB,1.4 GB,build log 9/27,4K counter textures
+build size,<500 MB,782 MB,Windows build 0.3,audio stems duplicated
+load time,<8 sec,11 sec,Anthony PC 9/27,only one scene so should improve
+WebGL size,<200 MB,not tested,old schedule,WebGL probably cut

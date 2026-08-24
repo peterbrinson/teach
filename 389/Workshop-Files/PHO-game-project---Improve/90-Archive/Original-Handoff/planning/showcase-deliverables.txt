@@ -1,0 +1,16 @@
+LANTERN DELIVERABLES, copied from email by D
+
+Application text — Oct 3
+4 screenshots — Oct 8
+30 sec gameplay capture — Oct 8
+Windows build upload — Oct 12 noon
+team names + contact — with application
+content warnings — with build
+
+OUR INTERNAL TARGETS
+
+title lock — Oct 1 (missed)
+stable build — Oct 10 6pm
+capture build — Oct 7 (Deloris unavailable that day??)
+
+Need to correct platform and playtime in festival_application_draft. It currently says Switch and 15–20 minutes.

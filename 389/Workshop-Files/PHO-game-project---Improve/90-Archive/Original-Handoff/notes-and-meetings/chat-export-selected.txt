@@ -1,0 +1,18 @@
+[09/23 09:12] Anthony: pushed three-slot bowl. still computes score but UI can hide it
+[09/23 09:19] Deloris: great. Can you remove red slot flash too?
+[09/23 09:22] Anthony: that is feedback, not score
+[09/23 09:31] Deloris: it communicates wrong. scope note says no correct/wrong labels
+[09/23 09:44] Anthony: okay, neutral gold for accepted, ending handles meaning
+
+[09/24 16:03] Deloris: clue sheet uses basil. build says mint
+[09/24 16:20] Anthony: dataset has mint from v1. easiest to change copy to mint
+[09/24 16:28] Deloris: the menu and story were researched around basil, so change data please
+[09/24 17:02] Anthony: changed id to basil locally, need prefab rename
+
+[09/26 11:07] Anthony: I added ghost placeholder so serving has response
+[09/26 11:10] Deloris: please label it debug. I don't want it in capture
+[09/26 11:12] Anthony: fine, DEBUG_GUEST
+
+[09/30 08:54] Anthony: my travel started early. build is on Drive, repo one commit behind
+[09/30 15:47] Deloris: materials pink in build project. which Unity version?
+[09/30 18:06] Anthony: main is 2022.3.48. don't open main in 2023

@@ -1,0 +1,9 @@
+PHO folder dump for handoff
+
+Anthony said the current docs are mostly in design and development.
+Deloris said the meeting notes are more current than the GDD.
+There are two schedules because the showcase moved (or maybe our internal date moved?).
+
+Please do not trust anything with FINAL in the name just because it says FINAL.
+
+- D

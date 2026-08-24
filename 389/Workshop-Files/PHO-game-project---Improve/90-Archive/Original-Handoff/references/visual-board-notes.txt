@@ -1,0 +1,16 @@
+VISUAL BOARD NOTES — no images included in handoff
+
+Deloris board A:
+- warm tungsten pool around counter
+- cool rain window
+- worn laminate / chrome / ceramic
+- little evidence of years: repaired stool, faded menu, tape on receipt printer
+- 4:3-ish compositions even if game is widescreen
+
+Anthony board B:
+- ingredient colors need strong category separation
+- avoid material realism that makes interactables disappear
+- prompt contrast over bright counter
+- first-person reach distance should define station spacing
+
+Conflict that may not be a conflict: D wants believable visual grouping; A wants game-readable stations. Could use lighting and repeated containers to do both.
