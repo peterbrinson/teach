@@ -1,4 +1,0 @@
-ProjectVersion: 2023.2.18f1
-
-copied from Deloris-lighting-test/ProjectSettings/ProjectVersion.txt on Sept 25
-Anthony says main is 2022.3.48f1
