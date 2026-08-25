@@ -10,13 +10,31 @@
     <link>https://peterbrinson.github.io/teach/389/</link>
     <guid>https://peterbrinson.github.io/teach/389/</guid>
     <description><![CDATA[ Units: 4 Fall 2026 Section: Tue, Thu, 4:00–5:50 pm Room: SCI 113 Instructor: Peter Brinson Student Assistant: Luke Pannell Course Description This course teaches fundamental skills of digital game development alongside the basic principles of level design. ]]></description>
-    <pubDate>Mon, 24 Aug 2026 20:37:37 GMT</pubDate>
+    <pubDate>Mon, 24 Aug 2026 21:52:09 GMT</pubDate>
+  </item><item>
+    <title>Project 1 — The Investigator</title>
+    <link>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Project-1</link>
+    <guid>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Project-1</guid>
+    <description><![CDATA[ Situated Player Role Reading: The Investigator — World as Evidence Learning Goals: Color theory and lighting; interactive storytelling; arc of experience; game engine literacy; camera principles; materials and textures; sound design; ideation, brainstorming, and prototyping; self-direction; critique... ]]></description>
+    <pubDate>Mon, 24 Aug 2026 21:52:09 GMT</pubDate>
+  </item><item>
+    <title>Project 2 — The Traveler</title>
+    <link>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Project-2</link>
+    <guid>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Project-2</guid>
+    <description><![CDATA[ Situated Player Role Reading: The Traveler — World as Presence Learning Goals: Color theory and lighting; interactive storytelling; arc of experience; game engine literacy; camera principles; materials and textures; sound design; ideation, brainstorming, and prototyping; self-direction; critique. ]]></description>
+    <pubDate>Mon, 24 Aug 2026 21:52:09 GMT</pubDate>
+  </item><item>
+    <title>Project 3 — The Dreamer</title>
+    <link>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Project-3</link>
+    <guid>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Project-3</guid>
+    <description><![CDATA[ Situated Player Role Reading: The Dreamer — World as Enigma Learning Goals: Color theory and lighting; interactive storytelling; arc of experience; game engine literacy; camera principles; materials and textures; sound design; ideation, brainstorming, and prototyping; self-direction; critique. ]]></description>
+    <pubDate>Mon, 24 Aug 2026 21:52:09 GMT</pubDate>
   </item><item>
     <title>CTIN 534</title>
     <link>https://peterbrinson.github.io/teach/534/</link>
     <guid>https://peterbrinson.github.io/teach/534/</guid>
     <description><![CDATA[ Units: 4 Fall 2026 Breakfast Section: Tue, Thu, 10:00 am–12:20 pm Lunch Section: Tue, Thu, 1:00–3:20 pm Instructor: Peter Brinson Student Assistant: Yinuo Chen Student Assistant: George Zou Course Description Is Life A Story or a Game? We will study and practice how narrative video games express mea... ]]></description>
-    <pubDate>Mon, 24 Aug 2026 20:37:37 GMT</pubDate>
+    <pubDate>Mon, 24 Aug 2026 21:52:09 GMT</pubDate>
   </item><item>
     <title>Week 2.2 — AI Workshop 1: Persistent Workspaces</title>
     <link>https://peterbrinson.github.io/teach/389/Lectures/Week-2.2---AI-Workshop-1</link>
@@ -46,24 +64,6 @@
     <link>https://peterbrinson.github.io/teach/389/Concepts/Character-Dilemmas</link>
     <guid>https://peterbrinson.github.io/teach/389/Concepts/Character-Dilemmas</guid>
     <description><![CDATA[ When it isn’t the player who is faced with a dilemma, but a character — that’s a story. Dilemmas put characters under pressure. ]]></description>
-    <pubDate>Mon, 24 Aug 2026 01:25:19 GMT</pubDate>
-  </item><item>
-    <title>Collaborative Playtesting</title>
-    <link>https://peterbrinson.github.io/teach/389/Concepts/Collaborative-Playtesting</link>
-    <guid>https://peterbrinson.github.io/teach/389/Concepts/Collaborative-Playtesting</guid>
-    <description><![CDATA[ Sometimes it’s useful to have two playtesters, even when the game is a single-player experience. ]]></description>
-    <pubDate>Mon, 24 Aug 2026 01:25:19 GMT</pubDate>
-  </item><item>
-    <title>Five Act Structure</title>
-    <link>https://peterbrinson.github.io/teach/389/Concepts/Five-Act-Structure</link>
-    <guid>https://peterbrinson.github.io/teach/389/Concepts/Five-Act-Structure</guid>
-    <description><![CDATA[ From Will Storr, The Science of Storytelling. ]]></description>
-    <pubDate>Mon, 24 Aug 2026 01:25:19 GMT</pubDate>
-  </item><item>
-    <title>Parser-Based Games</title>
-    <link>https://peterbrinson.github.io/teach/389/Concepts/Parser-Based-Games</link>
-    <guid>https://peterbrinson.github.io/teach/389/Concepts/Parser-Based-Games</guid>
-    <description><![CDATA[ Text adventures of the 1970s and 1980s — Zork, Adventure, and their descendants — where the player types commands (LOOK AT MIRROR, GO NORTH, TALK TO GUARD) and the game parses them against an internal model of the world. ]]></description>
     <pubDate>Mon, 24 Aug 2026 01:25:19 GMT</pubDate>
   </item>
     </channel>
