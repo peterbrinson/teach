@@ -6,11 +6,23 @@
       <description>Last 10 notes on PB Teach</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Week 2.1 — Keys and Doors</title>
+    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-2.1---Keys-and-Doors</link>
+    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-2.1---Keys-and-Doors</guid>
+    <description><![CDATA[ The Keys, the Doors, and All Those Problems Playtesting — The Other Shoe Peer feedback session on The Other Shoe — Expectation and Payoff. ]]></description>
+    <pubDate>Wed, 26 Aug 2026 18:40:50 GMT</pubDate>
+  </item><item>
     <title>Week 1 - The Value of Uncertainty</title>
     <link>https://peterbrinson.github.io/teach/389/Lectures/Week-2.1---The-Value-of-Uncertainty</link>
     <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-2.1---The-Value-of-Uncertainty</guid>
     <description><![CDATA[  Sources The Value of Uncertainty Four Authors – philosophers and psychologist aeon.co/essays/use-uncertainty-to-leverage-the-power-of-your-predictive-brain keywords Certainty, uncertainty, volatility, surprise, explore, information, solution, control Three Stages 3 Stages Expected Uncertainty Unexp... ]]></description>
-    <pubDate>Wed, 26 Aug 2026 18:37:20 GMT</pubDate>
+    <pubDate>Wed, 26 Aug 2026 18:40:50 GMT</pubDate>
+  </item><item>
+    <title>CTIN 389</title>
+    <link>https://peterbrinson.github.io/teach/389/</link>
+    <guid>https://peterbrinson.github.io/teach/389/</guid>
+    <description><![CDATA[ Units: 4 Fall 2026 Section: Tue, Thu, 4:00–5:50 pm Room: SCI 113 Instructor: Peter Brinson Student Assistant: Luke Pannell Course Description This course teaches fundamental skills of digital game development alongside the basic principles of level design. ]]></description>
+    <pubDate>Wed, 26 Aug 2026 18:40:50 GMT</pubDate>
   </item><item>
     <title>Week 1.1 — Course Introduction</title>
     <link>https://peterbrinson.github.io/teach/389/Lectures/Week-1.1---Course-Introduction</link>
@@ -23,12 +35,6 @@
     <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-1.2---The-Other-Shoe</guid>
     <description><![CDATA[ On This Page Today’s agenda Unity Essentials Render pipelines — what are they? Render pipelines — why? Render pipelines — the three options Importing 3D models Manipulating materials Lighting a scene Playing audio Setting up a camera Creating a particle system Creating and instantiating prefabs Play... ]]></description>
     <pubDate>Wed, 26 Aug 2026 18:31:22 GMT</pubDate>
-  </item><item>
-    <title>CTIN 389</title>
-    <link>https://peterbrinson.github.io/teach/389/</link>
-    <guid>https://peterbrinson.github.io/teach/389/</guid>
-    <description><![CDATA[ Units: 4 Fall 2026 Section: Tue, Thu, 4:00–5:50 pm Room: SCI 113 Instructor: Peter Brinson Student Assistant: Luke Pannell Course Description This course teaches fundamental skills of digital game development alongside the basic principles of level design. ]]></description>
-    <pubDate>Wed, 26 Aug 2026 18:23:12 GMT</pubDate>
   </item><item>
     <title>Week 1 - The Value of Uncertainty</title>
     <link>https://peterbrinson.github.io/teach/534/Lectures/Week-1---The-Value-of-Uncertainty</link>
@@ -59,12 +65,6 @@
     <guid>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Week-2c</guid>
     <description><![CDATA[ Prompt: Play The Exit 8 with classmates. Learning goals: Attention, environmental storytelling, anticipation and surprise. ]]></description>
     <pubDate>Wed, 26 Aug 2026 01:14:22 GMT</pubDate>
-  </item><item>
-    <title>Project 1 — The Investigator</title>
-    <link>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Project-1</link>
-    <guid>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Project-1</guid>
-    <description><![CDATA[ Situated Player Role Reading: The Investigator — World as Evidence Learning Goals: Color theory and lighting; interactive storytelling; arc of experience; game engine literacy; camera principles; materials and textures; sound design; ideation, brainstorming, and prototyping; self-direction; critique... ]]></description>
-    <pubDate>Mon, 24 Aug 2026 21:52:09 GMT</pubDate>
   </item>
     </channel>
   </rss>
