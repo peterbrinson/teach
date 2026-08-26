@@ -6,6 +6,18 @@
       <description>Last 10 notes on PB Teach</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Week 1.2 — The Other Shoe</title>
+    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-1.2---The-Other-Shoe</link>
+    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-1.2---The-Other-Shoe</guid>
+    <description><![CDATA[ On This Page Today’s agenda Unity Essentials Render pipelines — what are they? Render pipelines — why? Render pipelines — the three options Importing 3D models Manipulating materials Lighting a scene Playing audio Setting up a camera Creating a particle system Creating and instantiating prefabs Play... ]]></description>
+    <pubDate>Wed, 26 Aug 2026 18:23:12 GMT</pubDate>
+  </item><item>
+    <title>CTIN 389</title>
+    <link>https://peterbrinson.github.io/teach/389/</link>
+    <guid>https://peterbrinson.github.io/teach/389/</guid>
+    <description><![CDATA[ Units: 4 Fall 2026 Section: Tue, Thu, 4:00–5:50 pm Room: SCI 113 Instructor: Peter Brinson Student Assistant: Luke Pannell Course Description This course teaches fundamental skills of digital game development alongside the basic principles of level design. ]]></description>
+    <pubDate>Wed, 26 Aug 2026 18:23:12 GMT</pubDate>
+  </item><item>
     <title>Week 1 - The Value of Uncertainty</title>
     <link>https://peterbrinson.github.io/teach/534/Lectures/Week-1---The-Value-of-Uncertainty</link>
     <guid>https://peterbrinson.github.io/teach/534/Lectures/Week-1---The-Value-of-Uncertainty</guid>
@@ -17,12 +29,6 @@
     <guid>https://peterbrinson.github.io/teach/534/</guid>
     <description><![CDATA[ Units: 4 Fall 2026 Breakfast Section: Tue, Thu, 10:00 am–12:20 pm Lunch Section: Tue, Thu, 1:00–3:20 pm Instructor: Peter Brinson Student Assistant: Yinuo Chen Student Assistant: George Zou Course Description Is Life A Story or a Game? We will study and practice how narrative video games express mea... ]]></description>
     <pubDate>Wed, 26 Aug 2026 17:58:55 GMT</pubDate>
-  </item><item>
-    <title>CTIN 389</title>
-    <link>https://peterbrinson.github.io/teach/389/</link>
-    <guid>https://peterbrinson.github.io/teach/389/</guid>
-    <description><![CDATA[ Units: 4 Fall 2026 Section: Tue, Thu, 4:00–5:50 pm Room: SCI 113 Instructor: Peter Brinson Student Assistant: Luke Pannell Course Description This course teaches fundamental skills of digital game development alongside the basic principles of level design. ]]></description>
-    <pubDate>Wed, 26 Aug 2026 16:37:35 GMT</pubDate>
   </item><item>
     <title>534 In Class Week 1 Links</title>
     <link>https://peterbrinson.github.io/teach/534/In-Class/534-In-Class-Week-1-Links</link>
@@ -58,12 +64,6 @@
     <link>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Project-2</link>
     <guid>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Project-2</guid>
     <description><![CDATA[ Situated Player Role Reading: The Traveler — World as Presence Learning Goals: Color theory and lighting; interactive storytelling; arc of experience; game engine literacy; camera principles; materials and textures; sound design; ideation, brainstorming, and prototyping; self-direction; critique. ]]></description>
-    <pubDate>Mon, 24 Aug 2026 21:52:09 GMT</pubDate>
-  </item><item>
-    <title>Project 3 — The Dreamer</title>
-    <link>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Project-3</link>
-    <guid>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Project-3</guid>
-    <description><![CDATA[ Situated Player Role Reading: The Dreamer — World as Enigma Learning Goals: Color theory and lighting; interactive storytelling; arc of experience; game engine literacy; camera principles; materials and textures; sound design; ideation, brainstorming, and prototyping; self-direction; critique. ]]></description>
     <pubDate>Mon, 24 Aug 2026 21:52:09 GMT</pubDate>
   </item>
     </channel>
