@@ -6,11 +6,17 @@
       <description>Last 10 notes on PB Teach</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Peter Brinson — Teaching</title>
+    <link>https://peterbrinson.github.io/teach/</link>
+    <guid>https://peterbrinson.github.io/teach/</guid>
+    <description><![CDATA[ Course materials and talks. Personal site: peterbrinson.com. ]]></description>
+    <pubDate>Mon, 31 Aug 2026 00:04:41 GMT</pubDate>
+  </item><item>
     <title>Make a Queryable Knowledge Base</title>
     <link>https://peterbrinson.github.io/teach/queryable-knowledge-base</link>
     <guid>https://peterbrinson.github.io/teach/queryable-knowledge-base</guid>
     <description><![CDATA[ Make a Queryable Knowledge Base Ready to make a queryable knowledge base? A queryable knowledge base is a folder of plain text files on your own computer that you can ask questions of. ]]></description>
-    <pubDate>Mon, 31 Aug 2026 00:04:32 GMT</pubDate>
+    <pubDate>Mon, 31 Aug 2026 00:04:41 GMT</pubDate>
   </item><item>
     <title>Week 2.2 — AI Workshop 1: Persistent Workspaces</title>
     <link>https://peterbrinson.github.io/teach/389/Lectures/Week-2.2---AI-Workshop-1</link>
@@ -58,12 +64,6 @@
     <link>https://peterbrinson.github.io/teach/534/In-Class/534-In-Class-Week-2.1-Blade-Runner</link>
     <guid>https://peterbrinson.github.io/teach/534/In-Class/534-In-Class-Week-2.1-Blade-Runner</guid>
     <description><![CDATA[ Blade Runner is a detective story, a science fiction film that features The Investigator role. Look for the details in the film’s images. ]]></description>
-    <pubDate>Fri, 28 Aug 2026 01:09:47 GMT</pubDate>
-  </item><item>
-    <title>Week 3.1 — Investigator Milestone Playtest</title>
-    <link>https://peterbrinson.github.io/teach/534/In-Class/534-In-Class-Week-3.1-Investigator-Milestone</link>
-    <guid>https://peterbrinson.github.io/teach/534/In-Class/534-In-Class-Week-3.1-Investigator-Milestone</guid>
-    <description><![CDATA[ After each playtest round, write an answer to these 3 questions on your own private document. ]]></description>
     <pubDate>Fri, 28 Aug 2026 01:09:47 GMT</pubDate>
   </item>
     </channel>
