@@ -1,6 +1,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
     <loc>https://peterbrinson.github.io/teach/389/Assignments/Assignments-and-Readings</loc>
-    <lastmod>2026-08-26T22:27:13.000Z</lastmod>
+    <lastmod>2026-08-31T16:31:51.000Z</lastmod>
   </url><url>
     <loc>https://peterbrinson.github.io/teach/389/Assignments/W02-Assignment---The-Other-Shoe</loc>
     <lastmod>2026-08-31T15:26:31.000Z</lastmod>
@@ -294,7 +294,7 @@
     <lastmod>2026-08-28T01:09:47.000Z</lastmod>
   </url><url>
     <loc>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Week-2.1b</loc>
-    <lastmod>2026-08-28T01:09:47.000Z</lastmod>
+    <lastmod>2026-08-31T16:31:51.000Z</lastmod>
   </url><url>
     <loc>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Week-2.2</loc>
     <lastmod>2026-08-28T01:09:47.000Z</lastmod>
@@ -327,7 +327,10 @@
     <lastmod>2026-08-26T22:27:13.000Z</lastmod>
   </url><url>
     <loc>https://peterbrinson.github.io/teach/534/</loc>
-    <lastmod>2026-08-28T01:09:47.000Z</lastmod>
+    <lastmod>2026-08-31T16:31:51.000Z</lastmod>
+  </url><url>
+    <loc>https://peterbrinson.github.io/teach/AI/</loc>
+    <lastmod>2026-08-31T18:20:08.891Z</lastmod>
   </url><url>
     <loc>https://peterbrinson.github.io/teach/geidai/Assignment-A---Playable-Maze</loc>
     <lastmod>2026-07-31T23:38:58.000Z</lastmod>
@@ -349,7 +352,4 @@
   </url><url>
     <loc>https://peterbrinson.github.io/teach/</loc>
     <lastmod>2026-08-31T00:04:41.000Z</lastmod>
-  </url><url>
-    <loc>https://peterbrinson.github.io/teach/queryable-knowledge-base</loc>
-    <lastmod>2026-08-31T15:26:31.000Z</lastmod>
   </url></urlset>
