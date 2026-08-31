@@ -6,17 +6,23 @@
       <description>Last 10 notes on PB Teach</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>Make a Queryable Knowledge Base</title>
-    <link>https://peterbrinson.github.io/teach/AI/</link>
-    <guid>https://peterbrinson.github.io/teach/AI/</guid>
-    <description><![CDATA[ Queryable Knowledge Bases Here for PB Office Hours — the game design guide itself? Go straight there → Here to learn about and make a queryable knowledge base? A queryable knowledge base is a folder of plain text files on your own computer that you can ask questions of — your course material, your r... ]]></description>
-    <pubDate>Mon, 31 Aug 2026 18:20:08 GMT</pubDate>
-  </item><item>
     <title>Assignments</title>
     <link>https://peterbrinson.github.io/teach/389/Assignments/Assignments-and-Readings</link>
     <guid>https://peterbrinson.github.io/teach/389/Assignments/Assignments-and-Readings</guid>
     <description><![CDATA[ Assignments and Readings DueAssignment or readingTypeTeamEngine1.2A Dark RoomPlay / read——1.2Student Details formForm / setupSolo—1.2CTIN 389 — The Other Shoe MilestoneMilestoneSoloUnity URP2.1The Other Shoe — Expectation and PayoffProjectSoloUnity URP2.2Tutorial 1020 — Your First Persistent Workspa... ]]></description>
-    <pubDate>Mon, 31 Aug 2026 16:31:51 GMT</pubDate>
+    <pubDate>Mon, 31 Aug 2026 18:21:08 GMT</pubDate>
+  </item><item>
+    <title>Queryable Knowledge Bases</title>
+    <link>https://peterbrinson.github.io/teach/AI/</link>
+    <guid>https://peterbrinson.github.io/teach/AI/</guid>
+    <description><![CDATA[ Here for PB Office Hours — the game design guide itself? Go straight there → Here to learn about and make a queryable knowledge base? A queryable knowledge base is a folder of plain text files on your own computer that you can ask questions of — your course material, your research, your production n... ]]></description>
+    <pubDate>Mon, 31 Aug 2026 18:21:08 GMT</pubDate>
+  </item><item>
+    <title>Peter Brinson — Teaching</title>
+    <link>https://peterbrinson.github.io/teach/</link>
+    <guid>https://peterbrinson.github.io/teach/</guid>
+    <description><![CDATA[ Course materials and talks. Personal site: peterbrinson.com. ]]></description>
+    <pubDate>Mon, 31 Aug 2026 18:21:08 GMT</pubDate>
   </item><item>
     <title>Due Week 2.1b — The Exit 8</title>
     <link>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Week-2.1b</link>
@@ -41,12 +47,6 @@
     <guid>https://peterbrinson.github.io/teach/389/Assignments/W02-Assignment---The-Other-Shoe</guid>
     <description><![CDATA[ Due: Tuesday, September 1 at 1:00 pm Team: Solo Engine: Unity Create a short playable experience that establishes an expectation about its world, lets the player act within that expectation, and then delivers a payoff. ]]></description>
     <pubDate>Mon, 31 Aug 2026 15:26:31 GMT</pubDate>
-  </item><item>
-    <title>Peter Brinson — Teaching</title>
-    <link>https://peterbrinson.github.io/teach/</link>
-    <guid>https://peterbrinson.github.io/teach/</guid>
-    <description><![CDATA[ Course materials and talks. Personal site: peterbrinson.com. ]]></description>
-    <pubDate>Mon, 31 Aug 2026 00:04:41 GMT</pubDate>
   </item><item>
     <title>Week 2.2 — AI Workshop 1: Persistent Workspaces</title>
     <link>https://peterbrinson.github.io/teach/389/Lectures/Week-2.2---AI-Workshop-1</link>
