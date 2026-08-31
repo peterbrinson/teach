@@ -6,16 +6,22 @@
       <description>Last 10 notes on PB Teach</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>Peter Brinson — Teaching</title>
-    <link>https://peterbrinson.github.io/teach/</link>
-    <guid>https://peterbrinson.github.io/teach/</guid>
-    <description><![CDATA[ Course materials and talks. Personal site: peterbrinson.com. ]]></description>
-    <pubDate>Mon, 31 Aug 2026 00:04:41 GMT</pubDate>
+    <title>W02 — The Other Shoe — Expectation and Payoff</title>
+    <link>https://peterbrinson.github.io/teach/389/Assignments/W02-Assignment---The-Other-Shoe</link>
+    <guid>https://peterbrinson.github.io/teach/389/Assignments/W02-Assignment---The-Other-Shoe</guid>
+    <description><![CDATA[ Due: Tuesday, September 1 at 1:00 pm Team: Solo Engine: Unity Create a short playable experience that establishes an expectation about its world, lets the player act within that expectation, and then delivers a payoff. ]]></description>
+    <pubDate>Mon, 31 Aug 2026 15:26:31 GMT</pubDate>
   </item><item>
     <title>Make a Queryable Knowledge Base</title>
     <link>https://peterbrinson.github.io/teach/queryable-knowledge-base</link>
     <guid>https://peterbrinson.github.io/teach/queryable-knowledge-base</guid>
     <description><![CDATA[ Make a Queryable Knowledge Base Ready to make a queryable knowledge base? A queryable knowledge base is a folder of plain text files on your own computer that you can ask questions of. ]]></description>
+    <pubDate>Mon, 31 Aug 2026 15:26:31 GMT</pubDate>
+  </item><item>
+    <title>Peter Brinson — Teaching</title>
+    <link>https://peterbrinson.github.io/teach/</link>
+    <guid>https://peterbrinson.github.io/teach/</guid>
+    <description><![CDATA[ Course materials and talks. Personal site: peterbrinson.com. ]]></description>
     <pubDate>Mon, 31 Aug 2026 00:04:41 GMT</pubDate>
   </item><item>
     <title>Week 2.2 — AI Workshop 1: Persistent Workspaces</title>
@@ -58,12 +64,6 @@
     <link>https://peterbrinson.github.io/teach/534/In-Class/534-In-Class-Week-1.2-Links</link>
     <guid>https://peterbrinson.github.io/teach/534/In-Class/534-In-Class-Week-1.2-Links</guid>
     <description><![CDATA[ Film Clips A Most Violent Year - Attention; Film Space www.amazon.com/Most-Violent-Year-J-C-Chandor/dp/B0D4B3M2M6/ref=sr_1_2?dib=eyJ2IjoiMSJ9.IVXUUTqLCgYtgULjJlM99EYwvJ-IV2FnY4oIPv1_OO2ZS6XIRTuEtX1pPgiROI2X3us_1A0s4YeUzJ4dZD7atQJvwiZIlZd2Fsq-5J4byDhJuLRYAFdwynHAOeQ-LDcouyGjp2k96cdAjGxWNmN7kHQJibhOCE... ]]></description>
-    <pubDate>Fri, 28 Aug 2026 01:09:47 GMT</pubDate>
-  </item><item>
-    <title>Week 2.1 — Blade Runner</title>
-    <link>https://peterbrinson.github.io/teach/534/In-Class/534-In-Class-Week-2.1-Blade-Runner</link>
-    <guid>https://peterbrinson.github.io/teach/534/In-Class/534-In-Class-Week-2.1-Blade-Runner</guid>
-    <description><![CDATA[ Blade Runner is a detective story, a science fiction film that features The Investigator role. Look for the details in the film’s images. ]]></description>
     <pubDate>Fri, 28 Aug 2026 01:09:47 GMT</pubDate>
   </item>
     </channel>
