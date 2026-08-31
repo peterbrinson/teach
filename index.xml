@@ -6,10 +6,16 @@
       <description>Last 10 notes on PB Teach</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Queryable Knowledge Bases</title>
+    <link>https://peterbrinson.github.io/teach/AI/</link>
+    <guid>https://peterbrinson.github.io/teach/AI/</guid>
+    <description><![CDATA[  Are you a student looking for Peter Brinson&#039;s Office Hours, the game design guide itself? Go straight there Here to learn about and make queryable knowledge bases? A queryable knowledge base is a folder of plain text files on your own computer that you can ask questions of — your course materi... ]]></description>
+    <pubDate>Mon, 31 Aug 2026 19:56:10 GMT</pubDate>
+  </item><item>
     <title>Week 2.2 — AI Workshop 1: Persistent Workspaces</title>
     <link>https://peterbrinson.github.io/teach/389/Lectures/Week-2.2---AI-Workshop-1</link>
     <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-2.2---AI-Workshop-1</guid>
-    <description><![CDATA[ AI Workshop 1 — Persistent Workspaces We will use Tutorial 1020 to turn Anthony and Deloris’s messy PHO game-project into a persistent workspace. ]]></description>
+    <description><![CDATA[ AI Workshop 1 — Persistent Workspaces We will use Tutorial 2020 to turn Anthony and Deloris’s messy PHO game-project into a persistent workspace. ]]></description>
     <pubDate>Mon, 31 Aug 2026 19:38:22 GMT</pubDate>
   </item><item>
     <title>CTIN 389</title>
@@ -17,12 +23,6 @@
     <guid>https://peterbrinson.github.io/teach/389/</guid>
     <description><![CDATA[ Units: 4 Fall 2026 Section: Tue, Thu, 4:00–5:50 pm Room: SCI 113 Instructor: Peter Brinson Student Assistant: Luke Pannell Course Description This course teaches fundamental skills of digital game development alongside the basic principles of level design. ]]></description>
     <pubDate>Mon, 31 Aug 2026 19:38:22 GMT</pubDate>
-  </item><item>
-    <title>Queryable Knowledge Bases</title>
-    <link>https://peterbrinson.github.io/teach/AI/</link>
-    <guid>https://peterbrinson.github.io/teach/AI/</guid>
-    <description><![CDATA[  Are you a student looking for Peter Brinson&#039;s Office Hours, the game design guide itself? Go straight there Here to learn about and make queryable knowledge bases? A queryable knowledge base is a folder of plain text files on your own computer that you can ask questions of — your course materi... ]]></description>
-    <pubDate>Mon, 31 Aug 2026 19:28:50 GMT</pubDate>
   </item><item>
     <title>Peter Brinson — Teaching</title>
     <link>https://peterbrinson.github.io/teach/</link>
@@ -33,7 +33,7 @@
     <title>Assignments</title>
     <link>https://peterbrinson.github.io/teach/389/Assignments/Assignments-and-Readings</link>
     <guid>https://peterbrinson.github.io/teach/389/Assignments/Assignments-and-Readings</guid>
-    <description><![CDATA[ Assignments and Readings DueAssignment or readingTypeTeamEngine1.2A Dark RoomPlay / read——1.2Student Details formForm / setupSolo—1.2CTIN 389 — The Other Shoe MilestoneMilestoneSoloUnity URP2.1The Other Shoe — Expectation and PayoffProjectSoloUnity URP2.2Tutorial 1020 — Your First Persistent Workspa... ]]></description>
+    <description><![CDATA[ Assignments and Readings DueAssignment or readingTypeTeamEngine1.2A Dark RoomPlay / read——1.2Student Details formForm / setupSolo—1.2CTIN 389 — The Other Shoe MilestoneMilestoneSoloUnity URP2.1The Other Shoe — Expectation and PayoffProjectSoloUnity URP2.2Tutorial 2020 — Your First Persistent Workspa... ]]></description>
     <pubDate>Mon, 31 Aug 2026 18:21:08 GMT</pubDate>
   </item><item>
     <title>Due Week 2.1b — The Exit 8</title>
