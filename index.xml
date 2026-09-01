@@ -6,11 +6,29 @@
       <description>Last 10 notes on PB Teach</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>W10 — Unreal Interaction</title>
+    <link>https://peterbrinson.github.io/teach/389/Assignments/W10-Assignment---Unreal-Interaction-Project</link>
+    <guid>https://peterbrinson.github.io/teach/389/Assignments/W10-Assignment---Unreal-Interaction-Project</guid>
+    <description><![CDATA[ Introduced in Week 9.1 - Unreal Interaction Project. ]]></description>
+    <pubDate>Tue, 01 Sep 2026 15:24:13 GMT</pubDate>
+  </item><item>
+    <title>Week 1.1 — Course Introduction</title>
+    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-1.1---Course-Introduction</link>
+    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-1.1---Course-Introduction</guid>
+    <description><![CDATA[ On This Page Course overview Introductions Course structure and projects Resources From pattern to prediction Assignment Share examples of playful things in this world, that aren’t games. ]]></description>
+    <pubDate>Tue, 01 Sep 2026 15:24:13 GMT</pubDate>
+  </item><item>
+    <title>CTIN 389</title>
+    <link>https://peterbrinson.github.io/teach/389/</link>
+    <guid>https://peterbrinson.github.io/teach/389/</guid>
+    <description><![CDATA[ Units: 4 Fall 2026 Section: Tue, Thu, 4:00–5:50 pm Room: SCI 113 Instructor: Peter Brinson Student Assistant: Luke Pannell Course Description This course teaches fundamental skills of digital game development alongside the basic principles of level design. ]]></description>
+    <pubDate>Tue, 01 Sep 2026 15:24:13 GMT</pubDate>
+  </item><item>
     <title>Queryable Knowledge Bases</title>
     <link>https://peterbrinson.github.io/teach/AI/</link>
     <guid>https://peterbrinson.github.io/teach/AI/</guid>
     <description><![CDATA[ A student looking for Peter Brinson&#039;s Office Hours, the game design guide itself? Click here.Here to learn what a queryable knowledge base is, and build one? Read on. ]]></description>
-    <pubDate>Tue, 01 Sep 2026 00:18:10 GMT</pubDate>
+    <pubDate>Tue, 01 Sep 2026 15:24:13 GMT</pubDate>
   </item><item>
     <title>Assignments</title>
     <link>https://peterbrinson.github.io/teach/389/Assignments/Assignments-and-Readings</link>
@@ -22,12 +40,6 @@
     <link>https://peterbrinson.github.io/teach/389/Lectures/Week-2.2---AI-Workshop-1</link>
     <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-2.2---AI-Workshop-1</guid>
     <description><![CDATA[ AI Workshop 1 — Persistent Workspaces We will use Tutorial 2020 to turn Anthony and Deloris’s messy PHO game-project into a persistent workspace. ]]></description>
-    <pubDate>Mon, 31 Aug 2026 20:15:58 GMT</pubDate>
-  </item><item>
-    <title>CTIN 389</title>
-    <link>https://peterbrinson.github.io/teach/389/</link>
-    <guid>https://peterbrinson.github.io/teach/389/</guid>
-    <description><![CDATA[ Units: 4 Fall 2026 Section: Tue, Thu, 4:00–5:50 pm Room: SCI 113 Instructor: Peter Brinson Student Assistant: Luke Pannell Course Description This course teaches fundamental skills of digital game development alongside the basic principles of level design. ]]></description>
     <pubDate>Mon, 31 Aug 2026 20:15:58 GMT</pubDate>
   </item><item>
     <title>Peter Brinson — Teaching</title>
@@ -53,18 +65,6 @@
     <guid>https://peterbrinson.github.io/teach/389/Assignments/W03-Assignment---Keys-and-Doors</guid>
     <description><![CDATA[ Introduced in Week 2.1 - Keys and Doors. ]]></description>
     <pubDate>Mon, 31 Aug 2026 15:38:01 GMT</pubDate>
-  </item><item>
-    <title>W02 — The Other Shoe — Expectation and Payoff</title>
-    <link>https://peterbrinson.github.io/teach/389/Assignments/W02-Assignment---The-Other-Shoe</link>
-    <guid>https://peterbrinson.github.io/teach/389/Assignments/W02-Assignment---The-Other-Shoe</guid>
-    <description><![CDATA[ Due: Tuesday, September 1 at 1:00 pm Team: Solo Engine: Unity Create a short playable experience that establishes an expectation about its world, lets the player act within that expectation, and then delivers a payoff. ]]></description>
-    <pubDate>Mon, 31 Aug 2026 15:26:31 GMT</pubDate>
-  </item><item>
-    <title>Week 1.2 — The Other Shoe</title>
-    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-1.2---The-Other-Shoe</link>
-    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-1.2---The-Other-Shoe</guid>
-    <description><![CDATA[ On This Page Unity Essentials Render pipelines — what are they? Render pipelines — why? Render pipelines — the three options Importing 3D models Manipulating materials Creating a particle system Playing audio Creating and instantiating prefabs Lighting a scene Setting up a camera Player Attention Un... ]]></description>
-    <pubDate>Fri, 28 Aug 2026 01:09:47 GMT</pubDate>
   </item>
     </channel>
   </rss>
