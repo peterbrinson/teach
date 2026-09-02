@@ -6,65 +6,65 @@
       <description>Last 10 notes on PB Teach</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>Queryable Knowledge Bases</title>
-    <link>https://peterbrinson.github.io/teach/AI/</link>
-    <guid>https://peterbrinson.github.io/teach/AI/</guid>
-    <description><![CDATA[ A student looking for Peter Brinson&#039;s Office Hours, the game design guide itself? Click here.Here to learn what a queryable knowledge base is, and build one? Read on. ]]></description>
-    <pubDate>Tue, 01 Sep 2026 15:43:34 GMT</pubDate>
-  </item><item>
-    <title>W10 — Unreal Interaction</title>
-    <link>https://peterbrinson.github.io/teach/389/Assignments/W10-Assignment---Unreal-Interaction-Project</link>
-    <guid>https://peterbrinson.github.io/teach/389/Assignments/W10-Assignment---Unreal-Interaction-Project</guid>
-    <description><![CDATA[ Introduced in Week 9.1 - Unreal Interaction Project. ]]></description>
-    <pubDate>Tue, 01 Sep 2026 15:24:13 GMT</pubDate>
-  </item><item>
-    <title>Week 1.1 — Course Introduction</title>
-    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-1.1---Course-Introduction</link>
-    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-1.1---Course-Introduction</guid>
-    <description><![CDATA[ On This Page Course overview Introductions Course structure and projects Resources From pattern to prediction Assignment Share examples of playful things in this world, that aren’t games. ]]></description>
-    <pubDate>Tue, 01 Sep 2026 15:24:13 GMT</pubDate>
-  </item><item>
-    <title>CTIN 389</title>
-    <link>https://peterbrinson.github.io/teach/389/</link>
-    <guid>https://peterbrinson.github.io/teach/389/</guid>
-    <description><![CDATA[ Units: 4 Fall 2026 Section: Tue, Thu, 4:00–5:50 pm Room: SCI 113 Instructor: Peter Brinson Student Assistant: Luke Pannell Course Description This course teaches fundamental skills of digital game development alongside the basic principles of level design. ]]></description>
-    <pubDate>Tue, 01 Sep 2026 15:24:13 GMT</pubDate>
-  </item><item>
-    <title>Assignments</title>
-    <link>https://peterbrinson.github.io/teach/389/Assignments/Assignments-and-Readings</link>
-    <guid>https://peterbrinson.github.io/teach/389/Assignments/Assignments-and-Readings</guid>
-    <description><![CDATA[ Assignments and Readings DueAssignment or readingTypeTeamEngine1.2A Dark RoomPlay / read——1.2Student Details formForm / setupSolo—1.2CTIN 389 — The Other Shoe MilestoneMilestoneSoloUnity URP2.1The Other Shoe — Expectation and PayoffProjectSoloUnity URP2.2Tutorial 2020 — Your First Persistent Workspa... ]]></description>
-    <pubDate>Mon, 31 Aug 2026 20:15:58 GMT</pubDate>
-  </item><item>
-    <title>Week 2.2 — AI Workshop 1: Persistent Workspaces</title>
-    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-2.2---AI-Workshop-1</link>
-    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-2.2---AI-Workshop-1</guid>
-    <description><![CDATA[ AI Workshop 1 — Persistent Workspaces We will use Tutorial 2020 to turn Anthony and Deloris’s messy PHO game-project into a persistent workspace. ]]></description>
-    <pubDate>Mon, 31 Aug 2026 20:15:58 GMT</pubDate>
-  </item><item>
-    <title>Peter Brinson — Teaching</title>
-    <link>https://peterbrinson.github.io/teach/</link>
-    <guid>https://peterbrinson.github.io/teach/</guid>
-    <description><![CDATA[ Course materials and talks. Personal site: peterbrinson.com. ]]></description>
-    <pubDate>Mon, 31 Aug 2026 19:28:50 GMT</pubDate>
-  </item><item>
-    <title>Due Week 2.1b — The Exit 8</title>
-    <link>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Week-2.1b</link>
-    <guid>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Week-2.1b</guid>
-    <description><![CDATA[ Prompt: Play The Exit 8 with classmates. Learning goals: Attention, environmental storytelling, anticipation and surprise. ]]></description>
-    <pubDate>Mon, 31 Aug 2026 16:31:51 GMT</pubDate>
-  </item><item>
-    <title>CTIN 534</title>
-    <link>https://peterbrinson.github.io/teach/534/</link>
-    <guid>https://peterbrinson.github.io/teach/534/</guid>
-    <description><![CDATA[ Units: 4 Fall 2026 Breakfast Section: Tue, Thu, 10:00 am–12:20 pm Lunch Section: Tue, Thu, 1:00–3:20 pm Instructor: Peter Brinson Student Assistant: Yinuo Chen Student Assistant: George Zou Course Description Is Life A Story or a Game? We will study and practice how narrative video games express mea... ]]></description>
-    <pubDate>Mon, 31 Aug 2026 16:31:51 GMT</pubDate>
+    <title>W02 — The Other Shoe — Expectation and Payoff</title>
+    <link>https://peterbrinson.github.io/teach/389/Assignments/W02-Assignment---The-Other-Shoe</link>
+    <guid>https://peterbrinson.github.io/teach/389/Assignments/W02-Assignment---The-Other-Shoe</guid>
+    <description><![CDATA[ Due: Tuesday, September 1 at 1:00 pm Team: Solo Engine: Unity Create a short playable experience that establishes an expectation about its world, lets the player act within that expectation, and then delivers a payoff. ]]></description>
+    <pubDate>Wed, 02 Sep 2026 14:59:45 GMT</pubDate>
   </item><item>
     <title>W03 — Keys and Doors</title>
     <link>https://peterbrinson.github.io/teach/389/Assignments/W03-Assignment---Keys-and-Doors</link>
     <guid>https://peterbrinson.github.io/teach/389/Assignments/W03-Assignment---Keys-and-Doors</guid>
     <description><![CDATA[ Introduced in Week 2.1 - Keys and Doors. ]]></description>
-    <pubDate>Mon, 31 Aug 2026 15:38:01 GMT</pubDate>
+    <pubDate>Wed, 02 Sep 2026 14:59:45 GMT</pubDate>
+  </item><item>
+    <title>W04 — Racing / Constrained Movement</title>
+    <link>https://peterbrinson.github.io/teach/389/Assignments/W04-Assignment---Racing-Project</link>
+    <guid>https://peterbrinson.github.io/teach/389/Assignments/W04-Assignment---Racing-Project</guid>
+    <description><![CDATA[ Introduced in Week 3.2 - Workspaces and Splines. See Study - Movement and Speed for the supporting design study. ]]></description>
+    <pubDate>Wed, 02 Sep 2026 14:59:45 GMT</pubDate>
+  </item><item>
+    <title>W06 — Quandary</title>
+    <link>https://peterbrinson.github.io/teach/389/Assignments/W06-Assignment---Quandary-Project</link>
+    <guid>https://peterbrinson.github.io/teach/389/Assignments/W06-Assignment---Quandary-Project</guid>
+    <description><![CDATA[ Introduced in Week 5.1 - Quandaries. ]]></description>
+    <pubDate>Wed, 02 Sep 2026 14:59:45 GMT</pubDate>
+  </item><item>
+    <title>W07 — Lost Woods</title>
+    <link>https://peterbrinson.github.io/teach/389/Assignments/W07-Assignment---Lost-Woods-Project</link>
+    <guid>https://peterbrinson.github.io/teach/389/Assignments/W07-Assignment---Lost-Woods-Project</guid>
+    <description><![CDATA[ Introduced in Week 6.2 - Lost Woods. Due: Tuesday, October 6 at 1:00 p.m. ]]></description>
+    <pubDate>Wed, 02 Sep 2026 14:59:45 GMT</pubDate>
+  </item><item>
+    <title>W09 — Unreal Tutorial</title>
+    <link>https://peterbrinson.github.io/teach/389/Assignments/W09-Assignment---Unreal-Tutorial</link>
+    <guid>https://peterbrinson.github.io/teach/389/Assignments/W09-Assignment---Unreal-Tutorial</guid>
+    <description><![CDATA[ Introduced in Week 8.1 - Unreal Tutorial. ]]></description>
+    <pubDate>Wed, 02 Sep 2026 14:59:45 GMT</pubDate>
+  </item><item>
+    <title>W10 — Unreal Interaction</title>
+    <link>https://peterbrinson.github.io/teach/389/Assignments/W10-Assignment---Unreal-Interaction-Project</link>
+    <guid>https://peterbrinson.github.io/teach/389/Assignments/W10-Assignment---Unreal-Interaction-Project</guid>
+    <description><![CDATA[ Introduced in Week 9.1 - Unreal Interaction Project. ]]></description>
+    <pubDate>Wed, 02 Sep 2026 14:59:45 GMT</pubDate>
+  </item><item>
+    <title>W11 — Engine Exploration</title>
+    <link>https://peterbrinson.github.io/teach/389/Assignments/W11-Assignment---Engine-Exploration-Project</link>
+    <guid>https://peterbrinson.github.io/teach/389/Assignments/W11-Assignment---Engine-Exploration-Project</guid>
+    <description><![CDATA[ Introduced in Week 10.1 - Technology and Development. ]]></description>
+    <pubDate>Wed, 02 Sep 2026 14:59:45 GMT</pubDate>
+  </item><item>
+    <title>W12 — Evoking Emotion</title>
+    <link>https://peterbrinson.github.io/teach/389/Assignments/W12-Assignment---Emotion-Project</link>
+    <guid>https://peterbrinson.github.io/teach/389/Assignments/W12-Assignment---Emotion-Project</guid>
+    <description><![CDATA[ Introduced in Week 11.1 - Engine Exploration. Due: Tuesday, November 10 Team: Groups of 2–3 Perspective: 2D or 3D Engine: Unity Choose an emotion. ]]></description>
+    <pubDate>Wed, 02 Sep 2026 14:59:45 GMT</pubDate>
+  </item><item>
+    <title>W13 — Divergent Prototype</title>
+    <link>https://peterbrinson.github.io/teach/389/Assignments/W13-Assignment---Divergent-Prototype</link>
+    <guid>https://peterbrinson.github.io/teach/389/Assignments/W13-Assignment---Divergent-Prototype</guid>
+    <description><![CDATA[ Introduced in Week 12.1 - Divergent Prototyping. ]]></description>
+    <pubDate>Wed, 02 Sep 2026 14:59:45 GMT</pubDate>
   </item>
     </channel>
   </rss>
