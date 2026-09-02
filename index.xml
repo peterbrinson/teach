@@ -6,6 +6,18 @@
       <description>Last 10 notes on PB Teach</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>CTIN 389</title>
+    <link>https://peterbrinson.github.io/teach/389/</link>
+    <guid>https://peterbrinson.github.io/teach/389/</guid>
+    <description><![CDATA[ Units: 4 Fall 2026 Section: Tue, Thu, 4:00–5:50 pm Room: SCI 113 Instructor: Peter Brinson Student Assistant: Luke Pannell Course Description This course teaches fundamental skills of digital game development alongside the basic principles of level design. ]]></description>
+    <pubDate>Wed, 02 Sep 2026 15:23:47 GMT</pubDate>
+  </item><item>
+    <title>CTIN 534</title>
+    <link>https://peterbrinson.github.io/teach/534/</link>
+    <guid>https://peterbrinson.github.io/teach/534/</guid>
+    <description><![CDATA[ Units: 4 Fall 2026 Breakfast Section: Tue, Thu, 10:00 am–12:20 pm Lunch Section: Tue, Thu, 1:00–3:20 pm Instructor: Peter Brinson Student Assistant: Yinuo Chen Student Assistant: George Zou Course Description Is Life A Story or a Game? We will study and practice how narrative video games express mea... ]]></description>
+    <pubDate>Wed, 02 Sep 2026 15:23:47 GMT</pubDate>
+  </item><item>
     <title>Week 2.1 — Keys and Doors</title>
     <link>https://peterbrinson.github.io/teach/389/Lectures/Week-2.1---Keys-and-Doors</link>
     <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-2.1---Keys-and-Doors</guid>
@@ -16,12 +28,6 @@
     <link>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Week-2.2</link>
     <guid>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Week-2.2</guid>
     <description><![CDATA[ For Project 1, write a 4–6 sentence premise. Your priority is envisioning the situation the character(s) are in (or were in). ]]></description>
-    <pubDate>Wed, 02 Sep 2026 15:18:02 GMT</pubDate>
-  </item><item>
-    <title>CTIN 534</title>
-    <link>https://peterbrinson.github.io/teach/534/</link>
-    <guid>https://peterbrinson.github.io/teach/534/</guid>
-    <description><![CDATA[ Units: 4 Fall 2026 Breakfast Section: Tue, Thu, 10:00 am–12:20 pm Lunch Section: Tue, Thu, 1:00–3:20 pm Instructor: Peter Brinson Student Assistant: Yinuo Chen Student Assistant: George Zou Course Description Is Life A Story or a Game? We will study and practice how narrative video games express mea... ]]></description>
     <pubDate>Wed, 02 Sep 2026 15:18:02 GMT</pubDate>
   </item><item>
     <title>W02 — The Other Shoe — Expectation and Payoff</title>
@@ -58,12 +64,6 @@
     <link>https://peterbrinson.github.io/teach/389/Assignments/W09-Assignment---Unreal-Tutorial</link>
     <guid>https://peterbrinson.github.io/teach/389/Assignments/W09-Assignment---Unreal-Tutorial</guid>
     <description><![CDATA[ Introduced in Week 8.1 - Unreal Tutorial. ]]></description>
-    <pubDate>Wed, 02 Sep 2026 14:59:45 GMT</pubDate>
-  </item><item>
-    <title>W10 — Unreal Interaction</title>
-    <link>https://peterbrinson.github.io/teach/389/Assignments/W10-Assignment---Unreal-Interaction-Project</link>
-    <guid>https://peterbrinson.github.io/teach/389/Assignments/W10-Assignment---Unreal-Interaction-Project</guid>
-    <description><![CDATA[ Introduced in Week 9.1 - Unreal Interaction Project. ]]></description>
     <pubDate>Wed, 02 Sep 2026 14:59:45 GMT</pubDate>
   </item>
     </channel>
