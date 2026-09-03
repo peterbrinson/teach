@@ -6,17 +6,23 @@
       <description>Last 10 notes on PB Teach</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>Week 2.2 - The Science of Storytelling</title>
-    <link>https://peterbrinson.github.io/teach/534/Lectures/Week-2.2---The-Science-of-Storytelling</link>
-    <guid>https://peterbrinson.github.io/teach/534/Lectures/Week-2.2---The-Science-of-Storytelling</guid>
-    <description><![CDATA[ The Science of Storytelling by Will Storr Partial Knowledge Partial Knowledge Invites Engaging Questions 1.2 In addition to unexpected change, storytellers excite human’s thirst for knowledge by creating worlds but stopping short of telling the readers everything about them. ]]></description>
-    <pubDate>Wed, 02 Sep 2026 20:16:06 GMT</pubDate>
+    <title>W03 — Keys and Doors</title>
+    <link>https://peterbrinson.github.io/teach/389/Assignments/W03-Assignment---Keys-and-Doors</link>
+    <guid>https://peterbrinson.github.io/teach/389/Assignments/W03-Assignment---Keys-and-Doors</guid>
+    <description><![CDATA[ Introduced in Week 2.1 - Keys and Doors. ]]></description>
+    <pubDate>Wed, 02 Sep 2026 23:44:56 GMT</pubDate>
   </item><item>
     <title>CTIN 389</title>
     <link>https://peterbrinson.github.io/teach/389/</link>
     <guid>https://peterbrinson.github.io/teach/389/</guid>
     <description><![CDATA[ Units: 4 Fall 2026 Section: Tue, Thu, 4:00–5:50 pm Room: SCI 113 Instructor: Peter Brinson Student Assistant: Luke Pannell Course Description This course teaches fundamental skills of digital game development alongside the basic principles of level design. ]]></description>
-    <pubDate>Wed, 02 Sep 2026 20:02:28 GMT</pubDate>
+    <pubDate>Wed, 02 Sep 2026 23:44:56 GMT</pubDate>
+  </item><item>
+    <title>Week 2.2 - The Science of Storytelling</title>
+    <link>https://peterbrinson.github.io/teach/534/Lectures/Week-2.2---The-Science-of-Storytelling</link>
+    <guid>https://peterbrinson.github.io/teach/534/Lectures/Week-2.2---The-Science-of-Storytelling</guid>
+    <description><![CDATA[ The Science of Storytelling by Will Storr Partial Knowledge Partial Knowledge Invites Engaging Questions 1.2 In addition to unexpected change, storytellers excite human’s thirst for knowledge by creating worlds but stopping short of telling the readers everything about them. ]]></description>
+    <pubDate>Wed, 02 Sep 2026 20:16:06 GMT</pubDate>
   </item><item>
     <title>534 In Class Week 2.2 Cause and Effect</title>
     <link>https://peterbrinson.github.io/teach/534/In-Class/534-In-Class-Week-2.2-Cause-and-Effect</link>
@@ -52,12 +58,6 @@
     <link>https://peterbrinson.github.io/teach/389/Assignments/W02-Assignment---The-Other-Shoe</link>
     <guid>https://peterbrinson.github.io/teach/389/Assignments/W02-Assignment---The-Other-Shoe</guid>
     <description><![CDATA[ Due: Tuesday, September 1 at 1:00 pm Team: Solo Engine: Unity Create a short playable experience that establishes an expectation about its world, lets the player act within that expectation, and then delivers a payoff. ]]></description>
-    <pubDate>Wed, 02 Sep 2026 14:59:45 GMT</pubDate>
-  </item><item>
-    <title>W03 — Keys and Doors</title>
-    <link>https://peterbrinson.github.io/teach/389/Assignments/W03-Assignment---Keys-and-Doors</link>
-    <guid>https://peterbrinson.github.io/teach/389/Assignments/W03-Assignment---Keys-and-Doors</guid>
-    <description><![CDATA[ Introduced in Week 2.1 - Keys and Doors. ]]></description>
     <pubDate>Wed, 02 Sep 2026 14:59:45 GMT</pubDate>
   </item><item>
     <title>W04 — Racing / Constrained Movement</title>
