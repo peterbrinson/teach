@@ -6,6 +6,36 @@
       <description>Last 10 notes on PB Teach</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Study — Movement and Speed</title>
+    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-4.1---Movement-and-Speed</link>
+    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-4.1---Movement-and-Speed</guid>
+    <description><![CDATA[ How it feels to traverse the world — constrained movement, controlled perspective, and the AI that drives your opponents. ]]></description>
+    <pubDate>Thu, 10 Sep 2026 01:59:13 GMT</pubDate>
+  </item><item>
+    <title>Week 5.1 — Quandaries</title>
+    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-4.1---Quandries</link>
+    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-4.1---Quandries</guid>
+    <description><![CDATA[ Goals, rewards, and punishments — why we do the things we do, and how games turn a choice into a dilemma. ]]></description>
+    <pubDate>Thu, 10 Sep 2026 01:58:47 GMT</pubDate>
+  </item><item>
+    <title>Week 3.2 — Workspaces and Splines</title>
+    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-3.2---Splines</link>
+    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-3.2---Splines</guid>
+    <description><![CDATA[ What Is a Spline? A spline is a mathematically defined curve. ]]></description>
+    <pubDate>Thu, 10 Sep 2026 01:58:46 GMT</pubDate>
+  </item><item>
+    <title>W05 — A Difficult Loss</title>
+    <link>https://peterbrinson.github.io/teach/389/Assignments/W05-Assignment---A-Difficult-Loss-(Quandary)</link>
+    <guid>https://peterbrinson.github.io/teach/389/Assignments/W05-Assignment---A-Difficult-Loss-(Quandary)</guid>
+    <description><![CDATA[ Introduced in Week 4.1 - Quandries. Due: Tuesday, September 22 Engine: Unity Create a game in two halves, each played in its own level. ]]></description>
+    <pubDate>Thu, 10 Sep 2026 01:29:28 GMT</pubDate>
+  </item><item>
+    <title>Week 4.1 — Animation and Assets</title>
+    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-4.2---Animation-and-Assets</link>
+    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-4.2---Animation-and-Assets</guid>
+    <description><![CDATA[ Importing and controlling animations in Unity, and a field guide to finding game assets you can actually use. ]]></description>
+    <pubDate>Thu, 10 Sep 2026 01:12:10 GMT</pubDate>
+  </item><item>
     <title>Week 3.1 — AI Workshop 1: Persistent Workspaces</title>
     <link>https://peterbrinson.github.io/teach/534/In-Class/534-In-Class-Week-3.1-AI-Workshop-1</link>
     <guid>https://peterbrinson.github.io/teach/534/In-Class/534-In-Class-Week-3.1-AI-Workshop-1</guid>
@@ -35,36 +65,6 @@
     <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-2.2---AI-Workshop-1</guid>
     <description><![CDATA[ AI Workshop 1 — Persistent Workspaces We will use Tutorial 2020 or Tutorial 2022 to turn Anthony and Deloris’s messy PHO game-project into a persistent workspace. ]]></description>
     <pubDate>Mon, 07 Sep 2026 17:31:50 GMT</pubDate>
-  </item><item>
-    <title>CTIN 534</title>
-    <link>https://peterbrinson.github.io/teach/534/</link>
-    <guid>https://peterbrinson.github.io/teach/534/</guid>
-    <description><![CDATA[ Units: 4 Fall 2026 Breakfast Section: Tue, Thu, 10:00 am–12:20 pm Lunch Section: Tue, Thu, 1:00–3:20 pm Go To Schedule Instructor: Peter Brinson Student Assistant: Yinuo Chen Student Assistant: George Zou Course Description Is Life A Story or a Game? We will study and practice how narrative video ga... ]]></description>
-    <pubDate>Mon, 07 Sep 2026 17:31:50 GMT</pubDate>
-  </item><item>
-    <title>Project 1 — The Investigator</title>
-    <link>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Project-1</link>
-    <guid>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Project-1</guid>
-    <description><![CDATA[ Situated Player Role Reading: The Investigator — World as Evidence Learning Goals: Color theory and lighting; interactive storytelling; arc of experience; game engine literacy; camera principles; materials and textures; sound design; ideation, brainstorming, and prototyping; self-direction; critique... ]]></description>
-    <pubDate>Sun, 06 Sep 2026 17:05:04 GMT</pubDate>
-  </item><item>
-    <title>W03 — Keys and Doors</title>
-    <link>https://peterbrinson.github.io/teach/389/Assignments/W03-Assignment---Keys-and-Doors</link>
-    <guid>https://peterbrinson.github.io/teach/389/Assignments/W03-Assignment---Keys-and-Doors</guid>
-    <description><![CDATA[ Introduced in Week 2.1 - Keys and Doors. ]]></description>
-    <pubDate>Fri, 04 Sep 2026 00:19:33 GMT</pubDate>
-  </item><item>
-    <title>534 In Class Week 2.2 Cause and Effect</title>
-    <link>https://peterbrinson.github.io/teach/534/In-Class/534-In-Class-Week-2.2-Cause-and-Effect</link>
-    <guid>https://peterbrinson.github.io/teach/534/In-Class/534-In-Class-Week-2.2-Cause-and-Effect</guid>
-    <description><![CDATA[ Pony Island The Way Things Go www.amazon.com/gp/video/detail/B0GX8SR63V …and The Cake Server www.facebook.com/josephsmachines/videos/906648329513264/ Akira www.amazon.com/gp/video/detail/0FQA1M8R6CYWOYHJ6W0KQFLHZM The Van The Van Cycles of questions and answers. ]]></description>
-    <pubDate>Fri, 04 Sep 2026 00:05:05 GMT</pubDate>
-  </item><item>
-    <title>Week 2.2 - The Science of Storytelling</title>
-    <link>https://peterbrinson.github.io/teach/534/Lectures/Week-2.2---The-Science-of-Storytelling</link>
-    <guid>https://peterbrinson.github.io/teach/534/Lectures/Week-2.2---The-Science-of-Storytelling</guid>
-    <description><![CDATA[ The Science of Storytelling by Will Storr Partial Knowledge Partial Knowledge Invites Engaging Questions 1.2 In addition to unexpected change, storytellers excite human’s thirst for knowledge by creating worlds but stopping short of telling the readers everything about them. ]]></description>
-    <pubDate>Wed, 02 Sep 2026 20:16:06 GMT</pubDate>
   </item>
     </channel>
   </rss>
