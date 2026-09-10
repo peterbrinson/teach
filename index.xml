@@ -6,11 +6,35 @@
       <description>Last 10 notes on PB Teach</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Assignments</title>
+    <link>https://peterbrinson.github.io/teach/389/Assignments/Assignments-and-Readings</link>
+    <guid>https://peterbrinson.github.io/teach/389/Assignments/Assignments-and-Readings</guid>
+    <description><![CDATA[ Assignments and Readings DueAssignment or readingTypeTeamEngine1.2A Dark RoomPlay / read——1.2Student Details formForm / setupSolo—1.2CTIN 389 — The Other Shoe MilestoneMilestoneSoloUnity URP2.1The Other Shoe — Expectation and PayoffProjectSoloUnity URP2.2Tutorial 2020 — Your First Persistent Workspa... ]]></description>
+    <pubDate>Thu, 10 Sep 2026 02:34:52 GMT</pubDate>
+  </item><item>
     <title>W05 — A Quandary</title>
     <link>https://peterbrinson.github.io/teach/389/Assignments/W05-Assignment---A-Quandary</link>
     <guid>https://peterbrinson.github.io/teach/389/Assignments/W05-Assignment---A-Quandary</guid>
-    <description><![CDATA[ Introduced in Week 4.1 - Quandaries. Due: Tuesday, September 22 Engine: Unity Create a game in two halves, each played in separate spaces. ]]></description>
-    <pubDate>Thu, 10 Sep 2026 02:33:37 GMT</pubDate>
+    <description><![CDATA[ Introduced in Week 4.1 - Quandaries. Due: Tuesday, September 22 Team: Solo Engine: Unity Create a game in two halves, each played in separate spaces. ]]></description>
+    <pubDate>Thu, 10 Sep 2026 02:34:52 GMT</pubDate>
+  </item><item>
+    <title>Week 1.1 — Course Introduction</title>
+    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-1.1---Course-Introduction</link>
+    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-1.1---Course-Introduction</guid>
+    <description><![CDATA[ On This Page Course overview Introductions Course structure and projects Resources From pattern to prediction Assignment Share examples of playful things in this world, that aren’t games. ]]></description>
+    <pubDate>Thu, 10 Sep 2026 02:34:52 GMT</pubDate>
+  </item><item>
+    <title>Week 4.1 — Quandaries</title>
+    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-4.1---Quandaries</link>
+    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-4.1---Quandaries</guid>
+    <description><![CDATA[ Goals, rewards, and punishments — why we do the things we do, and how games turn a choice into a dilemma. ]]></description>
+    <pubDate>Thu, 10 Sep 2026 02:34:52 GMT</pubDate>
+  </item><item>
+    <title>CTIN 389</title>
+    <link>https://peterbrinson.github.io/teach/389/</link>
+    <guid>https://peterbrinson.github.io/teach/389/</guid>
+    <description><![CDATA[ Units: 4 Fall 2026 Section: Tue, Thu, 4:00–5:50 pm Room: SCI 113 Go To Schedule Instructor: Peter Brinson Student Assistant: Luke Pannell Course Description This course teaches fundamental skills of digital game development alongside the basic principles of level design. ]]></description>
+    <pubDate>Thu, 10 Sep 2026 02:34:52 GMT</pubDate>
   </item><item>
     <title>Affordances of Movement</title>
     <link>https://peterbrinson.github.io/teach/389/Concepts/Affordances-of-Movement</link>
@@ -41,30 +65,6 @@
     <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-3.2---Constraints-(and-Splines)</guid>
     <description><![CDATA[  Affordances of Movement How it feels to traverse the world. ]]></description>
     <pubDate>Thu, 10 Sep 2026 02:30:02 GMT</pubDate>
-  </item><item>
-    <title>Week 4.1 — Quandaries</title>
-    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-4.1---Quandaries</link>
-    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-4.1---Quandaries</guid>
-    <description><![CDATA[ Goals, rewards, and punishments — why we do the things we do, and how games turn a choice into a dilemma. ]]></description>
-    <pubDate>Thu, 10 Sep 2026 02:30:02 GMT</pubDate>
-  </item><item>
-    <title>Assignments</title>
-    <link>https://peterbrinson.github.io/teach/389/Assignments/Assignments-and-Readings</link>
-    <guid>https://peterbrinson.github.io/teach/389/Assignments/Assignments-and-Readings</guid>
-    <description><![CDATA[ Assignments and Readings DueAssignment or readingTypeTeamEngine1.2A Dark RoomPlay / read——1.2Student Details formForm / setupSolo—1.2CTIN 389 — The Other Shoe MilestoneMilestoneSoloUnity URP2.1The Other Shoe — Expectation and PayoffProjectSoloUnity URP2.2Tutorial 2020 — Your First Persistent Workspa... ]]></description>
-    <pubDate>Thu, 10 Sep 2026 02:25:42 GMT</pubDate>
-  </item><item>
-    <title>W04 — The Joy of Constraint</title>
-    <link>https://peterbrinson.github.io/teach/389/Assignments/W04-Assignment---The-Joy-of-Constraint</link>
-    <guid>https://peterbrinson.github.io/teach/389/Assignments/W04-Assignment---The-Joy-of-Constraint</guid>
-    <description><![CDATA[ Introduced in Week 3.2 - Constraints (and Splines) Due: Tuesday, September 15 Perspective: 3D Engine: Unity Create a 3D level in which the player’s movement is constrained. ]]></description>
-    <pubDate>Thu, 10 Sep 2026 02:25:42 GMT</pubDate>
-  </item><item>
-    <title>Choices — Risk Reward, Builds, Progression, Emotional Weight</title>
-    <link>https://peterbrinson.github.io/teach/389/Concepts/Choices-%E2%80%94-Risk-Reward,-Builds,-Progression,-Emotional-Weight</link>
-    <guid>https://peterbrinson.github.io/teach/389/Concepts/Choices-%E2%80%94-Risk-Reward,-Builds,-Progression,-Emotional-Weight</guid>
-    <description><![CDATA[ Four common shapes for meaningful choice in games: Risk and reward — two paths of unequal challenge and outcome. ]]></description>
-    <pubDate>Thu, 10 Sep 2026 02:25:42 GMT</pubDate>
   </item>
     </channel>
   </rss>
