@@ -6,65 +6,65 @@
       <description>Last 10 notes on PB Teach</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>Study — Movement and Speed</title>
-    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-4.1---Movement-and-Speed</link>
-    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-4.1---Movement-and-Speed</guid>
-    <description><![CDATA[ How it feels to traverse the world — constrained movement, controlled perspective, and the AI that drives your opponents. ]]></description>
-    <pubDate>Thu, 10 Sep 2026 01:59:13 GMT</pubDate>
+    <title>Week 3.2 — Constraints (and Splines)</title>
+    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-3.2---Constraints-(and-Splines)</link>
+    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-3.2---Constraints-(and-Splines)</guid>
+    <description><![CDATA[  Affordances of Movement How it feels to traverse the world. ]]></description>
+    <pubDate>Thu, 10 Sep 2026 02:24:52 GMT</pubDate>
   </item><item>
-    <title>Week 5.1 — Quandaries</title>
-    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-4.1---Quandries</link>
-    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-4.1---Quandries</guid>
+    <title>W04 — The Joy of Constraint</title>
+    <link>https://peterbrinson.github.io/teach/389/Assignments/W04-Assignment---The-Joy-of-Constraint</link>
+    <guid>https://peterbrinson.github.io/teach/389/Assignments/W04-Assignment---The-Joy-of-Constraint</guid>
+    <description><![CDATA[ Introduced in Week 3.2 - Constraints (and Splines) Due: Tuesday, September 15 Perspective: 3D Engine: Unity Create a 3D level in which the player’s movement is constrained. ]]></description>
+    <pubDate>Thu, 10 Sep 2026 02:24:49 GMT</pubDate>
+  </item><item>
+    <title>Week 4.1 — Quandaries</title>
+    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-4.1---Quandaries</link>
+    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-4.1---Quandaries</guid>
     <description><![CDATA[ Goals, rewards, and punishments — why we do the things we do, and how games turn a choice into a dilemma. ]]></description>
-    <pubDate>Thu, 10 Sep 2026 01:58:47 GMT</pubDate>
+    <pubDate>Thu, 10 Sep 2026 02:02:26 GMT</pubDate>
   </item><item>
-    <title>Week 3.2 — Workspaces and Splines</title>
-    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-3.2---Splines</link>
-    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-3.2---Splines</guid>
-    <description><![CDATA[ What Is a Spline? A spline is a mathematically defined curve. ]]></description>
-    <pubDate>Thu, 10 Sep 2026 01:58:46 GMT</pubDate>
+    <title>Assignments</title>
+    <link>https://peterbrinson.github.io/teach/389/Assignments/Assignments-and-Readings</link>
+    <guid>https://peterbrinson.github.io/teach/389/Assignments/Assignments-and-Readings</guid>
+    <description><![CDATA[ Assignments and Readings DueAssignment or readingTypeTeamEngine1.2A Dark RoomPlay / read——1.2Student Details formForm / setupSolo—1.2CTIN 389 — The Other Shoe MilestoneMilestoneSoloUnity URP2.1The Other Shoe — Expectation and PayoffProjectSoloUnity URP2.2Tutorial 2020 — Your First Persistent Workspa... ]]></description>
+    <pubDate>Thu, 10 Sep 2026 02:00:06 GMT</pubDate>
   </item><item>
     <title>W05 — A Difficult Loss</title>
     <link>https://peterbrinson.github.io/teach/389/Assignments/W05-Assignment---A-Difficult-Loss-(Quandary)</link>
     <guid>https://peterbrinson.github.io/teach/389/Assignments/W05-Assignment---A-Difficult-Loss-(Quandary)</guid>
-    <description><![CDATA[ Introduced in Week 4.1 - Quandries. Due: Tuesday, September 22 Engine: Unity Create a game in two halves, each played in its own level. ]]></description>
-    <pubDate>Thu, 10 Sep 2026 01:29:28 GMT</pubDate>
+    <description><![CDATA[ Introduced in Week 4.1 - Quandaries. Due: Tuesday, September 22 Engine: Unity Create a game in two halves, each played in its own level. ]]></description>
+    <pubDate>Thu, 10 Sep 2026 02:00:06 GMT</pubDate>
   </item><item>
-    <title>Week 4.1 — Animation and Assets</title>
-    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-4.2---Animation-and-Assets</link>
-    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-4.2---Animation-and-Assets</guid>
-    <description><![CDATA[ Importing and controlling animations in Unity, and a field guide to finding game assets you can actually use. ]]></description>
-    <pubDate>Thu, 10 Sep 2026 01:12:10 GMT</pubDate>
+    <title>Affordances of Movement</title>
+    <link>https://peterbrinson.github.io/teach/389/Concepts/Affordances-of-Movement</link>
+    <guid>https://peterbrinson.github.io/teach/389/Concepts/Affordances-of-Movement</guid>
+    <description><![CDATA[ How it feels to traverse the world. ]]></description>
+    <pubDate>Thu, 10 Sep 2026 02:00:06 GMT</pubDate>
   </item><item>
-    <title>Week 3.1 — AI Workshop 1: Persistent Workspaces</title>
-    <link>https://peterbrinson.github.io/teach/534/In-Class/534-In-Class-Week-3.1-AI-Workshop-1</link>
-    <guid>https://peterbrinson.github.io/teach/534/In-Class/534-In-Class-Week-3.1-AI-Workshop-1</guid>
-    <description><![CDATA[ AI Workshop 1 — Persistent Workspaces We will use Tutorial 2020 or Tutorial 2022 to turn Anthony and Deloris’s messy PHO game-project into a persistent workspace. ]]></description>
-    <pubDate>Tue, 08 Sep 2026 16:55:31 GMT</pubDate>
+    <title>Choices — Risk Reward, Builds, Progression, Emotional Weight</title>
+    <link>https://peterbrinson.github.io/teach/389/Concepts/Choices-%E2%80%94-Risk-Reward,-Builds,-Progression,-Emotional-Weight</link>
+    <guid>https://peterbrinson.github.io/teach/389/Concepts/Choices-%E2%80%94-Risk-Reward,-Builds,-Progression,-Emotional-Weight</guid>
+    <description><![CDATA[ Four common shapes for meaningful choice in games: Risk and reward — two paths of unequal challenge and outcome. ]]></description>
+    <pubDate>Thu, 10 Sep 2026 02:00:06 GMT</pubDate>
   </item><item>
-    <title>CTIN 389</title>
-    <link>https://peterbrinson.github.io/teach/389/</link>
-    <guid>https://peterbrinson.github.io/teach/389/</guid>
-    <description><![CDATA[ Units: 4 Fall 2026 Section: Tue, Thu, 4:00–5:50 pm Room: SCI 113 Go To Schedule Instructor: Peter Brinson Student Assistant: Luke Pannell Course Description This course teaches fundamental skills of digital game development alongside the basic principles of level design. ]]></description>
-    <pubDate>Mon, 07 Sep 2026 19:58:02 GMT</pubDate>
+    <title>Constrained Movement</title>
+    <link>https://peterbrinson.github.io/teach/389/Concepts/Constrained-Movement</link>
+    <guid>https://peterbrinson.github.io/teach/389/Concepts/Constrained-Movement</guid>
+    <description><![CDATA[ Racing games, rail shooters, dark rides, minecart sections — all use vehicular conventions to lock the player onto a track. ]]></description>
+    <pubDate>Thu, 10 Sep 2026 02:00:06 GMT</pubDate>
   </item><item>
-    <title>Week 2.1 — Keys and Doors</title>
-    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-2.1---Keys-and-Doors</link>
-    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-2.1---Keys-and-Doors</guid>
-    <description><![CDATA[ The Keys, the Doors, and All Those Problems Playtesting — The Other Shoe Peer feedback session on The Other Shoe — Expectation and Payoff. ]]></description>
-    <pubDate>Mon, 07 Sep 2026 17:44:03 GMT</pubDate>
+    <title>Constraints Create Challenge</title>
+    <link>https://peterbrinson.github.io/teach/389/Concepts/Constraints-Create-Challenge</link>
+    <guid>https://peterbrinson.github.io/teach/389/Concepts/Constraints-Create-Challenge</guid>
+    <description><![CDATA[ Another parable: golf is a game with the goal of putting a ball in a hole. That would be easy and boring if you could just pick it up and drop it in. ]]></description>
+    <pubDate>Thu, 10 Sep 2026 02:00:06 GMT</pubDate>
   </item><item>
-    <title>Week x.y — The Value of Uncertainty</title>
-    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-x.y---The-Value-of-Uncertainty</link>
-    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-x.y---The-Value-of-Uncertainty</guid>
-    <description><![CDATA[ Sources The Value of Uncertainty Four Authors – philosophers and psychologist aeon.co/essays/use-uncertainty-to-leverage-the-power-of-your-predictive-brain keywords Certainty, uncertainty, volatility, surprise, explore, information, solution, control Three Stages 3 Stages Expected Uncertainty Unexpe... ]]></description>
-    <pubDate>Mon, 07 Sep 2026 17:44:03 GMT</pubDate>
-  </item><item>
-    <title>Week 2.2 — AI Workshop 1: Persistent Workspaces</title>
-    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-2.2---AI-Workshop-1</link>
-    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-2.2---AI-Workshop-1</guid>
-    <description><![CDATA[ AI Workshop 1 — Persistent Workspaces We will use Tutorial 2020 or Tutorial 2022 to turn Anthony and Deloris’s messy PHO game-project into a persistent workspace. ]]></description>
-    <pubDate>Mon, 07 Sep 2026 17:31:50 GMT</pubDate>
+    <title>Controlled Perspective</title>
+    <link>https://peterbrinson.github.io/teach/389/Concepts/Controlled-Perspective</link>
+    <guid>https://peterbrinson.github.io/teach/389/Concepts/Controlled-Perspective</guid>
+    <description><![CDATA[ Dark rides — Disney’s Haunted Mansion, classic Pirates of the Caribbean — exploit the visitor’s constrained position to control pacing, stage surprises, and pull off visual tricks that only work from one angle: the hollow-mask illusion, infinity mirrors, Pepper’s ghost. ]]></description>
+    <pubDate>Thu, 10 Sep 2026 02:00:06 GMT</pubDate>
   </item>
     </channel>
   </rss>
