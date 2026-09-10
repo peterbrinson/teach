@@ -6,65 +6,65 @@
       <description>Last 10 notes on PB Teach</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>Week 3.2 — Constraints (and Splines)</title>
-    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-3.2---Constraints-(and-Splines)</link>
-    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-3.2---Constraints-(and-Splines)</guid>
-    <description><![CDATA[  Affordances of Movement How it feels to traverse the world. ]]></description>
-    <pubDate>Thu, 10 Sep 2026 02:24:52 GMT</pubDate>
+    <title>Assignments</title>
+    <link>https://peterbrinson.github.io/teach/389/Assignments/Assignments-and-Readings</link>
+    <guid>https://peterbrinson.github.io/teach/389/Assignments/Assignments-and-Readings</guid>
+    <description><![CDATA[ Assignments and Readings DueAssignment or readingTypeTeamEngine1.2A Dark RoomPlay / read——1.2Student Details formForm / setupSolo—1.2CTIN 389 — The Other Shoe MilestoneMilestoneSoloUnity URP2.1The Other Shoe — Expectation and PayoffProjectSoloUnity URP2.2Tutorial 2020 — Your First Persistent Workspa... ]]></description>
+    <pubDate>Thu, 10 Sep 2026 02:25:42 GMT</pubDate>
   </item><item>
     <title>W04 — The Joy of Constraint</title>
     <link>https://peterbrinson.github.io/teach/389/Assignments/W04-Assignment---The-Joy-of-Constraint</link>
     <guid>https://peterbrinson.github.io/teach/389/Assignments/W04-Assignment---The-Joy-of-Constraint</guid>
     <description><![CDATA[ Introduced in Week 3.2 - Constraints (and Splines) Due: Tuesday, September 15 Perspective: 3D Engine: Unity Create a 3D level in which the player’s movement is constrained. ]]></description>
-    <pubDate>Thu, 10 Sep 2026 02:24:49 GMT</pubDate>
-  </item><item>
-    <title>Week 4.1 — Quandaries</title>
-    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-4.1---Quandaries</link>
-    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-4.1---Quandaries</guid>
-    <description><![CDATA[ Goals, rewards, and punishments — why we do the things we do, and how games turn a choice into a dilemma. ]]></description>
-    <pubDate>Thu, 10 Sep 2026 02:02:26 GMT</pubDate>
-  </item><item>
-    <title>Assignments</title>
-    <link>https://peterbrinson.github.io/teach/389/Assignments/Assignments-and-Readings</link>
-    <guid>https://peterbrinson.github.io/teach/389/Assignments/Assignments-and-Readings</guid>
-    <description><![CDATA[ Assignments and Readings DueAssignment or readingTypeTeamEngine1.2A Dark RoomPlay / read——1.2Student Details formForm / setupSolo—1.2CTIN 389 — The Other Shoe MilestoneMilestoneSoloUnity URP2.1The Other Shoe — Expectation and PayoffProjectSoloUnity URP2.2Tutorial 2020 — Your First Persistent Workspa... ]]></description>
-    <pubDate>Thu, 10 Sep 2026 02:00:06 GMT</pubDate>
+    <pubDate>Thu, 10 Sep 2026 02:25:42 GMT</pubDate>
   </item><item>
     <title>W05 — A Difficult Loss</title>
     <link>https://peterbrinson.github.io/teach/389/Assignments/W05-Assignment---A-Difficult-Loss-(Quandary)</link>
     <guid>https://peterbrinson.github.io/teach/389/Assignments/W05-Assignment---A-Difficult-Loss-(Quandary)</guid>
     <description><![CDATA[ Introduced in Week 4.1 - Quandaries. Due: Tuesday, September 22 Engine: Unity Create a game in two halves, each played in its own level. ]]></description>
-    <pubDate>Thu, 10 Sep 2026 02:00:06 GMT</pubDate>
-  </item><item>
-    <title>Affordances of Movement</title>
-    <link>https://peterbrinson.github.io/teach/389/Concepts/Affordances-of-Movement</link>
-    <guid>https://peterbrinson.github.io/teach/389/Concepts/Affordances-of-Movement</guid>
-    <description><![CDATA[ How it feels to traverse the world. ]]></description>
-    <pubDate>Thu, 10 Sep 2026 02:00:06 GMT</pubDate>
+    <pubDate>Thu, 10 Sep 2026 02:25:42 GMT</pubDate>
   </item><item>
     <title>Choices — Risk Reward, Builds, Progression, Emotional Weight</title>
     <link>https://peterbrinson.github.io/teach/389/Concepts/Choices-%E2%80%94-Risk-Reward,-Builds,-Progression,-Emotional-Weight</link>
     <guid>https://peterbrinson.github.io/teach/389/Concepts/Choices-%E2%80%94-Risk-Reward,-Builds,-Progression,-Emotional-Weight</guid>
     <description><![CDATA[ Four common shapes for meaningful choice in games: Risk and reward — two paths of unequal challenge and outcome. ]]></description>
-    <pubDate>Thu, 10 Sep 2026 02:00:06 GMT</pubDate>
+    <pubDate>Thu, 10 Sep 2026 02:25:42 GMT</pubDate>
   </item><item>
-    <title>Constrained Movement</title>
-    <link>https://peterbrinson.github.io/teach/389/Concepts/Constrained-Movement</link>
-    <guid>https://peterbrinson.github.io/teach/389/Concepts/Constrained-Movement</guid>
-    <description><![CDATA[ Racing games, rail shooters, dark rides, minecart sections — all use vehicular conventions to lock the player onto a track. ]]></description>
-    <pubDate>Thu, 10 Sep 2026 02:00:06 GMT</pubDate>
+    <title>Designing Interesting Choices</title>
+    <link>https://peterbrinson.github.io/teach/389/Concepts/Designing-Interesting-Choices</link>
+    <guid>https://peterbrinson.github.io/teach/389/Concepts/Designing-Interesting-Choices</guid>
+    <description><![CDATA[ From Caleb Compton’s essay Designing Interesting Choices in Games (and when not to). ]]></description>
+    <pubDate>Thu, 10 Sep 2026 02:25:42 GMT</pubDate>
   </item><item>
-    <title>Constraints Create Challenge</title>
-    <link>https://peterbrinson.github.io/teach/389/Concepts/Constraints-Create-Challenge</link>
-    <guid>https://peterbrinson.github.io/teach/389/Concepts/Constraints-Create-Challenge</guid>
-    <description><![CDATA[ Another parable: golf is a game with the goal of putting a ball in a hole. That would be easy and boring if you could just pick it up and drop it in. ]]></description>
-    <pubDate>Thu, 10 Sep 2026 02:00:06 GMT</pubDate>
+    <title>Prisoner&#039;s Dilemma in Games</title>
+    <link>https://peterbrinson.github.io/teach/389/Concepts/Prisoner's-Dilemma-in-Games</link>
+    <guid>https://peterbrinson.github.io/teach/389/Concepts/Prisoner's-Dilemma-in-Games</guid>
+    <description><![CDATA[ Games can use social pressure and game theory to manufacture difficult choices, especially when other players are involved. ]]></description>
+    <pubDate>Thu, 10 Sep 2026 02:25:42 GMT</pubDate>
   </item><item>
-    <title>Controlled Perspective</title>
-    <link>https://peterbrinson.github.io/teach/389/Concepts/Controlled-Perspective</link>
-    <guid>https://peterbrinson.github.io/teach/389/Concepts/Controlled-Perspective</guid>
-    <description><![CDATA[ Dark rides — Disney’s Haunted Mansion, classic Pirates of the Caribbean — exploit the visitor’s constrained position to control pacing, stage surprises, and pull off visual tricks that only work from one angle: the hollow-mask illusion, infinity mirrors, Pepper’s ghost. ]]></description>
-    <pubDate>Thu, 10 Sep 2026 02:00:06 GMT</pubDate>
+    <title>Sunk Cost Fallacy</title>
+    <link>https://peterbrinson.github.io/teach/389/Concepts/Sunk-Cost-Fallacy</link>
+    <guid>https://peterbrinson.github.io/teach/389/Concepts/Sunk-Cost-Fallacy</guid>
+    <description><![CDATA[ The tendency to keep going down a path you’ve already invested in, even when the objectively better move is to abandon it and start over. ]]></description>
+    <pubDate>Thu, 10 Sep 2026 02:25:42 GMT</pubDate>
+  </item><item>
+    <title>Week 1.1 — Course Introduction</title>
+    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-1.1---Course-Introduction</link>
+    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-1.1---Course-Introduction</guid>
+    <description><![CDATA[ On This Page Course overview Introductions Course structure and projects Resources From pattern to prediction Assignment Share examples of playful things in this world, that aren’t games. ]]></description>
+    <pubDate>Thu, 10 Sep 2026 02:25:42 GMT</pubDate>
+  </item><item>
+    <title>Week 3.2 — Constraints (and Splines)</title>
+    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-3.2---Constraints-(and-Splines)</link>
+    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-3.2---Constraints-(and-Splines)</guid>
+    <description><![CDATA[  Affordances of Movement How it feels to traverse the world. ]]></description>
+    <pubDate>Thu, 10 Sep 2026 02:25:42 GMT</pubDate>
+  </item><item>
+    <title>Week 4.1 — Quandaries</title>
+    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-4.1---Quandaries</link>
+    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-4.1---Quandaries</guid>
+    <description><![CDATA[ Goals, rewards, and punishments — why we do the things we do, and how games turn a choice into a dilemma. ]]></description>
+    <pubDate>Thu, 10 Sep 2026 02:25:42 GMT</pubDate>
   </item>
     </channel>
   </rss>
