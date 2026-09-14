@@ -6,6 +6,18 @@
       <description>Last 10 notes on PB Teach</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Week 4.1 — Quandaries</title>
+    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-4.1---Quandaries</link>
+    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-4.1---Quandaries</guid>
+    <description><![CDATA[  Goals and Rewards Why do we do the things we do? Let’s start with a confession about decision-making. ]]></description>
+    <pubDate>Mon, 14 Sep 2026 18:54:32 GMT</pubDate>
+  </item><item>
+    <title>CTIN 389</title>
+    <link>https://peterbrinson.github.io/teach/389/</link>
+    <guid>https://peterbrinson.github.io/teach/389/</guid>
+    <description><![CDATA[ Units: 4 Fall 2026 Section: Tue, Thu, 4:00–5:50 pm Room: SCI 113 Go To Schedule Instructor: Peter Brinson Student Assistant: Luke Pannell Course Description This course teaches fundamental skills of digital game development alongside the basic principles of level design. ]]></description>
+    <pubDate>Mon, 14 Sep 2026 18:54:32 GMT</pubDate>
+  </item><item>
     <title>Assignments</title>
     <link>https://peterbrinson.github.io/teach/389/Assignments/Assignments-and-Readings</link>
     <guid>https://peterbrinson.github.io/teach/389/Assignments/Assignments-and-Readings</guid>
@@ -18,12 +30,6 @@
     <description><![CDATA[ Introduced in Week 3.2 - Constraints (and Splines) Due: Tuesday, September 15 Team: Solo Perspective: 3D Engine: Unity Create a 3D level in which the player’s movement is constrained. ]]></description>
     <pubDate>Sat, 12 Sep 2026 01:12:53 GMT</pubDate>
   </item><item>
-    <title>Week 4.1 — Quandaries</title>
-    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-4.1---Quandaries</link>
-    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-4.1---Quandaries</guid>
-    <description><![CDATA[  ## Perforce on Thursday uscedu.sharepoint.com/sites/SCAknowledgebase/SitePages/Perforce-GettingStarted.aspx Goals and Rewards Why do we do the things we do? Let’s start with a confession about decision-making. ]]></description>
-    <pubDate>Fri, 11 Sep 2026 21:46:07 GMT</pubDate>
-  </item><item>
     <title>W05 — A Quandary</title>
     <link>https://peterbrinson.github.io/teach/389/Assignments/W05-Assignment---A-Quandary</link>
     <guid>https://peterbrinson.github.io/teach/389/Assignments/W05-Assignment---A-Quandary</guid>
@@ -35,12 +41,6 @@
     <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-1.1---Course-Introduction</guid>
     <description><![CDATA[ On This Page Course overview Introductions Course structure and projects Resources From pattern to prediction Assignment Share examples of playful things in this world, that aren’t games. ]]></description>
     <pubDate>Thu, 10 Sep 2026 02:45:11 GMT</pubDate>
-  </item><item>
-    <title>CTIN 389</title>
-    <link>https://peterbrinson.github.io/teach/389/</link>
-    <guid>https://peterbrinson.github.io/teach/389/</guid>
-    <description><![CDATA[ Units: 4 Fall 2026 Section: Tue, Thu, 4:00–5:50 pm Room: SCI 113 Go To Schedule Instructor: Peter Brinson Student Assistant: Luke Pannell Course Description This course teaches fundamental skills of digital game development alongside the basic principles of level design. ]]></description>
-    <pubDate>Thu, 10 Sep 2026 02:34:52 GMT</pubDate>
   </item><item>
     <title>Affordances of Movement</title>
     <link>https://peterbrinson.github.io/teach/389/Concepts/Affordances-of-Movement</link>
