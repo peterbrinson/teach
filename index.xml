@@ -6,28 +6,34 @@
       <description>Last 10 notes on PB Teach</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>CTIN 389</title>
+    <link>https://peterbrinson.github.io/teach/389/</link>
+    <guid>https://peterbrinson.github.io/teach/389/</guid>
+    <description><![CDATA[ Units: 4 Fall 2026 Section: Tue, Thu, 4:00–5:50 pm Room: SCI 113 Go To Schedule Instructor: Peter Brinson Student Assistant: Luke Pannell Course Description This course teaches fundamental skills of digital game development alongside the basic principles of level design. ]]></description>
+    <pubDate>Mon, 21 Sep 2026 22:41:17 GMT</pubDate>
+  </item><item>
+    <title>CTIN 534</title>
+    <link>https://peterbrinson.github.io/teach/534/</link>
+    <guid>https://peterbrinson.github.io/teach/534/</guid>
+    <description><![CDATA[ Units: 4 Fall 2026 Breakfast Section: Tue, Thu, 10:00 am–12:20 pm Lunch Section: Tue, Thu, 1:00–3:20 pm Go To Schedule Instructor: Peter Brinson Student Assistant: Yinuo Chen Student Assistant: George Zou Course Description Is Life A Story or a Game? We will study and practice how narrative video ga... ]]></description>
+    <pubDate>Mon, 21 Sep 2026 22:41:17 GMT</pubDate>
+  </item><item>
+    <title>AI Talk</title>
+    <link>https://peterbrinson.github.io/teach/AI/AI-Talk</link>
+    <guid>https://peterbrinson.github.io/teach/AI/AI-Talk</guid>
+    <description><![CDATA[ in Notion. ]]></description>
+    <pubDate>Mon, 21 Sep 2026 22:41:17 GMT</pubDate>
+  </item><item>
     <title>Week 6.2 — AI Workshop 2: Your Own Knowledge Base</title>
     <link>https://peterbrinson.github.io/teach/389/Lectures/Week-6.2---AI-Workshop-2</link>
     <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-6.2---AI-Workshop-2</guid>
     <description><![CDATA[ AI Workshop 2 — Your Own Knowledge Base In Workshop 1 we turned Anthony and Deloris’s messy PHO project into a persistent workspace. ]]></description>
     <pubDate>Sun, 20 Sep 2026 20:17:56 GMT</pubDate>
   </item><item>
-    <title>CTIN 389</title>
-    <link>https://peterbrinson.github.io/teach/389/</link>
-    <guid>https://peterbrinson.github.io/teach/389/</guid>
-    <description><![CDATA[ Units: 4 Fall 2026 Section: Tue, Thu, 4:00–5:50 pm Room: SCI 113 Go To Schedule Instructor: Peter Brinson Student Assistant: Luke Pannell Course Description This course teaches fundamental skills of digital game development alongside the basic principles of level design. ]]></description>
-    <pubDate>Sun, 20 Sep 2026 20:17:56 GMT</pubDate>
-  </item><item>
     <title>Due Week 5.2 — Bring Your Own Material</title>
     <link>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Week-5.2</link>
     <guid>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Week-5.2</guid>
     <description><![CDATA[ In class we’ll work through Your First Queryable Knowledge Base together. 1. Have your agent working Ideally, you’ll use Codex on your USC account. ]]></description>
-    <pubDate>Sun, 20 Sep 2026 20:12:42 GMT</pubDate>
-  </item><item>
-    <title>CTIN 534</title>
-    <link>https://peterbrinson.github.io/teach/534/</link>
-    <guid>https://peterbrinson.github.io/teach/534/</guid>
-    <description><![CDATA[ Units: 4 Fall 2026 Breakfast Section: Tue, Thu, 10:00 am–12:20 pm Lunch Section: Tue, Thu, 1:00–3:20 pm Go To Schedule Instructor: Peter Brinson Student Assistant: Yinuo Chen Student Assistant: George Zou Course Description Is Life A Story or a Game? We will study and practice how narrative video ga... ]]></description>
     <pubDate>Sun, 20 Sep 2026 20:12:42 GMT</pubDate>
   </item><item>
     <title>Week 5.2 - Labyrinths</title>
@@ -39,7 +45,7 @@
     <title>Week 5.1 - Modernism and the Avant Garde</title>
     <link>https://peterbrinson.github.io/teach/534/Lectures/Week-5.1---Modernism-and-the-Avant-Garde</link>
     <guid>https://peterbrinson.github.io/teach/534/Lectures/Week-5.1---Modernism-and-the-Avant-Garde</guid>
-    <description><![CDATA[  Time to break away from tradition, from mainstream storytelling. ]]></description>
+    <description><![CDATA[  ![[week5.1-the-3-is.jpg]] *The 3 i&#039;s — Inventive, I Just Like It, It&#039;s Done.* Time to break away from tradition, from mainstream storytelling. ]]></description>
     <pubDate>Sun, 20 Sep 2026 18:23:57 GMT</pubDate>
   </item><item>
     <title>Week 5.1 — Lost Woods</title>
@@ -58,12 +64,6 @@
     <link>https://peterbrinson.github.io/teach/389/Assignments/W05-Assignment---A-Quandary</link>
     <guid>https://peterbrinson.github.io/teach/389/Assignments/W05-Assignment---A-Quandary</guid>
     <description><![CDATA[ Introduced in Week 4.1 - Quandaries. Due: Tuesday, September 22 Team: Solo Engine: Unity Create a game in two halves, each played in separate spaces. ]]></description>
-    <pubDate>Fri, 18 Sep 2026 16:12:20 GMT</pubDate>
-  </item><item>
-    <title>W09 — Unreal Tutorial</title>
-    <link>https://peterbrinson.github.io/teach/389/Assignments/W09-Assignment---Unreal-Tutorial</link>
-    <guid>https://peterbrinson.github.io/teach/389/Assignments/W09-Assignment---Unreal-Tutorial</guid>
-    <description><![CDATA[ Introduced in Week 8.1 - Unreal Tutorial. ]]></description>
     <pubDate>Fri, 18 Sep 2026 16:12:20 GMT</pubDate>
   </item>
     </channel>
