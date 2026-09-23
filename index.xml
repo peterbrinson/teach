@@ -6,6 +6,12 @@
       <description>Last 10 notes on PB Teach</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Project 2 — The Traveler</title>
+    <link>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Project-2</link>
+    <guid>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Project-2</guid>
+    <description><![CDATA[ Situated Player Role Reading: The Traveler — World as Presence Learning Goals: Color theory and lighting; interactive storytelling; arc of experience; game engine literacy; camera principles; materials and textures; sound design; ideation, brainstorming, and prototyping; self-direction; critique. ]]></description>
+    <pubDate>Tue, 22 Sep 2026 19:16:39 GMT</pubDate>
+  </item><item>
     <title>CTIN 534</title>
     <link>https://peterbrinson.github.io/teach/534/</link>
     <guid>https://peterbrinson.github.io/teach/534/</guid>
@@ -59,12 +65,6 @@
     <guid>https://peterbrinson.github.io/teach/389/Assignments/W06-Assignment---Lost-Woods-Project</guid>
     <description><![CDATA[ Introduced in Week 5.2 - Lost Woods. Due: Tuesday, September 29 at 1:00 p.m. ]]></description>
     <pubDate>Sun, 20 Sep 2026 17:57:10 GMT</pubDate>
-  </item><item>
-    <title>W05 — A Quandary</title>
-    <link>https://peterbrinson.github.io/teach/389/Assignments/W05-Assignment---A-Quandary</link>
-    <guid>https://peterbrinson.github.io/teach/389/Assignments/W05-Assignment---A-Quandary</guid>
-    <description><![CDATA[ Introduced in Week 4.1 - Quandaries. Due: Tuesday, September 22 Team: Solo Engine: Unity Create a game in two halves, each played in separate spaces. ]]></description>
-    <pubDate>Fri, 18 Sep 2026 16:12:20 GMT</pubDate>
   </item>
     </channel>
   </rss>
