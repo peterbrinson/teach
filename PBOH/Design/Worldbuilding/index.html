@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head><title>Bounded Worlds: The Playable and the Imagined</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="PB Teach"/><meta property="og:title" content="Bounded Worlds: The Playable and the Imagined"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Bounded Worlds: The Playable and the Imagined"/><meta name="twitter:description" content="1."/><meta property="og:description" content="1."/><meta property="og:image:alt" content="1."/><meta property="og:image" content="https://peterbrinson.github.io/teach/static/og-image.png"/><meta property="og:image:url" content="https://peterbrinson.github.io/teach/static/og-image.png"/><meta name="twitter:image" content="https://peterbrinson.github.io/teach/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="peterbrinson.github.io/teach"/><meta property="og:url" content="https://peterbrinson.github.io/teach/PBOH/Design/Worldbuilding/index"/><meta property="twitter:url" content="https://peterbrinson.github.io/teach/PBOH/Design/Worldbuilding/index"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="1."/><meta name="generator" content="Quartz"/><link href="../../../index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiQzpcXFVzZXJzXFxicmluc1xcRG9jdW1lbnRzXFxPYnNpZGlhblxcc2l0ZVxccXVhcnR6XFxjb21wb25lbnRzXFxzdHlsZXMiLCJzb3VyY2VzIjpbIm1lcm1haWQuaW5saW5lLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUdGO0VBQ0U7OztBQUtGO0VBQ0U7RUFDQTs7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7O0FBR0Y7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFOztBQUlGO0VBQ0U7RUFDQTtFQUNBIiwic291cmNlc0NvbnRlbnQiOlsiLmV4cGFuZC1idXR0b24ge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsb2F0OiByaWdodDtcbiAgcGFkZGluZzogMC40cmVtO1xuICBtYXJnaW46IDAuM3JlbTtcbiAgcmlnaHQ6IDA7IC8vIE5PVEU6IHJpZ2h0IHdpbGwgYmUgc2V0IGluIG1lcm1haWQuaW5saW5lLnRzXG4gIGNvbG9yOiB2YXIoLS1ncmF5KTtcbiAgYm9yZGVyLWNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICBib3JkZXI6IDFweCBzb2xpZDtcbiAgYm9yZGVyLXJhZGl1czogNXB4O1xuICBvcGFjaXR5OiAwO1xuICB0cmFuc2l0aW9uOiAwLjJzO1xuXG4gICYgPiBzdmcge1xuICAgIGZpbGw6IHZhcigtLWxpZ2h0KTtcbiAgICBmaWx0ZXI6IGNvbnRyYXN0KDAuMyk7XG4gIH1cblxuICAmOmhvdmVyIHtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgYm9yZGVyLWNvbG9yOiB2YXIoLS1zZWNvbmRhcnkpO1xuICB9XG5cbiAgJjpmb2N1cyB7XG4gICAgb3V0bGluZTogMDtcbiAgfVxufVxuXG5wcmUge1xuICAmOmhvdmVyID4gLmV4cGFuZC1idXR0b24ge1xuICAgIG9wYWNpdHk6IDE7XG4gICAgdHJhbnNpdGlvbjogMC4ycztcbiAgfVxufVxuXG4jbWVybWFpZC1jb250YWluZXIge1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIGNvbnRhaW46IGxheW91dDtcbiAgei1pbmRleDogOTk5O1xuICBsZWZ0OiAwO1xuICB0b3A6IDA7XG4gIHdpZHRoOiAxMDB2dztcbiAgaGVpZ2h0OiAxMDB2aDtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgZGlzcGxheTogbm9uZTtcbiAgYmFja2Ryb3AtZmlsdGVyOiBibHVyKDRweCk7XG4gIGJhY2tncm91bmQ6IHJnYmEoMCwgMCwgMCwgMC41KTtcblxuICAmLmFjdGl2ZSB7XG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICB9XG5cbiAgJiA+ICNtZXJtYWlkLXNwYWNlIHtcbiAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0KTtcbiAgICBib3JkZXItcmFkaXVzOiA1cHg7XG4gICAgcG9zaXRpb246IGZpeGVkO1xuICAgIHRvcDogNTAlO1xuICAgIGxlZnQ6IDUwJTtcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTAlKTtcbiAgICBoZWlnaHQ6IDgwdmg7XG4gICAgd2lkdGg6IDgwdnc7XG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcblxuICAgICYgPiAubWVybWFpZC1jb250ZW50IHtcbiAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICAgIHRyYW5zZm9ybS1vcmlnaW46IDAgMDtcbiAgICAgIHRyYW5zaXRpb246IHRyYW5zZm9ybSAwLjFzIGVhc2U7XG4gICAgICBvdmVyZmxvdzogdmlzaWJsZTtcbiAgICAgIG1pbi1oZWlnaHQ6IDIwMHB4O1xuICAgICAgbWluLXdpZHRoOiAyMDBweDtcblxuICAgICAgcHJlIHtcbiAgICAgICAgbWFyZ2luOiAwO1xuICAgICAgICBib3JkZXI6IG5vbmU7XG4gICAgICB9XG5cbiAgICAgIHN2ZyB7XG4gICAgICAgIG1heC13aWR0aDogbm9uZTtcbiAgICAgICAgaGVpZ2h0OiBhdXRvO1xuICAgICAgfVxuICAgIH1cblxuICAgICYgPiAubWVybWFpZC1jb250cm9scyB7XG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICBib3R0b206IDIwcHg7XG4gICAgICByaWdodDogMjBweDtcbiAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICBnYXA6IDhweDtcbiAgICAgIHBhZGRpbmc6IDhweDtcbiAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0KTtcbiAgICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICBib3JkZXItcmFkaXVzOiA2cHg7XG4gICAgICBib3gtc2hhZG93OiAwIDJweCA0cHggcmdiYSgwLCAwLCAwLCAwLjEpO1xuICAgICAgei1pbmRleDogMjtcblxuICAgICAgLm1lcm1haWQtY29udHJvbC1idXR0b24ge1xuICAgICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICAgICAgd2lkdGg6IDMycHg7XG4gICAgICAgIGhlaWdodDogMzJweDtcbiAgICAgICAgcGFkZGluZzogMDtcbiAgICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgICBjb2xvcjogdmFyKC0tZGFyayk7XG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICAgICBmb250LXNpemU6IDE2cHg7XG4gICAgICAgIGZvbnQtZmFtaWx5OiB2YXIoLS1ib2R5Rm9udCk7XG4gICAgICAgIHRyYW5zaXRpb246IGFsbCAwLjJzIGVhc2U7XG5cbiAgICAgICAgJjpob3ZlciB7XG4gICAgICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgICAgfVxuXG4gICAgICAgICY6YWN0aXZlIHtcbiAgICAgICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoMXB4KTtcbiAgICAgICAgfVxuXG4gICAgICAgIC8vIFN0eWxlIHRoZSByZXNldCBidXR0b24gZGlmZmVyZW50bHlcbiAgICAgICAgJjpudGgtY2hpbGQoMikge1xuICAgICAgICAgIHdpZHRoOiBhdXRvO1xuICAgICAgICAgIHBhZGRpbmc6IDAgMTJweDtcbiAgICAgICAgICBmb250LXNpemU6IDE0cHg7XG4gICAgICAgIH1cbiAgICAgIH1cbiAgICB9XG4gIH1cbn1cbiJdfQ== */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../../prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://peterbrinson.github.io/teach/index.xml"/></head><body data-slug="PBOH/Design/Worldbuilding/index"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><div class="spacer mobile-only"></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>{let rank={389:1,534:2,geidai:3,AI:4,PBOH:5},ra=rank[a.slugSegment]??99,rb=rank[b.slugSegment]??99;return ra!==rb?ra-rb:!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1}&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>{let shortNames={AI:\&quot;Tokens on the Table\&quot;,PBOH:\&quot;PB Office Hours\&quot;,Storytelling:\&quot;Storytelling\&quot;,Worldbuilding:\&quot;Worldbuilding\&quot;,_References:\&quot;References\&quot;};node.isFolder&amp;&amp;shortNames[node.slugSegment]&amp;&amp;(node.displayName=shortNames[node.slugSegment])}&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-34"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2></h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-34" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-3"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../PBOH/">Peter B's Office Hours</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../PBOH/Design/">Design</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Bounded Worlds: The Playable and the Imagined</a></div></nav><h1 class="article-title">Bounded Worlds: The Playable and the Imagined</h1></div></div><div class="popover-hint"><article class><h1 id="1-what-is-the-bounded-worlds-framework">1. What Is The Bounded Worlds Framework?<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1-what-is-the-bounded-worlds-framework" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<blockquote class="callout info" data-callout="info">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Bounded Worlds is a game design framework that foregrounds the world as a bounded space — expressive through the world's edge. </p></div>
+                  
+                </div>
+</blockquote>
+<p>Every game design project faces the same challenge: our initial ideas are too large to build.  The Bounded Worlds framework provides a direct response.  It encourages worlds that are expressive through their limits rather than their size.</p>
+<p>The Bounded Worlds framework is the worldbuilding companion to the <a href="../../../Situated-Player-Roles" class="internal alias" data-slug="Situated-Player-Roles">Situated Player Roles</a>: where the player roles turn on what the player does, Bounded Worlds turns on how the world defines its edges.</p>
+<p>Because the world has overt limits, the designer can focus on making it consistent, inhabited, and intelligible. Bounded Worlds frames (Brian Upton’s) <a href="../../../Situational-Game-Design-for-Bounded-Worlds" class="internal alias" data-slug="Situational-Game-Design-for-Bounded-Worlds">situations</a> as the essential components of worldbuilding: as the player chooses a path through them, exploration expresses their choices within constraint.</p>
+<h1 id="2-which-boundary-defines-my-world">2. Which Boundary Defines My World?<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2-which-boundary-defines-my-world" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<blockquote class="callout info" data-callout="info">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Every Bounded World has one of three Boundaries — Finite, Closed, or Threshold. </p></div>
+                  
+                </div>
+</blockquote>
+<p>There are a few ways a Bounded World can treat its edges. Some feel complete in themselves. Some present edges that can be approached but not passed. Others are structured around boundaries the player can cross.</p>
+<p><strong>For your Bounded Worlds project, your foundational decision</strong>: <em>does the world imply or provide an outside?</em><br/>
+If it doesn’t, the world is <strong>Finite</strong>. If it does, ask whether the player can reach it — an outside implied but withheld is <strong>Closed</strong>; an edge the player passes through is a <strong>Threshold</strong>.</p>
+<h2 id="finite">Finite<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#finite" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>The world presents itself as whole. The player engages entirely within what is present — there is no world outside of what’s playable.</p>
+<blockquote class="callout example is-collapsible is-collapsed" data-callout="example" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Examples </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<ul>
+<li><a href="../../../PBOH/Design/_References/Film---Balance-(1989)" class="internal alias" data-slug="PBOH/Design/_References/Film---Balance-(1989)">Balance</a> (1989) — the world is the platform and the five characters</li>
+<li><a href="../../../PBOH/Design/_References/Game---Monument-Valley" class="internal alias" data-slug="PBOH/Design/_References/Game---Monument-Valley">Monument Valley</a> (2014) — a set of micro-worlds, each small and finite</li>
+<li><a href="../../../PBOH/Design/_References/Game---Mountain" class="internal alias" data-slug="PBOH/Design/_References/Game---Mountain">Mountain</a> (2014) — you are a mountain</li>
+<li><a href="../../../PBOH/Design/_References/Game---Inscryption" class="internal alias" data-slug="PBOH/Design/_References/Game---Inscryption">Inscryption</a> (2021) — Act 1: the table, the cabin, the game</li>
+<li><a href="../../../PBOH/Design/_References/Game---12-Minutes" class="internal alias" data-slug="PBOH/Design/_References/Game---12-Minutes">12 Minutes</a> (2021) — three rooms, one looping conversation; the world is the apartment.  The world exists for 12 minutes</li>
+<li><a href="../../../PBOH/Design/_References/Game---Thomas-Was-Alone" class="internal alias" data-slug="PBOH/Design/_References/Game---Thomas-Was-Alone">Thomas Was Alone</a> (2012) — abstract rectangles in an empty field; the puzzle-space is the whole world</li>
+<li><a href="https://store.steampowered.com/app/638230/Journey/" class="external" target="_blank">Journey<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> (2012) — a single pilgrimage from desert to summit; nothing exists outside the arc</li>
+<li><a href="https://en.wikipedia.org/wiki/Tetris" class="external" target="_blank">Tetris<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> (1984) — the well and the falling shapes, a closed abstract system</li>
+<li><a href="../../../PBOH/Design/_References/Reading---Aesop's-Fables-(Aesop)" class="internal alias" data-slug="PBOH/Design/_References/Reading---Aesop's-Fables-(Aesop)">Aesop’s Fables</a> — each fable a tiny self-contained world, complete in a few lines (see <em>The Boy Who Cried Wolf</em>)</li>
+</ul>
+</div>
+</blockquote>
+<p>-A transition from Finite to Bounded:  <a href="../../../PBOH/Design/_References/Reading---Yertle-the-Turtle-(Seuss)" class="internal alias" data-slug="PBOH/Design/_References/Reading---Yertle-the-Turtle-(Seuss)">Yertle the Turtle</a> (1958) — expanding the boundary</p>
+<h2 id="closed">Closed<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#closed" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>The player can encounter the edge of the world. The boundary is found during play — the system holds the player within its limits — but cannot be passed.</p>
+<blockquote class="callout example is-collapsible is-collapsed" data-callout="example" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Examples </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Escape_room" class="external" target="_blank">Escape rooms<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> — sealed by design; the walls hold you for the duration of play</li>
+<li><a href="https://www.google.com/search?sca_esv=b2e5da9dfdb7adff&amp;rlz=1C1HKFL_enUS1217US1217&amp;sxsrf=APpeQnu5eDdC8bNazMLXcxq1bPRQY41ZnQ:1783465197703&amp;udm=2&amp;fbs=ABfTbFVyMZGZf1hfvX9uKjN_-G8c4u0nXx4bEIpwm1lnNH832SMIiTl3t-JZ4hGJOxPbHYRzcy6GgySVUpZky6o6nTl3yANz31fL3XIvRkTfoNBefg3cGlw6l4eYsWcHwcpFAwvKRuQYIHx4O8jI7q2P29S5kcU1ohbwTRhnOZ2hYPs8TPwU9KlaZERvH99w1Olcwj1Sbz1vyx3B0AnMQaaxzIr9OAIHMA&amp;q=terrarium&amp;sa=X&amp;ved=2ahUKEwju68_M1cGVAxXEplYBHfiSDXkQtKgLegQIGBAB&amp;biw=1392&amp;bih=779&amp;dpr=2" class="external" target="_blank">Terrariums<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>, zoos, prisons —  a world inside the world</li>
+<li><a href="https://en.wikipedia.org/wiki/Disneyland#/map/0" class="external" target="_blank">Disneyland<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> — the berm and landscaping hide the outside world from view; once inside, every sightline stays in-theme</li>
+<li><a href="https://en.wikipedia.org/wiki/The_Exterminating_Angel" class="external" target="_blank">The Exterminating Angel<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> (Luis Buñuel, 1962) - bourgeois characters are stuck in their own world, a house</li>
+<li><a href="../../../PBOH/Design/_References/Game---Dr-Langeskov" class="internal alias" data-slug="PBOH/Design/_References/Game---Dr-Langeskov">Dr Langeskov, The Tiger, and The Terribly Cursed Emerald: A Whirlwind Heist</a> - backstage from the real (and inaccessible) game</li>
+<li><a href="../../../PBOH/Design/_References/Game---Return-of-the-Obra-Dinn" class="internal alias" data-slug="PBOH/Design/_References/Game---Return-of-the-Obra-Dinn">Return of the Obra Dinn</a> (2018) — the ship is the playable enclosure; ports, empire, weather, and voyage exist as evidence</li>
+<li><a href="../../../PBOH/Design/_References/Game---Papers-Please" class="internal alias" data-slug="PBOH/Design/_References/Game---Papers-Please">Papers, Please</a> (2013) — the checkpoint booth holds the player while Arstotzka’s politics press in through papers, guards, news, and family consequences</li>
+<li><a href="../../../PBOH/Design/_References/Game---Tacoma" class="internal alias" data-slug="PBOH/Design/_References/Game---Tacoma">Tacoma</a> (2017) — the station is explorable, but Earth, corporate power, and the crew’s lives remain outside the accessible corridors, readable only through traces</li>
+<li><a href="../../../PBOH/Design/_References/Game---Gone-Home" class="internal alias" data-slug="PBOH/Design/_References/Game---Gone-Home">Gone Home</a> (2013) — the storm-lit house is the world; the family’s wider life is implied through rooms, objects, and absences</li>
+<li><a href="../../../PBOH/Design/_References/Game---BioShock" class="internal alias" data-slug="PBOH/Design/_References/Game---BioShock">BioShock</a> (2007) — Rapture is sealed by the ocean; the surface exists as memory, ideology, and almost-impossible escape</li>
+<li><a href="../../../PBOH/Design/_References/Film---Snowpiercer" class="internal alias" data-slug="PBOH/Design/_References/Film---Snowpiercer">Snowpiercer</a> (Bong Joon-ho, 2013) — the train holds the last of humanity; outside is death, therefore the cars cannot be left</li>
+<li><a href="https://en.wikipedia.org/wiki/Flatland" class="external" target="_blank">Flatland<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> (Edwin Abbott, 1884) — two-dimensional beings who cannot reach the third dimension they are shown</li>
+<li><a href="../../../PBOH/Design/_References/Film---The-Platform" class="internal alias" data-slug="PBOH/Design/_References/Film---The-Platform">The Platform</a> (Galder Gaztelu-Urrutia, 2019) — a vertical prison-pit; the structure holds each prisoner to their level</li>
+<li><a href="../../../PBOH/Design/_References/Film---La-Maison-en-Petits-Cubes" class="internal alias" data-slug="PBOH/Design/_References/Film---La-Maison-en-Petits-Cubes">La Maison en Petits Cubes</a> (Kunio Katō, 2008) — a whole life stacked as rooms, read by diving down through them; it would be Finite but for the moment other structures appear in the distance — an outside that plainly exists, and that he never ventures to</li>
+<li><a href="../../../PBOH/Design/_References/Game---PT" class="internal alias" data-slug="PBOH/Design/_References/Game---PT">P.T.</a> (Kojima Productions, 2014) — an L-shaped corridor that loops on itself; you walk forward but never leave</li>
+<li><a href="https://en.wikipedia.org/wiki/Slaughterhouse-Five" class="external" target="_blank">Slaughterhouse-Five<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> (Kurt Vonnegut, 1969) — Billy Pilgrim is kept in an alien zoo;</li>
+</ul>
+</div>
+</blockquote>
+<h2 id="threshold">Threshold<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#threshold" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>The player can approach and pass from one state or space into another.</p>
+<blockquote class="callout example is-collapsible is-collapsed" data-callout="example" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Examples </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<ul>
+<li><a href="../../../PBOH/Design/_References/Reading---Alice's-Adventures-in-Wonderland-(Carroll)" class="internal alias" data-slug="PBOH/Design/_References/Reading---Alice's-Adventures-in-Wonderland-(Carroll)">Alice in Wonderland</a> (Lewis Carroll, 1865) — down the rabbit-hole into a world with its own logic</li>
+<li><a href="../../../PBOH/Design/_References/Film---The-Matrix" class="internal alias" data-slug="PBOH/Design/_References/Film---The-Matrix">The Matrix</a> (Wachowski Sisters, 1999) — crossing between the simulation and the real</li>
+<li><a href="../../../PBOH/Design/_References/Film---Inception" class="internal alias" data-slug="PBOH/Design/_References/Film---Inception">Inception</a> (Christopher Nolan, 2010) — descent through nested dream layers, each a world within a world</li>
+<li><a href="../../../PBOH/Design/_References/Film---Paprika" class="internal alias" data-slug="PBOH/Design/_References/Film---Paprika">Paprika</a> (Satoshi Kon, 2006) — the boundary between dream and waking dissolves</li>
+<li><a href="../../../PBOH/Design/_References/Game---Portal" class="internal alias" data-slug="PBOH/Design/_References/Game---Portal">Portal</a> (2007) — the portal itself is the crossing: step through one space, emerge from another</li>
+<li><a href="../../../PBOH/Design/_References/Game---Psychonauts" class="internal alias" data-slug="PBOH/Design/_References/Game---Psychonauts">Psychonauts</a> (2005) — you cross from the physical camp into the interior worlds of other minds</li>
+<li><a href="../../../PBOH/Design/_References/Film---World-of-Tomorrow" class="internal alias" data-slug="PBOH/Design/_References/Film---World-of-Tomorrow">World of Tomorrow</a> (Don Hertzfeldt, 2015) — a child pulled across time into a distant, stranger future</li>
+<li><a href="../../../PBOH/Design/_References/Film---Spirited-Away" class="internal alias" data-slug="PBOH/Design/_References/Film---Spirited-Away">Spirited Away</a> (Miyazaki, 2001) — Chihiro passes through the tunnel into the spirit world, before crossing back</li>
+<li><a href="../../../PBOH/Design/_References/Reading---Piranesi-(Clarke)" class="internal alias" data-slug="PBOH/Design/_References/Reading---Piranesi-(Clarke)">Piranesi</a> (Susanna Clarke, 2020) — the labyrinthine house connects to our world through hidden ways</li>
+<li><a href="../../../PBOH/Design/_References/Film---Pan's-Labyrinth" class="internal alias" data-slug="PBOH/Design/_References/Film---Pan's-Labyrinth">Pan’s Labyrinth</a> (Guillermo del Toro, 2006) — Ofelia moves between wartime Spain and the faun’s underground kingdom</li>
+<li><a href="../../../PBOH/Design/_References/Film---Twin-Peaks" class="internal alias" data-slug="PBOH/Design/_References/Film---Twin-Peaks">Twin Peaks</a> (1990–1991, 2017) — the town opens onto the Red Room, another order of reality</li>
+<li><a href="../../../PBOH/Design/_References/Film---Severance" class="internal alias" data-slug="PBOH/Design/_References/Film---Severance">Severance</a> (2022–) — the threshold splits work-self from home-self; crossing it changes who you are</li>
+<li><a href="../../../PBOH/Design/_References/Game---Hades" class="internal alias" data-slug="PBOH/Design/_References/Game---Hades">Hades</a> (2020) — each escape attempt crosses out of the Underworld toward the surface</li>
+<li><a href="https://en.wikipedia.org/wiki/The_Chronicles_of_Narnia" class="external" target="_blank">The Chronicles of Narnia<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> (C.S. Lewis, 1950–1956) — through the wardrobe into Narnia and back again</li>
+</ul>
+</div>
+</blockquote>
+<p>A Boundary describes the player’s experience of the edge, not a property of the world itself. Judge it from inside the player’s perspective — a locked door only reads as Closed if the player feels it as sealed — not from an outside description of “the thing” (the room, the ship, the pocket dimension). And a Boundary can change over the course of play: a game might hold Closed for its first hour, then open into a Threshold once a door finally gives way. Naming a Boundary describes the experience <em>right now</em>, not a fixed label for the whole game.</p>
+<hr/>
+<h1 id="3-what-fundamentals-will-shape-your-design">3. What Fundamentals Will Shape Your Design?<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#3-what-fundamentals-will-shape-your-design" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<blockquote class="callout info" data-callout="info">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>A handful of design concepts shape how the player meets, inhabits, and reads the world. </p></div>
+                  
+                </div>
+</blockquote>
+<h2 id="meeting-the-world"><a href="../../../PBOH/Design/Worldbuilding/The-Experience/Meeting-the-World" class="internal alias" data-slug="PBOH/Design/Worldbuilding/The-Experience/Meeting-the-World">Meeting the World</a><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#meeting-the-world" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>How a player first enters a Bounded World is itself a designed moment: reading the boundary, sensing the place, an entry that can carry awe, dread, or curiosity.</p>
+<h2 id="responsiveness"><a href="../../../PBOH/Design/Worldbuilding/The-Experience/World-Responsiveness" class="internal alias" data-slug="PBOH/Design/Worldbuilding/The-Experience/World-Responsiveness">Responsiveness</a><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#responsiveness" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>A world feels inhabited when it answers the player with memory, behavior, and consequence; it’s where the concept meets the practical work of building it.</p>
+<h2 id="teaching-the-rules"><a href="../../../PBOH/Design/Worldbuilding/The-Experience/Teaching-the-Rules-of-the-World" class="internal alias" data-slug="PBOH/Design/Worldbuilding/The-Experience/Teaching-the-Rules-of-the-World">Teaching The Rules</a><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#teaching-the-rules" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>A world that runs on invented rules has to teach them, ideally through low-stakes play rather than a tutorial that pauses to explain.</p>
+<h2 id="catalysts-of-speculation"><a href="../../../PBOH/Design/Worldbuilding/Exposition-and-Anticipation/Catalysts-of-Speculation" class="internal alias" data-slug="PBOH/Design/Worldbuilding/Exposition-and-Anticipation/Catalysts-of-Speculation">Catalysts of Speculation</a><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#catalysts-of-speculation" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>The deliberate gaps the player’s imagination fills</p>
+<h2 id="awkward-exposition"><a href="../../../PBOH/Design/Worldbuilding/Exposition-and-Anticipation/Awkward-Exposition" class="internal alias" data-slug="PBOH/Design/Worldbuilding/Exposition-and-Anticipation/Awkward-Exposition">Awkward Exposition</a><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#awkward-exposition" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Show don’t tell.</p>
+<h2 id="go-deeper-wolfs-vocabulary">Go Deeper: Wolf’s Vocabulary<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#go-deeper-wolfs-vocabulary" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Mark Wolf’s <em>Building Imaginary Worlds</em> (the <a href="../../../Mark-Wolf" class="internal alias" data-slug="Mark-Wolf">lecture</a>) frames a world through three core properties — <strong>invention</strong>, <strong>completeness</strong> (by degree), and <strong>consistency</strong> — that together earn its <strong>plausibility</strong>. The gaps left by completeness are what invite the player’s speculation. Find each page:</p>
+<ul>
+<li><a href="../../../PBOH/Design/Worldbuilding/Vocabulary/Consistency-and-Internal-Logic" class="internal alias" data-slug="PBOH/Design/Worldbuilding/Vocabulary/Consistency-and-Internal-Logic">Consistency and Internal Logic</a> — consistent, not realistic</li>
+<li><a href="../../../PBOH/Design/Worldbuilding/Vocabulary/Completeness" class="internal" data-slug="PBOH/Design/Worldbuilding/Vocabulary/Completeness">Completeness</a> — inhabited by degree; the gaps invite <a href="../../../PBOH/Design/Worldbuilding/Exposition-and-Anticipation/Catalysts-of-Speculation" class="internal alias" data-slug="PBOH/Design/Worldbuilding/Exposition-and-Anticipation/Catalysts-of-Speculation">speculation</a></li>
+<li><a href="../../../Wolf's-Taxonomy-of-Invention" class="internal alias" data-slug="Wolf's-Taxonomy-of-Invention">Wolf’s Taxonomy of Invention</a> — four steps away from the real world, deepest in <a href="../../../PBOH/Design/Worldbuilding/Vocabulary/Taxonomy-of-Invention/Cultural-Invention" class="internal alias" data-slug="PBOH/Design/Worldbuilding/Vocabulary/Taxonomy-of-Invention/Cultural-Invention">culture</a> and <a href="../../../PBOH/Design/Worldbuilding/Vocabulary/Taxonomy-of-Invention/Nature-and-Invented-Physics" class="internal alias" data-slug="PBOH/Design/Worldbuilding/Vocabulary/Taxonomy-of-Invention/Nature-and-Invented-Physics">nature</a></li>
+<li><a href="../../../PBOH/Design/Worldbuilding/Vocabulary/World-Structure---Wolf's-Eight-Elements" class="internal alias" data-slug="PBOH/Design/Worldbuilding/Vocabulary/World-Structure---Wolf's-Eight-Elements">World Structure - Wolf’s Eight Elements</a> — space, time, characters, plus five content elements</li>
+<li><a href="../../../PBOH/Design/Worldbuilding/Vocabulary/Narrative-Structure-in-Worlds" class="internal alias" data-slug="PBOH/Design/Worldbuilding/Vocabulary/Narrative-Structure-in-Worlds">Narrative Structure in Worlds</a> — stories sit on top of a world, which can afford excess over economy</li>
+<li><a href="../../../PBOH/Design/Worldbuilding/Vocabulary/Transmedia" class="internal" data-slug="PBOH/Design/Worldbuilding/Vocabulary/Transmedia">Transmedia</a> — one world across many works</li>
+</ul>
+<p>Further reading: <a href="../../../PBOH/Design/_References/Reading---Emissary's-Guide-to-Worlding-(Cheng)" class="internal alias" data-slug="PBOH/Design/_References/Reading---Emissary's-Guide-to-Worlding-(Cheng)">Emissary’s Guide to Worlding</a>.</p>
+<h1 id="4-what-suggestions-will-pboh-offer">4. What Suggestions Will PBOH Offer?<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#4-what-suggestions-will-pboh-offer" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<blockquote class="callout info" data-callout="info">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>PBOH turns your Bounded World into a build plan — a recommended order for making it in a game engine. </p></div>
+                  
+                </div>
+</blockquote>
+<p><a href="../../../Development/Tutorials---LLM" class="internal alias" data-slug="Development/Tutorials---LLM">Get started using PBOH</a> with your preferred LLM.</p></article></div><hr/><div class="page-footer"></div></div><div class="right sidebar"></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../../postscript.js" type="module" data-persist="true"></script></html>

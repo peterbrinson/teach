@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head><title>Traces</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="PB Teach"/><meta property="og:title" content="Traces"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Traces"/><meta name="twitter:description" content="Traces (also called raycasts) shoot an invisible line or shape from a start point to an end point and report what they hit along the way."/><meta property="og:description" content="Traces (also called raycasts) shoot an invisible line or shape from a start point to an end point and report what they hit along the way."/><meta property="og:image:alt" content="Traces (also called raycasts) shoot an invisible line or shape from a start point to an end point and report what they hit along the way."/><meta property="og:image" content="https://peterbrinson.github.io/teach/static/og-image.png"/><meta property="og:image:url" content="https://peterbrinson.github.io/teach/static/og-image.png"/><meta name="twitter:image" content="https://peterbrinson.github.io/teach/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="peterbrinson.github.io/teach"/><meta property="og:url" content="https://peterbrinson.github.io/teach/PBOH/Development/Wiki---Unreal/Traces"/><meta property="twitter:url" content="https://peterbrinson.github.io/teach/PBOH/Development/Wiki---Unreal/Traces"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="Traces (also called raycasts) shoot an invisible line or shape from a start point to an end point and report what they hit along the way."/><meta name="generator" content="Quartz"/><link href="../../../index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiQzpcXFVzZXJzXFxicmluc1xcRG9jdW1lbnRzXFxPYnNpZGlhblxcc2l0ZVxccXVhcnR6XFxjb21wb25lbnRzXFxzdHlsZXMiLCJzb3VyY2VzIjpbIm1lcm1haWQuaW5saW5lLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUdGO0VBQ0U7OztBQUtGO0VBQ0U7RUFDQTs7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7O0FBR0Y7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFOztBQUlGO0VBQ0U7RUFDQTtFQUNBIiwic291cmNlc0NvbnRlbnQiOlsiLmV4cGFuZC1idXR0b24ge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsb2F0OiByaWdodDtcbiAgcGFkZGluZzogMC40cmVtO1xuICBtYXJnaW46IDAuM3JlbTtcbiAgcmlnaHQ6IDA7IC8vIE5PVEU6IHJpZ2h0IHdpbGwgYmUgc2V0IGluIG1lcm1haWQuaW5saW5lLnRzXG4gIGNvbG9yOiB2YXIoLS1ncmF5KTtcbiAgYm9yZGVyLWNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICBib3JkZXI6IDFweCBzb2xpZDtcbiAgYm9yZGVyLXJhZGl1czogNXB4O1xuICBvcGFjaXR5OiAwO1xuICB0cmFuc2l0aW9uOiAwLjJzO1xuXG4gICYgPiBzdmcge1xuICAgIGZpbGw6IHZhcigtLWxpZ2h0KTtcbiAgICBmaWx0ZXI6IGNvbnRyYXN0KDAuMyk7XG4gIH1cblxuICAmOmhvdmVyIHtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgYm9yZGVyLWNvbG9yOiB2YXIoLS1zZWNvbmRhcnkpO1xuICB9XG5cbiAgJjpmb2N1cyB7XG4gICAgb3V0bGluZTogMDtcbiAgfVxufVxuXG5wcmUge1xuICAmOmhvdmVyID4gLmV4cGFuZC1idXR0b24ge1xuICAgIG9wYWNpdHk6IDE7XG4gICAgdHJhbnNpdGlvbjogMC4ycztcbiAgfVxufVxuXG4jbWVybWFpZC1jb250YWluZXIge1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIGNvbnRhaW46IGxheW91dDtcbiAgei1pbmRleDogOTk5O1xuICBsZWZ0OiAwO1xuICB0b3A6IDA7XG4gIHdpZHRoOiAxMDB2dztcbiAgaGVpZ2h0OiAxMDB2aDtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgZGlzcGxheTogbm9uZTtcbiAgYmFja2Ryb3AtZmlsdGVyOiBibHVyKDRweCk7XG4gIGJhY2tncm91bmQ6IHJnYmEoMCwgMCwgMCwgMC41KTtcblxuICAmLmFjdGl2ZSB7XG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICB9XG5cbiAgJiA+ICNtZXJtYWlkLXNwYWNlIHtcbiAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0KTtcbiAgICBib3JkZXItcmFkaXVzOiA1cHg7XG4gICAgcG9zaXRpb246IGZpeGVkO1xuICAgIHRvcDogNTAlO1xuICAgIGxlZnQ6IDUwJTtcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTAlKTtcbiAgICBoZWlnaHQ6IDgwdmg7XG4gICAgd2lkdGg6IDgwdnc7XG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcblxuICAgICYgPiAubWVybWFpZC1jb250ZW50IHtcbiAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICAgIHRyYW5zZm9ybS1vcmlnaW46IDAgMDtcbiAgICAgIHRyYW5zaXRpb246IHRyYW5zZm9ybSAwLjFzIGVhc2U7XG4gICAgICBvdmVyZmxvdzogdmlzaWJsZTtcbiAgICAgIG1pbi1oZWlnaHQ6IDIwMHB4O1xuICAgICAgbWluLXdpZHRoOiAyMDBweDtcblxuICAgICAgcHJlIHtcbiAgICAgICAgbWFyZ2luOiAwO1xuICAgICAgICBib3JkZXI6IG5vbmU7XG4gICAgICB9XG5cbiAgICAgIHN2ZyB7XG4gICAgICAgIG1heC13aWR0aDogbm9uZTtcbiAgICAgICAgaGVpZ2h0OiBhdXRvO1xuICAgICAgfVxuICAgIH1cblxuICAgICYgPiAubWVybWFpZC1jb250cm9scyB7XG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICBib3R0b206IDIwcHg7XG4gICAgICByaWdodDogMjBweDtcbiAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICBnYXA6IDhweDtcbiAgICAgIHBhZGRpbmc6IDhweDtcbiAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0KTtcbiAgICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICBib3JkZXItcmFkaXVzOiA2cHg7XG4gICAgICBib3gtc2hhZG93OiAwIDJweCA0cHggcmdiYSgwLCAwLCAwLCAwLjEpO1xuICAgICAgei1pbmRleDogMjtcblxuICAgICAgLm1lcm1haWQtY29udHJvbC1idXR0b24ge1xuICAgICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICAgICAgd2lkdGg6IDMycHg7XG4gICAgICAgIGhlaWdodDogMzJweDtcbiAgICAgICAgcGFkZGluZzogMDtcbiAgICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgICBjb2xvcjogdmFyKC0tZGFyayk7XG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICAgICBmb250LXNpemU6IDE2cHg7XG4gICAgICAgIGZvbnQtZmFtaWx5OiB2YXIoLS1ib2R5Rm9udCk7XG4gICAgICAgIHRyYW5zaXRpb246IGFsbCAwLjJzIGVhc2U7XG5cbiAgICAgICAgJjpob3ZlciB7XG4gICAgICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgICAgfVxuXG4gICAgICAgICY6YWN0aXZlIHtcbiAgICAgICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoMXB4KTtcbiAgICAgICAgfVxuXG4gICAgICAgIC8vIFN0eWxlIHRoZSByZXNldCBidXR0b24gZGlmZmVyZW50bHlcbiAgICAgICAgJjpudGgtY2hpbGQoMikge1xuICAgICAgICAgIHdpZHRoOiBhdXRvO1xuICAgICAgICAgIHBhZGRpbmc6IDAgMTJweDtcbiAgICAgICAgICBmb250LXNpemU6IDE0cHg7XG4gICAgICAgIH1cbiAgICAgIH1cbiAgICB9XG4gIH1cbn1cbiJdfQ== */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../../prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://peterbrinson.github.io/teach/index.xml"/></head><body data-slug="PBOH/Development/Wiki---Unreal/Traces"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><div class="spacer mobile-only"></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>{let rank={389:1,534:2,geidai:3,AI:4,PBOH:5},ra=rank[a.slugSegment]??99,rb=rank[b.slugSegment]??99;return ra!==rb?ra-rb:!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1}&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>{let shortNames={AI:\&quot;Tokens on the Table\&quot;,PBOH:\&quot;PB Office Hours\&quot;,Storytelling:\&quot;Storytelling\&quot;,Worldbuilding:\&quot;Worldbuilding\&quot;,_References:\&quot;References\&quot;};node.isFolder&amp;&amp;shortNames[node.slugSegment]&amp;&amp;(node.displayName=shortNames[node.slugSegment])}&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-441"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2></h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-441" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../PBOH/">Peter B's Office Hours</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../PBOH/Development/">Development</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../PBOH/Development/Wiki---Unreal/">Wiki   Unreal</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Traces</a></div></nav><h1 class="article-title">Traces</h1></div></div><article class="popover-hint"><p>Traces (also called raycasts) shoot an invisible line or shape from a start point to an end point and report what they hit along the way. They’re the standard way to detect what a player is looking at, check line of sight, simulate projectiles, or test if something is in the way.</p>
+<p>Traces are computationally cheap compared to overlap checks and work through the physics system — only objects with collision set to respond to the trace’s channel or object type will register as hits.</p>
+<h2 id="use-when">Use When<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#use-when" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>You need to detect what the player is looking at (interaction systems, crosshair targeting)</li>
+<li>You want line-of-sight checks (can enemy see the player?)</li>
+<li>You’re simulating instant-hit weapons (hitscan)</li>
+<li>You need to find the surface normal or material at a hit point</li>
+<li>You want to check if a space is clear before spawning or moving an object</li>
+</ul>
+<h2 id="how-it-works">How It Works<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#how-it-works" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="trace-types">Trace Types<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#trace-types" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Every trace has two independent choices: <strong>what shape</strong> and <strong>what to filter by</strong>.</p>
+<p><strong>Shape:</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Shape</th><th>Description</th><th>Use For</th></tr></thead><tbody><tr><td><strong>Line Trace</strong></td><td>A single ray with no width</td><td>Precise targeting, hitscan weapons</td></tr><tr><td><strong>Sphere Trace</strong></td><td>A sphere swept along the line</td><td>Forgiving aim detection, interaction systems (player doesn’t have to aim precisely)</td></tr><tr><td><strong>Box Trace</strong></td><td>A box swept along the line</td><td>Wide area checks, vision cones</td></tr><tr><td><strong>Capsule Trace</strong></td><td>A capsule swept along the line</td><td>Character-shaped clearance checks</td></tr></tbody></table></div>
+<p><img src="../../../PBOH/Development/Wiki---Unreal/attachments/traces-overview-shape-traces.webp" width="auto" height="auto" alt/></p>
+<p><strong>Filter:</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Filter</th><th>Description</th></tr></thead><tbody><tr><td><strong>By Channel</strong></td><td>Tests against a collision channel (Visibility, Camera, or custom). Objects respond based on their collision response settings. Most common choice.</td></tr><tr><td><strong>By Object</strong> (For Objects)</td><td>Tests against specific object types (WorldStatic, WorldDynamic, Pawn, etc.). Returns anything matching those types.</td></tr></tbody></table></div>
+<p>Combine these freely: Line Trace By Channel, Sphere Trace For Objects, Box Trace By Channel, etc.</p>
+<h3 id="single-vs-multi">Single vs Multi<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#single-vs-multi" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>Single Trace</strong> — returns the <strong>first</strong> hit. Output is a single Hit Result on the <strong>Out Hit</strong> pin. <strong>Return Value</strong> (bool) tells you if anything was hit.</li>
+<li><strong>Multi Trace</strong> — returns <strong>all</strong> hits as an array on <strong>Out Hits</strong>. For By Channel, returns all overlaps up to and including the first blocking hit. For By Object, returns everything matching the specified types.</li>
+</ul>
+<p>Multi traces feed naturally into <a href="../../../PBOH/Development/Wiki---Unreal/For-Each-Loop" class="internal alias" data-slug="PBOH/Development/Wiki---Unreal/For-Each-Loop">For Each Loop</a> to process each hit.</p>
+<h3 id="common-pins">Common Pins<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#common-pins" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>All trace nodes share these inputs:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Pin</th><th>Description</th></tr></thead><tbody><tr><td><strong>Start</strong></td><td>World-space start position (usually camera or actor location)</td></tr><tr><td><strong>End</strong></td><td>World-space end position (start + forward vector * distance)</td></tr><tr><td><strong>Trace Channel</strong> / <strong>Object Types</strong></td><td>What to trace against</td></tr><tr><td><strong>Trace Complex</strong></td><td>If true, traces against complex collision (mesh triangles) instead of simple collision</td></tr><tr><td><strong>Actors to Ignore</strong></td><td>Array of actors the trace should pass through</td></tr><tr><td><strong>Draw Debug Type</strong></td><td>None, For One Frame, For Duration — visualizes the trace as a red/green line</td></tr><tr><td><strong>Ignore Self</strong></td><td>Whether the trace ignores the actor running it (default: checked)</td></tr></tbody></table></div>
+<p>Shape traces add <strong>Radius</strong> (sphere), <strong>Half Size + Orientation</strong> (box), or <strong>Radius + Half Height</strong> (capsule).</p>
+<h3 id="calculating-start-and-end">Calculating Start and End<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#calculating-start-and-end" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>The typical pattern for a “look at” trace from the camera:</p>
+<ol>
+<li>Get the camera’s world location → <strong>Start</strong></li>
+<li>Get the camera’s forward vector → multiply by trace distance (e.g., 1500) → add to Start → <strong>End</strong></li>
+</ol>
+<p>In <a href="../../../PBOH/Development/Tutorials---Unreal/800---Interactive-Systems/UE-Tutorial-821---Base-Interactive-System-(WIP)" class="internal alias" data-slug="PBOH/Development/Tutorials---Unreal/800---Interactive-Systems/UE-Tutorial-821---Base-Interactive-System-(WIP)">Tutorial 821</a>, a slightly different approach is used: <strong>Convert Screen Location To World Space</strong> computes the trace from the center of the screen, and a <strong>Trace Distance</strong> variable controls the reach.</p>
+<h3 id="break-hit-result">Break Hit Result<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#break-hit-result" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>When a trace hits something, the <strong>Out Hit</strong> pin contains a <strong>Hit Result</strong> struct. Use <strong>Break Hit Result</strong> to access its fields:</p>
+<p><img src="../../../PBOH/Development/Wiki---Unreal/attachments/blueprint-hit-struct.webp" width="auto" height="auto" alt/></p>
+<p>Key fields for most use cases:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Field</th><th>What It Gives You</th></tr></thead><tbody><tr><td><strong>Hit Actor</strong></td><td>Reference to the actor that was hit — promote to variable to interact with it later</td></tr><tr><td><strong>Hit Component</strong></td><td>The specific component hit (useful if the actor has multiple collision shapes)</td></tr><tr><td><strong>Location</strong></td><td>World-space position of the hit, adjusted for trace shape</td></tr><tr><td><strong>Impact Point</strong></td><td>Exact point of contact (ignoring trace shape)</td></tr><tr><td><strong>Impact Normal</strong></td><td>Surface normal at the hit point — useful for decals, bounce directions</td></tr><tr><td><strong>Distance</strong></td><td>Distance from Start to the hit</td></tr><tr><td><strong>Phys Mat</strong></td><td>Physical Material of the surface — useful for footstep sounds, impact effects</td></tr><tr><td><strong>Hit Bone Name</strong></td><td>If hitting a Skeletal Mesh, which bone was hit</td></tr></tbody></table></div>
+<h3 id="draw-debug">Draw Debug<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#draw-debug" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Set <strong>Draw Debug Type</strong> to <strong>For One Frame</strong> or <strong>For Duration</strong> during development. The trace draws as a red line (miss) or green line (hit) with impact points marked. Set it back to <strong>None</strong> before shipping.</p>
+<h2 id="common-patterns">Common Patterns<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#common-patterns" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>Interaction system (<a href="../../../PBOH/Development/Tutorials---Unreal/800---Interactive-Systems/UE-Tutorial-821---Base-Interactive-System-(WIP)" class="internal alias" data-slug="PBOH/Development/Tutorials---Unreal/800---Interactive-Systems/UE-Tutorial-821---Base-Interactive-System-(WIP)">Tutorial 821</a> pattern):</strong>
+A Sphere Trace By Channel fires every 0.1 seconds (via <a href="../../../PBOH/Development/Wiki---Unreal/Set-Timer-by-Event" class="internal alias" data-slug="PBOH/Development/Wiki---Unreal/Set-Timer-by-Event">Set Timer by Function Name</a>) from the center of the screen. If it hits an actor with the <code>Interactable</code> tag (<strong>Actor Has Tag</strong>), store a reference to that actor and enable interaction. Sphere Trace is used instead of Line Trace so the player doesn’t have to aim precisely at small objects.</p>
+<p><strong>Camera-forward line trace (Single Line Trace guide pattern):</strong>
+Get the First Person Camera’s world location (Start) and forward vector. Multiply the forward vector by the desired trace length (e.g., 1500) and add it to Start (End). Wire the Line Trace By Channel’s Out Hit through Break Hit Result → Hit Actor → To String → <a href="../../../PBOH/Development/Wiki---Unreal/Print-String" class="internal alias" data-slug="PBOH/Development/Wiki---Unreal/Print-String">Print String</a> to verify hits.</p>
+<p><img src="../../../PBOH/Development/Wiki---Unreal/attachments/guide-how-to-2b-10.webp" width="auto" height="auto" alt/></p>
+<p><strong>Interface-based interaction (<a href="../../../PBOH/Development/Tutorials---Unreal/800---Interactive-Systems/UE-Tutorial-801---Inspect-an-Object" class="internal alias" data-slug="PBOH/Development/Tutorials---Unreal/800---Interactive-Systems/UE-Tutorial-801---Inspect-an-Object">Tutorial 801</a> pattern):</strong>
+On E key press, fire a Line Trace By Channel from the camera with a short range (<code>DistanceToRead = 200</code>). If Return Value is true, call a <a href="../../../PBOH/Development/Wiki---Unreal/Blueprint-Interface" class="internal alias" data-slug="PBOH/Development/Wiki---Unreal/Blueprint-Interface">Blueprint Interface</a> function (<code>Examine</code>) directly on the Hit Actor. No cast, no tag check — if the actor implements the interface, the function runs; if not, the call is silently ignored. Simpler and cleaner than the Tutorial 821 sphere trace approach when you don’t need continuous hover detection.</p>
+<p><strong>Multi trace with iteration:</strong>
+Use a Multi Line Trace By Channel to find all objects along a path. Wire <strong>Out Hits</strong> (array) into a <a href="../../../PBOH/Development/Wiki---Unreal/For-Each-Loop" class="internal alias" data-slug="PBOH/Development/Wiki---Unreal/For-Each-Loop">For Each Loop</a>. Inside the loop, <strong>Break Hit Result</strong> on each Array Element to process individual hits — print names, apply damage, spawn effects.</p>
+<p><img src="../../../PBOH/Development/Wiki---Unreal/attachments/guide-how-to-2b-19.webp" width="auto" height="auto" alt/></p>
+<h2 id="related">Related<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#related" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="../../../PBOH/Development/Wiki---Unreal/Collision-Components" class="internal alias" data-slug="PBOH/Development/Wiki---Unreal/Collision-Components">Collision Components</a> — traces test against collision; objects need collision enabled to be detected</li>
+<li><a href="../../../PBOH/Development/Wiki---Unreal/For-Each-Loop" class="internal alias" data-slug="PBOH/Development/Wiki---Unreal/For-Each-Loop">For Each Loop</a> — process Multi Trace hit arrays</li>
+<li><a href="../../../PBOH/Development/Wiki---Unreal/Actor-Has-Tag" class="internal alias" data-slug="PBOH/Development/Wiki---Unreal/Actor-Has-Tag">Actor Has Tag</a> — common next step after a trace hit: check if the hit actor has a specific tag</li>
+<li><a href="../../../PBOH/Development/Wiki---Unreal/Branch" class="internal" data-slug="PBOH/Development/Wiki---Unreal/Branch">Branch</a> — check Return Value (did the trace hit anything?)</li>
+<li><a href="../../../PBOH/Development/Wiki---Unreal/Blueprint-Interface" class="internal alias" data-slug="PBOH/Development/Wiki---Unreal/Blueprint-Interface">Blueprint Interface</a> — call an interface function on the Hit Actor without casting</li>
+<li><a href="../../../PBOH/Development/Wiki---Unreal/Getting-References" class="internal alias" data-slug="PBOH/Development/Wiki---Unreal/Getting-References">Getting References</a> — Hit Actor from Break Hit Result is a way to get a reference to whatever the player is looking at</li>
+</ul>
+<h2 id="source">Source<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#source" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="https://dev.epicgames.com/documentation/unreal-engine/traces-in-unreal-engine---overview?application_version=5.5" class="external" target="_blank">Traces in Unreal Engine - Overview | UE 5.5<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> — clipped 2026-04-11</li>
+<li><a href="https://dev.epicgames.com/documentation/unreal-engine/using-a-single-line-trace-raycast-by-channel-in-unreal-engine?application_version=5.5" class="external" target="_blank">Using a Single Line Trace (Raycast) by Channel | UE 5.5<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> — clipped 2026-04-11</li>
+<li><a href="../../../PBOH/Development/Tutorials---Unreal/800---Interactive-Systems/UE-Tutorial-821---Base-Interactive-System-(WIP)" class="internal alias" data-slug="PBOH/Development/Tutorials---Unreal/800---Interactive-Systems/UE-Tutorial-821---Base-Interactive-System-(WIP)">Tutorial 821</a> — Sphere Trace By Channel interaction system</li>
+</ul></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-178" aria-expanded="true"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#use-when" data-for="use-when">Use When</a></li><li class="depth-0"><a href="#how-it-works" data-for="how-it-works">How It Works</a></li><li class="depth-1"><a href="#trace-types" data-for="trace-types">Trace Types</a></li><li class="depth-1"><a href="#single-vs-multi" data-for="single-vs-multi">Single vs Multi</a></li><li class="depth-1"><a href="#common-pins" data-for="common-pins">Common Pins</a></li><li class="depth-1"><a href="#calculating-start-and-end" data-for="calculating-start-and-end">Calculating Start and End</a></li><li class="depth-1"><a href="#break-hit-result" data-for="break-hit-result">Break Hit Result</a></li><li class="depth-1"><a href="#draw-debug" data-for="draw-debug">Draw Debug</a></li><li class="depth-0"><a href="#common-patterns" data-for="common-patterns">Common Patterns</a></li><li class="depth-0"><a href="#related" data-for="related">Related</a></li><li class="depth-0"><a href="#source" data-for="source">Source</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>Backlinks</h3><ul id="list-2" class="overflow"><li><a href="../../../PBOH/Development/Wiki---Unreal/Actor-Has-Tag" class="internal">Actor Has Tag</a></li><li><a href="../../../PBOH/Development/Wiki---Unreal/Blueprint-Interface" class="internal">Blueprint Interface</a></li><li><a href="../../../PBOH/Development/Wiki---Unreal/Getting-References" class="internal">Getting References</a></li><li><a href="../../../PBOH/Development/Wiki---Unreal/OnComponentHit" class="internal">OnComponentHit</a></li><li><a href="../../../PBOH/Development/Wiki---Unreal/Physical-Material" class="internal">Physical Material</a></li><li><a href="../../../PBOH/Development/Wiki---Unreal/Set-Timer-by-Event" class="internal">Set Timer by Event</a></li><li><a href="../../../PBOH/Development/Wiki---Unreal/" class="internal">Wiki - Unreal</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../../postscript.js" type="module" data-persist="true"></script></html>

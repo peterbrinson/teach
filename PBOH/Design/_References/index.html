@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head><title>index</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="PB Teach"/><meta property="og:title" content="index"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="index"/><meta name="twitter:description" content="Game and film examples PBOH draws on when a project reminds it of an existing work."/><meta property="og:description" content="Game and film examples PBOH draws on when a project reminds it of an existing work."/><meta property="og:image:alt" content="Game and film examples PBOH draws on when a project reminds it of an existing work."/><meta property="og:image" content="https://peterbrinson.github.io/teach/static/og-image.png"/><meta property="og:image:url" content="https://peterbrinson.github.io/teach/static/og-image.png"/><meta name="twitter:image" content="https://peterbrinson.github.io/teach/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="peterbrinson.github.io/teach"/><meta property="og:url" content="https://peterbrinson.github.io/teach/PBOH/Design/_References/index"/><meta property="twitter:url" content="https://peterbrinson.github.io/teach/PBOH/Design/_References/index"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="Game and film examples PBOH draws on when a project reminds it of an existing work."/><meta name="generator" content="Quartz"/><link href="../../../index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiQzpcXFVzZXJzXFxicmluc1xcRG9jdW1lbnRzXFxPYnNpZGlhblxcc2l0ZVxccXVhcnR6XFxjb21wb25lbnRzXFxzdHlsZXMiLCJzb3VyY2VzIjpbIm1lcm1haWQuaW5saW5lLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUdGO0VBQ0U7OztBQUtGO0VBQ0U7RUFDQTs7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7O0FBR0Y7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFOztBQUlGO0VBQ0U7RUFDQTtFQUNBIiwic291cmNlc0NvbnRlbnQiOlsiLmV4cGFuZC1idXR0b24ge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsb2F0OiByaWdodDtcbiAgcGFkZGluZzogMC40cmVtO1xuICBtYXJnaW46IDAuM3JlbTtcbiAgcmlnaHQ6IDA7IC8vIE5PVEU6IHJpZ2h0IHdpbGwgYmUgc2V0IGluIG1lcm1haWQuaW5saW5lLnRzXG4gIGNvbG9yOiB2YXIoLS1ncmF5KTtcbiAgYm9yZGVyLWNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICBib3JkZXI6IDFweCBzb2xpZDtcbiAgYm9yZGVyLXJhZGl1czogNXB4O1xuICBvcGFjaXR5OiAwO1xuICB0cmFuc2l0aW9uOiAwLjJzO1xuXG4gICYgPiBzdmcge1xuICAgIGZpbGw6IHZhcigtLWxpZ2h0KTtcbiAgICBmaWx0ZXI6IGNvbnRyYXN0KDAuMyk7XG4gIH1cblxuICAmOmhvdmVyIHtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgYm9yZGVyLWNvbG9yOiB2YXIoLS1zZWNvbmRhcnkpO1xuICB9XG5cbiAgJjpmb2N1cyB7XG4gICAgb3V0bGluZTogMDtcbiAgfVxufVxuXG5wcmUge1xuICAmOmhvdmVyID4gLmV4cGFuZC1idXR0b24ge1xuICAgIG9wYWNpdHk6IDE7XG4gICAgdHJhbnNpdGlvbjogMC4ycztcbiAgfVxufVxuXG4jbWVybWFpZC1jb250YWluZXIge1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIGNvbnRhaW46IGxheW91dDtcbiAgei1pbmRleDogOTk5O1xuICBsZWZ0OiAwO1xuICB0b3A6IDA7XG4gIHdpZHRoOiAxMDB2dztcbiAgaGVpZ2h0OiAxMDB2aDtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgZGlzcGxheTogbm9uZTtcbiAgYmFja2Ryb3AtZmlsdGVyOiBibHVyKDRweCk7XG4gIGJhY2tncm91bmQ6IHJnYmEoMCwgMCwgMCwgMC41KTtcblxuICAmLmFjdGl2ZSB7XG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICB9XG5cbiAgJiA+ICNtZXJtYWlkLXNwYWNlIHtcbiAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0KTtcbiAgICBib3JkZXItcmFkaXVzOiA1cHg7XG4gICAgcG9zaXRpb246IGZpeGVkO1xuICAgIHRvcDogNTAlO1xuICAgIGxlZnQ6IDUwJTtcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTAlKTtcbiAgICBoZWlnaHQ6IDgwdmg7XG4gICAgd2lkdGg6IDgwdnc7XG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcblxuICAgICYgPiAubWVybWFpZC1jb250ZW50IHtcbiAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICAgIHRyYW5zZm9ybS1vcmlnaW46IDAgMDtcbiAgICAgIHRyYW5zaXRpb246IHRyYW5zZm9ybSAwLjFzIGVhc2U7XG4gICAgICBvdmVyZmxvdzogdmlzaWJsZTtcbiAgICAgIG1pbi1oZWlnaHQ6IDIwMHB4O1xuICAgICAgbWluLXdpZHRoOiAyMDBweDtcblxuICAgICAgcHJlIHtcbiAgICAgICAgbWFyZ2luOiAwO1xuICAgICAgICBib3JkZXI6IG5vbmU7XG4gICAgICB9XG5cbiAgICAgIHN2ZyB7XG4gICAgICAgIG1heC13aWR0aDogbm9uZTtcbiAgICAgICAgaGVpZ2h0OiBhdXRvO1xuICAgICAgfVxuICAgIH1cblxuICAgICYgPiAubWVybWFpZC1jb250cm9scyB7XG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICBib3R0b206IDIwcHg7XG4gICAgICByaWdodDogMjBweDtcbiAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICBnYXA6IDhweDtcbiAgICAgIHBhZGRpbmc6IDhweDtcbiAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0KTtcbiAgICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICBib3JkZXItcmFkaXVzOiA2cHg7XG4gICAgICBib3gtc2hhZG93OiAwIDJweCA0cHggcmdiYSgwLCAwLCAwLCAwLjEpO1xuICAgICAgei1pbmRleDogMjtcblxuICAgICAgLm1lcm1haWQtY29udHJvbC1idXR0b24ge1xuICAgICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICAgICAgd2lkdGg6IDMycHg7XG4gICAgICAgIGhlaWdodDogMzJweDtcbiAgICAgICAgcGFkZGluZzogMDtcbiAgICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgICBjb2xvcjogdmFyKC0tZGFyayk7XG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICAgICBmb250LXNpemU6IDE2cHg7XG4gICAgICAgIGZvbnQtZmFtaWx5OiB2YXIoLS1ib2R5Rm9udCk7XG4gICAgICAgIHRyYW5zaXRpb246IGFsbCAwLjJzIGVhc2U7XG5cbiAgICAgICAgJjpob3ZlciB7XG4gICAgICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgICAgfVxuXG4gICAgICAgICY6YWN0aXZlIHtcbiAgICAgICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoMXB4KTtcbiAgICAgICAgfVxuXG4gICAgICAgIC8vIFN0eWxlIHRoZSByZXNldCBidXR0b24gZGlmZmVyZW50bHlcbiAgICAgICAgJjpudGgtY2hpbGQoMikge1xuICAgICAgICAgIHdpZHRoOiBhdXRvO1xuICAgICAgICAgIHBhZGRpbmc6IDAgMTJweDtcbiAgICAgICAgICBmb250LXNpemU6IDE0cHg7XG4gICAgICAgIH1cbiAgICAgIH1cbiAgICB9XG4gIH1cbn1cbiJdfQ== */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../../prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://peterbrinson.github.io/teach/index.xml"/></head><body data-slug="PBOH/Design/_References/index"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><div class="spacer mobile-only"></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>{let rank={389:1,534:2,geidai:3,AI:4,PBOH:5},ra=rank[a.slugSegment]??99,rb=rank[b.slugSegment]??99;return ra!==rb?ra-rb:!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1}&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>{let shortNames={AI:\&quot;Tokens on the Table\&quot;,PBOH:\&quot;PB Office Hours\&quot;,Storytelling:\&quot;Storytelling\&quot;,Worldbuilding:\&quot;Worldbuilding\&quot;,_References:\&quot;References\&quot;};node.isFolder&amp;&amp;shortNames[node.slugSegment]&amp;&amp;(node.displayName=shortNames[node.slugSegment])}&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-44"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2></h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-44" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-3"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../PBOH/">Peter B's Office Hours</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../PBOH/Design/">Design</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>_References</a></div></nav><h1 class="article-title">index</h1></div></div><div class="popover-hint"><article class><p>Game and film examples PBOH draws on when a project reminds it of an existing work.</p>
+<h2 id="games">Games<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#games" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="../../../PBOH/Design/_References/Game---12-Minutes" class="internal alias" data-slug="PBOH/Design/_References/Game---12-Minutes">12 Minutes</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---A-Short-Hike" class="internal alias" data-slug="PBOH/Design/_References/Game---A-Short-Hike">A Short Hike</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---ABZU" class="internal alias" data-slug="PBOH/Design/_References/Game---ABZU">ABZU</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Absolution" class="internal alias" data-slug="PBOH/Design/_References/Game---Absolution">Absolution</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Airplane-Mode" class="internal alias" data-slug="PBOH/Design/_References/Game---Airplane-Mode">Airplane Mode</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Alan-Wake" class="internal alias" data-slug="PBOH/Design/_References/Game---Alan-Wake">Alan Wake</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Alan-Wake-2" class="internal alias" data-slug="PBOH/Design/_References/Game---Alan-Wake-2">Alan Wake 2</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Among-Us" class="internal alias" data-slug="PBOH/Design/_References/Game---Among-Us">Among Us</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---An-Airport-for-Aliens-Currently-Run-by-Dogs" class="internal alias" data-slug="PBOH/Design/_References/Game---An-Airport-for-Aliens-Currently-Run-by-Dogs">An Airport for Aliens Currently Run by Dogs</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Antichamber" class="internal alias" data-slug="PBOH/Design/_References/Game---Antichamber">Antichamber</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Assassin's-Creed-II" class="internal alias" data-slug="PBOH/Design/_References/Game---Assassin's-Creed-II">Assassin’s Creed II</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Baba-Is-You" class="internal alias" data-slug="PBOH/Design/_References/Game---Baba-Is-You">Baba Is You</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Back-to-Bed" class="internal alias" data-slug="PBOH/Design/_References/Game---Back-to-Bed">Back to Bed</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Balatro" class="internal alias" data-slug="PBOH/Design/_References/Game---Balatro">Balatro</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Baldur's-Gate-3" class="internal alias" data-slug="PBOH/Design/_References/Game---Baldur's-Gate-3">Baldur’s Gate 3</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---BioShock" class="internal alias" data-slug="PBOH/Design/_References/Game---BioShock">BioShock</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Blue-Prince" class="internal alias" data-slug="PBOH/Design/_References/Game---Blue-Prince">Blue Prince</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Breath-of-the-Wild" class="internal alias" data-slug="PBOH/Design/_References/Game---Breath-of-the-Wild">Breath of the Wild</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Brothers---A-Tale-of-Two-Sons" class="internal alias" data-slug="PBOH/Design/_References/Game---Brothers---A-Tale-of-Two-Sons">Brothers - A Tale of Two Sons</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Catacombs-of-Solaris" class="internal alias" data-slug="PBOH/Design/_References/Game---Catacombs-of-Solaris">Catacombs of Solaris</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Children-of-the-Sun" class="internal alias" data-slug="PBOH/Design/_References/Game---Children-of-the-Sun">Children of the Sun</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Cocoon" class="internal alias" data-slug="PBOH/Design/_References/Game---Cocoon">Cocoon</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Creaks" class="internal alias" data-slug="PBOH/Design/_References/Game---Creaks">Creaks</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Crimson-Desert" class="internal alias" data-slug="PBOH/Design/_References/Game---Crimson-Desert">Crimson Desert</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Cyberpunk-2077" class="internal alias" data-slug="PBOH/Design/_References/Game---Cyberpunk-2077">Cyberpunk 2077</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Death-Stranding" class="internal alias" data-slug="PBOH/Design/_References/Game---Death-Stranding">Death Stranding</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Disco-Elysium" class="internal alias" data-slug="PBOH/Design/_References/Game---Disco-Elysium">Disco Elysium</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Dr-Langeskov" class="internal alias" data-slug="PBOH/Design/_References/Game---Dr-Langeskov">Dr Langeskov</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Elden-Ring" class="internal alias" data-slug="PBOH/Design/_References/Game---Elden-Ring">Elden Ring</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Everybody's-Gone-to-the-Rapture" class="internal alias" data-slug="PBOH/Design/_References/Game---Everybody's-Gone-to-the-Rapture">Everybody’s Gone to the Rapture</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Everything-(David-OReilly)" class="internal alias" data-slug="PBOH/Design/_References/Game---Everything-(David-OReilly)">Everything (David OReilly)</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Fallout-4" class="internal alias" data-slug="PBOH/Design/_References/Game---Fallout-4">Fallout 4</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Firewatch" class="internal alias" data-slug="PBOH/Design/_References/Game---Firewatch">Firewatch</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---God-of-War" class="internal alias" data-slug="PBOH/Design/_References/Game---God-of-War">God of War</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Gone-Home" class="internal alias" data-slug="PBOH/Design/_References/Game---Gone-Home">Gone Home</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Gris" class="internal alias" data-slug="PBOH/Design/_References/Game---Gris">Gris</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Hades" class="internal alias" data-slug="PBOH/Design/_References/Game---Hades">Hades</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Her-Story" class="internal alias" data-slug="PBOH/Design/_References/Game---Her-Story">Her Story</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Horizon-Zero-Dawn" class="internal alias" data-slug="PBOH/Design/_References/Game---Horizon-Zero-Dawn">Horizon Zero Dawn</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Humanity" class="internal alias" data-slug="PBOH/Design/_References/Game---Humanity">Humanity</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---I-Am-Bread" class="internal alias" data-slug="PBOH/Design/_References/Game---I-Am-Bread">I Am Bread</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Indiana-Jones-2024" class="internal alias" data-slug="PBOH/Design/_References/Game---Indiana-Jones-2024">Indiana Jones 2024</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Inscryption" class="internal alias" data-slug="PBOH/Design/_References/Game---Inscryption">Inscryption</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Inside" class="internal alias" data-slug="PBOH/Design/_References/Game---Inside">Inside</a></li>
+<li><a href="../../../Game---Isabella" class="internal alias" data-slug="Game---Isabella">Isabella</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Journey" class="internal alias" data-slug="PBOH/Design/_References/Game---Journey">Journey</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Kentucky-Route-Zero" class="internal alias" data-slug="PBOH/Design/_References/Game---Kentucky-Route-Zero">Kentucky Route Zero</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---KID-A-MNESIA-Exhibition" class="internal alias" data-slug="PBOH/Design/_References/Game---KID-A-MNESIA-Exhibition">KID A MNESIA Exhibition</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Knights-of-the-Old-Republic" class="internal alias" data-slug="PBOH/Design/_References/Game---Knights-of-the-Old-Republic">Knights of the Old Republic</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---LA-Noire" class="internal alias" data-slug="PBOH/Design/_References/Game---LA-Noire">LA Noire</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Link's-Awakening" class="internal alias" data-slug="PBOH/Design/_References/Game---Link's-Awakening">Link’s Awakening</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Little-Nightmares" class="internal alias" data-slug="PBOH/Design/_References/Game---Little-Nightmares">Little Nightmares</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Mango-Goes-to-Mewsic-School" class="internal alias" data-slug="PBOH/Design/_References/Game---Mango-Goes-to-Mewsic-School">Mango Goes to Mewsic School</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Manifold-Garden" class="internal alias" data-slug="PBOH/Design/_References/Game---Manifold-Garden">Manifold Garden</a></li>
+<li><a href="../../../Game---Mats-and-the-Metamagicians" class="internal alias" data-slug="Game---Mats-and-the-Metamagicians">Mats and the Metamagicians</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Monopoly" class="internal alias" data-slug="PBOH/Design/_References/Game---Monopoly">Monopoly</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Monument-Valley" class="internal alias" data-slug="PBOH/Design/_References/Game---Monument-Valley">Monument Valley</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Mountain" class="internal alias" data-slug="PBOH/Design/_References/Game---Mountain">Mountain</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---NaissanceE" class="internal alias" data-slug="PBOH/Design/_References/Game---NaissanceE">NaissanceE</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Ocarina-of-Time" class="internal alias" data-slug="PBOH/Design/_References/Game---Ocarina-of-Time">Ocarina of Time</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Octodad" class="internal alias" data-slug="PBOH/Design/_References/Game---Octodad">Octodad</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Old-Skies" class="internal alias" data-slug="PBOH/Design/_References/Game---Old-Skies">Old Skies</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Ori-and-the-Blind-Forest" class="internal alias" data-slug="PBOH/Design/_References/Game---Ori-and-the-Blind-Forest">Ori and the Blind Forest</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Outer-Wilds" class="internal alias" data-slug="PBOH/Design/_References/Game---Outer-Wilds">Outer Wilds</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Overwatch-2" class="internal alias" data-slug="PBOH/Design/_References/Game---Overwatch-2">Overwatch 2</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---POOLS" class="internal alias" data-slug="PBOH/Design/_References/Game---POOLS">POOLS</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---PT" class="internal alias" data-slug="PBOH/Design/_References/Game---PT">PT</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Papers-Please" class="internal alias" data-slug="PBOH/Design/_References/Game---Papers-Please">Papers Please</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Papo-and-Yo" class="internal alias" data-slug="PBOH/Design/_References/Game---Papo-and-Yo">Papo and Yo</a></li>
+<li><a href="../../../Game---Pentiment" class="internal alias" data-slug="Game---Pentiment">Pentiment</a></li>
+<li><a href="../../../Game---Photopia" class="internal alias" data-slug="Game---Photopia">Photopia</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Picnic-Pals" class="internal alias" data-slug="PBOH/Design/_References/Game---Picnic-Pals">Picnic Pals</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Pitfall" class="internal alias" data-slug="PBOH/Design/_References/Game---Pitfall">Pitfall</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Plug--and--Play" class="internal alias" data-slug="PBOH/Design/_References/Game---Plug--and--Play">Plug &amp; Play</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Pony-Island" class="internal alias" data-slug="PBOH/Design/_References/Game---Pony-Island">Pony Island</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Portal" class="internal alias" data-slug="PBOH/Design/_References/Game---Portal">Portal</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Portal-2" class="internal alias" data-slug="PBOH/Design/_References/Game---Portal-2">Portal 2</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Proteus" class="internal alias" data-slug="PBOH/Design/_References/Game---Proteus">Proteus</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Psychonauts" class="internal alias" data-slug="PBOH/Design/_References/Game---Psychonauts">Psychonauts</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Rain-World" class="internal alias" data-slug="PBOH/Design/_References/Game---Rain-World">Rain World</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Red-Dead-Redemption-2" class="internal alias" data-slug="PBOH/Design/_References/Game---Red-Dead-Redemption-2">Red Dead Redemption 2</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Return-of-the-Obra-Dinn" class="internal alias" data-slug="PBOH/Design/_References/Game---Return-of-the-Obra-Dinn">Return of the Obra Dinn</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Return-to-Zork" class="internal alias" data-slug="PBOH/Design/_References/Game---Return-to-Zork">Return to Zork</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Roller-Coaster-Tycoon" class="internal alias" data-slug="PBOH/Design/_References/Game---Roller-Coaster-Tycoon">Roller Coaster Tycoon</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Shadow-of-the-Colossus" class="internal alias" data-slug="PBOH/Design/_References/Game---Shadow-of-the-Colossus">Shadow of the Colossus</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Sherlock-Holmes-2021" class="internal alias" data-slug="PBOH/Design/_References/Game---Sherlock-Holmes-2021">Sherlock Holmes 2021</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Silly-Masterpiece" class="internal alias" data-slug="PBOH/Design/_References/Game---Silly-Masterpiece">Silly Masterpiece</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Slash-Bash" class="internal alias" data-slug="PBOH/Design/_References/Game---Slash-Bash">Slash Bash</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Spec-Ops-The-Line" class="internal alias" data-slug="PBOH/Design/_References/Game---Spec-Ops-The-Line">Spec Ops The Line</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Stray" class="internal alias" data-slug="PBOH/Design/_References/Game---Stray">Stray</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Subnautica" class="internal alias" data-slug="PBOH/Design/_References/Game---Subnautica">Subnautica</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Superliminal" class="internal alias" data-slug="PBOH/Design/_References/Game---Superliminal">Superliminal</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Tacoma" class="internal alias" data-slug="PBOH/Design/_References/Game---Tacoma">Tacoma</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---The-Beginner's-Guide" class="internal alias" data-slug="PBOH/Design/_References/Game---The-Beginner's-Guide">The Beginner’s Guide</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---The-Graveyard" class="internal alias" data-slug="PBOH/Design/_References/Game---The-Graveyard">The Graveyard</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---The-Lantern" class="internal alias" data-slug="PBOH/Design/_References/Game---The-Lantern">The Lantern</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---The-Last-of-Us" class="internal alias" data-slug="PBOH/Design/_References/Game---The-Last-of-Us">The Last of Us</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---The-Path" class="internal alias" data-slug="PBOH/Design/_References/Game---The-Path">The Path</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---The-Pedestrian" class="internal alias" data-slug="PBOH/Design/_References/Game---The-Pedestrian">The Pedestrian</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---The-Stanley-Parable" class="internal alias" data-slug="PBOH/Design/_References/Game---The-Stanley-Parable">The Stanley Parable</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---The-Talos-Principle" class="internal alias" data-slug="PBOH/Design/_References/Game---The-Talos-Principle">The Talos Principle</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---The-Unfinished-Swan" class="internal alias" data-slug="PBOH/Design/_References/Game---The-Unfinished-Swan">The Unfinished Swan</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Thirty-Flights-of-Loving" class="internal alias" data-slug="PBOH/Design/_References/Game---Thirty-Flights-of-Loving">Thirty Flights of Loving</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Thomas-Was-Alone" class="internal alias" data-slug="PBOH/Design/_References/Game---Thomas-Was-Alone">Thomas Was Alone</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Time-Flies" class="internal alias" data-slug="PBOH/Design/_References/Game---Time-Flies">Time Flies</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Up-the-River" class="internal alias" data-slug="PBOH/Design/_References/Game---Up-the-River">Up the River</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Viewfinder" class="internal alias" data-slug="PBOH/Design/_References/Game---Viewfinder">Viewfinder</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---What-Remains-of-Edith-Finch" class="internal alias" data-slug="PBOH/Design/_References/Game---What-Remains-of-Edith-Finch">What Remains of Edith Finch</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---Who's-Lila" class="internal alias" data-slug="PBOH/Design/_References/Game---Who's-Lila">Who’s Lila</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---World-of-Warcraft" class="internal alias" data-slug="PBOH/Design/_References/Game---World-of-Warcraft">World of Warcraft</a></li>
+<li><a href="../../../PBOH/Design/_References/Game---apartment-a-separated-place" class="internal alias" data-slug="PBOH/Design/_References/Game---apartment-a-separated-place">apartment a separated place</a></li>
+</ul>
+<h2 id="films">Films<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#films" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="../../../PBOH/Design/_References/Film---2001-A-Space-Odyssey" class="internal alias" data-slug="PBOH/Design/_References/Film---2001-A-Space-Odyssey">2001 A Space Odyssey</a></li>
+<li><a href="../../../PBOH/Design/_References/Film---Annihilation" class="internal alias" data-slug="PBOH/Design/_References/Film---Annihilation">Annihilation</a></li>
+<li><a href="../../../PBOH/Design/_References/Film---Arrival" class="internal alias" data-slug="PBOH/Design/_References/Film---Arrival">Arrival</a></li>
+<li><a href="../../../PBOH/Design/_References/Film---Balance-(1989)" class="internal alias" data-slug="PBOH/Design/_References/Film---Balance-(1989)">Balance (1989)</a></li>
+<li><a href="../../../PBOH/Design/_References/Film---Bardo" class="internal alias" data-slug="PBOH/Design/_References/Film---Bardo">Bardo</a></li>
+<li><a href="../../../PBOH/Design/_References/Film---Beau-Is-Afraid" class="internal alias" data-slug="PBOH/Design/_References/Film---Beau-Is-Afraid">Beau Is Afraid</a></li>
+<li><a href="../../../PBOH/Design/_References/Film---Birdman" class="internal alias" data-slug="PBOH/Design/_References/Film---Birdman">Birdman</a></li>
+<li><a href="../../../PBOH/Design/_References/Film---Coraline" class="internal alias" data-slug="PBOH/Design/_References/Film---Coraline">Coraline</a></li>
+<li><a href="../../../PBOH/Design/_References/Film---Don't-Worry-Darling" class="internal alias" data-slug="PBOH/Design/_References/Film---Don't-Worry-Darling">Don’t Worry Darling</a></li>
+<li><a href="../../../PBOH/Design/_References/Film---Dune" class="internal alias" data-slug="PBOH/Design/_References/Film---Dune">Dune</a></li>
+<li><a href="../../../PBOH/Design/_References/Film---Eraserhead" class="internal alias" data-slug="PBOH/Design/_References/Film---Eraserhead">Eraserhead</a></li>
+<li><a href="../../../PBOH/Design/_References/Film---Eternal-Sunshine-of-the-Spotless-Mind" class="internal alias" data-slug="PBOH/Design/_References/Film---Eternal-Sunshine-of-the-Spotless-Mind">Eternal Sunshine of the Spotless Mind</a></li>
+<li><a href="../../../PBOH/Design/_References/Film---Fight-Club" class="internal alias" data-slug="PBOH/Design/_References/Film---Fight-Club">Fight Club</a></li>
+<li><a href="../../../PBOH/Design/_References/Film---Get-Out" class="internal alias" data-slug="PBOH/Design/_References/Film---Get-Out">Get Out</a></li>
+<li><a href="../../../PBOH/Design/_References/Film---Inception" class="internal alias" data-slug="PBOH/Design/_References/Film---Inception">Inception</a></li>
+<li><a href="../../../PBOH/Design/_References/Film---Inside-Out" class="internal alias" data-slug="PBOH/Design/_References/Film---Inside-Out">Inside Out</a></li>
+<li><a href="../../../PBOH/Design/_References/Film---La-Maison-en-Petits-Cubes" class="internal alias" data-slug="PBOH/Design/_References/Film---La-Maison-en-Petits-Cubes">La Maison en Petits Cubes</a></li>
+<li><a href="../../../PBOH/Design/_References/Film---Lamp-(2002)" class="internal alias" data-slug="PBOH/Design/_References/Film---Lamp-(2002)">Lamp (2002)</a></li>
+<li><a href="../../../PBOH/Design/_References/Film---Lord-of-the-Rings" class="internal alias" data-slug="PBOH/Design/_References/Film---Lord-of-the-Rings">Lord of the Rings</a></li>
+<li><a href="../../../PBOH/Design/_References/Film---Naked-Lunch" class="internal alias" data-slug="PBOH/Design/_References/Film---Naked-Lunch">Naked Lunch</a></li>
+<li><a href="../../../PBOH/Design/_References/Film---Pan's-Labyrinth" class="internal alias" data-slug="PBOH/Design/_References/Film---Pan's-Labyrinth">Pan’s Labyrinth</a></li>
+<li><a href="../../../PBOH/Design/_References/Film---Paprika" class="internal alias" data-slug="PBOH/Design/_References/Film---Paprika">Paprika</a></li>
+<li><a href="../../../PBOH/Design/_References/Film---Poor-Things" class="internal alias" data-slug="PBOH/Design/_References/Film---Poor-Things">Poor Things</a></li>
+<li><a href="../../../PBOH/Design/_References/Film---Safe" class="internal alias" data-slug="PBOH/Design/_References/Film---Safe">Safe</a></li>
+<li><a href="../../../PBOH/Design/_References/Film---Severance" class="internal alias" data-slug="PBOH/Design/_References/Film---Severance">Severance</a></li>
+<li><a href="../../../PBOH/Design/_References/Film---Snowpiercer" class="internal alias" data-slug="PBOH/Design/_References/Film---Snowpiercer">Snowpiercer</a></li>
+<li><a href="../../../PBOH/Design/_References/Film---Sophie's-Choice" class="internal alias" data-slug="PBOH/Design/_References/Film---Sophie's-Choice">Sophie’s Choice</a></li>
+<li><a href="../../../PBOH/Design/_References/Film---Spirited-Away" class="internal alias" data-slug="PBOH/Design/_References/Film---Spirited-Away">Spirited Away</a></li>
+<li><a href="../../../PBOH/Design/_References/Film---Tango-(1981)" class="internal alias" data-slug="PBOH/Design/_References/Film---Tango-(1981)">Tango (1981)</a></li>
+<li><a href="../../../PBOH/Design/_References/Film---The-Cabinet-of-Dr-Caligari" class="internal alias" data-slug="PBOH/Design/_References/Film---The-Cabinet-of-Dr-Caligari">The Cabinet of Dr Caligari</a></li>
+<li><a href="../../../PBOH/Design/_References/Film---The-Father" class="internal alias" data-slug="PBOH/Design/_References/Film---The-Father">The Father</a></li>
+<li><a href="../../../PBOH/Design/_References/Film---The-Matrix" class="internal alias" data-slug="PBOH/Design/_References/Film---The-Matrix">The Matrix</a></li>
+<li><a href="../../../PBOH/Design/_References/Film---The-Others" class="internal alias" data-slug="PBOH/Design/_References/Film---The-Others">The Others</a></li>
+<li><a href="../../../PBOH/Design/_References/Film---The-Platform" class="internal alias" data-slug="PBOH/Design/_References/Film---The-Platform">The Platform</a></li>
+<li><a href="../../../Film---The-Sixth-Sense" class="internal alias" data-slug="Film---The-Sixth-Sense">The Sixth Sense</a></li>
+<li><a href="../../../PBOH/Design/_References/Film---The-Truman-Show" class="internal alias" data-slug="PBOH/Design/_References/Film---The-Truman-Show">The Truman Show</a></li>
+<li><a href="../../../PBOH/Design/_References/Film---The-Van-(2019)" class="internal alias" data-slug="PBOH/Design/_References/Film---The-Van-(2019)">The Van (2019)</a></li>
+<li><a href="../../../PBOH/Design/_References/Film---Twin-Peaks" class="internal alias" data-slug="PBOH/Design/_References/Film---Twin-Peaks">Twin Peaks</a></li>
+<li><a href="../../../PBOH/Design/_References/Film---World-of-Tomorrow" class="internal alias" data-slug="PBOH/Design/_References/Film---World-of-Tomorrow">World of Tomorrow</a></li>
+</ul>
+<h2 id="books--comics">Books &amp; Comics<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#books--comics" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="../../../PBOH/Design/_References/Reading---Yertle-the-Turtle-(Seuss)" class="internal alias" data-slug="PBOH/Design/_References/Reading---Yertle-the-Turtle-(Seuss)">Yertle the Turtle</a></li>
+<li><a href="../../../PBOH/Design/_References/Comic---Calvin-and-Hobbes" class="internal alias" data-slug="PBOH/Design/_References/Comic---Calvin-and-Hobbes">Calvin and Hobbes</a></li>
+</ul>
+<h2 id="worlds">Worlds<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#worlds" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="../../../PBOH/Design/_References/World---Backrooms" class="internal alias" data-slug="PBOH/Design/_References/World---Backrooms">Backrooms</a></li>
+<li><a href="../../../PBOH/Design/_References/World---The-Exit-8" class="internal alias" data-slug="PBOH/Design/_References/World---The-Exit-8">The Exit 8</a></li>
+</ul></article></div><hr/><div class="page-footer"></div></div><div class="right sidebar"></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../../postscript.js" type="module" data-persist="true"></script></html>

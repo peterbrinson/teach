@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head><title>Reading - Emissary's Guide to Worlding (Cheng)</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="PB Teach"/><meta property="og:title" content="Reading - Emissary's Guide to Worlding (Cheng)"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Reading - Emissary's Guide to Worlding (Cheng)"/><meta name="twitter:description" content="Author: Ian Cheng · Year: 2018 · Type: Book (short, e-book format) → worldto.live · Amazon Cheng is a visual artist known for AI-driven simulations."/><meta property="og:description" content="Author: Ian Cheng · Year: 2018 · Type: Book (short, e-book format) → worldto.live · Amazon Cheng is a visual artist known for AI-driven simulations."/><meta property="og:image:alt" content="Author: Ian Cheng · Year: 2018 · Type: Book (short, e-book format) → worldto.live · Amazon Cheng is a visual artist known for AI-driven simulations."/><meta property="og:image" content="https://peterbrinson.github.io/teach/static/og-image.png"/><meta property="og:image:url" content="https://peterbrinson.github.io/teach/static/og-image.png"/><meta name="twitter:image" content="https://peterbrinson.github.io/teach/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="peterbrinson.github.io/teach"/><meta property="og:url" content="https://peterbrinson.github.io/teach/PBOH/Design/_References/Reading---Emissary's-Guide-to-Worlding-(Cheng)"/><meta property="twitter:url" content="https://peterbrinson.github.io/teach/PBOH/Design/_References/Reading---Emissary's-Guide-to-Worlding-(Cheng)"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="Author: Ian Cheng · Year: 2018 · Type: Book (short, e-book format) → worldto.live · Amazon Cheng is a visual artist known for AI-driven simulations."/><meta name="generator" content="Quartz"/><link href="../../../index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiQzpcXFVzZXJzXFxicmluc1xcRG9jdW1lbnRzXFxPYnNpZGlhblxcc2l0ZVxccXVhcnR6XFxjb21wb25lbnRzXFxzdHlsZXMiLCJzb3VyY2VzIjpbIm1lcm1haWQuaW5saW5lLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUdGO0VBQ0U7OztBQUtGO0VBQ0U7RUFDQTs7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7O0FBR0Y7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFOztBQUlGO0VBQ0U7RUFDQTtFQUNBIiwic291cmNlc0NvbnRlbnQiOlsiLmV4cGFuZC1idXR0b24ge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsb2F0OiByaWdodDtcbiAgcGFkZGluZzogMC40cmVtO1xuICBtYXJnaW46IDAuM3JlbTtcbiAgcmlnaHQ6IDA7IC8vIE5PVEU6IHJpZ2h0IHdpbGwgYmUgc2V0IGluIG1lcm1haWQuaW5saW5lLnRzXG4gIGNvbG9yOiB2YXIoLS1ncmF5KTtcbiAgYm9yZGVyLWNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICBib3JkZXI6IDFweCBzb2xpZDtcbiAgYm9yZGVyLXJhZGl1czogNXB4O1xuICBvcGFjaXR5OiAwO1xuICB0cmFuc2l0aW9uOiAwLjJzO1xuXG4gICYgPiBzdmcge1xuICAgIGZpbGw6IHZhcigtLWxpZ2h0KTtcbiAgICBmaWx0ZXI6IGNvbnRyYXN0KDAuMyk7XG4gIH1cblxuICAmOmhvdmVyIHtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgYm9yZGVyLWNvbG9yOiB2YXIoLS1zZWNvbmRhcnkpO1xuICB9XG5cbiAgJjpmb2N1cyB7XG4gICAgb3V0bGluZTogMDtcbiAgfVxufVxuXG5wcmUge1xuICAmOmhvdmVyID4gLmV4cGFuZC1idXR0b24ge1xuICAgIG9wYWNpdHk6IDE7XG4gICAgdHJhbnNpdGlvbjogMC4ycztcbiAgfVxufVxuXG4jbWVybWFpZC1jb250YWluZXIge1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIGNvbnRhaW46IGxheW91dDtcbiAgei1pbmRleDogOTk5O1xuICBsZWZ0OiAwO1xuICB0b3A6IDA7XG4gIHdpZHRoOiAxMDB2dztcbiAgaGVpZ2h0OiAxMDB2aDtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgZGlzcGxheTogbm9uZTtcbiAgYmFja2Ryb3AtZmlsdGVyOiBibHVyKDRweCk7XG4gIGJhY2tncm91bmQ6IHJnYmEoMCwgMCwgMCwgMC41KTtcblxuICAmLmFjdGl2ZSB7XG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICB9XG5cbiAgJiA+ICNtZXJtYWlkLXNwYWNlIHtcbiAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0KTtcbiAgICBib3JkZXItcmFkaXVzOiA1cHg7XG4gICAgcG9zaXRpb246IGZpeGVkO1xuICAgIHRvcDogNTAlO1xuICAgIGxlZnQ6IDUwJTtcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTAlKTtcbiAgICBoZWlnaHQ6IDgwdmg7XG4gICAgd2lkdGg6IDgwdnc7XG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcblxuICAgICYgPiAubWVybWFpZC1jb250ZW50IHtcbiAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICAgIHRyYW5zZm9ybS1vcmlnaW46IDAgMDtcbiAgICAgIHRyYW5zaXRpb246IHRyYW5zZm9ybSAwLjFzIGVhc2U7XG4gICAgICBvdmVyZmxvdzogdmlzaWJsZTtcbiAgICAgIG1pbi1oZWlnaHQ6IDIwMHB4O1xuICAgICAgbWluLXdpZHRoOiAyMDBweDtcblxuICAgICAgcHJlIHtcbiAgICAgICAgbWFyZ2luOiAwO1xuICAgICAgICBib3JkZXI6IG5vbmU7XG4gICAgICB9XG5cbiAgICAgIHN2ZyB7XG4gICAgICAgIG1heC13aWR0aDogbm9uZTtcbiAgICAgICAgaGVpZ2h0OiBhdXRvO1xuICAgICAgfVxuICAgIH1cblxuICAgICYgPiAubWVybWFpZC1jb250cm9scyB7XG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICBib3R0b206IDIwcHg7XG4gICAgICByaWdodDogMjBweDtcbiAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICBnYXA6IDhweDtcbiAgICAgIHBhZGRpbmc6IDhweDtcbiAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0KTtcbiAgICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICBib3JkZXItcmFkaXVzOiA2cHg7XG4gICAgICBib3gtc2hhZG93OiAwIDJweCA0cHggcmdiYSgwLCAwLCAwLCAwLjEpO1xuICAgICAgei1pbmRleDogMjtcblxuICAgICAgLm1lcm1haWQtY29udHJvbC1idXR0b24ge1xuICAgICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICAgICAgd2lkdGg6IDMycHg7XG4gICAgICAgIGhlaWdodDogMzJweDtcbiAgICAgICAgcGFkZGluZzogMDtcbiAgICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgICBjb2xvcjogdmFyKC0tZGFyayk7XG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICAgICBmb250LXNpemU6IDE2cHg7XG4gICAgICAgIGZvbnQtZmFtaWx5OiB2YXIoLS1ib2R5Rm9udCk7XG4gICAgICAgIHRyYW5zaXRpb246IGFsbCAwLjJzIGVhc2U7XG5cbiAgICAgICAgJjpob3ZlciB7XG4gICAgICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgICAgfVxuXG4gICAgICAgICY6YWN0aXZlIHtcbiAgICAgICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoMXB4KTtcbiAgICAgICAgfVxuXG4gICAgICAgIC8vIFN0eWxlIHRoZSByZXNldCBidXR0b24gZGlmZmVyZW50bHlcbiAgICAgICAgJjpudGgtY2hpbGQoMikge1xuICAgICAgICAgIHdpZHRoOiBhdXRvO1xuICAgICAgICAgIHBhZGRpbmc6IDAgMTJweDtcbiAgICAgICAgICBmb250LXNpemU6IDE0cHg7XG4gICAgICAgIH1cbiAgICAgIH1cbiAgICB9XG4gIH1cbn1cbiJdfQ== */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../../prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://peterbrinson.github.io/teach/index.xml"/></head><body data-slug="PBOH/Design/_References/Reading---Emissary's-Guide-to-Worlding-(Cheng)"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><div class="spacer mobile-only"></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>{let rank={389:1,534:2,geidai:3,AI:4,PBOH:5},ra=rank[a.slugSegment]??99,rb=rank[b.slugSegment]??99;return ra!==rb?ra-rb:!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1}&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>{let shortNames={AI:\&quot;Tokens on the Table\&quot;,PBOH:\&quot;PB Office Hours\&quot;,Storytelling:\&quot;Storytelling\&quot;,Worldbuilding:\&quot;Worldbuilding\&quot;,_References:\&quot;References\&quot;};node.isFolder&amp;&amp;shortNames[node.slugSegment]&amp;&amp;(node.displayName=shortNames[node.slugSegment])}&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-336"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2></h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-336" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../PBOH/">Peter B's Office Hours</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../PBOH/Design/">Design</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../PBOH/Design/_References/">_References</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Reading   Emissary's Guide to Worlding (Cheng)</a></div></nav><h1 class="article-title">Reading - Emissary's Guide to Worlding (Cheng)</h1></div></div><article class="popover-hint"><p><strong>Author:</strong> Ian Cheng · <strong>Year:</strong> 2018 · <strong>Type:</strong> Book (short, e-book format)
+→ <a href="https://worldto.live" class="external" target="_blank">worldto.live<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> · <a href="https://www.amazon.com/Emissarys-Guide-Worlding-Ian-Cheng-ebook/dp/B07KGKGNNK" class="external" target="_blank">Amazon<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>Cheng is a visual artist known for AI-driven simulations. This book grew out of his <em>Emissaries</em> trilogy — live simulations shown at MoMA PS1, Serpentine, Carnegie. It formalizes his creative process as a portable framework. His take on worlding functions as advice given to artists broadly, not just to creators who frame their approach as <em>worldbuilding</em>.</p>
+<blockquote>
+<p>“This is not a book about worldbuilding, or how to make your fantasy novel more credible. It’s a book about Worlding. It’s about re-enchanting our complex times by creating futures you can believe in, over and over again.”</p>
+</blockquote>
+<p>The book turns on four ideas, taken up in turn below:</p>
+<ul>
+<li><strong>Aliveness and Autonomy</strong> — what a World <em>is</em>: the definition, the formula, finite vs. infinite games, Worlding vs. worldbuilding.</li>
+<li><strong>The Four Masks</strong> — the creative-psychology model: Director, Cartoonist, Hacker, Emissary.</li>
+<li><strong>The Container</strong> — the medium through which a World first expresses itself.</li>
+<li><strong>The Artist’s Dilemma</strong> — the tension between control and autonomy in the creative process.</li>
+</ul>
+<hr/>
+<h2 id="aliveness-and-autonomy">Aliveness and Autonomy<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#aliveness-and-autonomy" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="what-is-a-world">What Is a World?<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#what-is-a-world" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>(pg 17) <strong>A World is a future you can believe in: one that promises to survive its creator, and continue generating drama.</strong></p>
+<p>An important feature of this definition of a World is its double promise: when a World can “survive its creator,” that means it has achieved sufficient stability to regulate and safeguard its potentiality without authorial intervention. This is a World’s requirement for Autonomy. When a World can “continue generating drama,” a World is sufficiently interesting for people to care about and want to explore. This is a World’s requirement for Aliveness. When a World is keeping its promise, it continues to be a future you can believe in.</p>
+<h3 id="what-is-worlding">What Is Worlding?<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#what-is-worlding" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>(pg 21) Worlding is the artistic activity of an individual artist conceiving, incubating, triggering, and nurturing a World towards <em>aliveness</em>.</p>
+<h3 id="core-definitions">Core Definitions<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#core-definitions" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>Aliveness</strong> — the World generates its own drama; it is self-regulating and self-generating, not solely dependent on the creator’s output.</p>
+<p><strong>Autonomy</strong> — the World can sustain itself after the creator exits. Cheng distinguishes these: Worlding is <em>firstly the act of creating a life, then secondly letting that life live itself.</em></p>
+<h3 id="the-aliveness-formula">The Aliveness Formula<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#the-aliveness-formula" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>World’s Aliveness = Evidence Usage / Creator’s Hold</strong></p>
+<p><strong>Evidence Usage</strong> — the sum of all ways the World is used, discussed, extended, believed in. Films watched, forums active, fan fiction written, other creators influenced. When no one uses or believes in the World, Evidence Usage drops to zero.</p>
+<p><strong>Creator’s Hold</strong> — the degree of authoritative control the creator maintains over what counts as the World. When Creator’s Hold = 1: the World depends entirely on the creator; when the creator exits, the World goes with them. When Creator’s Hold = 0: the World has Autonomy — it can generate new evidence without the creator’s permission.
+For example, I throw a party at my home. I provide drinks, board games, music. I choose a time. Perhaps my Creator’s hold is 0.2?
+How about 1.0? He references Hayao Miyazaki who strongly authored films such as <a href="../../../PBOH/Design/_References/Film---Spirited-Away" class="internal alias" data-slug="PBOH/Design/_References/Film---Spirited-Away">Spirited Away</a>.</p>
+<h3 id="finite-games-and-infinite-games">Finite Games and Infinite Games<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#finite-games-and-infinite-games" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Cheng draws on philosopher James Carse (<em>Finite and Infinite Games</em>, 1986):</p>
+<ul>
+<li>A <strong>finite game</strong> is played to win — it has defined rules and a defined ending.</li>
+<li>An <strong>infinite game</strong> is played to keep the game going — if it risks ending, the rules must change to sustain it.</li>
+</ul>
+<p>The ultimate infinite game, Carse says, is evolutionary life itself: Nature.</p>
+<p>A World is the promise of an infinite game. It is “complex enough that we can generatively inhabit it and create new meaning within its local language.”</p>
+<h3 id="worlding-vs-worldbuilding">Worlding vs. Worldbuilding<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#worlding-vs-worldbuilding" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Cheng explicitly separates these. Worldbuilding constructs a credible, detailed world — geography, history, rules, consistency. Worlding is the process of making a World come <em>alive</em> and sustain itself. The goal of Worlding is Aliveness → Autonomy.</p>
+<blockquote>
+<p>“A World that fails on its promise to ‘survive its creator’ will rot and die soon after its creator exits… A World that fails on its promise to ‘continue generating drama’ becomes a boring utopia populated by the undead.”</p>
+</blockquote>
+<hr/>
+<h2 id="the-four-masks">The Four Masks<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#the-four-masks" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Cheng’s model of the artist as a crew of inner personas — “masks” — each with different drives, strengths, and blind spots. The artist is not one coherent person but a committee fighting to be heard.</p>
+<p>Two axes define the masks:</p>
+<ul>
+<li><strong>Seeking Home vs. Seeking Surprise</strong> — whether the mask drives toward stability and known human values, or toward the frontier and the unknown (experimentation)</li>
+<li><strong>Steering by Gut vs. Steering by Story</strong> — whether the mask navigates by immediate instinct and feeling, or by long-term arc and context</li>
+</ul>
+<p>The masks who Seek Home are rewarded with certainty and security. The masks who Seek Surprise are rewarded with adventure and novelty.
+The masks who steer by gut are rewarded with immediate results. The masks who steer by story are rewarded with a sense of big picture context. If the Story cannot expand to incorporate the unexpected, the artist turns to the Gut for survival. And if the Gut proves wrong too many times, the artist looks to Stories to put it all into perspective. It’s judging by short term vs. judging by long term.</p>
+<p><img src="../../../PBOH/Design/_References/attachments/cheng-four-masks.webp" width="auto" height="auto" alt/></p>
+<h3 id="the-director">The Director<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#the-director" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><em>Seeking Home · Steering by Story · Makes “Good” Art</em></p>
+<p>Concerned with recovering meaning from complex problems. Believes that structuring a project correctly creates the conditions for meaningful solutions to emerge. Marshals a team, establishes a narrative throughline, works toward mythology.</p>
+<ul>
+<li>Motto: “What’s the story?”</li>
+<li>Psychology: Parent seeking home, Adult steering by story</li>
+<li>Likes: Longform, mythology, satisfying drama, exploring multiple perspectives, learning from and revising the past, backstory, deep character origins, roadmaps, a good profound cry.</li>
+<li>Strengths: Creating the tangible container structure for everyone else to work in. Meaning resonance. Able to narrativize, historicize, mythologize, and organize. Ability to rally a team toward a finite goal that promises to be meaningful.</li>
+<li>Weaknesses: Bothered by open-ended outcomes and unsolved mysteries.</li>
+<li>Compatible with: Cartoonist, who can help the Director stretch to make instantly recognizable/iconic characters that make the long journey more emotionally resonant, peppered with limbic candy.</li>
+<li>Attracted to: Emissary, who can help the Director’s story to expand into sequels, a franchise, a philosophy, or cult following. If only that were manageable and had clear roadmap. Risky with:</li>
+<li>Hacker, who could radicalize the project with new abilities for expression, but the Director doesn’t know how to count on it. Threatens to change the Director’s structure, assembled team, budget, and meaning.</li>
+<li>Favorite forms: feature film, novel, non-fiction bestsellers, treatise, Oscar nominees</li>
+<li>Famous Director-dominant artists: Hayao Miyazaki (animator), Ursula Le Guin (novelist), Jordan Peterson (psychologist), Adam Curtis (filmmaker), Ayn Rand (novelist), Karl Marx (philosopher), Hannah Arendt (philosopher), Margaret Atwood (novelist), Joseph Campbell (mythologist), Homer (epic poet)</li>
+</ul>
+<h3 id="the-cartoonist">The Cartoonist<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#the-cartoonist" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><em>Seeking Home · Steering by Gut · Makes Flag Art</em></p>
+<p>Concerned with emotional resonance. Reduces complexity into instantly legible signals — characters, symbols, feelings, memes. Plays to the lowest common denominator of human cognition: gut instinct, tribal affiliation, limbic reward.</p>
+<ul>
+<li>Mask Archetype: The spontaneous reformer persona who believes we are united by what we feel, and that that baseline human trait is always ripe to be exploited to alleviate immediate pain and uncertainty. The jokester, the politician, the comedian, the marketer, the persuader, the star.</li>
+<li>Motto: “FREE PIZZA” Psychology: Parent seeking home, Child steering by gut Likes: Feels, memes, slogans, mnemonics, drama, jokes, irony, attention, animals, bumper stickers, dopamine, serotonin</li>
+<li>Strengths: Emotional resonance, characters, archetyping, naming, improv, persuasion</li>
+<li>Weaknesses: reducing humanity to their shared inner animal</li>
+<li>Compatible with: Director, who can furnish a narrative context, enriching the Cartoonist’s characters and behavioral observations, and add the possibility of character growth.</li>
+<li>Attracted to: Hacker, who can offer new magic tricks and psychological models to exploit blind spots in human behavior. Can add wow factor, which adds to limbic resonance.</li>
+<li>Risky with: Emissary, who could radicalize the Cartoonist’s work with an ever-growing platform, but the Cartoonist doesn’t know how to count on it. Emissary threatens to demote the Cartoonist’s work to marketing and shame the Cartoonist, whose instincts don’t fit the values of the Emissary’s World.</li>
+<li>Favorite forms: social media, elections, talk shows, tabloids, advertising, reality tv, clickbait, news, comedy club</li>
+<li>Famous Cartoonist-dominant artists: Oprah Winfrey (talk show host), Andy Warhol (pop artist), Quentin Tarantino (filmmaker), Andy Cohen (reality tv producer), Scott Adams (satirist), Bill Clinton (politician), Kim Kardashian (reality tv personality), Kanye West (recording artist), Mark Twain (satirist)</li>
+</ul>
+<h3 id="the-hacker">The Hacker<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#the-hacker" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><em>Seeking Surprise · Steering by Gut · Makes “New” Art</em></p>
+<p>Concerned with disruptive leverage. Sees through the veil of existing worlds to the underlying operating system — the hidden principles and mechanisms. Strips things down to find the real lever, the magic trick, the exploit.</p>
+<ul>
+<li>Mask Archetype: The spontaneous disruptor persona who tinkers, breaks and modifies systems, discovers first principles, and unlocks new advantages along the way. The cheat, the con man, the wizard, the magician.</li>
+<li>Motto: “It might not be science but it works” Psychology: Adult seeking surprise, Child steering by gut Likes: clever shortcuts, models, first principles, altered states, science fiction</li>
+<li>Strengths: Perceives underlying systems. Eye for easy overlooked leverage. Unafraid to break things to find hidden advantage.</li>
+<li>Weaknesses: indifferent to context or presentation</li>
+<li>Compatible with: Emissary, who can create a sustainable culture around the hack.</li>
+<li>Attracted to: Cartoonist. Wants to make their exploit relatable to people, help get a wow factor.</li>
+<li>Risky with: Director, could radicalize with narrative meaning, but the Hacker doesn’t know how to count on it. Threatens to turn the hack in service of an ideological purpose.</li>
+<li>Favorite forms: apps, cookbooks, playbooks, demos, world’s fair, existing systems, complacent industries</li>
+<li>Famous Hacker-dominant artists: Elon Musk (entrepreneur), Nikola Tesla (inventor), Satoshi Nakamoto (blockchain inventor), Dan Barber (chef), Harry Houdini (illusionist)</li>
+</ul>
+<h3 id="the-emissary">The Emissary<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#the-emissary" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><em>Seeking Surprise · Steering by Story · Makes Portal Art</em></p>
+<p>Concerned with the long-term health and growth of a living thing. The initiator of Worlding — the one who says <em>let’s create a life, not just a finished object.</em> Thinks on the scale of lifetimes. Absorbs unknowns from Reality and updates the World’s values and systems without losing its core.</p>
+<blockquote>
+<p>“The Emissary is always ‘caught between unravelling old realities and emerging weird ones’ in service of the ongoing health of the World.”</p>
+</blockquote>
+<p>The Emissary is the least practiced mask in art. Its work is thankless: people notice it only when updates don’t serve them, not when the World runs smoothly. The temptation of the Emissary is to hand the World back to the other masks — to let the Director prescribe a final meaning, or the Cartoonist turn it into advertising, or the Hacker sell the superpowers raw.</p>
+<ul>
+<li>Motto: “A future you can believe in”</li>
+<li>Psychology: Adult seeking surprise, Adult steering by story</li>
+<li>Strengths: mission and culture, designing incentives and laws, protecting core values, long-term vision</li>
+<li>Weakness: fits everything into the long term; easy to blame for not serving short-term needs</li>
+<li>Favorite containers: platforms, series, franchises, think tanks, families</li>
+<li>Famous Emissary-dominant figures: Kevin Feige (Marvel), Kathleen Kennedy (Star Wars), Benjamin Franklin, Dalai Lama</li>
+</ul>
+<h3 id="masks-combined">Masks Combined<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#masks-combined" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>A creation is generally more interesting the more masks it involves. More masks do not result in a more complicated experience for the viewer. On the contrary, if all masks are working together, the viewer feels immersed in a World.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Combination</th><th>Result</th></tr></thead><tbody><tr><td>C only</td><td>a joke</td></tr><tr><td>H only</td><td>a trick</td></tr><tr><td>D only</td><td>a moral</td></tr><tr><td>E only</td><td>a rule</td></tr><tr><td>C + H</td><td>a magic act</td></tr><tr><td>C + D</td><td>a story</td></tr><tr><td>D + H</td><td>a playbook</td></tr><tr><td>C + E</td><td>a meme</td></tr><tr><td>D + E</td><td>a wiki</td></tr><tr><td>H + E</td><td>a tool</td></tr><tr><td>C + D + H</td><td>a Gesamtkunstwerk</td></tr><tr><td>C + D + E</td><td>a series</td></tr><tr><td>C + H + E</td><td>an app</td></tr><tr><td>D + H + E</td><td>a cult</td></tr><tr><td>C + D + H + E</td><td><strong>a World</strong></td></tr></tbody></table></div>
+<hr/>
+<h2 id="the-container">The Container<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#the-container" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Before a World can exist, the artist must choose a <strong>container</strong> — the medium or form through which the World first expresses itself. A film, a restaurant, a novel, a video game, a religion, an electric car.</p>
+<p>The container is not the World. It is a portal to the World.</p>
+<blockquote>
+<p>“A drawing of Mickey Mouse is a low resolution, low dimensional manifestation of the World of Disney. A Mickey cartoon is a bit higher. And Disneyland is a high resolution, high dimensional manifestation of the World of Disney. But even a trip to Disneyland is not a one-to-one experience of the World of Disney itself.”</p>
+</blockquote>
+<p>The Director chooses the container. The Emissary checks whether it implies interesting consequences — whether it has potential for Aliveness.</p>
+<h3 id="declarative-vs-interactive">Declarative vs. Interactive<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#declarative-vs-interactive" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Containers exist on a spectrum:</p>
+<p><strong>Declarative</strong> (novel, film, sermon) — the creator declares a world and the audience accepts it. More fantastical potential. Higher suspension of disbelief required. The Cartoonist leads: great characters are needed to make the World sticky.</p>
+<p><strong>Interactive</strong> (restaurant, app, video game, baby) — the container is inhabited and used. More pragmatically realized. More directly suggests how the World will function. The Hacker leads: a great hack or superpower is needed to make it distinct.</p>
+<blockquote>
+<p>“If you value the pragmatic realization of the eventual World: interactive container > declarative container. If you value the fantastical potential: declarative container > interactive container.”</p>
+</blockquote>
+<h3 id="the-hacker-led-approach-interactive-containers">The Hacker-Led Approach (Interactive Containers)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#the-hacker-led-approach-interactive-containers" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>Discover a hack — test it, confirm it works</li>
+<li>Study the hack to understand why it works reliably</li>
+<li>See where the hack goes too far; make laws to regulate it</li>
+<li>Let the Cartoonist develop characters who embody and violate those laws</li>
+<li>Let the Director create a mythological narrative that situates the hack within meaning</li>
+</ol>
+<h3 id="the-cartoonist-led-approach-declarative-containers">The Cartoonist-Led Approach (Declarative Containers)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#the-cartoonist-led-approach-declarative-containers" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>Devise a character with an inner contradiction</li>
+<li>Describe the character by imagining where it lives — the living conditions that created it</li>
+<li>The living conditions imply the laws of the World</li>
+<li>Imagine disruptors of those laws and the drama that follows</li>
+</ol>
+<h3 id="the-container-as-contract">The Container as Contract<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#the-container-as-contract" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p>“In choosing a container, you are making an explicit contract with the viewer… In return, I will work to surprise your expectations of what is possible by stretching the container a bit farther than you thought it could go.”</p>
+</blockquote>
+<hr/>
+<h2 id="the-artists-dilemma">The Artist’s Dilemma<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#the-artists-dilemma" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Art is not an object, but a special kind of communication between an artist and an audience. It’s a communication for when words won’t do. For when you want to communicate something more interesting, nutritious, complex, or strange. But since high bandwidth telepathy doesn’t exist yet, a mediating object needs to be crafted to articulate this communication: the artwork.</p>
+<p>If an artwork is a ship, then the artist is its crew, the content is its cargo, and the destination port is the audience where the communication is received, where the ship docks and the cargo is delivered.</p>
+<hr/>
+<h2 id="key-quotes">Key Quotes<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#key-quotes" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>“A World is conceived when a creator decides to pick some part of Reality and start believing in it again.”</p>
+</blockquote>
+<blockquote>
+<p>“Simple rules lead to complex behavior. Complicated rules lead to stupid behavior.” — Andrew Hunt, <em>The Pragmatic Programmer</em>, cited by Cheng</p>
+</blockquote>
+<blockquote>
+<p>“A poem is never finished, only abandoned.” — Paul Valéry, on granting Autonomy</p>
+</blockquote>
+<hr/>
+<h2 id="related">Related<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#related" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="../../../PBOH/Design/Worldbuilding/Foundations/Worldbuilding---Definition-and-Scope" class="internal alias" data-slug="PBOH/Design/Worldbuilding/Foundations/Worldbuilding---Definition-and-Scope">Worldbuilding - Definition and Scope</a></li>
+<li><a href="../../../PBOH/Design/Worldbuilding/Vocabulary/Consistency-and-Internal-Logic" class="internal alias" data-slug="PBOH/Design/Worldbuilding/Vocabulary/Consistency-and-Internal-Logic">Consistency and Internal Logic</a></li>
+<li><a href="../../../Bounded-Worlds" class="internal alias" data-slug="Bounded-Worlds">Bounded Worlds</a></li>
+<li><a href="../../../PBOH/Design/_References/Reading---Philip-K-Dick" class="internal alias" data-slug="PBOH/Design/_References/Reading---Philip-K-Dick">Reading - Philip K Dick</a></li>
+</ul></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-76" aria-expanded="true"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#aliveness-and-autonomy" data-for="aliveness-and-autonomy">Aliveness and Autonomy</a></li><li class="depth-1"><a href="#what-is-a-world" data-for="what-is-a-world">What Is a World?</a></li><li class="depth-1"><a href="#what-is-worlding" data-for="what-is-worlding">What Is Worlding?</a></li><li class="depth-1"><a href="#core-definitions" data-for="core-definitions">Core Definitions</a></li><li class="depth-1"><a href="#the-aliveness-formula" data-for="the-aliveness-formula">The Aliveness Formula</a></li><li class="depth-1"><a href="#finite-games-and-infinite-games" data-for="finite-games-and-infinite-games">Finite Games and Infinite Games</a></li><li class="depth-1"><a href="#worlding-vs-worldbuilding" data-for="worlding-vs-worldbuilding">Worlding vs. Worldbuilding</a></li><li class="depth-0"><a href="#the-four-masks" data-for="the-four-masks">The Four Masks</a></li><li class="depth-1"><a href="#the-director" data-for="the-director">The Director</a></li><li class="depth-1"><a href="#the-cartoonist" data-for="the-cartoonist">The Cartoonist</a></li><li class="depth-1"><a href="#the-hacker" data-for="the-hacker">The Hacker</a></li><li class="depth-1"><a href="#the-emissary" data-for="the-emissary">The Emissary</a></li><li class="depth-1"><a href="#masks-combined" data-for="masks-combined">Masks Combined</a></li><li class="depth-0"><a href="#the-container" data-for="the-container">The Container</a></li><li class="depth-1"><a href="#declarative-vs-interactive" data-for="declarative-vs-interactive">Declarative vs. Interactive</a></li><li class="depth-1"><a href="#the-hacker-led-approach-interactive-containers" data-for="the-hacker-led-approach-interactive-containers">The Hacker-Led Approach (Interactive Containers)</a></li><li class="depth-1"><a href="#the-cartoonist-led-approach-declarative-containers" data-for="the-cartoonist-led-approach-declarative-containers">The Cartoonist-Led Approach (Declarative Containers)</a></li><li class="depth-1"><a href="#the-container-as-contract" data-for="the-container-as-contract">The Container as Contract</a></li><li class="depth-0"><a href="#the-artists-dilemma" data-for="the-artists-dilemma">The Artist’s Dilemma</a></li><li class="depth-0"><a href="#key-quotes" data-for="key-quotes">Key Quotes</a></li><li class="depth-0"><a href="#related" data-for="related">Related</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>Backlinks</h3><ul id="list-2" class="overflow"><li><a href="../../../PBOH/Design/Worldbuilding/" class="internal">Bounded Worlds: The Playable and the Imagined</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../../postscript.js" type="module" data-persist="true"></script></html>

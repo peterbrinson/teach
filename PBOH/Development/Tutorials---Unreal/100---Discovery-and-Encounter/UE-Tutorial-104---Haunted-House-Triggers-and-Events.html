@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head><title>UE Tutorial 104 - Haunted House Triggers and Events</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="PB Teach"/><meta property="og:title" content="UE Tutorial 104 - Haunted House Triggers and Events"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="UE Tutorial 104 - Haunted House Triggers and Events"/><meta name="twitter:description" content="Previous: Tutorial 103: Scoring and UI By Yibei He &amp; Peter Brinson 0. Introduction A."/><meta property="og:description" content="Previous: Tutorial 103: Scoring and UI By Yibei He &amp; Peter Brinson 0. Introduction A."/><meta property="og:image:alt" content="Previous: Tutorial 103: Scoring and UI By Yibei He &amp; Peter Brinson 0. Introduction A."/><meta property="og:image" content="https://peterbrinson.github.io/teach/static/og-image.png"/><meta property="og:image:url" content="https://peterbrinson.github.io/teach/static/og-image.png"/><meta name="twitter:image" content="https://peterbrinson.github.io/teach/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="peterbrinson.github.io/teach"/><meta property="og:url" content="https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-104---Haunted-House-Triggers-and-Events"/><meta property="twitter:url" content="https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-104---Haunted-House-Triggers-and-Events"/><link rel="icon" href="../../../../static/icon.png"/><meta name="description" content="Previous: Tutorial 103: Scoring and UI By Yibei He &amp; Peter Brinson 0. Introduction A."/><meta name="generator" content="Quartz"/><link href="../../../../index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiQzpcXFVzZXJzXFxicmluc1xcRG9jdW1lbnRzXFxPYnNpZGlhblxcc2l0ZVxccXVhcnR6XFxjb21wb25lbnRzXFxzdHlsZXMiLCJzb3VyY2VzIjpbIm1lcm1haWQuaW5saW5lLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUdGO0VBQ0U7OztBQUtGO0VBQ0U7RUFDQTs7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7O0FBR0Y7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFOztBQUlGO0VBQ0U7RUFDQTtFQUNBIiwic291cmNlc0NvbnRlbnQiOlsiLmV4cGFuZC1idXR0b24ge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsb2F0OiByaWdodDtcbiAgcGFkZGluZzogMC40cmVtO1xuICBtYXJnaW46IDAuM3JlbTtcbiAgcmlnaHQ6IDA7IC8vIE5PVEU6IHJpZ2h0IHdpbGwgYmUgc2V0IGluIG1lcm1haWQuaW5saW5lLnRzXG4gIGNvbG9yOiB2YXIoLS1ncmF5KTtcbiAgYm9yZGVyLWNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICBib3JkZXI6IDFweCBzb2xpZDtcbiAgYm9yZGVyLXJhZGl1czogNXB4O1xuICBvcGFjaXR5OiAwO1xuICB0cmFuc2l0aW9uOiAwLjJzO1xuXG4gICYgPiBzdmcge1xuICAgIGZpbGw6IHZhcigtLWxpZ2h0KTtcbiAgICBmaWx0ZXI6IGNvbnRyYXN0KDAuMyk7XG4gIH1cblxuICAmOmhvdmVyIHtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgYm9yZGVyLWNvbG9yOiB2YXIoLS1zZWNvbmRhcnkpO1xuICB9XG5cbiAgJjpmb2N1cyB7XG4gICAgb3V0bGluZTogMDtcbiAgfVxufVxuXG5wcmUge1xuICAmOmhvdmVyID4gLmV4cGFuZC1idXR0b24ge1xuICAgIG9wYWNpdHk6IDE7XG4gICAgdHJhbnNpdGlvbjogMC4ycztcbiAgfVxufVxuXG4jbWVybWFpZC1jb250YWluZXIge1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIGNvbnRhaW46IGxheW91dDtcbiAgei1pbmRleDogOTk5O1xuICBsZWZ0OiAwO1xuICB0b3A6IDA7XG4gIHdpZHRoOiAxMDB2dztcbiAgaGVpZ2h0OiAxMDB2aDtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgZGlzcGxheTogbm9uZTtcbiAgYmFja2Ryb3AtZmlsdGVyOiBibHVyKDRweCk7XG4gIGJhY2tncm91bmQ6IHJnYmEoMCwgMCwgMCwgMC41KTtcblxuICAmLmFjdGl2ZSB7XG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICB9XG5cbiAgJiA+ICNtZXJtYWlkLXNwYWNlIHtcbiAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0KTtcbiAgICBib3JkZXItcmFkaXVzOiA1cHg7XG4gICAgcG9zaXRpb246IGZpeGVkO1xuICAgIHRvcDogNTAlO1xuICAgIGxlZnQ6IDUwJTtcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTAlKTtcbiAgICBoZWlnaHQ6IDgwdmg7XG4gICAgd2lkdGg6IDgwdnc7XG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcblxuICAgICYgPiAubWVybWFpZC1jb250ZW50IHtcbiAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICAgIHRyYW5zZm9ybS1vcmlnaW46IDAgMDtcbiAgICAgIHRyYW5zaXRpb246IHRyYW5zZm9ybSAwLjFzIGVhc2U7XG4gICAgICBvdmVyZmxvdzogdmlzaWJsZTtcbiAgICAgIG1pbi1oZWlnaHQ6IDIwMHB4O1xuICAgICAgbWluLXdpZHRoOiAyMDBweDtcblxuICAgICAgcHJlIHtcbiAgICAgICAgbWFyZ2luOiAwO1xuICAgICAgICBib3JkZXI6IG5vbmU7XG4gICAgICB9XG5cbiAgICAgIHN2ZyB7XG4gICAgICAgIG1heC13aWR0aDogbm9uZTtcbiAgICAgICAgaGVpZ2h0OiBhdXRvO1xuICAgICAgfVxuICAgIH1cblxuICAgICYgPiAubWVybWFpZC1jb250cm9scyB7XG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICBib3R0b206IDIwcHg7XG4gICAgICByaWdodDogMjBweDtcbiAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICBnYXA6IDhweDtcbiAgICAgIHBhZGRpbmc6IDhweDtcbiAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0KTtcbiAgICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICBib3JkZXItcmFkaXVzOiA2cHg7XG4gICAgICBib3gtc2hhZG93OiAwIDJweCA0cHggcmdiYSgwLCAwLCAwLCAwLjEpO1xuICAgICAgei1pbmRleDogMjtcblxuICAgICAgLm1lcm1haWQtY29udHJvbC1idXR0b24ge1xuICAgICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICAgICAgd2lkdGg6IDMycHg7XG4gICAgICAgIGhlaWdodDogMzJweDtcbiAgICAgICAgcGFkZGluZzogMDtcbiAgICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgICBjb2xvcjogdmFyKC0tZGFyayk7XG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICAgICBmb250LXNpemU6IDE2cHg7XG4gICAgICAgIGZvbnQtZmFtaWx5OiB2YXIoLS1ib2R5Rm9udCk7XG4gICAgICAgIHRyYW5zaXRpb246IGFsbCAwLjJzIGVhc2U7XG5cbiAgICAgICAgJjpob3ZlciB7XG4gICAgICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgICAgfVxuXG4gICAgICAgICY6YWN0aXZlIHtcbiAgICAgICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoMXB4KTtcbiAgICAgICAgfVxuXG4gICAgICAgIC8vIFN0eWxlIHRoZSByZXNldCBidXR0b24gZGlmZmVyZW50bHlcbiAgICAgICAgJjpudGgtY2hpbGQoMikge1xuICAgICAgICAgIHdpZHRoOiBhdXRvO1xuICAgICAgICAgIHBhZGRpbmc6IDAgMTJweDtcbiAgICAgICAgICBmb250LXNpemU6IDE0cHg7XG4gICAgICAgIH1cbiAgICAgIH1cbiAgICB9XG4gIH1cbn1cbiJdfQ== */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../../../prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../../../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://peterbrinson.github.io/teach/index.xml"/></head><body data-slug="PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-104---Haunted-House-Triggers-and-Events"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><div class="spacer mobile-only"></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>{let rank={389:1,534:2,geidai:3,AI:4,PBOH:5},ra=rank[a.slugSegment]??99,rb=rank[b.slugSegment]??99;return ra!==rb?ra-rb:!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1}&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>{let shortNames={AI:\&quot;Tokens on the Table\&quot;,PBOH:\&quot;PB Office Hours\&quot;,Storytelling:\&quot;Storytelling\&quot;,Worldbuilding:\&quot;Worldbuilding\&quot;,_References:\&quot;References\&quot;};node.isFolder&amp;&amp;shortNames[node.slugSegment]&amp;&amp;(node.displayName=shortNames[node.slugSegment])}&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-369"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2></h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-369" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../../PBOH/">Peter B's Office Hours</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../../PBOH/Development/">Development</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../../PBOH/Development/Tutorials---Unreal/">Tutorials   Unreal</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../../PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/">100   Discovery and Encounter</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>UE Tutorial 104   Haunted House Triggers and Events</a></div></nav><h1 class="article-title">UE Tutorial 104 - Haunted House Triggers and Events</h1></div></div><article class="popover-hint unreal-tutorial"><p><strong>Previous:</strong> <a href="../../../../PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-103---Scoring-and-UI" class="internal alias" data-slug="PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-103---Scoring-and-UI">Tutorial 103: Scoring and UI</a></p>
+<p><span style="color:#d9a8b3;font-size:1.4rem;"><em>By Yibei He &amp; Peter Brinson</em></span></p>
+<h2 id="0-introduction">0. Introduction<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#0-introduction" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<hr/>
+<blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>A. Outcome </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p>In this tutorial, you will build a haunted house in first-person. Each chapter constructs a different type of trigger blueprint—actors that fire logic when a player enters a space. By repeating the “overlap-and-cast” pattern across lights, doors, animations, and sound, you will master the fundamentals of level interactivity.</p>
+<p>Sample outcome: <a href="https://vimeo.com/1186730731/90c148438a?share=copy&amp;fl=sv&amp;fe=ci" class="external" target="_blank">Video<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</div>
+</blockquote>
+<blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>B. Chapters </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<ul>
+<li><a href="#1-create-a-first-person-project" class="internal alias">1. Create a First Person Project</a></li>
+<li><a href="#2-light-trigger-blueprint" class="internal alias">2. Light Trigger Blueprint</a></li>
+<li><a href="#3-door-trigger-blueprint-rotate" class="internal alias">3. Door Trigger Blueprint (Rotate)</a></li>
+<li><a href="#4-animation-trigger-blueprint-npc" class="internal alias">4. Animation Trigger Blueprint (NPC)</a></li>
+<li><a href="#5-sound-trigger-blueprint" class="internal alias">5. Sound Trigger Blueprint</a></li>
+</ul>
+</div>
+</blockquote>
+<blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>C. Learning Objectives </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p>Review from earlier tutorials:</p>
+<ul>
+<li><code>OnComponentBeginOverlap</code></li>
+<li><a href="../../../../PBOH/Development/Wiki---Unreal/Cast-To" class="internal alias" data-slug="PBOH/Development/Wiki---Unreal/Cast-To">Cast to</a> character BP</li>
+<li><a href="../../../../PBOH/Development/Wiki---Unreal/Variables" class="internal" data-slug="PBOH/Development/Wiki---Unreal/Variables">Variables</a> (<code>Instance Editable</code>, <code>Expose on Spawn</code>)</li>
+<li><a href="../../../../PBOH/Development/Wiki---Unreal/Timeline" class="internal" data-slug="PBOH/Development/Wiki---Unreal/Timeline">Timeline</a> + <code>Lerp</code></li>
+</ul>
+<p>New:</p>
+<ul>
+<li>First Person template</li>
+<li><code>Array</code> variables + <code>For Each Loop</code></li>
+<li><code>Functions</code></li>
+<li>Bool “trigger once” pattern</li>
+<li><code>Set Relative Rotation</code></li>
+<li><code>Sound</code> variable (Ambient Sound, spatial audio)</li>
+<li>Mixamo character import and setup</li>
+<li><code>Character</code> Blueprint (parent class)</li>
+<li><code>Play Animation</code> / <code>SetTimerByEvent</code></li>
+<li>Parent static mesh as rotation axis</li>
+<li><code>Custom Event</code> + recursion (staggered timing)</li>
+<li>Functions (atomic operations) vs Event Graph (time-based orchestration)</li>
+</ul>
+</div>
+</blockquote>
+<hr/>
+<h2 id="1-create-a-first-person-project">1. Create a First Person Project<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1-create-a-first-person-project" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<hr/>
+<blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Project Haunted House </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p>Create a new project using the <strong>First Person</strong> template. Choose Blueprint (not C++). Setting Variant to <code>None</code> is fine. Name it <code>HauntedHouse</code>.</p>
+</div>
+</blockquote>
+<hr/>
+<h2 id="2-light-trigger-blueprint">2. Light Trigger Blueprint<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2-light-trigger-blueprint" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<hr/>
+<p><em>When the player enters a room, lights turn on gradually.</em></p>
+<blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>A. Create a Light Trigger Box </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p>Before we begin, let us focus on the essential parameter of this chapter - <code>Intensity</code> - a light’s brightness.
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_103.webp" width="auto" height="auto" alt/></p>
+<p>The first step: create an <code>Actor</code> blueprint. Name it <code>BP_LightOnTrigger</code>.
+Add a <code>Box Collision</code> (see <a href="../../../../PBOH/Development/Wiki---Unreal/Collision-Components" class="internal alias" data-slug="PBOH/Development/Wiki---Unreal/Collision-Components">wiki</a>) component.</p>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Hold On <a href="../../../../PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-101---A-Floor-Plate-Opens-A-Door#a-make-the-blueprint-file" class="internal alias" data-slug="PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-101---A-Floor-Plate-Opens-A-Door">Tutorial 101</a> on the basics of creating new blueprints and adding components.</p></div>
+                  
+                </div>
+<p>If you don’t know how to do this, refer back to </p>
+</blockquote>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_104.webp" width="auto" height="auto" alt/></p>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Hold On <em>not</em> new to Unreal, you ought to be practicing a file/folder organizational logic that makes sense to you. Be consistent so you can find your files quickly.
+Make a new folder named <code>HauntedHouse</code>? Or add new files to the existing <code>First Person</code> folder?</p></div>
+                  
+                </div>
+<p>Assuming you are </p>
+</blockquote>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_107.webp" width="auto" height="auto" alt/></p>
+</div>
+</blockquote>
+<blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>B. Create an Overlap Event </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p>In the Event Graph, add <code>OnComponentBeginOverlap</code> from the <code>Box Collision</code> component.</p>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Hold On <code>BP_FirstPersonCharacter</code> — not the <em>platforming</em> character from earlier tutorials. You must understand what character class you chose in order to choose the correct <code>Cast To</code> node.</p></div>
+                  
+                </div>
+<p>This project uses the First Person template, so the character class is </p>
+</blockquote>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_110.webp" width="auto" height="auto" alt/></p>
+<p>Drag from the resulting node to add <code>Cast to BP_FirstPersonCharacter</code> (see <a href="../../../../PBOH/Development/Wiki---Unreal/Cast-To" class="internal alias" data-slug="PBOH/Development/Wiki---Unreal/Cast-To">Cast To</a>).
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_113.webp" width="auto" height="auto" alt/></p>
+</div>
+</blockquote>
+<blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>C. Create a Light Variable </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p>Create a variable of type <code>Light</code>. Name it <code>LightsThe</code>.</p>
+<p>Why is there a grid icon by the type <code>Light</code>? Read on.
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_116.webp" width="auto" height="auto" alt/></p>
+<p>In the Details panel, change the container type to <code>Array</code>.<br/>
+This lets one <code>BP_LightOnTrigger</code> control multiple lights.
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_119.webp" width="auto" height="auto" alt/></p>
+<p>Enable <code>Instance Editable</code> and <code>Expose on Spawn</code> so lights can be added to the array by assigning them in the level.
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_122.webp" width="auto" height="auto" alt/></p>
+<blockquote class="callout question" data-callout="question">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Ask your LLM why: </p></div>
+                  
+                </div>
+<p>In the Unreal tutorial I’m following, I just changed a variable from a single item to an “Array”. Why would I use an Array instead of just creating five separate light variables?</p>
+</blockquote>
+</div>
+</blockquote>
+<blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>D. Create Timeline &amp; Lerp </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<h4 id="d1--build-the-timeline-and-for-each-loop-chain">D1 — Build the Timeline and For Each Loop chain<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#d1--build-the-timeline-and-for-each-loop-chain" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p>To make lights turn on gradually, we will use a <code>Timeline</code> node (<code>Add Timeline...</code>). Remember timelines from <a href="../../../../PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-101---A-Floor-Plate-Opens-A-Door" class="internal alias" data-slug="PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-101---A-Floor-Plate-Opens-A-Door">Tutorial 101</a>?</p>
+<p>With the <code>Timeline</code> node selected, press F2 to rename it <code>LightOnTM</code>.</p>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Hold On <a href="../../../../PBOH/Development/Wiki---Unreal/Timeline" class="internal" data-slug="PBOH/Development/Wiki---Unreal/Timeline">Timeline</a> and <a href="../../../../PBOH/Development/Wiki---Unreal/Lerp" class="internal" data-slug="PBOH/Development/Wiki---Unreal/Lerp">Lerp</a> in the wiki for details on these nodes.</p></div>
+                  
+                </div>
+<p>See </p>
+</blockquote>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_125.webp" width="auto" height="auto" alt/></p>
+<p>Drag from the <code>Cast To BP_FirstPersonCharacter</code> success pin.
+<em>Fix the exec wire: ensure it is connected to</em> <code>Play from Start</code>.
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_127.webp" width="auto" height="auto" alt/></p>
+<p>Double-click the <code>Timeline</code> node to open the editor.
+Create a float track named <code>LightOnTM</code>. Set <strong>Length</strong> to <code>2.0</code>. Add a keyframe at time <code>0.0</code> with value <code>0.0</code>, and at time <code>2.0</code> with value <code>1.0</code>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_128.webp" width="auto" height="auto" alt/>
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_131.webp" width="auto" height="auto" alt/></p>
+<p>Next, back in the Event Graph, create a <code>Target Intensity</code> variable (type <code>Float</code>, but not an array). Make it <code>Instance Editable</code> and <code>Expose on Spawn</code>.</p>
+<p>What is this for?  <code>Target Intensity</code> is the value we want the lights to reach when the player enters the trigger.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_134.webp" width="auto" height="auto" alt/>
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_137.webp" width="auto" height="auto" alt/></p>
+<p>Dragging from the <code>Timeline</code> pin, add a <code>For Each Loop</code>.
+From the Variables panel, drag in <code>LightsThe</code> and pass it into <code>For Each Loop</code>.
+Drag from the loop’s <code>Array Element</code> and choose the <code>Is Valid</code> node (the one with the <code>?</code>).</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_139.webp" width="auto" height="auto" alt/></p>
+<p>Drag an additional blue wire from the loop’s <code>Array Element</code> and search for <code>Get Light Component</code>.</p>
+<p>Drag from <code>Light Component</code> and search for <code>Set Intensity</code>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_141.webp" width="auto" height="auto" alt/></p>
+<p>See to the left of <code>Set Intensity</code>?  We left space for our next steps.</p>
+<p>Compile. Save All.</p>
+<h4 id="d2--insert-the-lerp-and-run-it-in-the-level">D2 — Insert the Lerp and run it in the level<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#d2--insert-the-lerp-and-run-it-in-the-level" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p>Drag from <code>Light Component</code> and search for <code>Get Intensity</code>. This node lets us access the current <code>Intensity</code> parameter of each light.</p>
+<p>Insert a <code>Lerp (float)</code> node between <code>Get Intensity</code> and <code>Set Intensity</code>.
+From our VARIABLES panel to the left of the Event Graph, drag the variable <code>Target Intensity</code> in and choose Get.</p>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Tip </p></div>
+                  
+                </div>
+<p>If you double-click a wire, you can add a reroute node (a dot) to clean up the graph.</p>
+</blockquote>
+<p>Connect the float output of the <code>Timeline</code> to the <code>Alpha</code> pin of the <code>Lerp</code>.</p>
+<p><span class="hint">To enlarge any image: Right-click to choose “Open image in new tab”.</span>
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_143.webp" width="auto" height="auto" alt/></p>
+<p>Back in the level, place an instance of <code>BP_LightOnTrigger</code> close to where the player will spawn.
+In its Details panel, assign multiple lights to <code>LightsThe</code>, and set a <code>Target Intensity</code> (e.g., 10).</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_146.webp" width="auto" height="auto" alt/></p>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Tip <code>Directional Light</code> so the effect is easier to see.</p></div>
+                  
+                </div>
+<p>Make the lights’ color distinct or place a large cube above the area to block the </p>
+</blockquote>
+<p>Set the <code>Intensity</code> parameter of each to zero so that they start out dark before the blueprint is triggered.<br/>
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_145.webp" width="auto" height="auto" alt/></p>
+<p>Test it. The lights should turn on gradually.</p>
+<h4 id="d3--refine-to-an-s-curve">D3 — Refine to an S-curve<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#d3--refine-to-an-s-curve" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p>Let’s make the “lights on” behavior more nuanced.</p>
+<p>Return to the <code>Timeline</code> node (<code>LightOnTM</code>). Double-click to edit the curve. Right-click the keys, choose <strong>User</strong>, and move the handles to create an “S-curve” for a smoother ramp-up.
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_147.webp" width="auto" height="auto" alt/>
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_149.webp" width="auto" height="auto" alt/></p>
+</div>
+</blockquote>
+<blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>E. Organize Nodes in a Function to Make This Modular </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<h4 id="e1--collapse-the-nodes-into-a-function">E1 — Collapse the nodes into a function<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#e1--collapse-the-nodes-into-a-function" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p>What a level designer wants: when working, to set the lights to their desired “target” (<code>Target Intensity</code>).  But then on game start (<code>BeginPlay</code>), the lights go dark - they are set to zero by the blueprint script.</p>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Hold on <code>BeginPlay</code> - you'd have a great deal of redundant code.</p></div>
+                  
+                </div>
+<p>Imagine you duplicated this script and called those duplicate nodes on </p>
+<div class="callout-content">
+<p>In every language, this is where functions are useful and wonderful.</p>
+</div>
+</blockquote>
+<p>Select every node after the <code>Timeline</code> node, including the array connected to the loop.  (See in this screengrab which nodes have an orange selection border).
+Right-click and choose <strong>Collapse to Function</strong>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_155.webp" width="auto" height="auto" alt/></p>
+<p>Those nodes will be replaced by a single node. Rename it <code>SetAllLights</code>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_158.webp" width="auto" height="auto" alt/></p>
+<p>Double-click the node to open the function graph.
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_161.webp" width="auto" height="auto" alt/></p>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Hold on. Take a moment to look at the tabs above, the ones that organize the parts of your blueprint, such as the Event Graph and your new function. </p></div>
+                  
+                </div>
+</blockquote>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_163.webp" width="auto" height="auto" alt/></p>
+<h4 id="e2--parameterize-the-function">E2 — Parameterize the function<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#e2--parameterize-the-function" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<blockquote class="callout question" data-callout="question">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Why are we doing this? <code>SetAllLights</code> whenever we want. The player entering a trigger, exiting it, or starting the game—all can use this same code.</p></div>
+                  
+                </div>
+<p>What good is taking this script out of the Event Graph and placing it in a function?
+Answer: We can now call </p>
+</blockquote>
+<p>In the <code>SetAllLights</code> function, select the purple node. In the Details panel, add an input named <code>InTargetIntensity</code> of type <code>Float</code> . Also rename <code>Alpha</code> to <code>InAlpha</code>.</p>
+<p>(The <code>In</code> prefix communicates these are <strong>Inputs</strong> - often called <strong>Parameters</strong>).</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_166.webp" width="auto" height="auto" alt/></p>
+<p>The inputs (parameters) are now passed in.
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_168.webp" width="auto" height="auto" alt/></p>
+<p>Delete the <code>Target Intensity</code> variable node from inside the function and connect the <code>InTargetIntensity</code> input pin instead.
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_170.webp" width="auto" height="auto" alt/>
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_173.webp" width="auto" height="auto" alt/></p>
+<p>Return to the Event Graph. Drag the <code>Target Intensity</code> variable into the new function node.
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_176.webp" width="auto" height="auto" alt/></p>
+<h4 id="e3--wire-to-beginplay">E3 — Wire to BeginPlay<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#e3--wire-to-beginplay" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p>Now, add an <code>Event BeginPlay</code> node to your Event Graph. Call <code>SetAllLights</code> and set <code>InTargetIntensity</code> to <code>0.0</code> and <code>InAlpha</code> to <code>1.0</code>.
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_180.webp" width="auto" height="auto" alt/></p>
+<p>Play the project. The lights should be dark at start, then brighten when you enter the trigger.</p>
+<blockquote class="callout info" data-callout="info">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>For the future <code>bHasTriggered</code>) to ensure certain events only fire once.</p></div>
+                  
+                </div>
+<p>Consider incorporating a boolean variable (e.g., </p>
+</blockquote>
+</div>
+</blockquote>
+<blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>F. Stagger the Lights </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><em>Final extension for lights and triggers. Right now every light fades in at the same time when the player enters the trigger. Let’s make them turn on one after another — i.e. light 1 immediately, light 2 a second later, light 3 a second after that.
+Be warned.  We will sacrifice functionality: the lights will indeed stagger, but will not fade up from zero.</em></p>
+<h4 id="first-instinct-might-be-to-add-a-delay-node--and-why-it-fails">First instinct might be to add a Delay node — and why it fails<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#first-instinct-might-be-to-add-a-delay-node--and-why-it-fails" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p>Open <code>SetAllLights</code>. Try to drag off the For Each Loop and add a <code>Delay</code> node. <strong>It won’t appear</strong>, even with context-sensitive turned off.</p>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Hold On — why? <code>Delay</code> is a <strong>latent</strong> node — its execution spans multiple frames. <strong>Functions in Blueprints do not allow latent nodes.</strong></p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Even if we worked around that by leaving everything in the Event Graph and just dropping a <code>Delay</code> inside a For Each Loop there, it still would have issues. A <code>For Each Loop</code> is <strong>synchronous</strong> — it expects to run all iterations in the same frame.</p>
+<p>So we need two things:</p>
+<ol>
+<li><strong>Get out of the loop.</strong> Replace it with a Custom Event that calls <em>itself</em> with an incremented Index. This pattern is called <strong>recursion</strong>.</li>
+<li>Extract a small function — <code>SetOneLight</code> — that handles “turn one light on.” The Event Graph will orchestrate the timing and we will remove both the Timeline node and <code>SetAllLights</code> from the <code>OnComponentBeginOverlap</code> logic.</li>
+</ol>
+<p>This is the foundational division of labor in Blueprint: <strong>Functions for discrete operations, Event Graph for time-based orchestration.</strong></p>
+</div>
+</blockquote>
+<h4 id="f1--make-a-setonelight-function">F1 — Make a SetOneLight function<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#f1--make-a-setonelight-function" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p>In the <strong>My Blueprint</strong> panel, click the <code>+</code> next to <strong>Functions</strong>. Name it <code>SetOneLight</code>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_401.webp" width="auto" height="auto" alt/></p>
+<p>Inside the function, select the purple entry node. In the <strong>Details</strong> panel, add two inputs:</p>
+<ul>
+<li><strong>Name:</strong> <code>InLight</code>, <strong>Type:</strong> <code>Light</code> (single — not an array)</li>
+<li><strong>Name:</strong> <code>InIntensity</code>, <strong>Type:</strong> <code>Float</code></li>
+</ul>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_404.webp" width="auto" height="auto" alt/></p>
+<p>Let’s build the function.</p>
+<p>First, drag from the entry node’s exec pin and search for <code>?Is Valid</code> (specifially, the question-mark node).  Connect the entry node’s <code>InLight</code> to <code>?Is Valid</code>’s <code>Input Object</code>.
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_407.webp" width="auto" height="auto" alt/></p>
+<ul>
+<li>From the entry node,  drag from <code>InLight</code> (again) and type <code>Light Component</code> in order to find <code>Get Light Component</code>.</li>
+<li>Drag from <code>Light Component</code> to add <code>Set Intensity</code>.  Connect the input <code>InIntensity</code> to the <strong>New Intensity</strong> pin of the <code>Set Intensity</code> node.</li>
+<li>Don’t forget to connect the exec pins.</li>
+</ul>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_410.webp" width="auto" height="auto" alt/></p>
+<p><span class="action">Compile</span>. <span class="save">Save All</span>.</p>
+<h4 id="f2--create-the-lightonsequence-custom-event">F2 — Create the LightOnSequence Custom Event<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#f2--create-the-lightonsequence-custom-event" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p>Back in the Event Graph, right-click in empty space and choose <strong>Add Custom Event…</strong>. Name it <code>LightOnSequence</code>.</p>
+<p>Select the new event node. In the <strong>Details</strong> panel, click <code>+</code> next to <strong>Inputs</strong>:</p>
+<ul>
+<li><strong>Name:</strong> <code>InIndex</code>, <strong>Type:</strong> <code>Integer</code></li>
+</ul>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_413.webp" width="auto" height="auto" alt/></p>
+<h4 id="f3--bounds-check">F3 — Bounds check<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#f3--bounds-check" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p>Stop the recursion when we run out of lights:</p>
+<ul>
+<li>Drag in the variable, <code>LightsThe</code> (Get).  Drag off it and search and add <code>Length</code>.</li>
+<li>Drag from <code>LightOnSequence</code>’s <code>InIndex</code> output in order to add <code>&lt;</code> (Less). Connect <code>Length</code> to the second input of the Less node.</li>
+<li>Drag from <code>LightOnSequence</code>’s exec pin and add <code>Branch</code>. Wire (red) the Less node’s boolean output to the Branch’s <strong>Condition</strong> pin.</li>
+</ul>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_416.webp" width="auto" height="auto" alt/></p>
+<h4 id="f4--on-true-fetch-the-current-light-and-call-setonelight">F4 — On True, fetch the current light and call SetOneLight<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#f4--on-true-fetch-the-current-light-and-call-setonelight" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li>Once again, drag in the variable <code>LightsThe</code> (Get).  Drag from it to add <code>Get (a copy)</code>. Connect <code>InIndex</code> to the Get node’s index pin.</li>
+<li>From the Branch’s True exec drag to add our function, <code>SetOneLight</code>.</li>
+<li>Back to the first (red) node, <code>LightOnSequence</code> - wire <code>InIndex</code> to <code>Get (a copy)</code>.</li>
+<li>Drag from <code>Get (a copy)</code> to <code>SetOneLight</code>’s <code>InLight</code>.</li>
+<li>Drag in the variable <code>Target Intensity</code> (Get) and connect it to <code>InIntensity</code>.</li>
+</ul>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_420.webp" width="auto" height="auto" alt/></p>
+<h4 id="f5--delay-then-call-yourself-with-index--1">F5 — Delay, then call yourself with <code>Index + 1</code><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#f5--delay-then-call-yourself-with-index--1" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li>From <code>SetOneLight</code>’s exec out → drag → <code>Delay</code>. Set <strong>Duration</strong> to <code>1.0</code> (your one-second gap between lights).</li>
+<li>From the Delay’s <code>Completed</code> pin → drag → search <code>LightOnSequence</code>. (Yes, your own event appears — that’s the recursion.)</li>
+<li>Drag from <code>LightOnSequence</code> (the blue node we just created) drag from <code>InIndex</code> → search <code>+</code> (under Operators to find <code>Add</code>). Type <code>1</code> in the second pin.</li>
+<li>And for the first pin of this <code>Add</code> node - look all the way from the red <code>LightOnSequence</code> node at the beginning of this script…and drag its <code>InIndex</code> to the first pin of the <code>Add</code> node.</li>
+</ul>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_423.webp" width="auto" height="auto" alt/></p>
+<p>The Branch’s False pin and the recursion-end happen automatically: when <code>InIndex</code> reaches <code>Length</code>, the Branch condition is false, the False pin fires (connected to nothing), and the chain stops.</p>
+<h4 id="f6--wire-it-up-at-the-overlap">F6 — Wire it up at the overlap<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#f6--wire-it-up-at-the-overlap" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p>Find your <code>OnComponentBeginOverlap</code> → <code>Cast To BP_FirstPersonCharacter</code> script, the script created in Steps 2D and 2E.</p>
+<ul>
+<li>Remove what currently runs after the cast success pin - the timeline and the <code>SetAllLights</code> call.</li>
+<li>(Yes - we’re removing the timeline, therefore the lights will come on instantly, when it is their turn).</li>
+<li>From the <code>Cast To BP_FirstPersonCharacter</code> → call <code>LightOnSequence</code>, connecting this to the script we’ve worked on above.</li>
+<li>Ensure <code>0</code> is the value in the new <code>LightOnSequence</code>’s <code>InIndex</code> input.</li>
+</ul>
+<p><strong>Keep <code>SetAllLights(0.0, 1.0)</code> on <code>BeginPlay</code></strong> — that’s still the right call to start the level dark. The stagger logic is a separate path.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_426.webp" width="auto" height="auto" alt/></p>
+<h4 id="f7--test">F7 — Test<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#f7--test" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p><span class="action">Compile</span>. <span class="save">Save All</span>. Press play and walk into the trigger. The lights should pop on one at a time, one second apart.</p>
+<blockquote class="callout info" data-callout="info">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>For the future <strong><code>SetOneLight</code></strong> is a Function — discrete, fast, reusable, no time involved.
+<strong><code>LightOnSequence</code></strong> is a Custom Event in the Event Graph — it orchestrates <em>when</em> things happen using <code>Delay</code> and recursion.</p></div>
+                  
+                </div>
+<p>Notice the division of labor we ended up with: </p>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Tip <code>SetOneLight</code>. That requires either one Timeline per light (impractical) or driving the fade with <code>SetTimerByEvent</code> or a <code>Tick</code>-based interpolation.
+We will not do this here.</p></div>
+                  
+                </div>
+<p>Do you miss the behavior where each light to faded in (not snap on)?  To be coupled with the staggered behavior? You’d need to call your Timeline-driven fade per light instead of </p>
+</blockquote>
+</div>
+</blockquote>
+<hr/>
+<h2 id="3-door-trigger-blueprint-rotate">3. Door Trigger Blueprint (Rotate)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#3-door-trigger-blueprint-rotate" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<hr/>
+<p><em>When the player enters a doorway, the door swings open.</em></p>
+<blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>A. Create a Door Trigger Box </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p>Create an <code>Actor</code> blueprint. Name it <code>BP_DoorTrigger</code>. Add a <code>Box Collision</code> component.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_178b.webp" width="auto" height="auto" alt/>
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_178a.webp" width="auto" height="auto" alt/></p>
+</div>
+</blockquote>
+<blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>B. Create an Overlap Event </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p>In the Event Graph, add <code>OnComponentBeginOverlap</code>. <code>Cast to BP_FirstPersonCharacter</code>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_179.webp" width="auto" height="auto" alt/>
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_182.webp" width="auto" height="auto" alt/></p>
+</div>
+</blockquote>
+<blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>C. Create a Door Mesh </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p>Add a <code>Static Mesh</code> component and rename it <code>Pivot</code>. Add a <code>Cube</code> component and scale it like a door panel. Rename it <code>Panel</code> and move it so one edge is centered with <code>Pivot</code>.</p>
+<p><strong>Hierarchy:</strong> <code>Pivot</code> should be the parent of <code>Panel</code>.
+Add a doorknob (cylinder) if you like.
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_184.webp" width="auto" height="auto" alt/></p>
+</div>
+</blockquote>
+<blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>D. Create Timeline &amp; Lerp </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p>Create a <code>Timeline</code> node by searching for <code>Add Timeline...</code>
+Name it <code>DoorOpenTM</code>. Connect the <code>Cast To BP_FirstPersonCharacter</code> execution pin to <code>Play from Start</code>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_193.webp" width="auto" height="auto" alt/></p>
+<p>Double-click <code>DoorOpenTM</code> to edit.</p>
+<p>Set the <code>Timeline</code> <strong>Length</strong> to <code>3.0</code>.</p>
+<p>Add a float track named <code>Relative Rotation</code>.</p>
+<p>See the button named <code>Track</code> with the green plus icon - click to <code>Add Float Track</code>.</p>
+<p>Add two keyframes like you see below.<br/>
+The first keyframe is at time 0 and value 0.  The second is at time 3 and value 1.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_194.webp" width="auto" height="auto" alt/></p>
+<hr/>
+<p>Back in the Event Graph, to the right of the Timeline node - drag the <code>Pivot</code> component (in the Components panel) in.  It will make a <code>Pivot</code> node.</p>
+<p>Drag from <code>Pivot</code> and search for <code>Get Relative Rotation</code>.
+Right-click the right side of that new node and choose <code>Split Struct Pin</code>.
+(Don’t worry, these are not yet to be wired to the Timeline node).</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_197.webp" width="auto" height="auto" alt/></p>
+<p>The <code>Split Struct Pin</code> breaks the rotation values into three discrete floats.</p>
+<p>Drag from <code>Relative Rotation Z (Yaw)</code> and add <code>Lerp</code> (under the <code>Float</code> category).</p>
+<hr/>
+<p>On the left, find VARIABLES.  Add a <code>Float</code> named <code>Target Rotation</code>.  (We will initialize it soon).
+Like we’ve done elsewhere, set to <code>true</code> for <code>Instance Editiable</code> and <code>Expose on Spawn</code>.
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_197b.webp" width="auto" height="auto" alt/></p>
+<hr/>
+<p>Now drag in <code>Target Rotation</code>; choose Get, and wire that to <code>Lerp</code> like this.
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_198.webp" width="auto" height="auto" alt/></p>
+<hr/>
+<p>Back to the Timeline node - <code>DoorOpenTM</code>.  Drag from its <code>Update</code> pin in order to add the node  <code>Set Relative Rotation (Pivot)</code>.
+The two created nodes - move them far to the right.  See below.
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_199.webp" width="auto" height="auto" alt/></p>
+<p>Right-click <code>Set Relative Rotation</code>’s <code>New Rotation</code> and choose <code>Split Struct</code>.</p>
+<blockquote class="callout question" data-callout="question">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Ask your LLM why </p></div>
+                  
+                </div>
+<p>In the Unreal tutorial I’m following, I’m using “Split Struct Pin” on a Rotation value. Why is it often better to split a pin into X, Y, and Z instead of just plugging in a single Rotation wire?</p>
+</blockquote>
+<p>Wire <code>Lerp</code>’s return value to <code>Set Relative Rotation</code>’s <code>New Rotation Z (Yaw)</code>.
+This blueprint script is complete.
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_203.webp" width="auto" height="auto" alt/></p>
+<hr/>
+<p>Time to try it out.
+From the Content Browser, drag your blueprint into your level.</p>
+<p>Find <code>Target Rotation</code> in the Details panel.<br/>
+Set it to 90.  This will cause the door to rotate from 0 to 90.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_210.webp" width="auto" height="auto" alt/></p>
+<hr/>
+<p>Play and test.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_224.webp" width="auto" height="auto" alt/></p>
+<p><span class="save">Save All</span></p>
+<hr/>
+</div>
+</blockquote>
+<h2 id="4-animation-trigger-blueprint-npc">4. Animation Trigger Blueprint (NPC)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#4-animation-trigger-blueprint-npc" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<hr/>
+<p><em>When the player enters a space, a Mixamo character plays an attack animation.</em></p>
+<blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>A. Import NPC Character Assets </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p>Go to <strong>Mixamo</strong>. Find a character and an <strong>Idle</strong> animation. <strong>Download with skin</strong> (.fbx).</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_227.webp" width="auto" height="auto" alt/>
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_230.webp" width="auto" height="auto" alt/>
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_233.webp" width="auto" height="auto" alt/></p>
+<p>Find a second animation (e.g., Attack) and download it <strong>Without Skin</strong>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_236.webp" width="auto" height="auto" alt/></p>
+<p>Import these into a <code>Mixamo</code> folder in Unreal.
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_239.webp" width="auto" height="auto" alt/></p>
+</div>
+</blockquote>
+<blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>B. Create an NPC Blueprint </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p>Create a Blueprint Class. Choose <code>Character</code> as the parent class. Name it <code>BP_Zombie</code>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_245.webp" width="auto" height="auto" alt/></p>
+<p>In the Viewport, assign your Mixamo skeletal mesh to the <code>Mesh</code> component.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_248.webp" width="auto" height="auto" alt/>
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_252.webp" width="auto" height="auto" alt/></p>
+<p>Change the <strong>Animation Mode</strong> to <code>Use Animation Asset</code> and select your <strong>Idle</strong> animation.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_254.webp" width="auto" height="auto" alt/></p>
+<p>Place <code>BP_Zombie</code> in the level and test that it plays the idle animation.
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_257.webp" width="auto" height="auto" alt/></p>
+</div>
+</blockquote>
+<blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>C. Create a Play Animation Event </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p>In the <code>BP_Zombie</code> Event Graph, add a <code>Custom Event</code> named <code>Attack</code>.
+Drag the <code>Mesh</code> component in. Drag off it and search for <code>Play Animation</code>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_260.webp" width="auto" height="auto" alt/>
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_263.webp" width="auto" height="auto" alt/></p>
+<p>Right-click the <code>New Anim to Play</code> pin and choose <strong>Promote to Variable</strong>. Name it <code>AttackAnim</code>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_266.webp" width="auto" height="auto" alt/>
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_269.webp" width="auto" height="auto" alt/>
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_272.webp" width="auto" height="auto" alt/>
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_275.webp" width="auto" height="auto" alt/></p>
+<p>Use a <code>Delay</code> node (set to the length of the animation) and then call <code>Play Animation</code> again with the <strong>Idle</strong> animation set to <code>Looping</code>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_278.webp" width="auto" height="auto" alt/></p>
+</div>
+</blockquote>
+<blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>D. Create an Animation Trigger Box </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p>Create a new <code>Actor</code> blueprint named <code>BP_ZombieTrigger</code>. Add <code>Box Collision</code> and <code>OnComponentBeginOverlap</code>. <code>Cast to BP_FirstPersonCharacter</code>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_281.webp" width="auto" height="auto" alt/>
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_284.webp" width="auto" height="auto" alt/></p>
+<p>Create a variable of type <code>BP_Zombie</code> named <code>Zombie</code>. Make it <code>Instance Editable</code>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_287.webp" width="auto" height="auto" alt/>
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_290.webp" width="auto" height="auto" alt/></p>
+<p>Drag the <code>Zombie</code> variable in, then call the custom event <code>Attack</code>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_293.webp" width="auto" height="auto" alt/>
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_296.webp" width="auto" height="auto" alt/>
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_299.webp" width="auto" height="auto" alt/></p>
+</div>
+</blockquote>
+<blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>E. Setup in the Level </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p>Place the trigger box in the level. In its Details panel, assign the <code>Zombie</code> variable to your <code>BP_Zombie</code> actor instance.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_302.webp" width="auto" height="auto" alt/>
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_305.webp" width="auto" height="auto" alt/></p>
+<p><span class="save">Save All</span></p>
+</div>
+</blockquote>
+<hr/>
+<h2 id="5-sound-trigger-blueprint">5. Sound Trigger Blueprint<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#5-sound-trigger-blueprint" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<hr/>
+<p><em>When the player enters a trigger, ambient sound fades in.</em></p>
+<blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>A. Create a Sound Trigger Box </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p>Standard pattern: <code>Box Collision</code>, <code>OnComponentBeginOverlap</code>, <code>Cast to BP_FirstPersonCharacter</code>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_308.webp" width="auto" height="auto" alt/>
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_311.webp" width="auto" height="auto" alt/></p>
+</div>
+</blockquote>
+<blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>B. Create a Sound Variable </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p>Create a variable named <code>Ambient Sound</code> of type <code>Ambient Sound</code>. Make it <code>Instance Editable</code>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_314.webp" width="auto" height="auto" alt/>
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_317.webp" width="auto" height="auto" alt/></p>
+<p>Drag <code>Ambient Sound</code> in. Drag off it and search for <code>Get Audio Component</code>, then call <code>Play</code>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_320.webp" width="auto" height="auto" alt/>
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_323.webp" width="auto" height="auto" alt/></p>
+</div>
+</blockquote>
+<blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>C. Insert an Ambient Sound in the Level </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p>Add an <code>Ambient Sound</code> actor to the level.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_326.webp" width="auto" height="auto" alt/></p>
+<p>Enable <strong>Spatialization</strong>. Adjust <code>Inner Radius</code> and <code>Falloff Distance</code>. Set <strong>Auto Activate</strong> to <code>false</code>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_329.webp" width="auto" height="auto" alt/>
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_330.webp" width="auto" height="auto" alt/></p>
+<p>Import a <code>.wav</code> file and assign it to the actor.
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_335.webp" width="auto" height="auto" alt/></p>
+</div>
+</blockquote>
+<blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>D. Setup the Trigger Box </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p>In the level, select your <code>BP_SoundTrigger</code> and assign the <code>Ambient Sound</code> actor to the variable.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_338.webp" width="auto" height="auto" alt/></p>
+<p><span class="save">Save All</span></p>
+</div>
+</blockquote>
+<h2 id="what-you-can-now-build">What you can now build<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#what-you-can-now-build" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>Lights that turn on when the player enters a room — all at once, or in a staggered sequence (one by one)</li>
+<li>A door that swings open on its hinge (rotation-based animation, not just sliding)</li>
+<li>An NPC character imported from Mixamo that reacts to the player’s proximity with a triggered animation</li>
+<li>Spatial ambient sound that activates when the player enters a zone, with falloff distance and spatialization</li>
+<li>A single trigger that controls multiple objects at once (an array of lights, sounds, or actors)</li>
+<li>Reusable blueprint functions — the same logic callable from BeginPlay, overlap events, or anywhere else</li>
+<li>A layered atmospheric space: lights, rotating doors, animated characters, and sound all responding to player movement</li>
+</ul>
+<h2 id="example-deviations-you-are-ready-for">Example deviations you are ready for<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#example-deviations-you-are-ready-for" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>One trigger fires multiple events - sound, lights on, actor transformations</li>
+<li>Events on exiting a trigger - lights turn off, for example</li>
+</ul></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-108" aria-expanded="true"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#0-introduction" data-for="0-introduction">0. Introduction</a></li><li class="depth-0"><a href="#1-create-a-first-person-project" data-for="1-create-a-first-person-project">1. Create a First Person Project</a></li><li class="depth-0"><a href="#2-light-trigger-blueprint" data-for="2-light-trigger-blueprint">2. Light Trigger Blueprint</a></li><li class="depth-0"><a href="#3-door-trigger-blueprint-rotate" data-for="3-door-trigger-blueprint-rotate">3. Door Trigger Blueprint (Rotate)</a></li><li class="depth-0"><a href="#4-animation-trigger-blueprint-npc" data-for="4-animation-trigger-blueprint-npc">4. Animation Trigger Blueprint (NPC)</a></li><li class="depth-0"><a href="#5-sound-trigger-blueprint" data-for="5-sound-trigger-blueprint">5. Sound Trigger Blueprint</a></li><li class="depth-0"><a href="#what-you-can-now-build" data-for="what-you-can-now-build">What you can now build</a></li><li class="depth-0"><a href="#example-deviations-you-are-ready-for" data-for="example-deviations-you-are-ready-for">Example deviations you are ready for</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>Backlinks</h3><ul id="list-2" class="overflow"><li><a href="../../../../PBOH/Design/Worldbuilding/The-Experience/World-Responsiveness" class="internal">World Responsiveness</a></li><li><a href="../../../../PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/" class="internal">100 - Discovery and Encounter</a></li><li><a href="../../../../PBOH/Development/Tutorials---Unreal/" class="internal">Tutorials - Unreal</a></li><li><a href="../../../../PBOH/Development/Wiki---Unreal/Blueprint-Instances" class="internal">Blueprint Instances</a></li><li><a href="../../../../PBOH/Development/Wiki---Unreal/Branch" class="internal">Branch</a></li><li><a href="../../../../PBOH/Development/Wiki---Unreal/Character" class="internal">Character</a></li><li><a href="../../../../PBOH/Development/Wiki---Unreal/Collision-Components" class="internal">Collision Components</a></li><li><a href="../../../../PBOH/Development/Wiki---Unreal/Editor-Workflows" class="internal">Editor Workflows</a></li><li><a href="../../../../PBOH/Development/Wiki---Unreal/Flow-Control" class="internal">Flow Control</a></li><li><a href="../../../../PBOH/Development/Wiki---Unreal/For-Each-Loop" class="internal">For Each Loop</a></li><li><a href="../../../../PBOH/Development/Wiki---Unreal/OnComponentEndOverlap" class="internal">OnComponentEndOverlap</a></li><li><a href="../../../../PBOH/Development/Wiki---Unreal/Play-Animation" class="internal">Play Animation</a></li><li><a href="../../../../PBOH/Development/Wiki---Unreal/Sequence" class="internal">Sequence</a></li><li><a href="../../../../PBOH/Development/Wiki---Unreal/Set-Relative-Rotation" class="internal">Set Relative Rotation</a></li><li><a href="../../../../PBOH/Development/Wiki---Unreal/Sound" class="internal">Sound</a></li><li><a href="../../../../PBOH/Development/Wiki---Unreal/Variables" class="internal">Variables</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../../../postscript.js" type="module" data-persist="true"></script></html>

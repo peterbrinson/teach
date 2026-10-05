@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head><title>UE Tutorial 101 - A Floor Plate Opens A Door</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="PB Teach"/><meta property="og:title" content="UE Tutorial 101 - A Floor Plate Opens A Door"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="UE Tutorial 101 - A Floor Plate Opens A Door"/><meta name="twitter:description" content="By Aaron Cheney &amp; Peter Brinson 0. Introduction A."/><meta property="og:description" content="By Aaron Cheney &amp; Peter Brinson 0. Introduction A."/><meta property="og:image:alt" content="By Aaron Cheney &amp; Peter Brinson 0. Introduction A."/><meta property="og:image" content="https://peterbrinson.github.io/teach/static/og-image.png"/><meta property="og:image:url" content="https://peterbrinson.github.io/teach/static/og-image.png"/><meta name="twitter:image" content="https://peterbrinson.github.io/teach/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="peterbrinson.github.io/teach"/><meta property="og:url" content="https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-101---A-Floor-Plate-Opens-A-Door"/><meta property="twitter:url" content="https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-101---A-Floor-Plate-Opens-A-Door"/><link rel="icon" href="../../../../static/icon.png"/><meta name="description" content="By Aaron Cheney &amp; Peter Brinson 0. Introduction A."/><meta name="generator" content="Quartz"/><link href="../../../../index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiQzpcXFVzZXJzXFxicmluc1xcRG9jdW1lbnRzXFxPYnNpZGlhblxcc2l0ZVxccXVhcnR6XFxjb21wb25lbnRzXFxzdHlsZXMiLCJzb3VyY2VzIjpbIm1lcm1haWQuaW5saW5lLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUdGO0VBQ0U7OztBQUtGO0VBQ0U7RUFDQTs7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7O0FBR0Y7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFOztBQUlGO0VBQ0U7RUFDQTtFQUNBIiwic291cmNlc0NvbnRlbnQiOlsiLmV4cGFuZC1idXR0b24ge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsb2F0OiByaWdodDtcbiAgcGFkZGluZzogMC40cmVtO1xuICBtYXJnaW46IDAuM3JlbTtcbiAgcmlnaHQ6IDA7IC8vIE5PVEU6IHJpZ2h0IHdpbGwgYmUgc2V0IGluIG1lcm1haWQuaW5saW5lLnRzXG4gIGNvbG9yOiB2YXIoLS1ncmF5KTtcbiAgYm9yZGVyLWNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICBib3JkZXI6IDFweCBzb2xpZDtcbiAgYm9yZGVyLXJhZGl1czogNXB4O1xuICBvcGFjaXR5OiAwO1xuICB0cmFuc2l0aW9uOiAwLjJzO1xuXG4gICYgPiBzdmcge1xuICAgIGZpbGw6IHZhcigtLWxpZ2h0KTtcbiAgICBmaWx0ZXI6IGNvbnRyYXN0KDAuMyk7XG4gIH1cblxuICAmOmhvdmVyIHtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgYm9yZGVyLWNvbG9yOiB2YXIoLS1zZWNvbmRhcnkpO1xuICB9XG5cbiAgJjpmb2N1cyB7XG4gICAgb3V0bGluZTogMDtcbiAgfVxufVxuXG5wcmUge1xuICAmOmhvdmVyID4gLmV4cGFuZC1idXR0b24ge1xuICAgIG9wYWNpdHk6IDE7XG4gICAgdHJhbnNpdGlvbjogMC4ycztcbiAgfVxufVxuXG4jbWVybWFpZC1jb250YWluZXIge1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIGNvbnRhaW46IGxheW91dDtcbiAgei1pbmRleDogOTk5O1xuICBsZWZ0OiAwO1xuICB0b3A6IDA7XG4gIHdpZHRoOiAxMDB2dztcbiAgaGVpZ2h0OiAxMDB2aDtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgZGlzcGxheTogbm9uZTtcbiAgYmFja2Ryb3AtZmlsdGVyOiBibHVyKDRweCk7XG4gIGJhY2tncm91bmQ6IHJnYmEoMCwgMCwgMCwgMC41KTtcblxuICAmLmFjdGl2ZSB7XG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICB9XG5cbiAgJiA+ICNtZXJtYWlkLXNwYWNlIHtcbiAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0KTtcbiAgICBib3JkZXItcmFkaXVzOiA1cHg7XG4gICAgcG9zaXRpb246IGZpeGVkO1xuICAgIHRvcDogNTAlO1xuICAgIGxlZnQ6IDUwJTtcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTAlKTtcbiAgICBoZWlnaHQ6IDgwdmg7XG4gICAgd2lkdGg6IDgwdnc7XG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcblxuICAgICYgPiAubWVybWFpZC1jb250ZW50IHtcbiAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICAgIHRyYW5zZm9ybS1vcmlnaW46IDAgMDtcbiAgICAgIHRyYW5zaXRpb246IHRyYW5zZm9ybSAwLjFzIGVhc2U7XG4gICAgICBvdmVyZmxvdzogdmlzaWJsZTtcbiAgICAgIG1pbi1oZWlnaHQ6IDIwMHB4O1xuICAgICAgbWluLXdpZHRoOiAyMDBweDtcblxuICAgICAgcHJlIHtcbiAgICAgICAgbWFyZ2luOiAwO1xuICAgICAgICBib3JkZXI6IG5vbmU7XG4gICAgICB9XG5cbiAgICAgIHN2ZyB7XG4gICAgICAgIG1heC13aWR0aDogbm9uZTtcbiAgICAgICAgaGVpZ2h0OiBhdXRvO1xuICAgICAgfVxuICAgIH1cblxuICAgICYgPiAubWVybWFpZC1jb250cm9scyB7XG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICBib3R0b206IDIwcHg7XG4gICAgICByaWdodDogMjBweDtcbiAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICBnYXA6IDhweDtcbiAgICAgIHBhZGRpbmc6IDhweDtcbiAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0KTtcbiAgICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICBib3JkZXItcmFkaXVzOiA2cHg7XG4gICAgICBib3gtc2hhZG93OiAwIDJweCA0cHggcmdiYSgwLCAwLCAwLCAwLjEpO1xuICAgICAgei1pbmRleDogMjtcblxuICAgICAgLm1lcm1haWQtY29udHJvbC1idXR0b24ge1xuICAgICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICAgICAgd2lkdGg6IDMycHg7XG4gICAgICAgIGhlaWdodDogMzJweDtcbiAgICAgICAgcGFkZGluZzogMDtcbiAgICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgICBjb2xvcjogdmFyKC0tZGFyayk7XG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICAgICBmb250LXNpemU6IDE2cHg7XG4gICAgICAgIGZvbnQtZmFtaWx5OiB2YXIoLS1ib2R5Rm9udCk7XG4gICAgICAgIHRyYW5zaXRpb246IGFsbCAwLjJzIGVhc2U7XG5cbiAgICAgICAgJjpob3ZlciB7XG4gICAgICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgICAgfVxuXG4gICAgICAgICY6YWN0aXZlIHtcbiAgICAgICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoMXB4KTtcbiAgICAgICAgfVxuXG4gICAgICAgIC8vIFN0eWxlIHRoZSByZXNldCBidXR0b24gZGlmZmVyZW50bHlcbiAgICAgICAgJjpudGgtY2hpbGQoMikge1xuICAgICAgICAgIHdpZHRoOiBhdXRvO1xuICAgICAgICAgIHBhZGRpbmc6IDAgMTJweDtcbiAgICAgICAgICBmb250LXNpemU6IDE0cHg7XG4gICAgICAgIH1cbiAgICAgIH1cbiAgICB9XG4gIH1cbn1cbiJdfQ== */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../../../prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../../../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://peterbrinson.github.io/teach/index.xml"/></head><body data-slug="PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-101---A-Floor-Plate-Opens-A-Door"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><div class="spacer mobile-only"></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>{let rank={389:1,534:2,geidai:3,AI:4,PBOH:5},ra=rank[a.slugSegment]??99,rb=rank[b.slugSegment]??99;return ra!==rb?ra-rb:!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1}&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>{let shortNames={AI:\&quot;Tokens on the Table\&quot;,PBOH:\&quot;PB Office Hours\&quot;,Storytelling:\&quot;Storytelling\&quot;,Worldbuilding:\&quot;Worldbuilding\&quot;,_References:\&quot;References\&quot;};node.isFolder&amp;&amp;shortNames[node.slugSegment]&amp;&amp;(node.displayName=shortNames[node.slugSegment])}&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-366"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2></h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-366" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../../PBOH/">Peter B's Office Hours</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../../PBOH/Development/">Development</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../../PBOH/Development/Tutorials---Unreal/">Tutorials   Unreal</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../../PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/">100   Discovery and Encounter</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>UE Tutorial 101   A Floor Plate Opens A Door</a></div></nav><h1 class="article-title">UE Tutorial 101 - A Floor Plate Opens A Door</h1></div></div><article class="popover-hint unreal-tutorial"><p><span style="color:#d9a8b3;font-size:1.4rem;"><em>By Aaron Cheney &amp; Peter Brinson</em></span></p>
+<h2 id="0-introduction">0. Introduction<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#0-introduction" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>A. Outcome </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><span style="color:#cb5d21;"><strong>This tutorial’s outcome:</strong></span>
+When the player character steps on a floor plate, a particular door slides open.
+The door closes when the player steps off the plate.</p>
+<p>The essential lesson is to learn how the door is “listening” for the pressure plate to call it.
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_01_101.webp" width="auto" height="auto" alt/></p>
+</div>
+</blockquote>
+<blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>B. Video Version of Tutorial </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p>This tutorial page and this video provide the same lesson in slightly different ways, encouraging you to repeat steps (a little differently) until you understand the principles.
+The outcome is demonstrated at (00:24 - 01:31).</p>
+<iframe src="https://player.vimeo.com/video/1119249385" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+</div>
+</blockquote>
+<blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>C. Learning Objectives </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p>Develop working knowledge of blueprint fundamentals:</p>
+<ul>
+<li>events</li>
+<li>components</li>
+<li>reference variables</li>
+<li>parameters</li>
+<li>control flow</li>
+<li>data flow</li>
+<li>casting</li>
+<li>timeline (animate location with lerp)</li>
+<li>collision events</li>
+<li>dispatchers</li>
+</ul>
+</div>
+</blockquote>
+<h2 id="1-a-new-third-person-project">1. A New Third Person Project<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1-a-new-third-person-project" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<hr/>
+<blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>A. Choose a Template </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p>Choose New Project</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_01_103.webp" width="auto" height="auto" alt/></p>
+<p>Choose the third person template.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_01_104.webp" width="auto" height="auto" alt/></p>
+</div>
+</blockquote>
+<blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>B. Add Platforming Variant </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><span style="color:#cb5d21;"><strong>Don’t miss this step:</strong></span>
+Add the Platforming “Variant”.  This is not critical to the project, but this and the next 2 tutorials use it.  You will be instructed to choose particular blueprints by name.  Without this step, that process will be foiled.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_01_107.webp" width="auto" height="auto" alt/></p>
+</div>
+</blockquote>
+<blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>C. Name and Verify </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p>Name your project and click Create.</p>
+<p>Once your project is open, click play to ensure you have your third person project working.</p>
+</div>
+</blockquote>
+<blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>D. Change the Player Character </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Hold On <a href="../../../../PBOH/Development/Tutorials---Unreal/UE-Editor-Navigation" class="internal alias" data-slug="PBOH/Development/Tutorials---Unreal/UE-Editor-Navigation">UE Editor Navigation</a></p></div>
+                  
+                </div>
+<p>If you are new to Unreal, become familiar with basic viewport navigation </p>
+</blockquote>
+<p>Follow this dropdown to change the <a href="../../../../PBOH/Development/Wiki---Unreal/Pawn" class="internal alias" data-slug="PBOH/Development/Wiki---Unreal/Pawn">pawn</a> from <code>BP_ThirdPersonPlayer</code> to <code>BP_PlatformingCharacter</code>. The pawn is the player character that will be spawned on play.</p>
+<p><span class="hint">To enlarge any image on this page: Right-click to choose “Open image in new tab”.</span></p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_01_110.webp" width="auto" height="auto" alt/></p>
+<p>Notice:
+If you do not find <code>BP_PlatformingCharacter</code>, that is likely because you did not select the Platforming Variant in Step 1B.</p>
+<blockquote class="callout question" data-callout="question">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Ask your LLM why </p></div>
+                  
+                </div>
+<p>In Unreal, why might the tutorial I’m following change the pawn blueprint from a third person character to the platforming character?</p>
+</blockquote>
+</div>
+</blockquote>
+<h2 id="2-the-pressure-plate-blueprint">2. The Pressure Plate Blueprint<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2-the-pressure-plate-blueprint" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<hr/>
+<p>Jump to (01:48): <a href="https://vimeo.com/1119249385?fl=pl&amp;fe=cm#t=1m45s" class="external" target="_blank">https://vimeo.com/1119249385?fl=pl&amp;fe=cm#t=1m45s<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>A. Make the Blueprint File </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p>Right-click in the content browser (or content drawer if you prefer) to make a new folder in Content, <code>PlateAndDoor</code>:</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_01_113.webp" width="auto" height="auto" alt/></p>
+<p>In the folder <code>PlateAndDoor</code>, right-click in the content browser and choose Blueprint Class. Next, you will choose <code>Actor</code>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_01_116.webp" width="auto" height="auto" alt/></p>
+<p>Name the blueprint <code>BP_PressurePlate</code>.  Including <code>BP_</code> at the start of blueprints is strongly encouraged.  In other situations, for example, you’ll include <code>M_</code> at the start of materials, and so on.</p>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Tip </p></div>
+                  
+                </div>
+<p>When you want to rename a file in the Content Browser, after selecting it, click F2.</p>
+</blockquote>
+<blockquote class="callout question" data-callout="question">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Ask your LLM what </p></div>
+                  
+                </div>
+<p>In Unreal, what is an actor and what is a blueprint?</p>
+</blockquote>
+</div>
+</blockquote>
+<blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>B. Add and Edit the Geometry </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p>Double click <code>BP_PressurePlate</code> to get a new window, where you can edit the blueprint. You will use this interface a great deal moving forward.</p>
+<p>In the <a href="../../../../PBOH/Development/Wiki---Unreal/Components" class="internal" data-slug="PBOH/Development/Wiki---Unreal/Components">Components</a> window, click Add and search for <code>Cube</code>. Select it under Basic Shapes.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_01_119.webp" width="auto" height="auto" alt/></p>
+<p>Name the resulting component <code>BottomPlatform</code>. Use the Transform Gizmo to scale the Z to make it short. Alternatively, you can type in a value in Details > Transform > Scale > Z, as you see on the right.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_01_122.webp" width="auto" height="auto" alt/></p>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Tip </p></div>
+                  
+                </div>
+<p>If the transform gizmo is too sensitive, you can adjust.</p>
+</blockquote>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_01_125.webp" width="auto" height="auto" alt/></p>
+<p>Next, create another <code>Cube</code> component, name it <code>PressurePlate</code> and configure it as such. Adjust the parent/child hierarchy by dragging in the Components window.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_01_128.webp" width="auto" height="auto" alt/></p>
+<p>To make the two components visibly distinct, with <code>PressurePlate</code> selected, find <code>Materials</code> in the Details window. Search for “grey” to find a working material already in this project.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_01_131.webp" width="auto" height="auto" alt/></p>
+<p>Next, a third component is needed. Its role is to detect when the player steps on the plate. That area (the yellow wireframe) needs to be a little larger than the pressure plate.</p>
+<p>To do this, click Add in the component window, choose: <code>Box Collision</code> (see <a href="../../../../PBOH/Development/Wiki---Unreal/Collision-Components" class="internal alias" data-slug="PBOH/Development/Wiki---Unreal/Collision-Components">wiki</a>). Rename it <code>BoxCollider</code>; adjust it to the same child/parent hierarchy as the two pressure plates in Components. Configure it so it is larger than <code>PressurePlate</code>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_01_134.webp" width="auto" height="auto" alt/></p>
+<p>One last adjustment: set <code>PressurePlate</code> to be at location 0,0,0. (Being inside the blueprint, such locations are relative.) When you set that location, <code>BottomPlatform</code> will need to be moved downward, and perhaps <code>BoxCollider</code>. This is because Step 2E will animate the pressure plate between, in effect, “Position 0% to Position 100%“.  So it is wise to make the default location equal to zero.</p>
+<p>Return to the main Unreal window, and File > Save Current Level as…</p>
+<p>Save the level file in the same folder as our working blueprint, <code>PlateAndDoor</code>.</p>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Tip </p></div>
+                  
+                </div>
+<p>The terms ‘scene’, ‘level’, and ‘map’ are interchangeable in Unreal.</p>
+</blockquote>
+<p>Finally, <span class="save">Save All</span> is under File…</p>
+</div>
+</blockquote>
+<blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>C. Add Event: OnComponentBeginOverlap Prints A String </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p>Back to editing <code>BP_PressurePlate</code>.</p>
+<p>The previous step - Step 2B, constructing the pressure plate - was taking place in the Viewport. Move to the <a href="../../../../PBOH/Development/Wiki---Unreal/Event-Graph" class="internal alias" data-slug="PBOH/Development/Wiki---Unreal/Event-Graph">Event Graph</a> by navigating the tabs you’ll find up high.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_01_137.webp" width="auto" height="auto" alt/></p>
+<p>Delete the 3 nodes already in there.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_01_140.webp" width="auto" height="auto" alt/></p>
+<p>In Components, right-click <code>BoxCollider</code> > Add Event > <a href="../../../../PBOH/Development/Wiki---Unreal/OnComponentBeginOverlap" class="internal" data-slug="PBOH/Development/Wiki---Unreal/OnComponentBeginOverlap">OnComponentBeginOverlap</a>.  This makes a new node in the Event Graph.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_01_143.webp" width="auto" height="auto" alt/></p>
+<blockquote class="callout question" data-callout="question">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Ask your LLM why <code>OnComponentBeginOverlap</code> by right clicking a collider component, then choosing <code>Add Event</code>.  I thought the way to add nodes to the event graph was by right-clicking there and searching.  Why do it this way this time?</p></div>
+                  
+                </div>
+<p>In the Unreal tutorial I’m following, I’m working on a blueprint.  The tutorial says to add </p>
+</blockquote>
+<p>On the resulting <code>OnComponentBeginOverlap</code> node, find its execution pin — the white arrow shape on the top right. Drag out and search for <a href="../../../../PBOH/Development/Wiki---Unreal/Print-String" class="internal alias" data-slug="PBOH/Development/Wiki---Unreal/Print-String">Print String</a>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_01_146.webp" width="auto" height="auto" alt/></p>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Tip </p></div>
+                  
+                </div>
+<p>Remember the terms “node” and “execution pin” (or just “pin”). These are essential moving forward.</p>
+</blockquote>
+<p>In the <code>Print String</code> node, type in the field (In String) <code>Begin Overlap</code>.</p>
+<p><span class="action">Compile</span></p>
+<p><span class="save">Save All</span></p>
+<p>Return to the level editor. Drag in <code>BP_PressurePlate</code> from the Content Browser. Size and position on the floor.</p>
+<p>Press play and test. On the top-left of your game window, <code>Begin Overlap</code> should appear.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_01_149.webp" width="auto" height="auto" alt/></p>
+</div>
+</blockquote>
+<blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>D. Behavior Is Only For Our Player </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p>Back to the Event Graph.  Drag off the <code>OnComponentBeginOverlap</code> execution pin and search/add <code>Cast to BP_PlatformingCharacter</code> (see <a href="../../../../PBOH/Development/Wiki---Unreal/Cast-To" class="internal alias" data-slug="PBOH/Development/Wiki---Unreal/Cast-To">wiki</a>). This new node is between the other two.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_01_152.webp" width="auto" height="auto" alt/></p>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Tip <code>BP_PlatformingCharacter</code>, it is because you skipped Step 1D, above.</p></div>
+                  
+                </div>
+<p>If you could not find </p>
+</blockquote>
+<p>Also, connect the parameter <code>Other Actor to Object</code> of the middle node, as in the above image. See the blue wire?</p>
+<p>Play the game again and ensure <code>Begin Overlap</code> still appears.</p>
+<blockquote class="callout question" data-callout="question">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>What is &quot;cast&quot;? <code>BP_PlatformingCharacter</code>, the cast works like a question. This cast only lets the blueprint script proceed - from one node to the next - if the <code>Object</code> (parameter) matches.</p></div>
+                  
+                </div>
+<p>The pressure plate should only be sensitive to the player character. In order to determine if the actor that just touched (the overlap) is indeed </p>
+</blockquote>
+<p>Because this project is currently so simple, this additional functionality is not needed. But it is good practice moving forward.</p>
+<p><span class="save">Save All</span></p>
+</div>
+</blockquote>
+<blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>E1. Animate the Pressure Plate Downward </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p>Drag off the <code>Print String</code> pin and add <code>Add Timeline</code> (see <a href="../../../../PBOH/Development/Wiki---Unreal/Timeline" class="internal alias" data-slug="PBOH/Development/Wiki---Unreal/Timeline">wiki</a>). Name that new node <code>PressurePlateTimeline</code>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_01_155.webp" width="auto" height="auto" alt/></p>
+<p>Double click the new node to get a new interface.</p>
+<p><code>Add Float Track</code>.  Name that new <code>Float</code> track <code>PressurePlateHeight</code>. The plan is to animate the pressure plate’s Z position.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_01_158.webp" width="auto" height="auto" alt/></p>
+<p>Make <code>Length</code> 0.75, which establishes that it will take 0.75 seconds to animate.</p>
+<p>Right-click on the graph to add a keyframe at 0 and another at 0.75. Fields will appear allowing you to enter exact values. The keyframe at 0 has a value of 0. At 0.75, enter the value 1.  Think of the 0 and 1 functioning as “Position 0% and Position 100%“.</p>
+<p>Click the button with arrows pointing up and down to adjust the graph’s view so you see everything.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_01_161.webp" width="auto" height="auto" alt/></p>
+<p>Back to the Event Graph.  Drag from the <code>PressurePlateTimeline</code>’s pin to add <code>Print String</code> to the right of it.
+See how one of the parameters is being passed in with the green wire that gets cast to a pink one?</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_01_164.webp" width="auto" height="auto" alt/></p>
+<blockquote class="callout question" data-callout="question">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Ask your LLM why <code>PressurePlateTimeline</code> node's parameter, <code>Pressure Plate Height</code> passes to the node <code>Print String</code>'s <code>In String</code> parameter.  It created a small node between those two wires when I did so.  Why does it change the data type?</p></div>
+                  
+                </div>
+<p>In the Unreal tutorial I’m following, the </p>
+</blockquote>
+<p><span class="action">Compile</span></p>
+<p>Play again to see integer values printed.</p>
+<p>Add: <code>Set Relative Location</code> (see <a href="../../../../PBOH/Development/Wiki---Unreal/Transformation" class="internal alias" data-slug="PBOH/Development/Wiki---Unreal/Transformation">wiki</a>).  There is more than one to choose from.  Choose the one that includes <code>(Pressure Plate)</code>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_01_167.webp" width="auto" height="auto" alt/></p>
+<p>See the node with only <code>Pressure Plate</code>?  When you added <code>Set Relative Location</code> (see <a href="../../../../PBOH/Development/Wiki---Unreal/Transformation" class="internal alias" data-slug="PBOH/Development/Wiki---Unreal/Transformation">wiki</a>), choosing the one with <code>Pressure Plate</code> added a reference variable node.
+(Typically, such reference variables need to be set up manually.)</p>
+<p>Right-click the <code>Set Relative Location</code> node’s <code>New Location</code> to “split”.  This will split that Vector3 into discrete parameters. Then hook <code>Pressure Plate Height</code> to the <code>New Location Z</code>.  It will be a green wire.</p>
+<p><span class="action">Compile</span>
+Test the game. The pressure plate now changes location, but there is more work to do.</p>
+<p>Time to insert a <a href="../../../../PBOH/Development/Wiki---Unreal/Lerp" class="internal" data-slug="PBOH/Development/Wiki---Unreal/Lerp">Lerp</a> and configure the values and wires as such.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_01_170.webp" width="auto" height="auto" alt/></p>
+<p>Be ready to tweak the B value in the <code>Lerp</code> node.</p>
+<blockquote class="callout question" data-callout="question">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Ask your LLM why <code>Lerp</code> node between a <code>Timeline</code> node and a <code>Set Relative Location</code> node's <code>New Location Z</code> input value.  Why?</p></div>
+                  
+                </div>
+<p>In the Unreal tutorial I’m following, it says to insert a </p>
+</blockquote>
+</div>
+</blockquote>
+<blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>E2. Animate the Pressure Plate Upward </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p>And to make the pressure plate return to its initial location, add two nodes - <a href="../../../../PBOH/Development/Wiki---Unreal/OnComponentEndOverlap" class="internal" data-slug="PBOH/Development/Wiki---Unreal/OnComponentEndOverlap">OnComponentEndOverlap</a> and <code>Cast to BP_PlatformingCharacter</code>.  This closely models what you did in Step E1.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_01_173.webp" width="auto" height="auto" alt/></p>
+<p>Here is the completed Event Graph for <code>BP_PressurePlate</code>.</p>
+<p><span class="hint">To enlarge any image: Right-click to choose “Open image in new tab”.</span>
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_01_176.webp" width="auto" height="auto" alt/></p>
+<p><span class="save">Save All</span></p>
+</div>
+</blockquote>
+<h2 id="3-the-door-listens-and-opens">3. The Door Listens and Opens<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#3-the-door-listens-and-opens" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<hr/>
+<p>Jump to (17:07): <a href="https://vimeo.com/1119249385?fl=pl&amp;fe=cm#t=17m7s" class="external" target="_blank">https://vimeo.com/1119249385?fl=pl&amp;fe=cm#t=17m7s<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>A. Create the Door Blueprint and Configure Geometry </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><em>Time to make a new blueprint</em>.  Name it <code>BP_Door</code>.
+Refer back to Steps 2A and 2B for general guidance on making a new blueprint and editing it.</p>
+<p>Make two cube components.  Scale, position, and name them like the image below.</p>
+<p>The wall component will not move, and the door component will move.  Therefore, make sure the door component is at location 0,0,0 before dragging the blueprint asset (from Content Browser) into the scene.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_01_179.webp" width="auto" height="auto" alt/></p>
+</div>
+</blockquote>
+<blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>B. Dispatcher for the Pressure Plate </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><em>Back to editing the pressure plate blueprint.</em> In the event graph, find EVENT DISPATCHERS on the left, and click its little plus button. Name the dispatcher <code>OnBeginPressurePlate</code>.</p>
+<p>Drag it into the Event Graph, choose “call” after letting go. And insert before <code>PressurePlateTimeline</code>.</p>
+<blockquote class="callout question" data-callout="question">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Ask your LLM why <code>call</code> upon adding it to the event graph.  Why?</p></div>
+                  
+                </div>
+<p>In the Unreal tutorial I’m following, it says to add a dispatcher, and choose </p>
+</blockquote>
+</div>
+</blockquote>
+<blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>C. Bind Event in the Door </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><em>Back in the door blueprint.</em>
+The Event Graph. Delete the nodes except keep <code>Event BeginPlay</code>.</p>
+<p>Drag off of <code>Event BeginPlay</code> and search for <code>Bind Event to On Begin Pressure Plate</code>.  <em>Need to uncheck Context Sensitive right there?</em>
+This makes the connection to the work in Step 3B, the event dispatcher.</p>
+<blockquote class="callout question" data-callout="question">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Ask your LLM <code>Bind Event to On Begin Pressure Plate</code>.  I needed to check untrue <code>Context Sensative</code> in that interface.  Why?</p></div>
+                  
+                </div>
+<p>In the Unreal tutorial I’m following, it says to add the node </p>
+</blockquote>
+<p>What we are doing here: when the game starts, set the door to be “listening” for the pressure plate to <code>Call On Begin Pressure Plate</code>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_01_182.webp" width="auto" height="auto" alt/></p>
+<p><span class="save">Save All</span></p>
+<p>On the left, click the plus to the right of VARIABLES, name it <code>MyPressurePlate</code> and give it a type, <code>BP_PressurePlate</code>.
+You will have to search for that type as it is quite specific compared to say, <code>Int</code> or <code>String</code>.</p>
+<p>Keep the variable <code>MyPressurePlate</code> selected.   Under Details, click on <code>Instance Editable</code> (see <a href="../../../../PBOH/Development/Wiki---Unreal/Blueprint-Instances" class="internal alias" data-slug="PBOH/Development/Wiki---Unreal/Blueprint-Instances">wiki</a>) and <code>Expose on Spawn</code>. This opens up the scope of this variable beyond its blueprint, so that it can be a reference to our other blueprint - pressure plate.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_01_185.webp" width="auto" height="auto" alt/>
+Notice the open eye icon next to the variable, where you created it on the left.  When you clicked <code>Instance Editable</code>, you make it a public variable accessible in the level.  We will take advantage of that setting soon, the fact that the variable is “exposed”.</p>
+<p>Now you can drag the variable <code>MyPressurePlate</code> into the event graph, choose “Get”, and drag its wire to the parameter <code>Target</code> - found on <code>Bind Event to On Begin Pressure Plate</code>.</p>
+<p>If you compile, you will get an error. Hold tight.</p>
+<p>Right-click in the Event Graph and click <code>Context Sensitive</code> back to <code>true</code>.
+Search and choose <code>Add Custom Event</code> (see <a href="../../../../PBOH/Development/Wiki---Unreal/Custom-Events" class="internal alias" data-slug="PBOH/Development/Wiki---Unreal/Custom-Events">wiki</a>).</p>
+<p>Name it <code>OnPressurePlatePressed</code>. Connect it to <code>Event</code> of <code>Bind Event to On Begin Pressure Plate</code>.</p>
+<p>Notice it is not the execution pin that draws the red wire.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_01_186.webp" width="auto" height="auto" alt/></p>
+<p>Because you exposed the variable <code>MyPressurePlate</code> above, we can give the variable a value in the level.</p>
+<p>Click on the door in the level. In Details, find the variable, <code>My Pressure Plate</code> — hey, here is where you can initialize the variable that you just created. Change its value to <code>BP_PressurePlate</code>.
+Success: the door has a reference to the pressure plate.</p>
+<p>To make sure things are set, in the door Event Graph, drag off <code>OnPressurePlatePressed</code>’s pin, add a print statement with “Door (me) got called”. Compile and test to see that string appears when the player character steps on the pressure plate.</p>
+<p><span class="save">Save All</span></p>
+<blockquote class="callout question" data-callout="question">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Ask your LLM why </p></div>
+                  
+                </div>
+<p>In an Unreal tutorial I’m following, why might it ask me to make a blueprint variable Instance Editable?</p>
+</blockquote>
+</div>
+</blockquote>
+<blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>D. Animate the Door with the Timeline Node </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p>Refer to Steps 2A and 2B to animate the door.  And Step 3C for how to call the pressure plate (so it will close).
+That is, this section - 3D - does not tell you how to animate and call the door, but you can extrapolate based on 2A, 2B, and 3C - with these additional instructions incorporated:</p>
+<ul>
+<li>When you edit the timeline for your door, name the float track <code>DoorXPosition</code>.</li>
+<li>When you are setting the location, the specific node is: <code>Set Relative Location (Door)</code>.</li>
+<li>The pressure plate needs the node <code>Call On End Pressure Plate</code> inserted similarly to how you did for <code>Call On Begin Pressure Plate</code> in 4C. Look at the complete graph a bit below for details.</li>
+</ul>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_01_188.webp" width="auto" height="auto" alt/></p>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Tip </p></div>
+                  
+                </div>
+<p>If you double-click a wire, it will add a dot - a reroute node - which is a way to shape your wires for orderliness.</p>
+</blockquote>
+<p><em>Below are the two completed event graphs.</em></p>
+<p><span class="hint">To enlarge any image on this page: Right-click to choose “Open image in new tab”.</span></p>
+<p><strong>BP_Door</strong>
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_01_191.webp" width="auto" height="auto" alt/></p>
+<p><strong>BP_PressurePlate</strong>
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_01_176.webp" width="auto" height="auto" alt/></p>
+</div>
+</blockquote>
+<h2 id="what-you-can-now-build">What you can now build<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#what-you-can-now-build" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>A trigger zone that detects when the player enters or exits — and ignores other physics objects</li>
+<li>A door (or any object) that slides open and closed smoothly when the player approaches.</li>
+<li>A pressure plate that broadcasts an event without knowing who’s listening — the door binds to that event at startup, so the plate never needs a reference to the door</li>
+<li>Animated movement along one axis driven by a timeline curve</li>
+<li>The foundational “when the player steps here, something happens over there” pattern that underlies nearly all proximity-based gameplay</li>
+</ul>
+<h2 id="example-deviations-you-are-ready-for">Example deviations you are ready for<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#example-deviations-you-are-ready-for" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>The trigger is fired by BP_FirstPersonCharacter or BP_ThirdPersonCharacter</li>
+<li>The object (such as a door) rotates or scales rather than slides
+<ul>
+<li>For example, design a floor trap door</li>
+</ul>
+</li>
+<li>Ready two (or more) “doors” to react to pressure plate trigger</li>
+</ul></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-105" aria-expanded="true"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#0-introduction" data-for="0-introduction">0. Introduction</a></li><li class="depth-0"><a href="#1-a-new-third-person-project" data-for="1-a-new-third-person-project">1. A New Third Person Project</a></li><li class="depth-0"><a href="#2-the-pressure-plate-blueprint" data-for="2-the-pressure-plate-blueprint">2. The Pressure Plate Blueprint</a></li><li class="depth-0"><a href="#3-the-door-listens-and-opens" data-for="3-the-door-listens-and-opens">3. The Door Listens and Opens</a></li><li class="depth-0"><a href="#what-you-can-now-build" data-for="what-you-can-now-build">What you can now build</a></li><li class="depth-0"><a href="#example-deviations-you-are-ready-for" data-for="example-deviations-you-are-ready-for">Example deviations you are ready for</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>Backlinks</h3><ul id="list-2" class="overflow"><li><a href="../../../../PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-102---Collectables-and-Restart" class="internal">UE Tutorial 102 - Collectables and Restart</a></li><li><a href="../../../../PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-103---Scoring-and-UI" class="internal">UE Tutorial 103 - Scoring and UI</a></li><li><a href="../../../../PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-104---Haunted-House-Triggers-and-Events" class="internal">UE Tutorial 104 - Haunted House Triggers and Events</a></li><li><a href="../../../../PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/" class="internal">100 - Discovery and Encounter</a></li><li><a href="../../../../PBOH/Development/Tutorials---Unreal/300---Environment-Systems/UE-Tutorial-301---Landscapes,-Gaea-and-Automaterial" class="internal">UE Tutorial 301 - Landscapes, Gaea and Automaterial</a></li><li><a href="../../../../PBOH/Development/Tutorials---Unreal/" class="internal">Tutorials - Unreal</a></li><li><a href="../../../../PBOH/Development/Wiki---Unreal/Cast-To" class="internal">Cast To</a></li><li><a href="../../../../PBOH/Development/Wiki---Unreal/Collision-Components" class="internal">Collision Components</a></li><li><a href="../../../../PBOH/Development/Wiki---Unreal/Event-Dispatchers" class="internal">Event Dispatchers</a></li><li><a href="../../../../PBOH/Development/Wiki---Unreal/Get-Actor-Location" class="internal">Get Actor Location</a></li><li><a href="../../../../PBOH/Development/Wiki---Unreal/Lerp" class="internal">Lerp</a></li><li><a href="../../../../PBOH/Development/Wiki---Unreal/OnComponentBeginOverlap" class="internal">OnComponentBeginOverlap</a></li><li><a href="../../../../PBOH/Development/Wiki---Unreal/OnComponentEndOverlap" class="internal">OnComponentEndOverlap</a></li><li><a href="../../../../PBOH/Development/Wiki---Unreal/Set-Actor-Location" class="internal">Set Actor Location</a></li><li><a href="../../../../PBOH/Development/Wiki---Unreal/Timeline" class="internal">Timeline</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../../../postscript.js" type="module" data-persist="true"></script></html>

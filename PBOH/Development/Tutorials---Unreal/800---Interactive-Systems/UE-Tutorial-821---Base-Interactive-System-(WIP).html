@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head><title>UE Tutorial 821 - Base Interactive System</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="PB Teach"/><meta property="og:title" content="UE Tutorial 821 - Base Interactive System"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="UE Tutorial 821 - Base Interactive System"/><meta name="twitter:description" content="By Yibei He &amp; Peter Brinson Disclaimer: since being converted from a different platform, this document has not yet been proofread."/><meta property="og:description" content="By Yibei He &amp; Peter Brinson Disclaimer: since being converted from a different platform, this document has not yet been proofread."/><meta property="og:image:alt" content="By Yibei He &amp; Peter Brinson Disclaimer: since being converted from a different platform, this document has not yet been proofread."/><meta property="og:image" content="https://peterbrinson.github.io/teach/static/og-image.png"/><meta property="og:image:url" content="https://peterbrinson.github.io/teach/static/og-image.png"/><meta name="twitter:image" content="https://peterbrinson.github.io/teach/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="peterbrinson.github.io/teach"/><meta property="og:url" content="https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/800---Interactive-Systems/UE-Tutorial-821---Base-Interactive-System-(WIP)"/><meta property="twitter:url" content="https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/800---Interactive-Systems/UE-Tutorial-821---Base-Interactive-System-(WIP)"/><link rel="icon" href="../../../../static/icon.png"/><meta name="description" content="By Yibei He &amp; Peter Brinson Disclaimer: since being converted from a different platform, this document has not yet been proofread."/><meta name="generator" content="Quartz"/><link href="../../../../index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiQzpcXFVzZXJzXFxicmluc1xcRG9jdW1lbnRzXFxPYnNpZGlhblxcc2l0ZVxccXVhcnR6XFxjb21wb25lbnRzXFxzdHlsZXMiLCJzb3VyY2VzIjpbIm1lcm1haWQuaW5saW5lLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUdGO0VBQ0U7OztBQUtGO0VBQ0U7RUFDQTs7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7O0FBR0Y7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFOztBQUlGO0VBQ0U7RUFDQTtFQUNBIiwic291cmNlc0NvbnRlbnQiOlsiLmV4cGFuZC1idXR0b24ge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsb2F0OiByaWdodDtcbiAgcGFkZGluZzogMC40cmVtO1xuICBtYXJnaW46IDAuM3JlbTtcbiAgcmlnaHQ6IDA7IC8vIE5PVEU6IHJpZ2h0IHdpbGwgYmUgc2V0IGluIG1lcm1haWQuaW5saW5lLnRzXG4gIGNvbG9yOiB2YXIoLS1ncmF5KTtcbiAgYm9yZGVyLWNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICBib3JkZXI6IDFweCBzb2xpZDtcbiAgYm9yZGVyLXJhZGl1czogNXB4O1xuICBvcGFjaXR5OiAwO1xuICB0cmFuc2l0aW9uOiAwLjJzO1xuXG4gICYgPiBzdmcge1xuICAgIGZpbGw6IHZhcigtLWxpZ2h0KTtcbiAgICBmaWx0ZXI6IGNvbnRyYXN0KDAuMyk7XG4gIH1cblxuICAmOmhvdmVyIHtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgYm9yZGVyLWNvbG9yOiB2YXIoLS1zZWNvbmRhcnkpO1xuICB9XG5cbiAgJjpmb2N1cyB7XG4gICAgb3V0bGluZTogMDtcbiAgfVxufVxuXG5wcmUge1xuICAmOmhvdmVyID4gLmV4cGFuZC1idXR0b24ge1xuICAgIG9wYWNpdHk6IDE7XG4gICAgdHJhbnNpdGlvbjogMC4ycztcbiAgfVxufVxuXG4jbWVybWFpZC1jb250YWluZXIge1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIGNvbnRhaW46IGxheW91dDtcbiAgei1pbmRleDogOTk5O1xuICBsZWZ0OiAwO1xuICB0b3A6IDA7XG4gIHdpZHRoOiAxMDB2dztcbiAgaGVpZ2h0OiAxMDB2aDtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgZGlzcGxheTogbm9uZTtcbiAgYmFja2Ryb3AtZmlsdGVyOiBibHVyKDRweCk7XG4gIGJhY2tncm91bmQ6IHJnYmEoMCwgMCwgMCwgMC41KTtcblxuICAmLmFjdGl2ZSB7XG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICB9XG5cbiAgJiA+ICNtZXJtYWlkLXNwYWNlIHtcbiAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0KTtcbiAgICBib3JkZXItcmFkaXVzOiA1cHg7XG4gICAgcG9zaXRpb246IGZpeGVkO1xuICAgIHRvcDogNTAlO1xuICAgIGxlZnQ6IDUwJTtcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTAlKTtcbiAgICBoZWlnaHQ6IDgwdmg7XG4gICAgd2lkdGg6IDgwdnc7XG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcblxuICAgICYgPiAubWVybWFpZC1jb250ZW50IHtcbiAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICAgIHRyYW5zZm9ybS1vcmlnaW46IDAgMDtcbiAgICAgIHRyYW5zaXRpb246IHRyYW5zZm9ybSAwLjFzIGVhc2U7XG4gICAgICBvdmVyZmxvdzogdmlzaWJsZTtcbiAgICAgIG1pbi1oZWlnaHQ6IDIwMHB4O1xuICAgICAgbWluLXdpZHRoOiAyMDBweDtcblxuICAgICAgcHJlIHtcbiAgICAgICAgbWFyZ2luOiAwO1xuICAgICAgICBib3JkZXI6IG5vbmU7XG4gICAgICB9XG5cbiAgICAgIHN2ZyB7XG4gICAgICAgIG1heC13aWR0aDogbm9uZTtcbiAgICAgICAgaGVpZ2h0OiBhdXRvO1xuICAgICAgfVxuICAgIH1cblxuICAgICYgPiAubWVybWFpZC1jb250cm9scyB7XG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICBib3R0b206IDIwcHg7XG4gICAgICByaWdodDogMjBweDtcbiAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICBnYXA6IDhweDtcbiAgICAgIHBhZGRpbmc6IDhweDtcbiAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0KTtcbiAgICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICBib3JkZXItcmFkaXVzOiA2cHg7XG4gICAgICBib3gtc2hhZG93OiAwIDJweCA0cHggcmdiYSgwLCAwLCAwLCAwLjEpO1xuICAgICAgei1pbmRleDogMjtcblxuICAgICAgLm1lcm1haWQtY29udHJvbC1idXR0b24ge1xuICAgICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICAgICAgd2lkdGg6IDMycHg7XG4gICAgICAgIGhlaWdodDogMzJweDtcbiAgICAgICAgcGFkZGluZzogMDtcbiAgICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgICBjb2xvcjogdmFyKC0tZGFyayk7XG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICAgICBmb250LXNpemU6IDE2cHg7XG4gICAgICAgIGZvbnQtZmFtaWx5OiB2YXIoLS1ib2R5Rm9udCk7XG4gICAgICAgIHRyYW5zaXRpb246IGFsbCAwLjJzIGVhc2U7XG5cbiAgICAgICAgJjpob3ZlciB7XG4gICAgICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgICAgfVxuXG4gICAgICAgICY6YWN0aXZlIHtcbiAgICAgICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoMXB4KTtcbiAgICAgICAgfVxuXG4gICAgICAgIC8vIFN0eWxlIHRoZSByZXNldCBidXR0b24gZGlmZmVyZW50bHlcbiAgICAgICAgJjpudGgtY2hpbGQoMikge1xuICAgICAgICAgIHdpZHRoOiBhdXRvO1xuICAgICAgICAgIHBhZGRpbmc6IDAgMTJweDtcbiAgICAgICAgICBmb250LXNpemU6IDE0cHg7XG4gICAgICAgIH1cbiAgICAgIH1cbiAgICB9XG4gIH1cbn1cbiJdfQ== */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../../../prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../../../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://peterbrinson.github.io/teach/index.xml"/></head><body data-slug="PBOH/Development/Tutorials---Unreal/800---Interactive-Systems/UE-Tutorial-821---Base-Interactive-System-(WIP)"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><div class="spacer mobile-only"></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>{let rank={389:1,534:2,geidai:3,AI:4,PBOH:5},ra=rank[a.slugSegment]??99,rb=rank[b.slugSegment]??99;return ra!==rb?ra-rb:!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1}&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>{let shortNames={AI:\&quot;Tokens on the Table\&quot;,PBOH:\&quot;PB Office Hours\&quot;,Storytelling:\&quot;Storytelling\&quot;,Worldbuilding:\&quot;Worldbuilding\&quot;,_References:\&quot;References\&quot;};node.isFolder&amp;&amp;shortNames[node.slugSegment]&amp;&amp;(node.displayName=shortNames[node.slugSegment])}&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-379"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2></h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-379" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../../PBOH/">Peter B's Office Hours</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../../PBOH/Development/">Development</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../../PBOH/Development/Tutorials---Unreal/">Tutorials   Unreal</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../../PBOH/Development/Tutorials---Unreal/800---Interactive-Systems/">800   Interactive Systems</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>UE Tutorial 821   Base Interactive System</a></div></nav><h1 class="article-title">UE Tutorial 821 - Base Interactive System</h1></div></div><article class="popover-hint unreal-tutorial"><p><span style="color:#d9a8b3;font-size:1.4rem;"><em>By Yibei He &amp; Peter Brinson</em></span></p>
+<blockquote>
+<p><em>Disclaimer: since being converted from a different platform, this document has not yet been proofread. And many of the images need updating. You are welcome to ask Peter any questions.</em></p>
+</blockquote>
+<h2 id="0-introduction">0. Introduction<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#0-introduction" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Build a reusable <code>BP_Interactable_Base</code> Actor Blueprint with a mesh and trigger radius</li>
+<li>Create an <code>InteractionComponent</code> (Actor Component) to separate interaction logic from the player</li>
+<li>Use a looping Sphere Trace to detect what the player is looking at</li>
+<li>Build hover effects including a Widget UI that appears when the player looks at an object</li>
+<li>Bind an interaction event to the E key</li>
+</ul>
+<hr/>
+<h2 id="chapter-a-create-the-interactable-item-system">Chapter A: Create the Interactable Item System<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#chapter-a-create-the-interactable-item-system" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="a0-create-a-blueprint-with-mesh--trigger-area">A0. Create a Blueprint with Mesh &amp; Trigger Area<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#a0-create-a-blueprint-with-mesh--trigger-area" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Right-click in the Content Browser, create a Blueprint, choose <strong>Actor</strong>, and rename it <code>BP_Interactable_Base</code>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_101.webp" width="auto" height="auto" alt/>
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_104.webp" width="auto" height="auto" alt/></p>
+<p>Double-click to open it. In <strong>Components</strong>, add a <strong>Static Mesh</strong> component and rename it <code>Mesh_Interactable</code>.</p>
+<p><span class="hint">In Unreal, searching is almost always faster than scrolling — use the search field in Components, Details, and most other panels.</span></p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_107.webp" width="auto" height="auto" alt/>
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_110.webp" width="auto" height="auto" alt/></p>
+<p>In Details, change the mesh to a cube.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_113.webp" width="auto" height="auto" alt/></p>
+<p>Add a <strong>Sphere Collision</strong> component. Name it and parent it as shown. In Details, adjust the <strong>Sphere Radius</strong> to define the area where players can interact with this object.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_116.webp" width="auto" height="auto" alt/></p>
+<p>Click on <strong>BP_Interactable_Base</strong> in the <a href="../../../../PBOH/Development/Wiki---Unreal/Components" class="internal" data-slug="PBOH/Development/Wiki---Unreal/Components">Components</a> panel and add the tag <code>Interactable</code>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_119.webp" width="auto" height="auto" alt/>
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_122.webp" width="auto" height="auto" alt/></p>
+<p><span class="hint">When you drag the actor into the level, position it so the player starts outside the interaction radius.</span></p>
+<h3 id="a1-setup-interact-overlap">A1. Setup Interact Overlap<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#a1-setup-interact-overlap" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Right-click on the collision component (<code>InteractRadius</code>) and add:</p>
+<ul>
+<li>Add <a href="../../../../PBOH/Development/Wiki---Unreal/OnComponentBeginOverlap" class="internal" data-slug="PBOH/Development/Wiki---Unreal/OnComponentBeginOverlap">OnComponentBeginOverlap</a></li>
+<li>Add <a href="../../../../PBOH/Development/Wiki---Unreal/OnComponentEndOverlap" class="internal" data-slug="PBOH/Development/Wiki---Unreal/OnComponentEndOverlap">OnComponentEndOverlap</a></li>
+</ul>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_125.webp" width="auto" height="auto" alt/></p>
+<p>Drag from each event node and search for <strong><a href="../../../../PBOH/Development/Wiki---Unreal/Cast-To" class="internal alias" data-slug="PBOH/Development/Wiki---Unreal/Cast-To">Cast to</a> BP_FirstPersonCharacter</strong>. Note the parameters flowing left to right.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_128.webp" width="auto" height="auto" alt/></p>
+<h3 id="a2-create-interaction-component">A2. Create Interaction Component<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#a2-create-interaction-component" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Create a new Blueprint and choose <strong>Actor Component</strong>.</p>
+<p><span class="hint">Actor Component is not in the “Common” list at the top — enable “All Classes” to find it.</span></p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_131.webp" width="auto" height="auto" alt/>
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_134.webp" width="auto" height="auto" alt/></p>
+<p>Add it to <code>BP_FirstPersonCharacter</code> (found in your <code>FirstPerson</code> folder). Keeping interaction logic in a dedicated component makes it easy to disable — just remove the component from the character.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_137.webp" width="auto" height="auto" alt/>
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_140.webp" width="auto" height="auto" alt/></p>
+<h3 id="a3-call-overlap-event">A3. Call Overlap Event<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#a3-call-overlap-event" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Open <strong>InteractionComponent</strong>. Right-click to <strong>Add Custom Event</strong>, rename it <code>On Interactable Overlap</code>. In Details, add an input: <code>bIsOverlapped</code> (Boolean).</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_143.webp" width="auto" height="auto" alt/></p>
+<p>Back in <strong>BP_Interactable_Base</strong>: from <strong>Other Actor</strong>, drag out a <strong>Get Component by Class</strong> node and select <code>InteractionComponent</code>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_146.webp" width="auto" height="auto" alt/></p>
+<p>Call the event we just created: <code>On Interactable Overlap</code>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_149.webp" width="auto" height="auto" alt/></p>
+<p>For <strong>On Component End Overlap</strong>, do the same but uncheck <strong>Is Overlapped</strong>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_152.webp" width="auto" height="auto" alt/></p>
+<p>Back in the Interactable Blueprint, add <strong><a href="../../../../PBOH/Development/Wiki---Unreal/Branch" class="internal" data-slug="PBOH/Development/Wiki---Unreal/Branch">Branch</a></strong> and <strong><a href="../../../../PBOH/Development/Wiki---Unreal/Print-String" class="internal alias" data-slug="PBOH/Development/Wiki---Unreal/Print-String">Print String</a></strong> nodes to test.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_155.webp" width="auto" height="auto" alt/></p>
+<p>Toggle between <code>BP_Interactable_Base</code> and <code>InteractionComponent</code>’s <a href="../../../../PBOH/Development/Wiki---Unreal/Event-Graph" class="internal alias" data-slug="PBOH/Development/Wiki---Unreal/Event-Graph">EventGraph</a> to see how <code>OnInteractableOverlap</code> is called as a custom function.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_158.webp" width="auto" height="auto" alt/>
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_161.webp" width="auto" height="auto" alt/></p>
+<p>Test it — position the actor and player so the player starts outside the radius.</p>
+<h3 id="a4-setup-the-line-trace-logic">A4. Setup the Line Trace Logic<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#a4-setup-the-line-trace-logic" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>In <strong>InteractionComponent</strong>:</p>
+<p>Add a Custom Event, rename it <code>Draw Trace</code>, add a Boolean input <code>bIsDrawTrace</code>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_164.webp" width="auto" height="auto" alt/></p>
+<p>Add another Custom Event, rename it <code>Detect Sight</code>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_167.webp" width="auto" height="auto" alt/></p>
+<p>Branch the <strong>Draw Trace</strong> event and connect to <strong>Set Timer by Function Name</strong>, passing <code>Detect Sight</code> as the function name. Set <strong>Time</strong> to <code>0.1</code>, check <strong>Looping</strong>. This calls <code>Detect Sight</code> every 0.1 seconds until stopped.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_170.webp" width="auto" height="auto" alt/></p>
+<p>Promote the Return Value to a variable. In the <a href="../../../../PBOH/Development/Wiki---Unreal/Variables" class="internal" data-slug="PBOH/Development/Wiki---Unreal/Variables">Variables</a> panel, rename it <code>Trace Timer</code>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_173.webp" width="auto" height="auto" alt/>
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_176.webp" width="auto" height="auto" alt/></p>
+<p>Use <strong>Clear and Invalidate Timer by Handle</strong> to stop the timer. Drag <code>Trace Timer</code> from the <code>Variables</code> panel (<strong>Get Trace Timer</strong>) and connect it to <strong>Handle</strong>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_179.webp" width="auto" height="auto" alt/></p>
+<h3 id="a5-create-the-line-trace-logic">A5. Create the Line Trace Logic<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#a5-create-the-line-trace-logic" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Use <strong>Sphere Trace By Channel</strong> rather than Line Trace. The sphere width means the player doesn’t have to aim precisely at interactable objects.</p>
+<p><span class="hint">See the <a href="https://dev.epicgames.com/documentation/en-us/unreal-engine/traces-in-unreal-engine-overview" class="external" target="_blank">Traces in Unreal Engine overview<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> in the Epic documentation for more detail.</span></p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_182.webp" width="auto" height="auto" alt/></p>
+<p>Build the math for the trace start location. Take time with this — hover over nodes for documentation pop-ups. Note the <strong>Divide</strong> nodes and type-conversion nodes. Did you need to uncheck <strong>Context Sensitive</strong> to find <code>Convert Screen Location To World Space</code>?</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_185.webp" width="auto" height="auto" alt/></p>
+<p>When you first create the <strong>Add</strong> and <strong>Multiply</strong> nodes, they accept Vector3 values. Right-click around those fields to <strong>Promote to Variable</strong> — this creates a <code>New Var</code> node. Rename it <code>Trace Distance</code>, change the type to <strong>Float</strong>, and set its Default Value to <code>250.0</code>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_188.webp" width="auto" height="auto" alt/>
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_191.webp" width="auto" height="auto" alt/></p>
+<p>Set the following on the Sphere Trace node:</p>
+<ul>
+<li><strong>Radius:</strong> <code>5.0</code></li>
+<li><strong>Draw Debug Type:</strong> <code>For Duration</code></li>
+<li><strong>Draw Time:</strong> <code>0.1</code></li>
+</ul>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_194.webp" width="auto" height="auto" alt/></p>
+<p>From <strong>Return Value</strong>, add a <strong>Branch</strong> to detect whether the trace hit something. Drag from <strong>On Hit</strong> to <strong>Break Hit Result</strong> so you can check whether the hit actor has the <code>Interactable</code> tag. Continue building as shown — don’t forget the tag value for <strong><a href="../../../../PBOH/Development/Wiki---Unreal/Actor-Has-Tag" class="internal alias" data-slug="PBOH/Development/Wiki---Unreal/Actor-Has-Tag">Actor Has Tag</a></strong>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_197.webp" width="auto" height="auto" alt/></p>
+<p>Promote <strong>Hit Actor</strong> to a variable — rename it <code>Interactable Item</code>. Add a new Boolean variable named <code>bCanInteract</code>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_200.webp" width="auto" height="auto" alt/>
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_203.webp" width="auto" height="auto" alt/></p>
+<p>For the false branch, clear all look-related state. Add a <strong>Print String</strong> to test the result.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_206.webp" width="auto" height="auto" alt/></p>
+<p>Back in <strong>On Interactable Overlap</strong>, add two <strong>Draw Trace</strong> calls as shown. Test the system now.</p>
+<p><span class="hint">This <code>EventGraph</code> has a lot of detail — don’t be discouraged if something doesn’t connect first try. Check every pin and parameter methodically.</span></p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_209.webp" width="auto" height="auto" alt/></p>
+<p>You should see output in the print log:</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_212.gif" width="auto" height="auto" alt/></p>
+<p>Currently the trace fires every 0.1s continuously. Optimize it: only <strong>Set Interactable Item</strong> when the actor has actually changed — not on every tick.</p>
+<p>Add the two new <strong>Branch</strong> nodes shown at the far right. Insert them between the existing Branches and Sets. Note the <strong>Equal (==)</strong> and <strong>Not (Boolean)</strong> nodes integrated here.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_215.webp" width="auto" height="auto" alt/></p>
+<p><span class="save">Save All</span></p>
+<p>The behavior is the same as the GIF above, but <code>Print &quot;Looking&quot;</code> and <code>Print &quot;Not Looking&quot;</code> now only fire on state change, not repeatedly.</p>
+<h3 id="a6-final-blueprint-structure">A6. Final Blueprint Structure<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#a6-final-blueprint-structure" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>BP_Interactable_Base:</strong></p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_218.webp" width="auto" height="auto" alt/></p>
+<p><strong>InteractionComponent — On Interactable Overlap &amp; Draw Trace:</strong></p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_221.webp" width="auto" height="auto" alt/></p>
+<p><strong>InteractionComponent — Detect Sight:</strong></p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_224.webp" width="auto" height="auto" alt/>
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_227.webp" width="auto" height="auto" alt/></p>
+<hr/>
+<h2 id="chapter-b-create-hover-effects">Chapter B: Create Hover Effects<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#chapter-b-create-hover-effects" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="b1-create-hover-logic">B1. Create Hover Logic<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#b1-create-hover-logic" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>In <strong>BP_Interactable_Base</strong>, create two <a href="../../../../PBOH/Development/Wiki---Unreal/Custom-Events" class="internal alias" data-slug="PBOH/Development/Wiki---Unreal/Custom-Events">custom events</a>: <code>On Hovered</code> and <code>On UnHovered</code>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_230.webp" width="auto" height="auto" alt/></p>
+<p>Back in <strong>InteractionComponent</strong>, insert the nodes highlighted in red below. Note: <strong>Is Valid</strong> is found under “struct” — look for the <code>?</code> icon on the node.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_233.webp" width="auto" height="auto" alt/></p>
+<p>Insert the red-rectangle nodes again in the second location. This prevents errors — we set the item to <code>UnHovered</code> first, then to <code>Hovered</code>, ensuring clean state transitions.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_236.webp" width="auto" height="auto" alt/></p>
+<p>Back in <strong>Draw Trace</strong>, add the new nodes shown below the red line.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_239.webp" width="auto" height="auto" alt/></p>
+<p>Back in <strong>BP_Interactable_Base</strong>, the <code>On Hovered</code> and <code>On UnHovered</code> events are now ready for any logic you want to attach: a sound, a highlight, a post-processing effect. Use a Print String to test first.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_242.webp" width="auto" height="auto" alt/></p>
+<h3 id="b2-add-a-hover-ui">B2. Add a Hover UI<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#b2-add-a-hover-ui" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Right-click in the Content Browser and navigate to <strong>UI → <a href="../../../../PBOH/Development/Wiki---Unreal/Widget-Blueprint" class="internal alias" data-slug="PBOH/Development/Wiki---Unreal/Widget-Blueprint">Widget Blueprint</a> → User Widget</strong>. Name it <code>WB_InteractionTip</code>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_245.webp" width="auto" height="auto" alt/></p>
+<p>From the <strong>Palette</strong>, drag a <code>Canvas Panel</code> into the UI area, then add an <strong>Image</strong> inside it. Set your texture: <strong>Details → Brush → Image</strong>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_248.webp" width="auto" height="auto" alt/></p>
+<h3 id="b3-set-hover-ui-to-the-item-blueprint">B3. Set Hover UI to the Item Blueprint<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#b3-set-hover-ui-to-the-item-blueprint" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>In <strong>BP_Interactable_Base</strong>, add a <strong>Widget</strong> component. Rename it and parent it under the mesh.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_251.webp" width="auto" height="auto" alt/>
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_254.webp" width="auto" height="auto" alt/></p>
+<p>In the <strong>Viewport</strong>, move the Widget to the top of the mesh.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_257.webp" width="auto" height="auto" alt/></p>
+<p>In Details, set:</p>
+<ul>
+<li><strong>User Interface Space:</strong> <code>Screen</code></li>
+<li><strong>Widget Class:</strong> <code>WB_InteractionTip</code></li>
+</ul>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_260.webp" width="auto" height="auto" alt/></p>
+<p>Uncheck <code>Visible</code> (the widget starts hidden).</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_263.webp" width="auto" height="auto" alt/></p>
+<p>Add show/hide logic to your <code>On Hovered</code> / <code>On UnHovered</code> events.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_266.webp" width="auto" height="auto" alt/></p>
+<p>The hover UI should now appear when the player looks at the object:</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_269.gif" width="auto" height="auto" alt/></p>
+<hr/>
+<h2 id="chapter-c-create-base-interact-event">Chapter C: Create Base Interact Event<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#chapter-c-create-base-interact-event" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="c1-create-an-event">C1. Create an Event<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#c1-create-an-event" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>In <strong>BP_Interactable_Base</strong>, add a custom event named <code>Interact</code>. Add an input of type <strong>Actor</strong>, named <code>Character</code>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_272.webp" width="auto" height="auto" alt/></p>
+<h3 id="c2-bind-the-event-to-e">C2. Bind the Event to E<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#c2-bind-the-event-to-e" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>In <strong>InteractionComponent</strong>, add an <strong>E Key</strong> node.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_275.webp" width="auto" height="auto" alt/></p>
+<p>When <code>bCanInteract</code> is true, <code>Cast to BP_Interactable_Base</code> and call <code>Interact</code>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_278.webp" width="auto" height="auto" alt/>
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_281.webp" width="auto" height="auto" alt/></p>
+<p>Right-click to <strong>Get Owner</strong> and connect it to the <code>Character</code> input on the <code>Interact</code> node.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_284.webp" width="auto" height="auto" alt/>
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_287.webp" width="auto" height="auto" alt/></p>
+<p>Any logic you add inside <code>BP_Interactable_Base</code>’s <code>Interact</code> event will now run when the player presses E.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_290.webp" width="auto" height="auto" alt/>
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_10_293.webp" width="auto" height="auto" alt/></p>
+<hr/>
+<h2 id="what-you-can-now-build">What you can now build<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#what-you-can-now-build" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>A reusable interactable base class that any specific item type can extend</li>
+<li>A sphere trace that detects what the player is looking at, firing only on objects tagged <code>Interactable</code></li>
+<li>A hover UI tip that appears when the player aims at an object and disappears when they look away</li>
+<li>An E key interaction that calls a custom event on whatever the player is targeting</li>
+<li>A dedicated Actor Component for interaction logic — separating it from the player character so it can be disabled or swapped independently</li>
+</ul>
+<h2 id="example-deviations-you-are-ready-for">Example deviations you are ready for<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#example-deviations-you-are-ready-for" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>A readable note (see Tutorial 802)</li>
+<li>An inspectable object the player can rotate and examine</li>
+<li>A movable item the player can pick up and carry</li>
+<li>A door or drawer that opens on interaction</li>
+<li>A chest or container that reveals its contents</li>
+<li>A switch or lever that triggers a distant event</li>
+</ul></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-118" aria-expanded="true"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#0-introduction" data-for="0-introduction">0. Introduction</a></li><li class="depth-0"><a href="#chapter-a-create-the-interactable-item-system" data-for="chapter-a-create-the-interactable-item-system">Chapter A: Create the Interactable Item System</a></li><li class="depth-1"><a href="#a0-create-a-blueprint-with-mesh--trigger-area" data-for="a0-create-a-blueprint-with-mesh--trigger-area">A0. Create a Blueprint with Mesh &amp; Trigger Area</a></li><li class="depth-1"><a href="#a1-setup-interact-overlap" data-for="a1-setup-interact-overlap">A1. Setup Interact Overlap</a></li><li class="depth-1"><a href="#a2-create-interaction-component" data-for="a2-create-interaction-component">A2. Create Interaction Component</a></li><li class="depth-1"><a href="#a3-call-overlap-event" data-for="a3-call-overlap-event">A3. Call Overlap Event</a></li><li class="depth-1"><a href="#a4-setup-the-line-trace-logic" data-for="a4-setup-the-line-trace-logic">A4. Setup the Line Trace Logic</a></li><li class="depth-1"><a href="#a5-create-the-line-trace-logic" data-for="a5-create-the-line-trace-logic">A5. Create the Line Trace Logic</a></li><li class="depth-1"><a href="#a6-final-blueprint-structure" data-for="a6-final-blueprint-structure">A6. Final Blueprint Structure</a></li><li class="depth-0"><a href="#chapter-b-create-hover-effects" data-for="chapter-b-create-hover-effects">Chapter B: Create Hover Effects</a></li><li class="depth-1"><a href="#b1-create-hover-logic" data-for="b1-create-hover-logic">B1. Create Hover Logic</a></li><li class="depth-1"><a href="#b2-add-a-hover-ui" data-for="b2-add-a-hover-ui">B2. Add a Hover UI</a></li><li class="depth-1"><a href="#b3-set-hover-ui-to-the-item-blueprint" data-for="b3-set-hover-ui-to-the-item-blueprint">B3. Set Hover UI to the Item Blueprint</a></li><li class="depth-0"><a href="#chapter-c-create-base-interact-event" data-for="chapter-c-create-base-interact-event">Chapter C: Create Base Interact Event</a></li><li class="depth-1"><a href="#c1-create-an-event" data-for="c1-create-an-event">C1. Create an Event</a></li><li class="depth-1"><a href="#c2-bind-the-event-to-e" data-for="c2-bind-the-event-to-e">C2. Bind the Event to E</a></li><li class="depth-0"><a href="#what-you-can-now-build" data-for="what-you-can-now-build">What you can now build</a></li><li class="depth-0"><a href="#example-deviations-you-are-ready-for" data-for="example-deviations-you-are-ready-for">Example deviations you are ready for</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>Backlinks</h3><ul id="list-2" class="overflow"><li><a href="../../../../PBOH/Development/Tutorials---Unreal/800---Interactive-Systems/UE-Tutorial-801---Inspect-an-Object" class="internal">UE Tutorial 801 - Inspect an Object</a></li><li><a href="../../../../PBOH/Development/Tutorials---Unreal/800---Interactive-Systems/" class="internal">800 - Interactive Systems</a></li><li><a href="../../../../PBOH/Development/Tutorials---Unreal/" class="internal">Tutorials - Unreal</a></li><li><a href="../../../../PBOH/Development/Wiki---Unreal/Actor-Has-Tag" class="internal">Actor Has Tag</a></li><li><a href="../../../../PBOH/Development/Wiki---Unreal/Components" class="internal">Components</a></li><li><a href="../../../../PBOH/Development/Wiki---Unreal/Getting-References" class="internal">Getting References</a></li><li><a href="../../../../PBOH/Development/Wiki---Unreal/Set-Timer-by-Event" class="internal">Set Timer by Event</a></li><li><a href="../../../../PBOH/Development/Wiki---Unreal/Traces" class="internal">Traces</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../../../postscript.js" type="module" data-persist="true"></script></html>

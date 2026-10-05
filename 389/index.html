@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head><title>CTIN 389</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="PB Teach"/><meta property="og:title" content="CTIN 389"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="CTIN 389"/><meta name="twitter:description" content="Units: 4 Fall 2026 Section: Tue, Thu, 4:00–5:50 pm Room: SCI 113 Go To Schedule Instructor: Peter Brinson Student Assistant: Luke Pannell Course Description This course teaches fundamental skills of digital game development alongside the basic principles of level design."/><meta property="og:description" content="Units: 4 Fall 2026 Section: Tue, Thu, 4:00–5:50 pm Room: SCI 113 Go To Schedule Instructor: Peter Brinson Student Assistant: Luke Pannell Course Description This course teaches fundamental skills of digital game development alongside the basic principles of level design."/><meta property="og:image:alt" content="Units: 4 Fall 2026 Section: Tue, Thu, 4:00–5:50 pm Room: SCI 113 Go To Schedule Instructor: Peter Brinson Student Assistant: Luke Pannell Course Description This course teaches fundamental skills of digital game development alongside the basic principles of level design."/><meta property="og:image" content="https://peterbrinson.github.io/teach/static/og-image.png"/><meta property="og:image:url" content="https://peterbrinson.github.io/teach/static/og-image.png"/><meta name="twitter:image" content="https://peterbrinson.github.io/teach/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="peterbrinson.github.io/teach"/><meta property="og:url" content="https://peterbrinson.github.io/teach/389/index"/><meta property="twitter:url" content="https://peterbrinson.github.io/teach/389/index"/><link rel="icon" href="../static/icon.png"/><meta name="description" content="Units: 4 Fall 2026 Section: Tue, Thu, 4:00–5:50 pm Room: SCI 113 Go To Schedule Instructor: Peter Brinson Student Assistant: Luke Pannell Course Description This course teaches fundamental skills of digital game development alongside the basic principles of level design."/><meta name="generator" content="Quartz"/><link href="../index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiQzpcXFVzZXJzXFxicmluc1xcRG9jdW1lbnRzXFxPYnNpZGlhblxcc2l0ZVxccXVhcnR6XFxjb21wb25lbnRzXFxzdHlsZXMiLCJzb3VyY2VzIjpbIm1lcm1haWQuaW5saW5lLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUdGO0VBQ0U7OztBQUtGO0VBQ0U7RUFDQTs7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7O0FBR0Y7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFOztBQUlGO0VBQ0U7RUFDQTtFQUNBIiwic291cmNlc0NvbnRlbnQiOlsiLmV4cGFuZC1idXR0b24ge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsb2F0OiByaWdodDtcbiAgcGFkZGluZzogMC40cmVtO1xuICBtYXJnaW46IDAuM3JlbTtcbiAgcmlnaHQ6IDA7IC8vIE5PVEU6IHJpZ2h0IHdpbGwgYmUgc2V0IGluIG1lcm1haWQuaW5saW5lLnRzXG4gIGNvbG9yOiB2YXIoLS1ncmF5KTtcbiAgYm9yZGVyLWNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICBib3JkZXI6IDFweCBzb2xpZDtcbiAgYm9yZGVyLXJhZGl1czogNXB4O1xuICBvcGFjaXR5OiAwO1xuICB0cmFuc2l0aW9uOiAwLjJzO1xuXG4gICYgPiBzdmcge1xuICAgIGZpbGw6IHZhcigtLWxpZ2h0KTtcbiAgICBmaWx0ZXI6IGNvbnRyYXN0KDAuMyk7XG4gIH1cblxuICAmOmhvdmVyIHtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgYm9yZGVyLWNvbG9yOiB2YXIoLS1zZWNvbmRhcnkpO1xuICB9XG5cbiAgJjpmb2N1cyB7XG4gICAgb3V0bGluZTogMDtcbiAgfVxufVxuXG5wcmUge1xuICAmOmhvdmVyID4gLmV4cGFuZC1idXR0b24ge1xuICAgIG9wYWNpdHk6IDE7XG4gICAgdHJhbnNpdGlvbjogMC4ycztcbiAgfVxufVxuXG4jbWVybWFpZC1jb250YWluZXIge1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIGNvbnRhaW46IGxheW91dDtcbiAgei1pbmRleDogOTk5O1xuICBsZWZ0OiAwO1xuICB0b3A6IDA7XG4gIHdpZHRoOiAxMDB2dztcbiAgaGVpZ2h0OiAxMDB2aDtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgZGlzcGxheTogbm9uZTtcbiAgYmFja2Ryb3AtZmlsdGVyOiBibHVyKDRweCk7XG4gIGJhY2tncm91bmQ6IHJnYmEoMCwgMCwgMCwgMC41KTtcblxuICAmLmFjdGl2ZSB7XG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICB9XG5cbiAgJiA+ICNtZXJtYWlkLXNwYWNlIHtcbiAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0KTtcbiAgICBib3JkZXItcmFkaXVzOiA1cHg7XG4gICAgcG9zaXRpb246IGZpeGVkO1xuICAgIHRvcDogNTAlO1xuICAgIGxlZnQ6IDUwJTtcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTAlKTtcbiAgICBoZWlnaHQ6IDgwdmg7XG4gICAgd2lkdGg6IDgwdnc7XG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcblxuICAgICYgPiAubWVybWFpZC1jb250ZW50IHtcbiAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICAgIHRyYW5zZm9ybS1vcmlnaW46IDAgMDtcbiAgICAgIHRyYW5zaXRpb246IHRyYW5zZm9ybSAwLjFzIGVhc2U7XG4gICAgICBvdmVyZmxvdzogdmlzaWJsZTtcbiAgICAgIG1pbi1oZWlnaHQ6IDIwMHB4O1xuICAgICAgbWluLXdpZHRoOiAyMDBweDtcblxuICAgICAgcHJlIHtcbiAgICAgICAgbWFyZ2luOiAwO1xuICAgICAgICBib3JkZXI6IG5vbmU7XG4gICAgICB9XG5cbiAgICAgIHN2ZyB7XG4gICAgICAgIG1heC13aWR0aDogbm9uZTtcbiAgICAgICAgaGVpZ2h0OiBhdXRvO1xuICAgICAgfVxuICAgIH1cblxuICAgICYgPiAubWVybWFpZC1jb250cm9scyB7XG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICBib3R0b206IDIwcHg7XG4gICAgICByaWdodDogMjBweDtcbiAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICBnYXA6IDhweDtcbiAgICAgIHBhZGRpbmc6IDhweDtcbiAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0KTtcbiAgICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICBib3JkZXItcmFkaXVzOiA2cHg7XG4gICAgICBib3gtc2hhZG93OiAwIDJweCA0cHggcmdiYSgwLCAwLCAwLCAwLjEpO1xuICAgICAgei1pbmRleDogMjtcblxuICAgICAgLm1lcm1haWQtY29udHJvbC1idXR0b24ge1xuICAgICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICAgICAgd2lkdGg6IDMycHg7XG4gICAgICAgIGhlaWdodDogMzJweDtcbiAgICAgICAgcGFkZGluZzogMDtcbiAgICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgICBjb2xvcjogdmFyKC0tZGFyayk7XG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICAgICBmb250LXNpemU6IDE2cHg7XG4gICAgICAgIGZvbnQtZmFtaWx5OiB2YXIoLS1ib2R5Rm9udCk7XG4gICAgICAgIHRyYW5zaXRpb246IGFsbCAwLjJzIGVhc2U7XG5cbiAgICAgICAgJjpob3ZlciB7XG4gICAgICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgICAgfVxuXG4gICAgICAgICY6YWN0aXZlIHtcbiAgICAgICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoMXB4KTtcbiAgICAgICAgfVxuXG4gICAgICAgIC8vIFN0eWxlIHRoZSByZXNldCBidXR0b24gZGlmZmVyZW50bHlcbiAgICAgICAgJjpudGgtY2hpbGQoMikge1xuICAgICAgICAgIHdpZHRoOiBhdXRvO1xuICAgICAgICAgIHBhZGRpbmc6IDAgMTJweDtcbiAgICAgICAgICBmb250LXNpemU6IDE0cHg7XG4gICAgICAgIH1cbiAgICAgIH1cbiAgICB9XG4gIH1cbn1cbiJdfQ== */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://peterbrinson.github.io/teach/index.xml"/></head><body data-slug="389/index"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><div class="spacer mobile-only"></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>{let rank={389:1,534:2,geidai:3,AI:4,PBOH:5},ra=rank[a.slugSegment]??99,rb=rank[b.slugSegment]??99;return ra!==rb?ra-rb:!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1}&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>{let shortNames={AI:\&quot;Tokens on the Table\&quot;,PBOH:\&quot;PB Office Hours\&quot;,Storytelling:\&quot;Storytelling\&quot;,Worldbuilding:\&quot;Worldbuilding\&quot;,_References:\&quot;References\&quot;};node.isFolder&amp;&amp;shortNames[node.slugSegment]&amp;&amp;(node.displayName=shortNames[node.slugSegment])}&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2></h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-1" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-3"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>CTIN 389</a></div></nav><h1 class="article-title">CTIN 389</h1></div></div><div class="popover-hint"><article class><p>Units: 4<br/>
+Fall 2026<br/>
+Section: Tue, Thu, 4:00–5:50 pm<br/>
+Room: SCI 113<br/></p>
+<p><a href="#schedule-detail" class="internal alias">Go To Schedule</a></p>
+<p>Instructor: Peter Brinson<br/>
+Student Assistant: Luke Pannell<br/></p>
+<h2 id="course-description">Course Description<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#course-description" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>This course teaches fundamental skills of digital game development alongside the basic principles of level design. Over the semester, students will learn concepts related to the implementation and presentation of digital games using computer graphics, then demonstrate that learning through practical projects focused on specific game-development techniques.</p>
+<p>Through these projects, students will practice level-design preproduction, layout, blockout, and production.</p>
+<p>The course also covers professional communication for game designers, including techniques that support collaboration and conflict resolution.</p>
+<h2 id="required-readings-games-and-viewings">Required Readings, Games, and Viewings<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#required-readings-games-and-viewings" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>See <a href="../389/Assignments/Assignments-and-Readings" class="internal alias" data-slug="389/Assignments/Assignments-and-Readings">Assignments and Readings</a>.</p>
+<ul>
+<li><em>Analyzing Architecture</em>, Chapter 2: Basic Elements of Architecture — Simon Unwin</li>
+<li><em>Cursed Problems in Game Design</em> — Alex Jaffe, GDC video</li>
+<li><em>Designing Interesting Choices in Games (and when not to)</em> — Compton</li>
+<li><em>Photopia</em> — Adam Cadre</li>
+<li><em>The Level Design Book</em>, Chapter 2: Pre-production — Robert Yang</li>
+<li>GDC video selection and <em>Papo &amp; Yo</em> — Minority Media</li>
+<li><em>The Level Design Book</em>, Chapter 5: Blockout — Robert Yang</li>
+<li><em>A Playful Production Process</em>, Chapter 17 — Richard Lemarchand</li>
+<li><em>Designing Games</em>, Chapter 1: Engines of Experience — Tynan Sylvester</li>
+<li><em>Video Game Level Design</em>, Chapter 2: Principles — Michael Salmond</li>
+</ul>
+<h2 id="assignments">Assignments<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#assignments" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>See <a href="../389/Assignments/Assignments-and-Readings" class="internal alias" data-slug="389/Assignments/Assignments-and-Readings">Assignments and Readings</a>.</p>
+<p>Projects are due in Google Drive or Perforce by 1:00 p.m. on the meeting listed as due. Most project deadlines are Tuesdays; Thursday deadlines are identified in the schedule. Bring games scheduled for in-class playtesting ready to play.</p>
+<h3 id="grading--conscientiousness">Grading — Conscientiousness<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#grading--conscientiousness" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Your grade in this course is based on conscientiousness: attending class and having work ready when it is scheduled for playtest.</p>
+<h4 id="attendance-and-punctuality">Attendance and Punctuality<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#attendance-and-punctuality" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p>You receive one forgiven absence over the semester. Beginning with the second absence, each additional absence lowers the final course grade by 3 points. For example, a final grade of 100 becomes 97.</p>
+<p>Four late arrivals, accumulated across the semester, count as one absence. That absence is included in the same forgiveness and subsequent deductions.</p>
+<p>If Peter is ever late to class, attendance will not be taken that day. In addition, every student receives one additional forgiven absence to use later in the semester.</p>
+<h4 id="playtest-builds">Playtest Builds<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#playtest-builds" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p>You receive one forgiven playtest without a working build over the semester. After that, each scheduled playtest for which you do not provide a working build ready for in-class play lowers the final course grade by 5 points.</p>
+<p>Your grade begins at 100. Attendance and playtest-build deductions accumulate: for example, a second absence lowers a 100 to 97, and a second playtest without a working build lowers a 100 to 95. A final grade of 90–100 is an A; 80–89.9 is a B; and so on.</p>
+<h2 id="schedule-detail">Schedule Detail<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#schedule-detail" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="week-11--aug-25">Week 1.1 — Aug 25<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#week-11--aug-25" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p><strong>Lecture:</strong> <a href="../389/Lectures/Week-1.1---Course-Introduction" class="internal alias" data-slug="389/Lectures/Week-1.1---Course-Introduction">Week 1.1 - Course Introduction</a></p>
+<p><strong>Topics:</strong> Course overview; introductions; from pattern to prediction—how players learn a world and form expectations.</p>
+</blockquote>
+<h3 id="week-12--aug-27">Week 1.2 — Aug 27<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#week-12--aug-27" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p><strong>Lecture:</strong> <a href="../389/Lectures/Week-1.2---The-Other-Shoe" class="internal alias" data-slug="389/Lectures/Week-1.2---The-Other-Shoe">Week 1.2 - The Other Shoe</a></p>
+<p><span class="due-label">Due</span><strong>:</strong> <a href="https://docs.google.com/forms/d/e/1FAIpQLSemB52szkpJO1ImnlgZ4aVC8R6vq3sHQm4TGVQxyI4yPVZ0MA/viewform?usp=dialog" class="external" target="_blank">Student Details form<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><span class="due-label">Due</span><strong> — milestone:</strong> <a href="https://docs.google.com/document/d/1mDnup3XgcOeOuNqx2M6zw3Sea2t-0x9pSt7dfGFU6bA/edit?tab=t.0" class="external" target="_blank">The Other Shoe Milestone<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> — draft three ideas for next week’s assignment.</p>
+</blockquote>
+<h3 id="week-21--sept-1">Week 2.1 — Sept 1<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#week-21--sept-1" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p><strong>Lecture:</strong> <a href="../389/Lectures/Week-2.1---Keys-and-Doors" class="internal alias" data-slug="389/Lectures/Week-2.1---Keys-and-Doors">Week 2.1 - Keys and Doors</a></p>
+<p><span class="due-label">Due</span><strong> and playtest:</strong> <a href="../389/Assignments/W02-Assignment---The-Other-Shoe" class="internal alias" data-slug="389/Assignments/W02-Assignment---The-Other-Shoe">The Other Shoe — Expectation and Payoff</a>.</p>
+</blockquote>
+<h3 id="week-22--sept-3">Week 2.2 — Sept 3<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#week-22--sept-3" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p><span class="due-label">Due</span><strong> — setup:</strong> Complete Steps 1–3 of <a href="https://peterbrinson.github.io/PBOH/Development/Tutorials---LLM/Tutorial-2020---Your-First-Persistent-Workspace-(with-Codex)" class="external" target="_blank">Tutorial 2020 — Your First Persistent Workspace (with Codex)<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>.</p>
+</blockquote>
+<blockquote>
+<p><span class="due-label">Due</span>: Read Krimenski - <a href="https://drive.google.com/drive/u/1/folders/1TYE_O8P6ie-Y1_Dy2EHCtMzXulhU02_F" class="external" target="_blank">Locked doors, headaches, and intellectual need<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</blockquote>
+<blockquote>
+<p>Topic: Problem-solution Ordering Issues and Learning</p>
+</blockquote>
+<blockquote>
+<p>Play: (some) Creaks, Binding of Isaac, Antichamber, Inside, Portal, Talos Principle</p>
+</blockquote>
+<blockquote>
+<p><span class="due-label">Due</span>:  (Read the short essay, above, first) Three Ideas for Your <a href="../389/Assignments/W03-Assignment---Keys-and-Doors" class="internal alias" data-slug="389/Assignments/W03-Assignment---Keys-and-Doors">Keys and Doors</a></p>
+<p><strong>Workshop:</strong> <a href="../389/Lectures/Week-2.2---AI-Workshop-1" class="internal alias" data-slug="389/Lectures/Week-2.2---AI-Workshop-1">Week 2.2 - AI Workshop 1</a></p>
+</blockquote>
+<h3 id="week-31--sept-8">Week 3.1 — Sept 8<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#week-31--sept-8" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p><strong>Workshop:</strong> <a href="../389/Lectures/Week-2.2---AI-Workshop-1" class="internal alias" data-slug="389/Lectures/Week-2.2---AI-Workshop-1">Week 2.2 - AI Workshop 1</a> revisited with the Antigravity (Google’s Gemini) as an option.</p>
+<p><span class="due-label">Due</span>: Your Keys and Door Project is over 50% complete. At this stage, your project should clearly demonstrate the principle discussed in, <a href="https://drive.google.com/drive/u/1/folders/1TYE_O8P6ie-Y1_Dy2EHCtMzXulhU02_F" class="external" target="_blank">Locked doors, headaches, and intellectual need<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>  — well enough that it could serve as an additional example in the reading.</p>
+</blockquote>
+<blockquote>
+<p>Workshop: Use <a href="https://peterbrinson.github.io/PBOH/Design/Storytelling/Situated-Player-Role-3---The-Entrant,-World-as-Threshold#the-entrants-loop-lop" class="external" target="_blank">L.O.P.<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> to assess milestones.  (Ignore the rest of the page,  and in parallel play <em>Inside</em>, the scene that starts with the safe).</p>
+</blockquote>
+<h3 id="week-32--sept-10">Week 3.2 — Sept 10<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#week-32--sept-10" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p><strong>Lecture:</strong> <a href="../389/Lectures/Week-3.2---Constraints-(and-Splines)" class="internal alias" data-slug="389/Lectures/Week-3.2---Constraints-(and-Splines)">Week 3.2 - Constraints (and Splines)</a></p>
+<p><span class="due-label">Due</span><strong> and playtest:</strong> <a href="../389/Assignments/W03-Assignment---Keys-and-Doors" class="internal alias" data-slug="389/Assignments/W03-Assignment---Keys-and-Doors">Keys and Doors</a></p>
+</blockquote>
+<h3 id="week-41--sept-15">Week 4.1 — Sept 15<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#week-41--sept-15" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p><strong>Lecture:</strong> <a href="../389/Lectures/Week-4.1---Quandaries" class="internal alias" data-slug="389/Lectures/Week-4.1---Quandaries">Week 4.1 - Quandaries</a></p>
+</blockquote>
+<blockquote>
+<p><span class="due-label">Due</span><strong> and playtest:</strong> <a href="../389/Assignments/W04-Assignment---The-Joy-of-Constraint" class="internal alias" data-slug="389/Assignments/W04-Assignment---The-Joy-of-Constraint"> Constrained Movement</a></p>
+</blockquote>
+<blockquote>
+<p>Topic:  <a href="../389/Lectures/Week-x.y---The-Value-of-Uncertainty" class="internal alias" data-slug="389/Lectures/Week-x.y---The-Value-of-Uncertainty">The Value of Uncertainty</a></p>
+</blockquote>
+<h3 id="week-42--sept-17">Week 4.2 — Sept 17<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#week-42--sept-17" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p><strong>Play:</strong> <a href="../389/Lectures/Week-4.2---Quandaries-2" class="internal alias" data-slug="389/Lectures/Week-4.2---Quandaries-2">Week 4.2 - Quandaries 2</a></p>
+</blockquote>
+<blockquote>
+<p><span class="due-label">Due</span><strong>:</strong> Perforce - install P4V on your laptop.  Test signing in.  <a href="https://uscedu.sharepoint.com/sites/SCAknowledgebase/SitePages/Perforce-GettingStarted.aspx" class="external" target="_blank">Help here<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>.</p>
+</blockquote>
+<blockquote>
+<p>Due: Read <a href="https://www.gamedeveloper.com/design/designing-interesting-decisions-in-games-and-when-not-to-" class="external" target="_blank">Designing Interesting Decisions in Games (And When Not To)<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</blockquote>
+<blockquote>
+<p>Due: <a href="https://docs.google.com/document/d/1s2QRQlhm7IyTqjqzFbhnLn1sg0J2yTiN-f1xFGvdPvI/edit?tab=t.0" class="external" target="_blank">Examples of Choices <svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</blockquote>
+<h3 id="week-51--sept-22">Week 5.1 — Sept 22<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#week-51--sept-22" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p><span class="due-label">Due</span><strong> and playtest:</strong> <a href="../389/Assignments/W05-Assignment---A-Quandary" class="internal alias" data-slug="389/Assignments/W05-Assignment---A-Quandary">Quandary</a></p>
+</blockquote>
+<h3 id="week-52--sept-24">Week 5.2 — Sept 24<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#week-52--sept-24" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p><strong>Lecture:</strong> <a href="../389/Lectures/Week-5.1---Lost-Woods" class="internal alias" data-slug="389/Lectures/Week-5.1---Lost-Woods">Week 5.1 - Lost Woods</a>
+<strong>Lecture:</strong> <a href="../389/Lectures/Week-5.2---Lost-Woods" class="internal alias" data-slug="389/Lectures/Week-5.2---Lost-Woods">Week 5.2 - Lost Woods</a>
+<strong>Workshop:</strong> Reflection (of Quandry)</p>
+</blockquote>
+<blockquote>
+<p><span class="due-label">Due</span><strong> — milestone:</strong> <a href="../389/Assignments/W06-Assignment---Lost-Woods-Project" class="internal alias" data-slug="389/Assignments/W06-Assignment---Lost-Woods-Project">Lost Woods</a>. — draft <a href="https://docs.google.com/document/d/13wRa5N-Nn0t81D1OjkHDIKteMp3emgOW0xhHtMMMHlA/edit?tab=t.0" class="external" target="_blank">three ideas for next week’s assignment<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>.</p>
+<p><span class="due-label">Due</span><strong> — Read:</strong> <em>Analyzing Architecture</em>, Chapter 1: Basic Elements of Architecture. <a href="https://drive.google.com/drive/u/0/folders/1rxKhs2UpwYhrnVbrS1dgFXTUgri18GIU" class="external" target="_blank">Analyzing Architecture<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</blockquote>
+<h3 id="week-61--sept-29">Week 6.1 — Sept 29<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#week-61--sept-29" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p><span class="due-label">Due</span><strong> and playtest:</strong> <a href="../389/Assignments/W06-Assignment---Lost-Woods-Project" class="internal alias" data-slug="389/Assignments/W06-Assignment---Lost-Woods-Project">Lost Woods</a>.
+<strong>Workshop:</strong> Reflection</p>
+</blockquote>
+<h3 id="week-62--oct-1">Week 6.2 — Oct 1<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#week-62--oct-1" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p><span class="due-label">Due:</span><strong> Install Unreal 5.8</strong>
+<span class="due-label">Due:</span><strong> bring</strong> your own material for <a href="../389/Lectures/Week-6.2---AI-Workshop-2" class="internal alias" data-slug="389/Lectures/Week-6.2---AI-Workshop-2">AI Workshop 2</a></p>
+</blockquote>
+<blockquote>
+<p><strong>Workshop:</strong>  <a href="https://peterbrinson.github.io/PBOH/Development/Tutorials---LLM/Tutorial-2021---Your-First-Queryable-Knowledge-Base" class="external" target="_blank">Your First QKB<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</blockquote>
+<h3 id="week-71--oct-6">Week 7.1 — Oct 6<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#week-71--oct-6" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p><strong>Workshop</strong>: Unreal. <a href="https://peterbrinson.github.io/PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-101---A-Floor-Plate-Opens-A-Door" class="external" target="_blank">A Floor Plate Opens a Door<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><span class="due-label">Due:</span> <a href="../389/Assignments/W07-Assignment---Finish-a-Prior-Project" class="internal alias" data-slug="389/Assignments/W07-Assignment---Finish-a-Prior-Project">Finish a Prior Project</a> — 6–8 hours on one of your projects from Weeks 2–6.</p>
+</blockquote>
+<h3 id="week-72--oct-8">Week 7.2 — Oct 8<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#week-72--oct-8" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p><strong>Fall Break — no class.</strong></p>
+</blockquote>
+<h3 id="week-81--oct-13">Week 8.1 — Oct 13<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#week-81--oct-13" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p><strong>Due</strong>: Unreal. <a href="https://peterbrinson.github.io/PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-102---Collectables-and-Restart" class="external" target="_blank">Collectables and Restart<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</blockquote>
+<blockquote>
+<p><strong>Workshop</strong>:  Unreal. <a href="https://peterbrinson.github.io/PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-103---Scoring-and-UI" class="external" target="_blank">Scoring and UI<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</blockquote>
+<h3 id="week-82--oct-15">Week 8.2 — Oct 15<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#week-82--oct-15" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p><strong>Lecture:</strong> <a href="../389/Lectures/Week-8.2---Subtext-and-Theme" class="internal alias" data-slug="389/Lectures/Week-8.2---Subtext-and-Theme">Week 8.2 - Subtext and Theme</a></p>
+</blockquote>
+<blockquote>
+<p><strong>Due</strong>:  Design a maze in Unreal.</p>
+<p><strong>Topics:</strong> Interactive lights and cameras; mechanics, narrative, subtext, and theme.</p>
+<p><span class="due-label">Due</span><strong> — reading/play:</strong> <em>The Level Design Book</em>, Chapter 2: Pre-production; GDC video selection; and <em>Papo &amp; Yo</em>.</p>
+</blockquote>
+<h3 id="week-91--oct-20">Week 9.1 — Oct 20<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#week-91--oct-20" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p><strong>Lecture:</strong> <a href="../389/Lectures/Week-9.1---Unreal-Interaction-Project" class="internal alias" data-slug="389/Lectures/Week-9.1---Unreal-Interaction-Project">Week 9.1 - Unreal Interaction Project</a></p>
+<p><span class="due-label">Due</span><strong>:</strong> <a href="../389/Assignments/W09-Assignment---Unreal-Tutorial" class="internal alias" data-slug="389/Assignments/W09-Assignment---Unreal-Tutorial">Unreal Tutorial</a>.</p>
+</blockquote>
+<blockquote>
+<p><strong>Lecture</strong>: <a href="https://peterbrinson.github.io/PBOH/Design/Worldbuilding/" class="external" target="_blank">Bounded Worlds<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</blockquote>
+<h3 id="week-92--oct-22">Week 9.2 — Oct 22<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#week-92--oct-22" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p><strong>Lecture:</strong> <a href="../389/Lectures/Week-9.2---Mechanics-and-Emotion" class="internal alias" data-slug="389/Lectures/Week-9.2---Mechanics-and-Emotion">Week 9.2 - Mechanics and Emotion</a></p>
+<p><strong>Topics:</strong> Post-processing; advanced audio; mechanics and emotion.</p>
+<p><span class="due-label">Due</span><strong> — reading:</strong> <em>The Level Design Book</em>, Chapter 5: Blockout.</p>
+</blockquote>
+<h3 id="week-101--oct-27">Week 10.1 — Oct 27<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#week-101--oct-27" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p><strong>Lecture:</strong> <a href="../389/Lectures/Week-10.1---Technology-and-Development" class="internal alias" data-slug="389/Lectures/Week-10.1---Technology-and-Development">Week 10.1 - Technology and Development</a></p>
+<p><span class="due-label">Due</span><strong> and playtest:</strong> Group of 4 Project.</p>
+<p><strong>Topics:</strong> Technology and development; emotion in games.</p>
+</blockquote>
+<h3 id="week-102--oct-29">Week 10.2 — Oct 29<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#week-102--oct-29" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p><strong>Lecture:</strong> <a href="../389/Lectures/Week-10.2---Procedural-Rhetoric" class="internal alias" data-slug="389/Lectures/Week-10.2---Procedural-Rhetoric">Week 10.2 - Procedural Rhetoric</a></p>
+<p><strong>Topics:</strong> Mechanics with subtext and theme; procedural rhetoric; refactoring code.</p>
+<p><span class="due-label">Due</span><strong> — reading:</strong> <em>A Playful Production Process</em>, Chapter 17: The Game Design Macro.</p>
+</blockquote>
+<h3 id="week-111--nov-3">Week 11.1 — Nov 3<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#week-111--nov-3" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p><strong>Lecture:</strong> <a href="../389/Lectures/Week-11.1---Engine-Exploration" class="internal alias" data-slug="389/Lectures/Week-11.1---Engine-Exploration">Week 11.1 - Engine Exploration</a></p>
+<p><span class="due-label">Due</span><strong> and playtest:</strong> <a href="../389/Assignments/W11-Assignment---Engine-Exploration-Project" class="internal alias" data-slug="389/Assignments/W11-Assignment---Engine-Exploration-Project">Engine Exploration</a>.</p>
+<p><strong>Topics:</strong> Tools, engines, and affordances; discussion of playtest results.</p>
+</blockquote>
+<h3 id="week-112--nov-5">Week 11.2 — Nov 5<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#week-112--nov-5" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p><strong>Lecture:</strong> <a href="../389/Lectures/Week-11.2---Games" class="internal alias" data-slug="389/Lectures/Week-11.2---Games">Week 11.2 - Games</a></p>
+<p><strong>Topics:</strong> User interface; design documentation; games discussion.</p>
+</blockquote>
+<h3 id="week-121--nov-10">Week 12.1 — Nov 10<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#week-121--nov-10" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p><strong>Lecture:</strong> <a href="../389/Lectures/Week-12.1---Divergent-Prototyping" class="internal alias" data-slug="389/Lectures/Week-12.1---Divergent-Prototyping">Week 12.1 - Divergent Prototyping</a></p>
+<p><span class="due-label">Due</span><strong> and playtest:</strong> <a href="../389/Assignments/W12-Assignment---Emotion-Project" class="internal alias" data-slug="389/Assignments/W12-Assignment---Emotion-Project">Evoking Emotion</a>.</p>
+<p><strong>Topics:</strong> Divergent prototyping; ideology; discussion of playtest results.</p>
+</blockquote>
+<h3 id="week-122--nov-12">Week 12.2 — Nov 12<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#week-122--nov-12" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p><strong>Lecture:</strong> <a href="../389/Lectures/Week-12.2---Evoking-Emotion" class="internal alias" data-slug="389/Lectures/Week-12.2---Evoking-Emotion">Week 12.2 - Evoking Emotion</a></p>
+<p><strong>Topics:</strong> Evoking emotion; advanced user interface.</p>
+<p><span class="due-label">Due</span><strong> — reading:</strong> <em>Designing Games</em>, Chapter 1: Engines of Experience.</p>
+</blockquote>
+<h3 id="week-131--nov-17">Week 13.1 — Nov 17<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#week-131--nov-17" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p><strong>Lecture:</strong> <a href="../389/Lectures/Week-13.1---Level-Design,-Emotion-Prototype-2" class="internal alias" data-slug="389/Lectures/Week-13.1---Level-Design,-Emotion-Prototype-2">Week 13.1 - Level Design, Emotion Prototype 2</a></p>
+<p><span class="due-label">Due</span><strong> and playtest:</strong> <a href="../389/Assignments/W13-Assignment---Divergent-Prototype" class="internal alias" data-slug="389/Assignments/W13-Assignment---Divergent-Prototype">Divergent Prototype</a>.</p>
+<p><strong>Topics:</strong> Level design; second emotion prototype; establishing the final-project direction.</p>
+</blockquote>
+<h3 id="week-132--nov-19">Week 13.2 — Nov 19<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#week-132--nov-19" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p><strong>Lecture:</strong> <a href="../389/Lectures/Week-13.2---Cinematics" class="internal alias" data-slug="389/Lectures/Week-13.2---Cinematics">Week 13.2 - Cinematics</a></p>
+<p><strong>Topics:</strong> Cinematics; juice; portfolios.</p>
+<p><span class="due-label">Due</span><strong> — reading:</strong> <em>Video Game Level Design</em>, Chapter 2: Principles.</p>
+</blockquote>
+<h3 id="week-141--nov-24">Week 14.1 — Nov 24<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#week-141--nov-24" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p><span class="due-label">Due</span><strong> and playtest:</strong> <a href="../389/Assignments/W14-Assignment---Final-Project-Iteration-1" class="internal alias" data-slug="389/Assignments/W14-Assignment---Final-Project-Iteration-1">Final Project — Iteration 1</a>.</p>
+<p><strong>Topics:</strong> Final-project playtesting and discussion of results.</p>
+</blockquote>
+<h3 id="week-142--nov-26">Week 14.2 — Nov 26<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#week-142--nov-26" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p><strong>Thanksgiving — no class.</strong></p>
+</blockquote>
+<h3 id="week-151--dec-1">Week 15.1 — Dec 1<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#week-151--dec-1" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p><strong>Playtest:</strong> <a href="../389/Assignments/W15-Assignment---Final-Project" class="internal alias" data-slug="389/Assignments/W15-Assignment---Final-Project">Final Project</a>.</p>
+<p><strong>Topics:</strong> Final-project playtesting and revision planning.</p>
+</blockquote>
+<h3 id="week-152--dec-3">Week 15.2 — Dec 3<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#week-152--dec-3" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p><strong>Present:</strong> <a href="../389/Assignments/W15-Assignment---Final-Project" class="internal alias" data-slug="389/Assignments/W15-Assignment---Final-Project">Final Project</a>.</p>
+<p><strong>Topics:</strong> Postmortem.</p>
+</blockquote>
+<h3 id="finals-week">Finals Week<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#finals-week" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p><strong>Lecture:</strong> <a href="../389/Lectures/Week-15.2---Final-Games,-Intermediate" class="internal alias" data-slug="389/Lectures/Week-15.2---Final-Games,-Intermediate">Week 15.2 - Final Games, Intermediate</a></p>
+<p><span class="due-label">Due</span><strong>:</strong> <a href="../389/Assignments/W15-Assignment---Final-Project" class="internal alias" data-slug="389/Assignments/W15-Assignment---Final-Project">Final Project</a> final build, Friday, December 11 at 4:30 PM.</p>
+</blockquote>
+<hr/>
+<h3 id="note-for-students-with-disabilities">Note for Students with Disabilities<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#note-for-students-with-disabilities" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Any student requesting academic accommodations based on a disability is required to register with Disability Services and Programs (DSP) each semester. A letter of verification for approved accommodations can be obtained from DSP. Please be sure the letter is delivered to us as early in the semester as possible. DSP is located in STU 301, and is open 8:30am – 5:00pm Monday through Friday. The phone number for DSP is (213) 740-0776.</p>
+<h3 id="disruptive-behavior">Disruptive Behavior<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#disruptive-behavior" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Behavior that persistently or grossly interferes with classroom activities is considered disruptive behavior and may be subject to disciplinary action. Such behavior inhibits other students’ ability to learn and an instructor’s ability to teach. A student responsible for disruptive behavior may be required to leave class pending discussion and resolution of the problem and may be reported to the Office of Student Judicial Affairs for disciplinary action.</p>
+<h3 id></h3>
+<h3 id="syllabus-updates">Syllabus Updates<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#syllabus-updates" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>This syllabus is liable to change up to the beginning of class and possibly over the semester. Please check the posted syllabus regularly and note all changes that are shared by the instructor in class.</p></article></div><hr/><div class="page-footer"></div></div><div class="right sidebar"></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../postscript.js" type="module" data-persist="true"></script></html>

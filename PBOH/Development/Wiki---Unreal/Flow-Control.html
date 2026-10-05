@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head><title>Flow Control</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="PB Teach"/><meta property="og:title" content="Flow Control"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Flow Control"/><meta name="twitter:description" content="Nodes that direct the flow of execution in a Blueprint graph — deciding which path runs, how many times, or in what order."/><meta property="og:description" content="Nodes that direct the flow of execution in a Blueprint graph — deciding which path runs, how many times, or in what order."/><meta property="og:image:alt" content="Nodes that direct the flow of execution in a Blueprint graph — deciding which path runs, how many times, or in what order."/><meta property="og:image" content="https://peterbrinson.github.io/teach/static/og-image.png"/><meta property="og:image:url" content="https://peterbrinson.github.io/teach/static/og-image.png"/><meta name="twitter:image" content="https://peterbrinson.github.io/teach/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="peterbrinson.github.io/teach"/><meta property="og:url" content="https://peterbrinson.github.io/teach/PBOH/Development/Wiki---Unreal/Flow-Control"/><meta property="twitter:url" content="https://peterbrinson.github.io/teach/PBOH/Development/Wiki---Unreal/Flow-Control"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="Nodes that direct the flow of execution in a Blueprint graph — deciding which path runs, how many times, or in what order."/><meta name="generator" content="Quartz"/><link href="../../../index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiQzpcXFVzZXJzXFxicmluc1xcRG9jdW1lbnRzXFxPYnNpZGlhblxcc2l0ZVxccXVhcnR6XFxjb21wb25lbnRzXFxzdHlsZXMiLCJzb3VyY2VzIjpbIm1lcm1haWQuaW5saW5lLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUdGO0VBQ0U7OztBQUtGO0VBQ0U7RUFDQTs7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7O0FBR0Y7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFOztBQUlGO0VBQ0U7RUFDQTtFQUNBIiwic291cmNlc0NvbnRlbnQiOlsiLmV4cGFuZC1idXR0b24ge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsb2F0OiByaWdodDtcbiAgcGFkZGluZzogMC40cmVtO1xuICBtYXJnaW46IDAuM3JlbTtcbiAgcmlnaHQ6IDA7IC8vIE5PVEU6IHJpZ2h0IHdpbGwgYmUgc2V0IGluIG1lcm1haWQuaW5saW5lLnRzXG4gIGNvbG9yOiB2YXIoLS1ncmF5KTtcbiAgYm9yZGVyLWNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICBib3JkZXI6IDFweCBzb2xpZDtcbiAgYm9yZGVyLXJhZGl1czogNXB4O1xuICBvcGFjaXR5OiAwO1xuICB0cmFuc2l0aW9uOiAwLjJzO1xuXG4gICYgPiBzdmcge1xuICAgIGZpbGw6IHZhcigtLWxpZ2h0KTtcbiAgICBmaWx0ZXI6IGNvbnRyYXN0KDAuMyk7XG4gIH1cblxuICAmOmhvdmVyIHtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgYm9yZGVyLWNvbG9yOiB2YXIoLS1zZWNvbmRhcnkpO1xuICB9XG5cbiAgJjpmb2N1cyB7XG4gICAgb3V0bGluZTogMDtcbiAgfVxufVxuXG5wcmUge1xuICAmOmhvdmVyID4gLmV4cGFuZC1idXR0b24ge1xuICAgIG9wYWNpdHk6IDE7XG4gICAgdHJhbnNpdGlvbjogMC4ycztcbiAgfVxufVxuXG4jbWVybWFpZC1jb250YWluZXIge1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIGNvbnRhaW46IGxheW91dDtcbiAgei1pbmRleDogOTk5O1xuICBsZWZ0OiAwO1xuICB0b3A6IDA7XG4gIHdpZHRoOiAxMDB2dztcbiAgaGVpZ2h0OiAxMDB2aDtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgZGlzcGxheTogbm9uZTtcbiAgYmFja2Ryb3AtZmlsdGVyOiBibHVyKDRweCk7XG4gIGJhY2tncm91bmQ6IHJnYmEoMCwgMCwgMCwgMC41KTtcblxuICAmLmFjdGl2ZSB7XG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICB9XG5cbiAgJiA+ICNtZXJtYWlkLXNwYWNlIHtcbiAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0KTtcbiAgICBib3JkZXItcmFkaXVzOiA1cHg7XG4gICAgcG9zaXRpb246IGZpeGVkO1xuICAgIHRvcDogNTAlO1xuICAgIGxlZnQ6IDUwJTtcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTAlKTtcbiAgICBoZWlnaHQ6IDgwdmg7XG4gICAgd2lkdGg6IDgwdnc7XG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcblxuICAgICYgPiAubWVybWFpZC1jb250ZW50IHtcbiAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICAgIHRyYW5zZm9ybS1vcmlnaW46IDAgMDtcbiAgICAgIHRyYW5zaXRpb246IHRyYW5zZm9ybSAwLjFzIGVhc2U7XG4gICAgICBvdmVyZmxvdzogdmlzaWJsZTtcbiAgICAgIG1pbi1oZWlnaHQ6IDIwMHB4O1xuICAgICAgbWluLXdpZHRoOiAyMDBweDtcblxuICAgICAgcHJlIHtcbiAgICAgICAgbWFyZ2luOiAwO1xuICAgICAgICBib3JkZXI6IG5vbmU7XG4gICAgICB9XG5cbiAgICAgIHN2ZyB7XG4gICAgICAgIG1heC13aWR0aDogbm9uZTtcbiAgICAgICAgaGVpZ2h0OiBhdXRvO1xuICAgICAgfVxuICAgIH1cblxuICAgICYgPiAubWVybWFpZC1jb250cm9scyB7XG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICBib3R0b206IDIwcHg7XG4gICAgICByaWdodDogMjBweDtcbiAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICBnYXA6IDhweDtcbiAgICAgIHBhZGRpbmc6IDhweDtcbiAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0KTtcbiAgICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICBib3JkZXItcmFkaXVzOiA2cHg7XG4gICAgICBib3gtc2hhZG93OiAwIDJweCA0cHggcmdiYSgwLCAwLCAwLCAwLjEpO1xuICAgICAgei1pbmRleDogMjtcblxuICAgICAgLm1lcm1haWQtY29udHJvbC1idXR0b24ge1xuICAgICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICAgICAgd2lkdGg6IDMycHg7XG4gICAgICAgIGhlaWdodDogMzJweDtcbiAgICAgICAgcGFkZGluZzogMDtcbiAgICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgICBjb2xvcjogdmFyKC0tZGFyayk7XG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICAgICBmb250LXNpemU6IDE2cHg7XG4gICAgICAgIGZvbnQtZmFtaWx5OiB2YXIoLS1ib2R5Rm9udCk7XG4gICAgICAgIHRyYW5zaXRpb246IGFsbCAwLjJzIGVhc2U7XG5cbiAgICAgICAgJjpob3ZlciB7XG4gICAgICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgICAgfVxuXG4gICAgICAgICY6YWN0aXZlIHtcbiAgICAgICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoMXB4KTtcbiAgICAgICAgfVxuXG4gICAgICAgIC8vIFN0eWxlIHRoZSByZXNldCBidXR0b24gZGlmZmVyZW50bHlcbiAgICAgICAgJjpudGgtY2hpbGQoMikge1xuICAgICAgICAgIHdpZHRoOiBhdXRvO1xuICAgICAgICAgIHBhZGRpbmc6IDAgMTJweDtcbiAgICAgICAgICBmb250LXNpemU6IDE0cHg7XG4gICAgICAgIH1cbiAgICAgIH1cbiAgICB9XG4gIH1cbn1cbiJdfQ== */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../../prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://peterbrinson.github.io/teach/index.xml"/></head><body data-slug="PBOH/Development/Wiki---Unreal/Flow-Control"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><div class="spacer mobile-only"></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>{let rank={389:1,534:2,geidai:3,AI:4,PBOH:5},ra=rank[a.slugSegment]??99,rb=rank[b.slugSegment]??99;return ra!==rb?ra-rb:!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1}&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>{let shortNames={AI:\&quot;Tokens on the Table\&quot;,PBOH:\&quot;PB Office Hours\&quot;,Storytelling:\&quot;Storytelling\&quot;,Worldbuilding:\&quot;Worldbuilding\&quot;,_References:\&quot;References\&quot;};node.isFolder&amp;&amp;shortNames[node.slugSegment]&amp;&amp;(node.displayName=shortNames[node.slugSegment])}&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-404"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2></h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-404" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../PBOH/">Peter B's Office Hours</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../PBOH/Development/">Development</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../PBOH/Development/Wiki---Unreal/">Wiki   Unreal</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Flow Control</a></div></nav><h1 class="article-title">Flow Control</h1></div></div><article class="popover-hint"><p>Nodes that direct the flow of execution in a Blueprint graph — deciding <em>which</em> path runs, <em>how many times</em>, or <em>in what order</em>. These are the structural bones of any Blueprint.</p>
+<h2 id="standalone-pages">Standalone Pages<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#standalone-pages" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>These nodes are complex enough to warrant their own pages:</p>
+<ul>
+<li><strong><a href="../../../PBOH/Development/Wiki---Unreal/Branch" class="internal" data-slug="PBOH/Development/Wiki---Unreal/Branch">Branch</a></strong> — if/else. Routes to True or False based on a boolean.</li>
+<li><strong><a href="../../../PBOH/Development/Wiki---Unreal/Sequence" class="internal" data-slug="PBOH/Development/Wiki---Unreal/Sequence">Sequence</a></strong> — fan-out. Fires multiple exec outputs in guaranteed order from a single input.</li>
+<li><strong><a href="../../../PBOH/Development/Wiki---Unreal/For-Each-Loop" class="internal alias" data-slug="PBOH/Development/Wiki---Unreal/For-Each-Loop">For Each Loop</a></strong> — array iteration. Executes the loop body once per array element.</li>
+<li><strong><a href="../../../PBOH/Development/Wiki---Unreal/Switch" class="internal" data-slug="PBOH/Development/Wiki---Unreal/Switch">Switch</a></strong> — multi-way routing. Sends execution down one of several paths based on a data value (Int, String, Name, or Enum).</li>
+<li><strong><a href="../../../PBOH/Development/Wiki---Unreal/Gate" class="internal" data-slug="PBOH/Development/Wiki---Unreal/Gate">Gate</a></strong> — open/close valve. Blocks or allows a stream of execution pulses. Controlled by separate Open, Close, and Toggle inputs.</li>
+<li><strong><a href="../../../PBOH/Development/Wiki---Unreal/MultiGate" class="internal" data-slug="PBOH/Development/Wiki---Unreal/MultiGate">MultiGate</a></strong> — sequential/random distributor. Routes each pulse to the next output in a sequence (or randomly). Can loop or stop after all outputs fire once.</li>
+</ul>
+<hr/>
+<h2 id="flip-flop">Flip Flop<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#flip-flop" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><img src="../../../PBOH/Development/Wiki---Unreal/attachments/flipflop_example.webp" width="auto" height="auto" alt/></p>
+<p>Alternates between two execution outputs on each call. First call fires <strong>A</strong>, second fires <strong>B</strong>, third fires <strong>A</strong>, and so on. The <strong>Is A</strong> boolean output tells you which side just fired.</p>
+<h3 id="pins">Pins<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#pins" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Pin</th><th>Direction</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><strong>(Unlabeled)</strong></td><td>Input</td><td>Exec</td><td>Triggers the toggle</td></tr><tr><td><strong>A</strong></td><td>Output</td><td>Exec</td><td>Fires on odd calls (1st, 3rd, 5th…)</td></tr><tr><td><strong>B</strong></td><td>Output</td><td>Exec</td><td>Fires on even calls (2nd, 4th, 6th…)</td></tr><tr><td><strong>Is A</strong></td><td>Output</td><td>Bool</td><td>True when A fires, false when B fires</td></tr></tbody></table></div>
+<h3 id="when-to-use">When to Use<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#when-to-use" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Toggle behaviors: open/close, show/hide, enable/disable</li>
+<li>Any two-state interaction where one input should alternate between two outcomes</li>
+</ul>
+<h3 id="pattern-readclose-toggle">Pattern: Read/Close Toggle<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#pattern-readclose-toggle" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><img src="../../../PBOH/Development/Wiki---Unreal/attachments/flipflop_network.webp" width="auto" height="auto" alt/></p>
+<p><a href="../../../PBOH/Development/Tutorials---Unreal/800---Interactive-Systems/UE-Tutorial-801---Inspect-an-Object" class="internal alias" data-slug="PBOH/Development/Tutorials---Unreal/800---Interactive-Systems/UE-Tutorial-801---Inspect-an-Object">Tutorial 801</a>’s readable item system: the player presses E to read a note. A fires — the widget appears, input is disabled. Press E again — B fires, the widget is removed, input is restored. One node replaces a boolean variable + Branch + Set combination.</p>
+<hr/>
+<h2 id="do-once">Do Once<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#do-once" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><img src="../../../PBOH/Development/Wiki---Unreal/attachments/doonce_example.webp" width="auto" height="auto" alt/></p>
+<p>Fires its output exactly once. All subsequent calls are ignored until the <strong>Reset</strong> input is pulsed, which re-arms the node for one more firing.</p>
+<h3 id="pins-1">Pins<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#pins-1" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Pin</th><th>Direction</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><strong>(Unlabeled)</strong></td><td>Input</td><td>Exec</td><td>The trigger. Only passes through on the first call.</td></tr><tr><td><strong>Reset</strong></td><td>Input</td><td>Exec</td><td>Re-arms the node so it can fire once more.</td></tr><tr><td><strong>Completed</strong></td><td>Output</td><td>Exec</td><td>Fires on the first call (and once after each Reset).</td></tr></tbody></table></div>
+<h3 id="when-to-use-1">When to Use<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#when-to-use-1" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>One-time events: a cutscene that plays once, a door that opens permanently, a pickup that can only be collected once</li>
+<li>Any trigger that should fire once but might need re-arming later (unlike a boolean gate, DoOnce handles the state internally)</li>
+</ul>
+<h3 id="pattern-resettable-one-shot">Pattern: Resettable One-Shot<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#pattern-resettable-one-shot" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><img src="../../../PBOH/Development/Wiki---Unreal/attachments/doonce_network.webp" width="auto" height="auto" alt/></p>
+<p>A door opens the first time the player touches a trigger. Further touches do nothing. But a separate “reset” trigger (a lever, a key pickup, a timer) wires into Reset, and the door can be opened once more.</p>
+<h3 id="doonce-vs-branch--boolean-gate">DoOnce vs. Branch + Boolean Gate<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#doonce-vs-branch--boolean-gate" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../PBOH/Development/Wiki---Unreal/Branch" class="internal" data-slug="PBOH/Development/Wiki---Unreal/Branch">Branch</a> with a <code>HasTriggered</code> boolean (<a href="../../../PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-104---Haunted-House-Triggers-and-Events" class="internal alias" data-slug="PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-104---Haunted-House-Triggers-and-Events">Tutorial 104</a> pattern) does the same thing as DoOnce — but requires you to create the variable, set it, and check it. DoOnce is one node. Use DoOnce when you don’t need to read the triggered state elsewhere; use the boolean pattern when other parts of the Blueprint need to know whether the event has fired.</p>
+<hr/>
+<h2 id="do-n">Do N<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#do-n" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><img src="../../../PBOH/Development/Wiki---Unreal/attachments/do_n.webp" width="auto" height="auto" alt/></p>
+<p>Fires its output <strong>N</strong> times, then stops. Like DoOnce but with a configurable limit. Has a <strong>Reset</strong> input to restart the counter.</p>
+<h3 id="pins-2">Pins<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#pins-2" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Pin</th><th>Direction</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><strong>Enter</strong></td><td>Input</td><td>Exec</td><td>The trigger. Passes through up to N times.</td></tr><tr><td><strong>N</strong></td><td>Input</td><td>Int</td><td>How many times to allow before stopping.</td></tr><tr><td><strong>Reset</strong></td><td>Input</td><td>Exec</td><td>Resets the counter back to 0 so it can fire N more times.</td></tr><tr><td><strong>Exit</strong></td><td>Output</td><td>Exec</td><td>Fires each time Enter is called, up to the Nth call.</td></tr></tbody></table></div>
+<h3 id="when-to-use-2">When to Use<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#when-to-use-2" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Limited-use items: a flashlight with 5 uses, a gun with limited ammo before reloading</li>
+<li>Tutorial prompts that appear the first 3 times a player does something, then stop</li>
+</ul>
+<h3 id="pattern-refuel-to-reset">Pattern: Refuel to Reset<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#pattern-refuel-to-reset" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><img src="../../../PBOH/Development/Wiki---Unreal/attachments/refuel_key_do_n.webp" width="auto" height="auto" alt/></p>
+<p>A vehicle can start 20 times. After that, Enter pulses are ignored. A refueling event wires into Reset — the vehicle can start 20 more times.</p>
+<hr/>
+<h2 id="for-loop">For Loop<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#for-loop" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><img src="../../../PBOH/Development/Wiki---Unreal/attachments/forloop_example.webp" width="auto" height="auto" alt/></p>
+<p>A counter-based loop that fires <strong>Loop Body</strong> once for each integer from <strong>First Index</strong> to <strong>Last Index</strong> (inclusive). The current counter value is available on the <strong>Index</strong> output. After all iterations complete, <strong>Completed</strong> fires.</p>
+<h3 id="pins-3">Pins<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#pins-3" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Pin</th><th>Direction</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><strong>(Unlabeled)</strong></td><td>Input</td><td>Exec</td><td>Starts the loop</td></tr><tr><td><strong>First Index</strong></td><td>Input</td><td>Int</td><td>Starting counter value</td></tr><tr><td><strong>Last Index</strong></td><td>Input</td><td>Int</td><td>Ending counter value (inclusive)</td></tr><tr><td><strong>Loop Body</strong></td><td>Output</td><td>Exec</td><td>Fires once per iteration</td></tr><tr><td><strong>Index</strong></td><td>Output</td><td>Int</td><td>Current counter value</td></tr><tr><td><strong>Completed</strong></td><td>Output</td><td>Exec</td><td>Fires once after the last iteration</td></tr></tbody></table></div>
+<h3 id="when-to-use-3">When to Use<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#when-to-use-3" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>You need to run something a specific number of times (spawn 5 enemies, check 10 slots)</li>
+<li>You need the iteration counter as data (e.g., spacing items along a line by index × offset)</li>
+<li>You don’t have an array — if you have an array, use <a href="../../../PBOH/Development/Wiki---Unreal/For-Each-Loop" class="internal alias" data-slug="PBOH/Development/Wiki---Unreal/For-Each-Loop">For Each Loop</a> instead</li>
+</ul>
+<h3 id="for-loop-vs-for-each-loop">For Loop vs. For Each Loop<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#for-loop-vs-for-each-loop" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>ForLoop</strong> counts integers. <strong>For Each Loop</strong> iterates array elements. If you’re processing items in an array, For Each Loop is the right choice — it gives you the element directly. If you just need to repeat something N times or need the index as a value, ForLoop is simpler.</p>
+<h3 id="forloopwithbreak-variant">ForLoopWithBreak Variant<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#forloopwithbreak-variant" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><img src="../../../PBOH/Development/Wiki---Unreal/attachments/forloopwithbreak_example.webp" width="auto" height="auto" alt/></p>
+<p>Same as ForLoop but adds a <strong>Break</strong> exec input. When fired (typically from a <a href="../../../PBOH/Development/Wiki---Unreal/Branch" class="internal" data-slug="PBOH/Development/Wiki---Unreal/Branch">Branch</a> inside the loop body), the loop stops immediately and Completed fires.</p>
+<p><img src="../../../PBOH/Development/Wiki---Unreal/attachments/forloopwithbreak_network.webp" width="auto" height="auto" alt/></p>
+<p>Use when you’re searching for something and want to stop as soon as you find it, or when a condition inside the loop should abort early.</p>
+<p><strong>Performance note:</strong> Loop iterations happen between frames. Large loops (hundreds or thousands of iterations) can cause frame hitches. For very large iteration counts, consider spreading work across multiple frames with a timer.</p>
+<hr/>
+<h2 id="while-loop">While Loop<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#while-loop" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><img src="../../../PBOH/Development/Wiki---Unreal/attachments/bp_whileloop-1.webp" width="auto" height="auto" alt/></p>
+<p>Evaluates a <strong>Condition</strong> before each iteration. If true, executes the <strong>Loop Body</strong> and re-checks. If false, exits to <strong>Completed</strong>. This is the Blueprint equivalent of a <code>while</code> loop in code.</p>
+<h3 id="pins-4">Pins<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#pins-4" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Pin</th><th>Direction</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><strong>(Unlabeled)</strong></td><td>Input</td><td>Exec</td><td>Starts the loop</td></tr><tr><td><strong>Condition</strong></td><td>Input</td><td>Bool</td><td>Checked before each iteration. Loop continues while true.</td></tr><tr><td><strong>Loop Body</strong></td><td>Output</td><td>Exec</td><td>Fires each iteration</td></tr><tr><td><strong>Completed</strong></td><td>Output</td><td>Exec</td><td>Fires when Condition becomes false</td></tr></tbody></table></div>
+<h3 id="when-to-use-4">When to Use<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#when-to-use-4" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>The number of iterations isn’t known ahead of time — you loop until a condition changes</li>
+<li>Searching through data structures where the size varies</li>
+<li>Processing a queue until it’s empty</li>
+</ul>
+<h3 id="pattern-counter-based-while-loop">Pattern: Counter-Based While Loop<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#pattern-counter-based-while-loop" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><img src="../../../PBOH/Development/Wiki---Unreal/attachments/bp_whileloop_exampleusage.webp" width="auto" height="auto" alt/></p>
+<p>A counter starts at 0. The condition checks <code>Counter &lt; Count Limit</code>. Each iteration increments the counter and prints its value. When the counter reaches the limit, the loop exits and prints “WhileLoop Completed.”</p>
+<h3 id="infinite-loop-warning">Infinite Loop Warning<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#infinite-loop-warning" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>A WhileLoop that never makes its condition false will freeze the editor. Before using one, answer three questions:</p>
+<ol>
+<li>What makes the condition become false?</li>
+<li>Is the condition initialized correctly before the loop starts?</li>
+<li>Does something inside the loop body actually change the condition each cycle?</li>
+</ol>
+<p>If you can’t answer all three, use a ForLoop with a known limit instead.</p>
+<hr/>
+<h2 id="all-flow-control-nodes-at-a-glance">All Flow Control Nodes at a Glance<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#all-flow-control-nodes-at-a-glance" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><img src="../../../PBOH/Development/Wiki---Unreal/attachments/flowcontrolexpanded.webp" width="auto" height="auto" alt/></p>
+<h2 id="source">Source<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#source" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="https://dev.epicgames.com/documentation/en-us/unreal-engine/flow-control-in-unreal-engine?application_version=4.27" class="external" target="_blank">Flow Control | UE 4.27<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> — full page, clipped 2026-04-12</li>
+<li>Individual pages above — see each for additional sources</li>
+</ul></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-141" aria-expanded="true"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#standalone-pages" data-for="standalone-pages">Standalone Pages</a></li><li class="depth-0"><a href="#flip-flop" data-for="flip-flop">Flip Flop</a></li><li class="depth-1"><a href="#pins" data-for="pins">Pins</a></li><li class="depth-1"><a href="#when-to-use" data-for="when-to-use">When to Use</a></li><li class="depth-1"><a href="#pattern-readclose-toggle" data-for="pattern-readclose-toggle">Pattern: Read/Close Toggle</a></li><li class="depth-0"><a href="#do-once" data-for="do-once">Do Once</a></li><li class="depth-1"><a href="#pins-1" data-for="pins-1">Pins</a></li><li class="depth-1"><a href="#when-to-use-1" data-for="when-to-use-1">When to Use</a></li><li class="depth-1"><a href="#pattern-resettable-one-shot" data-for="pattern-resettable-one-shot">Pattern: Resettable One-Shot</a></li><li class="depth-1"><a href="#doonce-vs-branch--boolean-gate" data-for="doonce-vs-branch--boolean-gate">DoOnce vs. Branch + Boolean Gate</a></li><li class="depth-0"><a href="#do-n" data-for="do-n">Do N</a></li><li class="depth-1"><a href="#pins-2" data-for="pins-2">Pins</a></li><li class="depth-1"><a href="#when-to-use-2" data-for="when-to-use-2">When to Use</a></li><li class="depth-1"><a href="#pattern-refuel-to-reset" data-for="pattern-refuel-to-reset">Pattern: Refuel to Reset</a></li><li class="depth-0"><a href="#for-loop" data-for="for-loop">For Loop</a></li><li class="depth-1"><a href="#pins-3" data-for="pins-3">Pins</a></li><li class="depth-1"><a href="#when-to-use-3" data-for="when-to-use-3">When to Use</a></li><li class="depth-1"><a href="#for-loop-vs-for-each-loop" data-for="for-loop-vs-for-each-loop">For Loop vs. For Each Loop</a></li><li class="depth-1"><a href="#forloopwithbreak-variant" data-for="forloopwithbreak-variant">ForLoopWithBreak Variant</a></li><li class="depth-0"><a href="#while-loop" data-for="while-loop">While Loop</a></li><li class="depth-1"><a href="#pins-4" data-for="pins-4">Pins</a></li><li class="depth-1"><a href="#when-to-use-4" data-for="when-to-use-4">When to Use</a></li><li class="depth-1"><a href="#pattern-counter-based-while-loop" data-for="pattern-counter-based-while-loop">Pattern: Counter-Based While Loop</a></li><li class="depth-1"><a href="#infinite-loop-warning" data-for="infinite-loop-warning">Infinite Loop Warning</a></li><li class="depth-0"><a href="#all-flow-control-nodes-at-a-glance" data-for="all-flow-control-nodes-at-a-glance">All Flow Control Nodes at a Glance</a></li><li class="depth-0"><a href="#source" data-for="source">Source</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>Backlinks</h3><ul id="list-2" class="overflow"><li><a href="../../../PBOH/Development/Wiki---Unreal/Branch" class="internal">Branch</a></li><li><a href="../../../PBOH/Development/Wiki---Unreal/For-Each-Loop" class="internal">For Each Loop</a></li><li><a href="../../../PBOH/Development/Wiki---Unreal/Gate" class="internal">Gate</a></li><li><a href="../../../PBOH/Development/Wiki---Unreal/MultiGate" class="internal">MultiGate</a></li><li><a href="../../../PBOH/Development/Wiki---Unreal/Sequence" class="internal">Sequence</a></li><li><a href="../../../PBOH/Development/Wiki---Unreal/Spawn-Actor-from-Class" class="internal">Spawn Actor from Class</a></li><li><a href="../../../PBOH/Development/Wiki---Unreal/Switch" class="internal">Switch</a></li><li><a href="../../../PBOH/Development/Wiki---Unreal/Variables" class="internal">Variables</a></li><li><a href="../../../PBOH/Development/Wiki---Unreal/" class="internal">Wiki - Unreal</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../../postscript.js" type="module" data-persist="true"></script></html>
