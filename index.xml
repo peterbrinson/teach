@@ -6,6 +6,12 @@
       <description>Last 10 notes on PB Teach</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>UE Tutorial 101 - A Floor Plate Opens A Door</title>
+    <link>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-101---A-Floor-Plate-Opens-A-Door</link>
+    <guid>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-101---A-Floor-Plate-Opens-A-Door</guid>
+    <description><![CDATA[ By Aaron Cheney &amp; Peter Brinson 0. Introduction A. ]]></description>
+    <pubDate>Tue, 06 Oct 2026 04:51:20 GMT</pubDate>
+  </item><item>
     <title>CTIN 389</title>
     <link>https://peterbrinson.github.io/teach/389/</link>
     <guid>https://peterbrinson.github.io/teach/389/</guid>
@@ -58,12 +64,6 @@
     <link>https://peterbrinson.github.io/teach/PBOH/Development/Wiki---Unreal/Switch</link>
     <guid>https://peterbrinson.github.io/teach/PBOH/Development/Wiki---Unreal/Switch</guid>
     <description><![CDATA[ Routes execution to one of several outputs based on a data value — the multi-way alternative to chaining Branch nodes. ]]></description>
-    <pubDate>Mon, 05 Oct 2026 23:40:24 GMT</pubDate>
-  </item><item>
-    <title>Possess</title>
-    <link>https://peterbrinson.github.io/teach/PBOH/Development/Wiki---Unreal/Possess</link>
-    <guid>https://peterbrinson.github.io/teach/PBOH/Development/Wiki---Unreal/Possess</guid>
-    <description><![CDATA[ Transfers control of a Pawn to a Controller. ]]></description>
     <pubDate>Mon, 05 Oct 2026 23:40:24 GMT</pubDate>
   </item>
     </channel>
