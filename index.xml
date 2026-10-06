@@ -6,6 +6,24 @@
       <description>Last 10 notes on PB Teach</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>(Let&#039;s Put Our) Tokens on the Table</title>
+    <link>https://peterbrinson.github.io/teach/TOTT/</link>
+    <guid>https://peterbrinson.github.io/teach/TOTT/</guid>
+    <description><![CDATA[ A Seminar Series, Learning AI Are you using AI for game development and want to talk about it? What about game design and production? You mostly work in the browser chat but have heard there are smarter ways to work? You hesitate to tell your professors about your AI use because you don’t know what’... ]]></description>
+    <pubDate>Tue, 06 Oct 2026 19:38:29 GMT</pubDate>
+  </item><item>
+    <title>Seminar 1: Your First Upgrades</title>
+    <link>https://peterbrinson.github.io/teach/TOTT/Seminars/TOTT-Seminar-1</link>
+    <guid>https://peterbrinson.github.io/teach/TOTT/Seminars/TOTT-Seminar-1</guid>
+    <description><![CDATA[ Monday, October 26, 12pm. SCI 108. Part of Tokens on the Table. Join the TOTT Discord (link forthcoming). ]]></description>
+    <pubDate>Tue, 06 Oct 2026 19:37:22 GMT</pubDate>
+  </item><item>
+    <title>Session Limits: Context Window, Usage, and Compacting</title>
+    <link>https://peterbrinson.github.io/teach/TOTT/Topics/Session-Limits</link>
+    <guid>https://peterbrinson.github.io/teach/TOTT/Topics/Session-Limits</guid>
+    <description><![CDATA[ Every AI session runs out of something. ]]></description>
+    <pubDate>Tue, 06 Oct 2026 19:35:10 GMT</pubDate>
+  </item><item>
     <title>UE Tutorial 101 - A Floor Plate Opens A Door</title>
     <link>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-101---A-Floor-Plate-Opens-A-Door</link>
     <guid>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-101---A-Floor-Plate-Opens-A-Door</guid>
@@ -42,28 +60,10 @@
     <description><![CDATA[ Course materials and talks. Personal site: peterbrinson.com. ]]></description>
     <pubDate>Tue, 06 Oct 2026 00:02:17 GMT</pubDate>
   </item><item>
-    <title>Seminar 1: Your First Upgrades</title>
-    <link>https://peterbrinson.github.io/teach/TOTT/Seminars/TOTT-Seminar-1</link>
-    <guid>https://peterbrinson.github.io/teach/TOTT/Seminars/TOTT-Seminar-1</guid>
-    <description><![CDATA[ Monday, October 26, 12pm. SCI 108. Part of Tokens on the Table. Join the TOTT Discord (link forthcoming). ]]></description>
-    <pubDate>Tue, 06 Oct 2026 00:02:17 GMT</pubDate>
-  </item><item>
     <title>Widget Blueprint</title>
     <link>https://peterbrinson.github.io/teach/PBOH/Development/Wiki---Unreal/Widget-Blueprint</link>
     <guid>https://peterbrinson.github.io/teach/PBOH/Development/Wiki---Unreal/Widget-Blueprint</guid>
     <description><![CDATA[ A specialized Blueprint for building UI elements using Unreal Motion Graphics (UMG). ]]></description>
-    <pubDate>Mon, 05 Oct 2026 23:40:24 GMT</pubDate>
-  </item><item>
-    <title>Traces</title>
-    <link>https://peterbrinson.github.io/teach/PBOH/Development/Wiki---Unreal/Traces</link>
-    <guid>https://peterbrinson.github.io/teach/PBOH/Development/Wiki---Unreal/Traces</guid>
-    <description><![CDATA[ Traces (also called raycasts) shoot an invisible line or shape from a start point to an end point and report what they hit along the way. ]]></description>
-    <pubDate>Mon, 05 Oct 2026 23:40:24 GMT</pubDate>
-  </item><item>
-    <title>Switch</title>
-    <link>https://peterbrinson.github.io/teach/PBOH/Development/Wiki---Unreal/Switch</link>
-    <guid>https://peterbrinson.github.io/teach/PBOH/Development/Wiki---Unreal/Switch</guid>
-    <description><![CDATA[ Routes execution to one of several outputs based on a data value — the multi-way alternative to chaining Branch nodes. ]]></description>
     <pubDate>Mon, 05 Oct 2026 23:40:24 GMT</pubDate>
   </item>
     </channel>
