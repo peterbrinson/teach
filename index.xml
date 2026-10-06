@@ -6,6 +6,36 @@
       <description>Last 10 notes on PB Teach</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Week 8.1 — Unreal Tutorial</title>
+    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-8.1---Unreal-Tutorial</link>
+    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-8.1---Unreal-Tutorial</guid>
+    <description><![CDATA[ A tour of the Unreal Editor and Blueprints — orienting Unity-trained designers in a second engine. ]]></description>
+    <pubDate>Tue, 06 Oct 2026 00:02:51 GMT</pubDate>
+  </item><item>
+    <title>Peter B&#039;s Office Hours</title>
+    <link>https://peterbrinson.github.io/teach/PBOH/</link>
+    <guid>https://peterbrinson.github.io/teach/PBOH/</guid>
+    <description><![CDATA[ Peter B’s Office Hours Here to learn about queryable knowledge bases in general? Click here.Or, are you here to start a playable story or world? Read on. ]]></description>
+    <pubDate>Tue, 06 Oct 2026 00:02:17 GMT</pubDate>
+  </item><item>
+    <title>Queryable Knowledge Bases</title>
+    <link>https://peterbrinson.github.io/teach/TOTT/Topics/Queryable-Knowledge-Bases</link>
+    <guid>https://peterbrinson.github.io/teach/TOTT/Topics/Queryable-Knowledge-Bases</guid>
+    <description><![CDATA[ A student looking for Peter Brinson&#039;s Office Hours, the game design guide itself? Click here.Here to learn what a queryable knowledge base is, and build one? Read on. ]]></description>
+    <pubDate>Tue, 06 Oct 2026 00:02:17 GMT</pubDate>
+  </item><item>
+    <title>Peter Brinson — Teaching</title>
+    <link>https://peterbrinson.github.io/teach/</link>
+    <guid>https://peterbrinson.github.io/teach/</guid>
+    <description><![CDATA[ Course materials and talks. Personal site: peterbrinson.com. ]]></description>
+    <pubDate>Tue, 06 Oct 2026 00:02:17 GMT</pubDate>
+  </item><item>
+    <title>Seminar 1: Your First Upgrades</title>
+    <link>https://peterbrinson.github.io/teach/TOTT/Seminars/TOTT-Seminar-1</link>
+    <guid>https://peterbrinson.github.io/teach/TOTT/Seminars/TOTT-Seminar-1</guid>
+    <description><![CDATA[ Monday, October 26, 12pm. SCI 108. Part of Tokens on the Table. Join the TOTT Discord (link forthcoming). ]]></description>
+    <pubDate>Tue, 06 Oct 2026 00:02:17 GMT</pubDate>
+  </item><item>
     <title>Widget Blueprint</title>
     <link>https://peterbrinson.github.io/teach/PBOH/Development/Wiki---Unreal/Widget-Blueprint</link>
     <guid>https://peterbrinson.github.io/teach/PBOH/Development/Wiki---Unreal/Widget-Blueprint</guid>
@@ -34,36 +64,6 @@
     <link>https://peterbrinson.github.io/teach/PBOH/Development/Wiki---Unreal/Physical-Material</link>
     <guid>https://peterbrinson.github.io/teach/PBOH/Development/Wiki---Unreal/Physical-Material</guid>
     <description><![CDATA[ Physical Material A small asset that describes what a surface is made of — its physical response. ]]></description>
-    <pubDate>Mon, 05 Oct 2026 23:40:24 GMT</pubDate>
-  </item><item>
-    <title>MultiGate</title>
-    <link>https://peterbrinson.github.io/teach/PBOH/Development/Wiki---Unreal/MultiGate</link>
-    <guid>https://peterbrinson.github.io/teach/PBOH/Development/Wiki---Unreal/MultiGate</guid>
-    <description><![CDATA[ Takes a single execution pulse and routes it to one of several outputs. Each call advances to the next output. ]]></description>
-    <pubDate>Mon, 05 Oct 2026 23:40:24 GMT</pubDate>
-  </item><item>
-    <title>Level Blueprint</title>
-    <link>https://peterbrinson.github.io/teach/PBOH/Development/Wiki---Unreal/Level-Blueprint</link>
-    <guid>https://peterbrinson.github.io/teach/PBOH/Development/Wiki---Unreal/Level-Blueprint</guid>
-    <description><![CDATA[ A specialized Blueprint that acts as a level-wide event graph. ]]></description>
-    <pubDate>Mon, 05 Oct 2026 23:40:24 GMT</pubDate>
-  </item><item>
-    <title>Flow Control</title>
-    <link>https://peterbrinson.github.io/teach/PBOH/Development/Wiki---Unreal/Flow-Control</link>
-    <guid>https://peterbrinson.github.io/teach/PBOH/Development/Wiki---Unreal/Flow-Control</guid>
-    <description><![CDATA[ Nodes that direct the flow of execution in a Blueprint graph — deciding which path runs, how many times, or in what order. ]]></description>
-    <pubDate>Mon, 05 Oct 2026 23:40:24 GMT</pubDate>
-  </item><item>
-    <title>Gate</title>
-    <link>https://peterbrinson.github.io/teach/PBOH/Development/Wiki---Unreal/Gate</link>
-    <guid>https://peterbrinson.github.io/teach/PBOH/Development/Wiki---Unreal/Gate</guid>
-    <description><![CDATA[ Controls whether execution pulses pass through or are blocked. ]]></description>
-    <pubDate>Mon, 05 Oct 2026 23:40:24 GMT</pubDate>
-  </item><item>
-    <title>Enhanced Input</title>
-    <link>https://peterbrinson.github.io/teach/PBOH/Development/Wiki---Unreal/Enhanced-Input</link>
-    <guid>https://peterbrinson.github.io/teach/PBOH/Development/Wiki---Unreal/Enhanced-Input</guid>
-    <description><![CDATA[ The UE5 input system. ]]></description>
     <pubDate>Mon, 05 Oct 2026 23:40:24 GMT</pubDate>
   </item>
     </channel>
