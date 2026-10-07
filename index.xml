@@ -6,6 +6,42 @@
       <description>Last 10 notes on PB Teach</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>CTIN 389</title>
+    <link>https://peterbrinson.github.io/teach/389/</link>
+    <guid>https://peterbrinson.github.io/teach/389/</guid>
+    <description><![CDATA[ Units: 4 Fall 2026 Section: Tue, Thu, 4:00–5:50 pm Room: SCI 113 Go To Schedule Instructor: Peter Brinson Student Assistant: Luke Pannell Course Description This course teaches fundamental skills of digital game development alongside the basic principles of level design. ]]></description>
+    <pubDate>Wed, 07 Oct 2026 22:21:18 GMT</pubDate>
+  </item><item>
+    <title>W10 — Unreal Interaction</title>
+    <link>https://peterbrinson.github.io/teach/389/Assignments/W10-Assignment---Unreal-Interaction-Project</link>
+    <guid>https://peterbrinson.github.io/teach/389/Assignments/W10-Assignment---Unreal-Interaction-Project</guid>
+    <description><![CDATA[ Introduced in Week 9.1 - Unreal Interaction Project. ]]></description>
+    <pubDate>Wed, 07 Oct 2026 22:19:34 GMT</pubDate>
+  </item><item>
+    <title>W09 — Unreal Tutorial</title>
+    <link>https://peterbrinson.github.io/teach/389/Assignments/W09-Assignment---Unreal-Tutorial</link>
+    <guid>https://peterbrinson.github.io/teach/389/Assignments/W09-Assignment---Unreal-Tutorial</guid>
+    <description><![CDATA[ Introduced in Week 8.1 - Unreal Tutorial. ]]></description>
+    <pubDate>Wed, 07 Oct 2026 22:19:29 GMT</pubDate>
+  </item><item>
+    <title>W08 — Prepare for Unreal Development</title>
+    <link>https://peterbrinson.github.io/teach/389/Assignments/W08-Assignment---Prepare-for-Unreal-Development</link>
+    <guid>https://peterbrinson.github.io/teach/389/Assignments/W08-Assignment---Prepare-for-Unreal-Development</guid>
+    <description><![CDATA[ Introduced in Week 7.1 - Game Engines. ]]></description>
+    <pubDate>Wed, 07 Oct 2026 22:19:19 GMT</pubDate>
+  </item><item>
+    <title>Week 9.1 — Unreal Interaction Project</title>
+    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-9.1---Unreal-Interaction-Project</link>
+    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-9.1---Unreal-Interaction-Project</guid>
+    <description><![CDATA[ Unreal Engine postmortem + Make an Argument exercise + Interaction Project assignment. ]]></description>
+    <pubDate>Wed, 07 Oct 2026 22:18:33 GMT</pubDate>
+  </item><item>
+    <title>Week 8.2 — Subtext and Theme</title>
+    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-8.2---Subtext-and-Theme</link>
+    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-8.2---Subtext-and-Theme</guid>
+    <description><![CDATA[ How games carry meaning through metaphor — from Alice in Wonderland to surrealism to the controlling metaphor of Papo y Yo. ]]></description>
+    <pubDate>Wed, 07 Oct 2026 22:18:28 GMT</pubDate>
+  </item><item>
     <title>Seminar 1 - Your First Upgrades</title>
     <link>https://peterbrinson.github.io/teach/TOTT/Seminars/TOTT-Seminar-1---Your-First-Upgrades</link>
     <guid>https://peterbrinson.github.io/teach/TOTT/Seminars/TOTT-Seminar-1---Your-First-Upgrades</guid>
@@ -29,42 +65,6 @@
     <guid>https://peterbrinson.github.io/teach/TOTT/Seminars/TOTT-Seminar-2---Thinking-and-Doing</guid>
     <description><![CDATA[ Monday, November 9, 12pm. SCI 108. Part of Tokens on the Table. ]]></description>
     <pubDate>Wed, 07 Oct 2026 19:01:43 GMT</pubDate>
-  </item><item>
-    <title>Session Limits: Context Window, Usage, and Compacting</title>
-    <link>https://peterbrinson.github.io/teach/TOTT/Topics/Session-Limits</link>
-    <guid>https://peterbrinson.github.io/teach/TOTT/Topics/Session-Limits</guid>
-    <description><![CDATA[ Every AI session runs out of something. ]]></description>
-    <pubDate>Wed, 07 Oct 2026 19:01:24 GMT</pubDate>
-  </item><item>
-    <title>Plan Mode</title>
-    <link>https://peterbrinson.github.io/teach/TOTT/Topics/Plan-Mode</link>
-    <guid>https://peterbrinson.github.io/teach/TOTT/Topics/Plan-Mode</guid>
-    <description><![CDATA[ Plan Mode is a setting where the AI proposes a plan before it touches anything. It reads, thinks, and lays out what it intends to do. ]]></description>
-    <pubDate>Wed, 07 Oct 2026 19:01:24 GMT</pubDate>
-  </item><item>
-    <title>Persistent Workspace</title>
-    <link>https://peterbrinson.github.io/teach/TOTT/Topics/Persistent-Workspace</link>
-    <guid>https://peterbrinson.github.io/teach/TOTT/Topics/Persistent-Workspace</guid>
-    <description><![CDATA[ A persistent workspace is a folder on your computer that both you and an AI return to, session after session. ]]></description>
-    <pubDate>Wed, 07 Oct 2026 19:01:24 GMT</pubDate>
-  </item><item>
-    <title>Obsidian</title>
-    <link>https://peterbrinson.github.io/teach/TOTT/Topics/Obsidian</link>
-    <guid>https://peterbrinson.github.io/teach/TOTT/Topics/Obsidian</guid>
-    <description><![CDATA[ Obsidian is a free text editor for markdown files. It shows your folder and file structure in a sidebar, the way VS Code does for a codebase. ]]></description>
-    <pubDate>Wed, 07 Oct 2026 19:01:24 GMT</pubDate>
-  </item><item>
-    <title>Markdown</title>
-    <link>https://peterbrinson.github.io/teach/TOTT/Topics/Markdown</link>
-    <guid>https://peterbrinson.github.io/teach/TOTT/Topics/Markdown</guid>
-    <description><![CDATA[ Markdown is plain text in files ending in .md, with a couple of formatting conventions for headings and links. ]]></description>
-    <pubDate>Wed, 07 Oct 2026 19:01:24 GMT</pubDate>
-  </item><item>
-    <title>In-Context Learning</title>
-    <link>https://peterbrinson.github.io/teach/TOTT/Topics/In-Context-Learning</link>
-    <guid>https://peterbrinson.github.io/teach/TOTT/Topics/In-Context-Learning</guid>
-    <description><![CDATA[ In-context learning means the AI learns from what you place in front of it, live, in the moment: the files it’s holding in memory for this session. ]]></description>
-    <pubDate>Wed, 07 Oct 2026 19:01:24 GMT</pubDate>
   </item>
     </channel>
   </rss>
