@@ -10,7 +10,25 @@
     <link>https://peterbrinson.github.io/teach/TOTT/</link>
     <guid>https://peterbrinson.github.io/teach/TOTT/</guid>
     <description><![CDATA[ (Let’s Put Our) Tokens on the Table A Seminar Series About AI and Games Are you using AI for game development and want to talk about it? What about game design and production? You mostly work in the browser chat but have heard there are smarter ways to work? You hesitate to tell your professors abou... ]]></description>
-    <pubDate>Tue, 06 Oct 2026 20:39:50 GMT</pubDate>
+    <pubDate>Wed, 07 Oct 2026 18:43:07 GMT</pubDate>
+  </item><item>
+    <title>Seminar 2: Thinking and Doing</title>
+    <link>https://peterbrinson.github.io/teach/TOTT/Seminars/TOTT-Seminar-2</link>
+    <guid>https://peterbrinson.github.io/teach/TOTT/Seminars/TOTT-Seminar-2</guid>
+    <description><![CDATA[ Monday, November 9, 12pm. SCI 108. Part of Tokens on the Table. ]]></description>
+    <pubDate>Wed, 07 Oct 2026 18:41:23 GMT</pubDate>
+  </item><item>
+    <title>Seminar 1: Your First Upgrades</title>
+    <link>https://peterbrinson.github.io/teach/TOTT/Seminars/TOTT-Seminar-1</link>
+    <guid>https://peterbrinson.github.io/teach/TOTT/Seminars/TOTT-Seminar-1</guid>
+    <description><![CDATA[ Monday, October 26, 12pm. SCI 108. Part of Tokens on the Table. ]]></description>
+    <pubDate>Wed, 07 Oct 2026 18:40:39 GMT</pubDate>
+  </item><item>
+    <title>Flow Proposal</title>
+    <link>https://peterbrinson.github.io/teach/534/Flow-Proposal</link>
+    <guid>https://peterbrinson.github.io/teach/534/Flow-Proposal</guid>
+    <description><![CDATA[ Google Flow access for USC Games graduate students, November–early December 2026 I’m requesting Flow access for CTIN 534, a graduate course in narrative game design in USC’s Interactive Media &amp; Games Division. ]]></description>
+    <pubDate>Tue, 06 Oct 2026 21:32:50 GMT</pubDate>
   </item><item>
     <title>CLI: Command Line Interface</title>
     <link>https://peterbrinson.github.io/teach/TOTT/Topics/CLI</link>
@@ -46,24 +64,6 @@
     <link>https://peterbrinson.github.io/teach/TOTT/Topics/In-Context-Learning</link>
     <guid>https://peterbrinson.github.io/teach/TOTT/Topics/In-Context-Learning</guid>
     <description><![CDATA[ In-context learning means the AI learns from what you place in front of it, live, in the moment: the files it’s holding in memory for this session. ]]></description>
-    <pubDate>Tue, 06 Oct 2026 20:29:55 GMT</pubDate>
-  </item><item>
-    <title>Context Engineering</title>
-    <link>https://peterbrinson.github.io/teach/TOTT/Topics/Context-Engineering</link>
-    <guid>https://peterbrinson.github.io/teach/TOTT/Topics/Context-Engineering</guid>
-    <description><![CDATA[ Context engineering is the craft of arranging your files so an AI finds what matters without being told every time: which files it reads, in what order, and how much it can hold at once. ]]></description>
-    <pubDate>Tue, 06 Oct 2026 20:29:55 GMT</pubDate>
-  </item><item>
-    <title>Artifact</title>
-    <link>https://peterbrinson.github.io/teach/TOTT/Topics/Artifact</link>
-    <guid>https://peterbrinson.github.io/teach/TOTT/Topics/Artifact</guid>
-    <description><![CDATA[ An artifact is a finished piece of work an AI hands you, something you can keep, read, review, and pass along. ]]></description>
-    <pubDate>Tue, 06 Oct 2026 20:29:55 GMT</pubDate>
-  </item><item>
-    <title>Seminar 1: Your First Upgrades</title>
-    <link>https://peterbrinson.github.io/teach/TOTT/Seminars/TOTT-Seminar-1</link>
-    <guid>https://peterbrinson.github.io/teach/TOTT/Seminars/TOTT-Seminar-1</guid>
-    <description><![CDATA[ Monday, October 26, 12pm. SCI 108. Part of Tokens on the Table. Join the TOTT Discord (link forthcoming). ]]></description>
     <pubDate>Tue, 06 Oct 2026 20:29:55 GMT</pubDate>
   </item>
     </channel>
