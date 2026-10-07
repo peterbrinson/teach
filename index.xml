@@ -10,7 +10,13 @@
     <link>https://peterbrinson.github.io/teach/TOTT/</link>
     <guid>https://peterbrinson.github.io/teach/TOTT/</guid>
     <description><![CDATA[ (Let’s Put Our) Tokens on the Table A Seminar Series About AI and Games Are you using AI for game development and want to talk about it? What about game design and production? You mostly work in the browser chat but have heard there are smarter ways to work? You hesitate to tell your professors abou... ]]></description>
-    <pubDate>Wed, 07 Oct 2026 18:43:07 GMT</pubDate>
+    <pubDate>Wed, 07 Oct 2026 18:58:45 GMT</pubDate>
+  </item><item>
+    <title>Seminar 3: AI and the Industry</title>
+    <link>https://peterbrinson.github.io/teach/TOTT/Seminars/TOTT-Seminar-3</link>
+    <guid>https://peterbrinson.github.io/teach/TOTT/Seminars/TOTT-Seminar-3</guid>
+    <description><![CDATA[ Monday, November 30, 12pm. SCI 108. Part of Tokens on the Table. ]]></description>
+    <pubDate>Wed, 07 Oct 2026 18:58:05 GMT</pubDate>
   </item><item>
     <title>Seminar 2: Thinking and Doing</title>
     <link>https://peterbrinson.github.io/teach/TOTT/Seminars/TOTT-Seminar-2</link>
@@ -58,12 +64,6 @@
     <link>https://peterbrinson.github.io/teach/TOTT/Topics/Obsidian</link>
     <guid>https://peterbrinson.github.io/teach/TOTT/Topics/Obsidian</guid>
     <description><![CDATA[ Obsidian is a free text editor for markdown files. It shows your folder and file structure in a sidebar, the way VS Code does for a codebase. ]]></description>
-    <pubDate>Tue, 06 Oct 2026 20:29:55 GMT</pubDate>
-  </item><item>
-    <title>In-Context Learning</title>
-    <link>https://peterbrinson.github.io/teach/TOTT/Topics/In-Context-Learning</link>
-    <guid>https://peterbrinson.github.io/teach/TOTT/Topics/In-Context-Learning</guid>
-    <description><![CDATA[ In-context learning means the AI learns from what you place in front of it, live, in the moment: the files it’s holding in memory for this session. ]]></description>
     <pubDate>Tue, 06 Oct 2026 20:29:55 GMT</pubDate>
   </item>
     </channel>
