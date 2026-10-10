@@ -6,17 +6,41 @@
       <description>Last 10 notes on PB Teach</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>(Let&#039;s Put Our) Tokens on the Table</title>
-    <link>https://peterbrinson.github.io/teach/TOTT/</link>
-    <guid>https://peterbrinson.github.io/teach/TOTT/</guid>
-    <description><![CDATA[ (Let’s Put Our) Tokens on the Table A Seminar Series About AI and Games Are you using AI for game development and want to talk about it? What about game design and production? You mostly work in the browser chat but have heard there are smarter ways to work? You hesitate to tell your professors abou... ]]></description>
-    <pubDate>Fri, 09 Oct 2026 00:55:19 GMT</pubDate>
-  </item><item>
     <title>Seminar 1 - Your First Upgrades</title>
     <link>https://peterbrinson.github.io/teach/TOTT/Seminars/TOTT-Seminar-1---Your-First-Upgrades</link>
     <guid>https://peterbrinson.github.io/teach/TOTT/Seminars/TOTT-Seminar-1---Your-First-Upgrades</guid>
     <description><![CDATA[ Monday, October 26, 12pm. SCI 108. Part of Tokens on the Table. ]]></description>
-    <pubDate>Thu, 08 Oct 2026 17:57:47 GMT</pubDate>
+    <pubDate>Sat, 10 Oct 2026 01:45:06 GMT</pubDate>
+  </item><item>
+    <title>Tips</title>
+    <link>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Tips</link>
+    <guid>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Tips</guid>
+    <description><![CDATA[  Effort and models Get to know your LLM’s effort: how much thinking it does before it answers. ]]></description>
+    <pubDate>Sat, 10 Oct 2026 01:44:41 GMT</pubDate>
+  </item><item>
+    <title>(Let&#039;s Put Our) Tokens on the Table</title>
+    <link>https://peterbrinson.github.io/teach/TOTT/</link>
+    <guid>https://peterbrinson.github.io/teach/TOTT/</guid>
+    <description><![CDATA[ (Let’s Put Our) Tokens on the Table A Seminar Series About AI and Games Are you using AI for game development and want to talk about it? What about game design and (pre)production? You mostly work in the browser chat but have heard there are smarter ways to work? You hesitate to tell your professors... ]]></description>
+    <pubDate>Sat, 10 Oct 2026 00:28:55 GMT</pubDate>
+  </item><item>
+    <title>Context Engineering</title>
+    <link>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Context-Engineering</link>
+    <guid>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Context-Engineering</guid>
+    <description><![CDATA[ Context engineering is the craft of arranging your files so an AI finds what matters without being told every time: which files it reads, in what order, and how much it can hold at once. ]]></description>
+    <pubDate>Fri, 09 Oct 2026 23:22:35 GMT</pubDate>
+  </item><item>
+    <title>Queryable Knowledge Base</title>
+    <link>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Queryable-Knowledge-Base</link>
+    <guid>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Queryable-Knowledge-Base</guid>
+    <description><![CDATA[ A student looking for Peter Brinson&#039;s Office Hours, the game design guide itself? Click here.Here to learn what a queryable knowledge base is, and build one? Read on. ]]></description>
+    <pubDate>Fri, 09 Oct 2026 23:22:35 GMT</pubDate>
+  </item><item>
+    <title>Harness</title>
+    <link>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Harness</link>
+    <guid>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Harness</guid>
+    <description><![CDATA[ A harness is the software wrapped around an AI model that lets it do work. The model does the thinking; the harness gives it hands, eyes, and rules. ]]></description>
+    <pubDate>Fri, 09 Oct 2026 18:48:26 GMT</pubDate>
   </item><item>
     <title>Seminar 2 - Thinking and Doing</title>
     <link>https://peterbrinson.github.io/teach/TOTT/Seminars/TOTT-Seminar-2---Thinking-and-Doing</link>
@@ -40,30 +64,6 @@
     <link>https://peterbrinson.github.io/teach/534/Lectures/Week-5.2---Worldbuilding-1,-Finite-Worlds</link>
     <guid>https://peterbrinson.github.io/teach/534/Lectures/Week-5.2---Worldbuilding-1,-Finite-Worlds</guid>
     <description><![CDATA[ Let us study worldbuilding in parallel to storytelling in games. The Bounded Worlds Framework couples nicely with The Situated Player Roles. ]]></description>
-    <pubDate>Wed, 07 Oct 2026 22:40:31 GMT</pubDate>
-  </item><item>
-    <title>Week 5.2 - Labyrinths</title>
-    <link>https://peterbrinson.github.io/teach/534/Lectures/Week-5.2---Labyrinths</link>
-    <guid>https://peterbrinson.github.io/teach/534/Lectures/Week-5.2---Labyrinths</guid>
-    <description><![CDATA[  Labyrinths What a Labyrinth Is Labyrinths are expressive mazes. That is, they are vehicles for a story, or they are metaphors themselves. ]]></description>
-    <pubDate>Wed, 07 Oct 2026 22:40:31 GMT</pubDate>
-  </item><item>
-    <title>Project 3 — The Dreamer</title>
-    <link>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Project-3</link>
-    <guid>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Project-3</guid>
-    <description><![CDATA[ Situated Player Role Reading: The Dreamer — World as Enigma Learning Goals: Color theory and lighting; interactive storytelling; arc of experience; game engine literacy; camera principles; materials and textures; sound design; ideation, brainstorming, and prototyping; self-direction; critique. ]]></description>
-    <pubDate>Wed, 07 Oct 2026 22:40:31 GMT</pubDate>
-  </item><item>
-    <title>Project 1 — The Investigator</title>
-    <link>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Project-1</link>
-    <guid>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Project-1</guid>
-    <description><![CDATA[ Situated Player Role Reading: The Investigator — World as Evidence Learning Goals: Color theory and lighting; interactive storytelling; arc of experience; game engine literacy; camera principles; materials and textures; sound design; ideation, brainstorming, and prototyping; self-direction; critique... ]]></description>
-    <pubDate>Wed, 07 Oct 2026 22:40:31 GMT</pubDate>
-  </item><item>
-    <title>Project 2 — The Traveler</title>
-    <link>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Project-2</link>
-    <guid>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Project-2</guid>
-    <description><![CDATA[ Situated Player Role Reading: The Traveler — World as Presence Learning Goals: Color theory and lighting; interactive storytelling; arc of experience; game engine literacy; camera principles; materials and textures; sound design; ideation, brainstorming, and prototyping; self-direction; critique. ]]></description>
     <pubDate>Wed, 07 Oct 2026 22:40:31 GMT</pubDate>
   </item>
     </channel>

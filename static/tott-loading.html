@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TOTT Loading</title>
+<!--
+  Tokens on the Table: game-style loading screen with a rotating tip.
+  Embedded in TOTT pages as a wide, short strip (iframe); the ⤢ button
+  or opening this file directly gives the full-screen version.
+  PROTOTYPE: tips are hard-coded below. Later they should be pulled at
+  build time from Tips/Tips and Insights.md and Tools/Which AI.md.
+  Placeholder art is CSS gradients; swap in real art via --art.
+-->
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --wine: #21141b;
+    --cream: #f7eef1;
+    --gold: #ffc978;
+    --aqua: #5fe3ff;
+    --dwell: 14s;           /* how long each tip stays */
+    --art: none;            /* real art later: url("...") */
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body {
+    background: var(--wine);
+    color: var(--cream);
+    font-family: "Source Sans 3", system-ui, sans-serif;
+    overflow: hidden;
+    cursor: pointer;
+    user-select: none;
+  }
+  .screen {
+    position: relative;
+    height: 100%;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 max(6%, 70px) clamp(18px, 5vh, 52px);
+    /* placeholder art: warm parchment glow over wine, a map-ish blotch */
+    background:
+      var(--art),
+      radial-gradient(ellipse 30% 70% at 50% 40%, rgba(255, 201, 120, 0.16), transparent 70%),
+      radial-gradient(ellipse 18% 50% at 22% 60%, rgba(240, 168, 194, 0.10), transparent 70%),
+      radial-gradient(ellipse 18% 50% at 80% 55%, rgba(95, 227, 255, 0.08), transparent 70%),
+      linear-gradient(180deg, #2b1a23 0%, #1a0f15 100%);
+    background-size: cover;
+    background-position: center;
+  }
+  .screen { overflow: hidden; }
+  /* Ornamental fantasy-RPG frame, after the gilded frame around WoW's
+     title: beveled gold border, scrollwork corners, a crest at top center,
+     and diamond caps on the loading bar. */
+  .frame {
+    position: absolute;
+    inset: 5px;
+    border: 3px solid transparent;
+    border-image: linear-gradient(180deg, #ffe6a8, #c99a4b 40%, #7a5420 60%, #e8c27a) 1;
+    box-shadow: 0 0 0 1px #000, inset 0 0 0 1px #000, inset 0 0 18px rgba(0,0,0,0.7);
+    pointer-events: none;
+  }
+  .frame::after {           /* thin inner gilt line */
+    content: "";
+    position: absolute;
+    inset: 4px;
+    border: 1px solid rgba(255, 201, 120, 0.45);
+  }
+  .corner {
+    position: absolute;
+    width: clamp(52px, 13vh, 130px);
+    height: clamp(52px, 13vh, 130px);
+    pointer-events: none;
+    filter: drop-shadow(0 1px 1px #000) drop-shadow(0 0 4px rgba(255, 201, 120, 0.25));
+  }
+  .corner.tl { top: 0; left: 0; }
+  .corner.tr { top: 0; right: 0; transform: scaleX(-1); }
+  .corner.bl { bottom: 0; left: 0; transform: scaleY(-1); }
+  .corner.br { bottom: 0; right: 0; transform: scale(-1, -1); }
+  .crest {
+    position: absolute;
+    top: 1px;
+    left: 50%;
+    width: clamp(150px, 34vh, 380px);
+    transform: translateX(-50%);
+    pointer-events: none;
+    filter: drop-shadow(0 1px 1px #000) drop-shadow(0 0 5px rgba(255, 201, 120, 0.3));
+  }
+  .barwrap { position: relative; margin: 0 26px; }
+  .cap {
+    position: absolute;
+    top: 50%;
+    width: 34px;
+    height: 34px;
+    transform: translateY(-50%);
+    filter: drop-shadow(0 1px 1px #000);
+    pointer-events: none;
+  }
+  .cap.l { left: -27px; }
+  .cap.r { right: -27px; transform: translateY(-50%) scaleX(-1); }
+  .tiprow { display: flex; align-items: flex-end; gap: 1rem; margin-bottom: 0.65em; }
+  .tiprow .tip { flex: 1; }
+  .more {
+    flex: none;
+    margin-bottom: 0.7em;
+    padding: 0.15em 0.7em 0.2em;
+    background: rgba(255, 201, 120, 0.12);
+    border: 1px solid rgba(255, 201, 120, 0.7);
+    border-radius: 4px;
+    color: #ffd894;
+    font: italic 600 clamp(0.85rem, 1.7vh + 0.35vw, 1.15rem) "Source Sans 3", system-ui, sans-serif;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+    text-shadow: 0 1px 2px #000;
+    box-shadow: 0 0 8px rgba(255, 201, 120, 0.25);
+  }
+  .more:hover { color: #fff; border-color: #fff; background: rgba(255, 201, 120, 0.22); }
+  .title {
+    position: absolute;
+    top: clamp(10px, 6vh, 80px);
+    left: 0; right: 0;
+    text-align: center;
+    color: var(--gold);
+    font-weight: 700;
+    font-size: clamp(1rem, 6vh, 4rem);
+    letter-spacing: 0.02em;
+    text-shadow: 0 2px 0 #000, 0 0 18px rgba(255, 201, 120, 0.35);
+    pointer-events: none;
+  }
+  .title small {
+    display: block;
+    color: #fff;
+    font-size: 0.4em;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+  }
+  /* In the short strip there's no room for the title */
+  @media (max-height: 260px) { .title { display: none; } }
+
+  .tip {
+    font-size: clamp(0.95rem, 2.4vh + 0.5vw, 1.6rem);
+    line-height: 1.35;
+    text-shadow: 0 1px 2px #000;
+    margin-bottom: 0.7em;
+    min-height: 2.7em;
+    display: flex;
+    align-items: flex-end;
+    transition: opacity 0.4s;
+  }
+  .tip b { color: var(--gold); font-weight: 600; margin-right: 0.3em; }
+  .tip.fade { opacity: 0; }
+
+  .bar {
+    height: clamp(10px, 1.6vh, 16px);
+    border: 1px solid rgba(255, 201, 120, 0.55);
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.55);
+    box-shadow: inset 0 1px 3px #000;
+    overflow: hidden;
+  }
+  .fill {
+    height: 100%;
+    width: 0;
+    background: linear-gradient(180deg, #8ff0ff, var(--aqua) 50%, #2aa9c9);
+    box-shadow: 0 0 10px rgba(95, 227, 255, 0.6);
+  }
+  .fill.run { animation: load var(--dwell) linear forwards; }
+  @keyframes load { from { width: 0; } to { width: 100%; } }
+
+  .full {
+    position: absolute;
+    top: 12px; right: calc(clamp(34px, 9vh, 90px) + 4px);
+    background: rgba(0, 0, 0, 0.35);
+    color: var(--cream);
+    border: 1px solid rgba(247, 238, 241, 0.3);
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 1;
+    padding: 4px 7px;
+    cursor: pointer;
+    opacity: 0.6;
+  }
+  .full:hover { opacity: 1; }
+</style>
+</head>
+<body>
+<div class="screen" id="screen" title="Click for the next tip">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="gilt" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#ffe6a8"/><stop offset=".45" stop-color="#c99a4b"/>
+        <stop offset=".7" stop-color="#7a5420"/><stop offset="1" stop-color="#e8c27a"/>
+      </linearGradient>
+      <symbol id="scroll" viewBox="0 0 120 120">
+        <!-- double gilt rails along the two edges -->
+        <path d="M5 118 V34 C5 17 17 5 34 5 H118" fill="none" stroke="url(#gilt)" stroke-width="6"/>
+        <path d="M13 118 V40 C13 25 25 13 40 13 H118" fill="none" stroke="url(#gilt)" stroke-width="1.6" opacity=".8"/>
+        <!-- big curl along the top edge -->
+        <path d="M30 22 C52 14 80 16 86 30 C91 42 78 50 70 44 C63 39 68 30 75 33"
+              fill="none" stroke="url(#gilt)" stroke-width="4.5" stroke-linecap="round"/>
+        <!-- big curl down the side edge -->
+        <path d="M22 30 C14 52 16 80 30 86 C42 91 50 78 44 70 C39 63 30 68 33 75"
+              fill="none" stroke="url(#gilt)" stroke-width="4.5" stroke-linecap="round"/>
+        <!-- leaves -->
+        <path d="M86 30 C98 24 108 24 116 28 C106 32 96 34 86 30 Z" fill="url(#gilt)"/>
+        <path d="M30 86 C24 98 24 108 28 116 C32 106 34 96 30 86 Z" fill="url(#gilt)"/>
+        <path d="M38 38 C50 34 58 40 56 50 C46 52 40 46 38 38 Z" fill="url(#gilt)" opacity=".9"/>
+        <!-- corner boss with gem -->
+        <circle cx="15" cy="15" r="11" fill="url(#gilt)" stroke="#000" stroke-width="1"/>
+        <circle cx="15" cy="15" r="5" fill="#5fe3ff"/>
+        <circle cx="13.5" cy="13.5" r="1.6" fill="#fff" opacity=".8"/>
+      </symbol>
+      <symbol id="endcap" viewBox="0 0 40 40">
+        <!-- bracket that clasps the bar end, curling outward, with a gem -->
+        <path d="M30 6 C20 6 14 10 14 20 C14 30 20 34 30 34" fill="none" stroke="url(#gilt)" stroke-width="4.5" stroke-linecap="round"/>
+        <path d="M14 20 C8 20 4 16 4 11 C4 6 9 5 11 8" fill="none" stroke="url(#gilt)" stroke-width="3" stroke-linecap="round"/>
+        <path d="M14 20 C8 20 4 24 4 29 C4 34 9 35 11 32" fill="none" stroke="url(#gilt)" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="22" cy="20" r="6" fill="url(#gilt)" stroke="#000" stroke-width="1"/>
+        <circle cx="22" cy="20" r="2.8" fill="#5fe3ff"/>
+      </symbol>
+    </defs>
+  </svg>
+  <div class="frame"></div>
+  <svg class="corner tl" aria-hidden="true"><use href="#scroll"/></svg>
+  <svg class="corner tr" aria-hidden="true"><use href="#scroll"/></svg>
+  <svg class="corner bl" aria-hidden="true"><use href="#scroll"/></svg>
+  <svg class="corner br" aria-hidden="true"><use href="#scroll"/></svg>
+  <svg class="crest" viewBox="0 0 300 64" aria-hidden="true">
+    <!-- wings of scrollwork either side of a shield -->
+    <path d="M0 4 H300" stroke="url(#gilt)" stroke-width="4"/>
+    <path d="M24 4 C60 4 74 30 104 30 C118 30 124 22 128 14" fill="none" stroke="url(#gilt)" stroke-width="4" stroke-linecap="round"/>
+    <path d="M276 4 C240 4 226 30 196 30 C182 30 176 22 172 14" fill="none" stroke="url(#gilt)" stroke-width="4" stroke-linecap="round"/>
+    <path d="M70 18 C78 32 96 38 108 34 C100 44 80 42 70 18 Z" fill="url(#gilt)" opacity=".9"/>
+    <path d="M230 18 C222 32 204 38 192 34 C200 44 220 42 230 18 Z" fill="url(#gilt)" opacity=".9"/>
+    <path d="M104 30 C96 40 98 50 108 50 C115 50 116 42 111 40" fill="none" stroke="url(#gilt)" stroke-width="3" stroke-linecap="round"/>
+    <path d="M196 30 C204 40 202 50 192 50 C185 50 184 42 189 40" fill="none" stroke="url(#gilt)" stroke-width="3" stroke-linecap="round"/>
+    <!-- shield -->
+    <path d="M150 2 L178 10 C178 34 168 50 150 62 C132 50 122 34 122 10 Z" fill="url(#gilt)" stroke="#000" stroke-width="1.2"/>
+    <path d="M150 9 L171 15 C171 33 163 45 150 54 C137 45 129 33 129 15 Z" fill="#3a1f2c" stroke="#7a5420" stroke-width="1"/>
+    <path d="M150 18 L160 30 L150 44 L140 30 Z" fill="#5fe3ff" stroke="#e8c27a" stroke-width="1.2"/>
+    <path d="M147 22 L150 19 L153 23 Z" fill="#fff" opacity=".7"/>
+  </svg>
+  <div class="title"><small>(Let's Put Our)</small>Tokens on the Table</div>
+  <button class="full" id="full" title="Full screen">⤢</button>
+  <div class="tiprow">
+    <p class="tip" id="tip"></p>
+    <button class="more" id="more" title="Open this tip in a new tab">Click for more ›</button>
+  </div>
+  <div class="barwrap"><svg class="cap l" aria-hidden="true"><use href="#endcap"/></svg><div class="bar"><div class="fill" id="fill"></div></div><svg class="cap r" aria-hidden="true"><use href="#endcap"/></svg></div>
+</div>
+<script>
+  // Tips come from the published Tips page (teach/TOTT/Topics and Tips/Tips.md), read
+  // each time the strip loads: the first sentence of each tip section
+  // (### heading).
+  // Each tip keeps its heading's id so "Click for more" can scroll to it.
+  // FALLBACK is used only if the Tips page can't be read.
+  const TIPS_PAGE = "../TOTT/Topics-and-Tips/Tips";   // relative to /teach/static/tott-loading
+  const FALLBACK = [
+    ["Keep your source in files, not chats.", "keep-your-source-in-files-not-chats"],
+  ];
+  let tips = FALLBACK;
+
+  function firstSentence(text) {
+    const t = text.replace(/\s+/g, " ").trim();
+    const m = t.match(/^.*?[.!?](?=\s|$)/);
+    return m ? m[0] : t;
+  }
+
+  async function loadTips() {
+    const res = await fetch(new URL(TIPS_PAGE, location.href), { cache: "no-cache" });
+    if (!res.ok) throw new Error(res.status);
+    const doc = new DOMParser().parseFromString(await res.text(), "text/html");
+    const found = [];
+    doc.querySelectorAll("article h3[id]").forEach((h) => {
+      for (let el = h.nextElementSibling; el && !/^H[1-3]$/.test(el.tagName); el = el.nextElementSibling) {
+        const src = el.tagName === "UL" || el.tagName === "OL" ? el.querySelector("li") : el;
+        if (src && src.textContent.trim()) { found.push([firstSentence(src.textContent), h.id]); break; }
+      }
+    });
+    if (found.length) tips = found;
+  }
+
+  const tipEl = document.getElementById("tip");
+  const fill = document.getElementById("fill");
+  let i = 0;
+
+  function show() {
+    tipEl.classList.add("fade");
+    setTimeout(() => {
+      tipEl.innerHTML = "<span><b>Tip:</b> " + tips[i][0] + "</span>";
+      tipEl.classList.remove("fade");
+      fill.classList.remove("run");
+      void fill.offsetWidth;          // restart the animation
+      fill.classList.add("run");
+    }, 400);
+  }
+  function next() { i = (i + 1) % tips.length; show(); }
+
+  fill.addEventListener("animationend", next);
+  document.getElementById("screen").addEventListener("click", next);
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowRight" || e.key === " ") { e.preventDefault(); next(); }
+  });
+  // "Click for more": show this tip on the Tips and Insights page. The page
+  // opens in a tab named "tott-tips"; if that tab is already open on the
+  // tips page, bring it forward and glide to the tip without reloading.
+  document.getElementById("more").addEventListener("click", (e) => {
+    e.stopPropagation();
+    const id = tips[i][1];
+    const url = new URL(TIPS_PAGE, location.href);
+    url.searchParams.set("go", id);
+    const w = window.open("", "tott-tips");
+    if (!w) { window.open(url.href, "_blank"); return; }
+    try {
+      if (typeof w.tottGlide === "function") { w.tottGlide(id); w.focus(); return; }
+    } catch (err) { /* different page in that tab: just navigate it */ }
+    w.location.href = url.href;
+    w.focus();
+  });
+  document.getElementById("full").addEventListener("click", (e) => {
+    e.stopPropagation();
+    if (document.fullscreenElement) document.exitFullscreen();
+    else document.documentElement.requestFullscreen?.();
+  });
+  loadTips()
+    .catch(() => {})                       // keep FALLBACK if the page can't be read
+    .finally(() => { i = Math.floor(Math.random() * tips.length); show(); });
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"><defs><linearGradient id="gilt" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#ffe6a8"/><stop offset=".45" stop-color="#c99a4b"/>
+        <stop offset=".7" stop-color="#7a5420"/><stop offset="1" stop-color="#e8c27a"/>
+      </linearGradient></defs><g transform="translate(0 120) scale(1 -1)">
+        <!-- double gilt rails along the two edges -->
+        <path d="M5 118 V34 C5 17 17 5 34 5 H118" fill="none" stroke="url(#gilt)" stroke-width="6"/>
+        <path d="M13 118 V40 C13 25 25 13 40 13 H118" fill="none" stroke="url(#gilt)" stroke-width="1.6" opacity=".8"/>
+        <!-- big curl along the top edge -->
+        <path d="M30 22 C52 14 80 16 86 30 C91 42 78 50 70 44 C63 39 68 30 75 33"
+              fill="none" stroke="url(#gilt)" stroke-width="4.5" stroke-linecap="round"/>
+        <!-- big curl down the side edge -->
+        <path d="M22 30 C14 52 16 80 30 86 C42 91 50 78 44 70 C39 63 30 68 33 75"
+              fill="none" stroke="url(#gilt)" stroke-width="4.5" stroke-linecap="round"/>
+        <!-- leaves -->
+        <path d="M86 30 C98 24 108 24 116 28 C106 32 96 34 86 30 Z" fill="url(#gilt)"/>
+        <path d="M30 86 C24 98 24 108 28 116 C32 106 34 96 30 86 Z" fill="url(#gilt)"/>
+        <path d="M38 38 C50 34 58 40 56 50 C46 52 40 46 38 38 Z" fill="url(#gilt)" opacity=".9"/>
+        <!-- corner boss with gem -->
+        <circle cx="15" cy="15" r="11" fill="url(#gilt)" stroke="#000" stroke-width="1"/>
+        <circle cx="15" cy="15" r="5" fill="#5fe3ff"/>
+        <circle cx="13.5" cy="13.5" r="1.6" fill="#fff" opacity=".8"/>
+      </g></svg>
