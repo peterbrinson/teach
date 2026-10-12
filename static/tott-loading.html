@@ -183,6 +183,17 @@
     opacity: 0.6;
   }
   .full:hover { opacity: 1; }
+  /* Phones: the frame is narrow, so give the tip and button the full width
+     inside it -- small side margins, smaller corners, tighter bar caps. */
+  @media (max-width: 560px) {
+    .screen { padding: 0 20px clamp(14px, 4vh, 40px); }
+    .corner { width: 38px; height: 38px; }
+    .barwrap { margin: 0 20px; }
+    .tiprow { gap: 0.6rem; }
+    .tip { font-size: 0.95rem; line-height: 1.3; }
+    .more { font-size: 0.8rem; padding: 0.15em 0.55em 0.2em; }
+    .full { right: 44px; }
+  }
 </style>
 </head>
 <body>
