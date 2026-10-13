@@ -6,6 +6,54 @@
       <description>Last 10 notes on PB Teach</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>UE Tutorial 801 - Inspect an Object</title>
+    <link>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/800---Interactive-Systems/UE-Tutorial-801---Inspect-an-Object</link>
+    <guid>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/800---Interactive-Systems/UE-Tutorial-801---Inspect-an-Object</guid>
+    <description><![CDATA[ By Yibei He &amp; Peter Brinson 0. Introduction A. Outcome Build a readable item system — the foundational mechanic of the Investigator role. ]]></description>
+    <pubDate>Tue, 13 Oct 2026 23:55:13 GMT</pubDate>
+  </item><item>
+    <title>UE Tutorial 104 - Haunted House Triggers and Events</title>
+    <link>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-104---Haunted-House-Triggers-and-Events</link>
+    <guid>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-104---Haunted-House-Triggers-and-Events</guid>
+    <description><![CDATA[ Previous: Tutorial 103: Scoring and UI By Yibei He &amp; Peter Brinson 0. Introduction A. ]]></description>
+    <pubDate>Tue, 13 Oct 2026 23:55:13 GMT</pubDate>
+  </item><item>
+    <title>UE Tutorial 103 - Scoring and UI</title>
+    <link>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-103---Scoring-and-UI</link>
+    <guid>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-103---Scoring-and-UI</guid>
+    <description><![CDATA[ Continuing from: Tutorial 102: Collectables and Restart By Aaron Cheney &amp; Peter Brinson 0. Introduction A. ]]></description>
+    <pubDate>Tue, 13 Oct 2026 23:55:13 GMT</pubDate>
+  </item><item>
+    <title>UE Tutorial 102 - Collectables and Restart</title>
+    <link>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-102---Collectables-and-Restart</link>
+    <guid>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-102---Collectables-and-Restart</guid>
+    <description><![CDATA[ Continuing From: Tutorial 101: A Floor Plate Opens A Door By Aaron Cheney &amp; Peter Brinson 0. Introduction A. ]]></description>
+    <pubDate>Tue, 13 Oct 2026 23:55:13 GMT</pubDate>
+  </item><item>
+    <title>UE Tutorial 101 - A Floor Plate Opens A Door</title>
+    <link>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-101---A-Floor-Plate-Opens-A-Door</link>
+    <guid>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-101---A-Floor-Plate-Opens-A-Door</guid>
+    <description><![CDATA[ By Aaron Cheney &amp; Peter Brinson 0. Introduction A. ]]></description>
+    <pubDate>Tue, 13 Oct 2026 23:55:13 GMT</pubDate>
+  </item><item>
+    <title>UE Tutorial 501 - Simple Physics</title>
+    <link>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/500---Physics/UE-Tutorial-501---Simple-Physics</link>
+    <guid>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/500---Physics/UE-Tutorial-501---Simple-Physics</guid>
+    <description><![CDATA[ Learn the fundamentals of Unreal’s physics engine. 0. Introduction A. ]]></description>
+    <pubDate>Tue, 13 Oct 2026 23:53:49 GMT</pubDate>
+  </item><item>
+    <title>UE Tutorial 701 - Post-Processing</title>
+    <link>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/700---Tone-and-Atmosphere/UE-Tutorial-701---Post-Processing</link>
+    <guid>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/700---Tone-and-Atmosphere/UE-Tutorial-701---Post-Processing</guid>
+    <description><![CDATA[ By Yibei He &amp; Peter Brinson 0. Introduction A. Outcome In this tutorial, you will master the use of Post Process Volumes. ]]></description>
+    <pubDate>Tue, 13 Oct 2026 23:53:49 GMT</pubDate>
+  </item><item>
+    <title>UE Tutorial 702 - Niagara Particles</title>
+    <link>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/700---Tone-and-Atmosphere/UE-Tutorial-702---Niagara-Particles</link>
+    <guid>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/700---Tone-and-Atmosphere/UE-Tutorial-702---Niagara-Particles</guid>
+    <description><![CDATA[ By Yibei He &amp; Peter Brinson 0. Introduction A. ]]></description>
+    <pubDate>Tue, 13 Oct 2026 23:53:49 GMT</pubDate>
+  </item><item>
     <title>Assignments</title>
     <link>https://peterbrinson.github.io/teach/389/Assignments/Assignments-and-Readings</link>
     <guid>https://peterbrinson.github.io/teach/389/Assignments/Assignments-and-Readings</guid>
@@ -17,54 +65,6 @@
     <guid>https://peterbrinson.github.io/teach/389/</guid>
     <description><![CDATA[ Units: 4 Fall 2026 Section: Tue, Thu, 4:00–5:50 pm Room: SCI 113 Go To Schedule Instructor: Peter Brinson Student Assistant: Luke Pannell Course Description This course teaches fundamental skills of digital game development alongside the basic principles of level design. ]]></description>
     <pubDate>Tue, 13 Oct 2026 23:29:37 GMT</pubDate>
-  </item><item>
-    <title>W09 — Haunted House</title>
-    <link>https://peterbrinson.github.io/teach/389/Assignments/W09-Assignment---Haunted-House</link>
-    <guid>https://peterbrinson.github.io/teach/389/Assignments/W09-Assignment---Haunted-House</guid>
-    <description><![CDATA[ Due: Tuesday, October 20 at 1:00 p.m. ]]></description>
-    <pubDate>Tue, 13 Oct 2026 23:29:10 GMT</pubDate>
-  </item><item>
-    <title>CTIN 534</title>
-    <link>https://peterbrinson.github.io/teach/534/</link>
-    <guid>https://peterbrinson.github.io/teach/534/</guid>
-    <description><![CDATA[ Units: 4 Fall 2026 Breakfast Section: Tue, Thu, 10:00 am–12:20 pm Lunch Section: Tue, Thu, 1:00–3:20 pm Go To Schedule Instructor: Peter Brinson Student Assistant: Yinuo Chen Student Assistant: George Zou Course Description Is Life A Story or a Game? We will study and practice how narrative video ga... ]]></description>
-    <pubDate>Tue, 13 Oct 2026 19:58:38 GMT</pubDate>
-  </item><item>
-    <title>Week 8.2 - Creativity</title>
-    <link>https://peterbrinson.github.io/teach/534/Lectures/Week-8.2---Creativity</link>
-    <guid>https://peterbrinson.github.io/teach/534/Lectures/Week-8.2---Creativity</guid>
-    <description><![CDATA[  Let’s Review Visual and Cinematic Grammar Affords Communication The Protagonist Problems Change Narrative Roles So Far: The Investigator Engages Architecture’s Narrative Point of View: Character Knowledge (In Sync?) Our Learning Modernism (The 20th Century) Point of View (different than last slide)... ]]></description>
-    <pubDate>Tue, 13 Oct 2026 19:58:28 GMT</pubDate>
-  </item><item>
-    <title>Seminar 2 - Thinking and Doing</title>
-    <link>https://peterbrinson.github.io/teach/TOTT/Seminars/TOTT-Seminar-2---Thinking-and-Doing</link>
-    <guid>https://peterbrinson.github.io/teach/TOTT/Seminars/TOTT-Seminar-2---Thinking-and-Doing</guid>
-    <description><![CDATA[ Monday, November 9, 12pm. SCI 108. Part of Tokens on the Table. ]]></description>
-    <pubDate>Tue, 13 Oct 2026 15:14:00 GMT</pubDate>
-  </item><item>
-    <title>Seminar 1 - Your First Upgrades</title>
-    <link>https://peterbrinson.github.io/teach/TOTT/Seminars/TOTT-Seminar-1---Your-First-Upgrades</link>
-    <guid>https://peterbrinson.github.io/teach/TOTT/Seminars/TOTT-Seminar-1---Your-First-Upgrades</guid>
-    <description><![CDATA[ Monday, October 26, 12pm. SCI 108. Part of Tokens on the Table. ]]></description>
-    <pubDate>Tue, 13 Oct 2026 00:12:59 GMT</pubDate>
-  </item><item>
-    <title>Tips</title>
-    <link>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Tips</link>
-    <guid>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Tips</guid>
-    <description><![CDATA[  Effort and models Get to know your LLM’s effort: how much thinking it does before it answers. ]]></description>
-    <pubDate>Tue, 13 Oct 2026 00:07:49 GMT</pubDate>
-  </item><item>
-    <title>(Let&#039;s Put Our) Tokens on the Table</title>
-    <link>https://peterbrinson.github.io/teach/TOTT/</link>
-    <guid>https://peterbrinson.github.io/teach/TOTT/</guid>
-    <description><![CDATA[ (Let’s Put Our) Tokens on the Table A Seminar Series About AI and Games Are you using AI for game development and want to talk about it? What about game design and (pre)production? You mostly work in the browser chat but have heard there are smarter ways to work? You hesitate to tell your professors... ]]></description>
-    <pubDate>Sat, 10 Oct 2026 00:28:55 GMT</pubDate>
-  </item><item>
-    <title>Context Engineering</title>
-    <link>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Context-Engineering</link>
-    <guid>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Context-Engineering</guid>
-    <description><![CDATA[ Context engineering is the craft of arranging your files so an AI finds what matters without being told every time: which files it reads, in what order, and how much it can hold at once. ]]></description>
-    <pubDate>Fri, 09 Oct 2026 23:22:35 GMT</pubDate>
   </item>
     </channel>
   </rss>

@@ -208,20 +208,24 @@ Add a <code>Box Collision</code> (see <a href="../../../../PBOH/Development/Wiki
 <blockquote class="callout tip" data-callout="tip">
 <div class="callout-title">
                   <div class="callout-icon"></div>
-                  <div class="callout-title-inner"><p>Hold On <a href="../../../../PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-101---A-Floor-Plate-Opens-A-Door#a-make-the-blueprint-file" class="internal alias" data-slug="PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-101---A-Floor-Plate-Opens-A-Door">Tutorial 101</a> on the basics of creating new blueprints and adding components.</p></div>
+                  <div class="callout-title-inner"><p>Hold On </p></div>
                   
                 </div>
-<p>If you don’t know how to do this, refer back to </p>
+<div class="callout-content">
+<p>If you don’t know how to do this, refer back to <a href="../../../../PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-101---A-Floor-Plate-Opens-A-Door#a-make-the-blueprint-file" class="internal alias" data-slug="PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-101---A-Floor-Plate-Opens-A-Door">Tutorial 101</a> on the basics of creating new blueprints and adding components.</p>
+</div>
 </blockquote>
 <p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_104.webp" width="auto" height="auto" alt/></p>
 <blockquote class="callout tip" data-callout="tip">
 <div class="callout-title">
                   <div class="callout-icon"></div>
-                  <div class="callout-title-inner"><p>Hold On <em>not</em> new to Unreal, you ought to be practicing a file/folder organizational logic that makes sense to you. Be consistent so you can find your files quickly.
-Make a new folder named <code>HauntedHouse</code>? Or add new files to the existing <code>First Person</code> folder?</p></div>
+                  <div class="callout-title-inner"><p>Hold On </p></div>
                   
                 </div>
-<p>Assuming you are </p>
+<div class="callout-content">
+<p>Assuming you are <em>not</em> new to Unreal, you ought to be practicing a file/folder organizational logic that makes sense to you. Be consistent so you can find your files quickly.
+Make a new folder named <code>HauntedHouse</code>? Or add new files to the existing <code>First Person</code> folder?</p>
+</div>
 </blockquote>
 <p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_107.webp" width="auto" height="auto" alt/></p>
 </div>
@@ -237,10 +241,12 @@ Make a new folder named <code>HauntedHouse</code>? Or add new files to the exist
 <blockquote class="callout tip" data-callout="tip">
 <div class="callout-title">
                   <div class="callout-icon"></div>
-                  <div class="callout-title-inner"><p>Hold On <code>BP_FirstPersonCharacter</code> — not the <em>platforming</em> character from earlier tutorials. You must understand what character class you chose in order to choose the correct <code>Cast To</code> node.</p></div>
+                  <div class="callout-title-inner"><p>Hold On </p></div>
                   
                 </div>
-<p>This project uses the First Person template, so the character class is </p>
+<div class="callout-content">
+<p>This project uses the First Person template, so the character class is <code>BP_FirstPersonCharacter</code> — not the <em>platforming</em> character from earlier tutorials. You must understand what character class you chose in order to choose the correct <code>Cast To</code> node.</p>
+</div>
 </blockquote>
 <p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_110.webp" width="auto" height="auto" alt/></p>
 <p>Drag from the resulting node to add <code>Cast to BP_FirstPersonCharacter</code> (see <a href="../../../../PBOH/Development/Wiki---Unreal/Cast-To" class="internal alias" data-slug="PBOH/Development/Wiki---Unreal/Cast-To">Cast To</a>).
@@ -268,7 +274,9 @@ This lets one <code>BP_LightOnTrigger</code> control multiple lights.
                   <div class="callout-title-inner"><p>Ask your LLM why: </p></div>
                   
                 </div>
+<div class="callout-content">
 <p>In the Unreal tutorial I’m following, I just changed a variable from a single item to an “Array”. Why would I use an Array instead of just creating five separate light variables?</p>
+</div>
 </blockquote>
 </div>
 </blockquote>
@@ -285,10 +293,12 @@ This lets one <code>BP_LightOnTrigger</code> control multiple lights.
 <blockquote class="callout tip" data-callout="tip">
 <div class="callout-title">
                   <div class="callout-icon"></div>
-                  <div class="callout-title-inner"><p>Hold On <a href="../../../../PBOH/Development/Wiki---Unreal/Timeline" class="internal" data-slug="PBOH/Development/Wiki---Unreal/Timeline">Timeline</a> and <a href="../../../../PBOH/Development/Wiki---Unreal/Lerp" class="internal" data-slug="PBOH/Development/Wiki---Unreal/Lerp">Lerp</a> in the wiki for details on these nodes.</p></div>
+                  <div class="callout-title-inner"><p>Hold On </p></div>
                   
                 </div>
-<p>See </p>
+<div class="callout-content">
+<p>See <a href="../../../../PBOH/Development/Wiki---Unreal/Timeline" class="internal" data-slug="PBOH/Development/Wiki---Unreal/Timeline">Timeline</a> and <a href="../../../../PBOH/Development/Wiki---Unreal/Lerp" class="internal" data-slug="PBOH/Development/Wiki---Unreal/Lerp">Lerp</a> in the wiki for details on these nodes.</p>
+</div>
 </blockquote>
 <p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_125.webp" width="auto" height="auto" alt/></p>
 <p>Drag from the <code>Cast To BP_FirstPersonCharacter</code> success pin.
@@ -321,7 +331,9 @@ From our VARIABLES panel to the left of the Event Graph, drag the variable <code
                   <div class="callout-title-inner"><p>Tip </p></div>
                   
                 </div>
+<div class="callout-content">
 <p>If you double-click a wire, you can add a reroute node (a dot) to clean up the graph.</p>
+</div>
 </blockquote>
 <p>Connect the float output of the <code>Timeline</code> to the <code>Alpha</code> pin of the <code>Lerp</code>.</p>
 <p><span class="hint">To enlarge any image: Right-click to choose “Open image in new tab”.</span>
@@ -332,10 +344,12 @@ In its Details panel, assign multiple lights to <code>LightsThe</code>, and set 
 <blockquote class="callout tip" data-callout="tip">
 <div class="callout-title">
                   <div class="callout-icon"></div>
-                  <div class="callout-title-inner"><p>Tip <code>Directional Light</code> so the effect is easier to see.</p></div>
+                  <div class="callout-title-inner"><p>Tip </p></div>
                   
                 </div>
-<p>Make the lights’ color distinct or place a large cube above the area to block the </p>
+<div class="callout-content">
+<p>Make the lights’ color distinct or place a large cube above the area to block the <code>Directional Light</code> so the effect is easier to see.</p>
+</div>
 </blockquote>
 <p>Set the <code>Intensity</code> parameter of each to zero so that they start out dark before the blueprint is triggered.<br/>
 <img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_04_145.webp" width="auto" height="auto" alt/></p>
@@ -359,11 +373,11 @@ In its Details panel, assign multiple lights to <code>LightsThe</code>, and set 
 <blockquote class="callout tip" data-callout="tip">
 <div class="callout-title">
                   <div class="callout-icon"></div>
-                  <div class="callout-title-inner"><p>Hold on <code>BeginPlay</code> - you'd have a great deal of redundant code.</p></div>
+                  <div class="callout-title-inner"><p>Hold on </p></div>
                   
                 </div>
-<p>Imagine you duplicated this script and called those duplicate nodes on </p>
 <div class="callout-content">
+<p>Imagine you duplicated this script and called those duplicate nodes on <code>BeginPlay</code> - you’d have a great deal of redundant code.</p>
 <p>In every language, this is where functions are useful and wonderful.</p>
 </div>
 </blockquote>
@@ -386,11 +400,13 @@ Right-click and choose <strong>Collapse to Function</strong>.</p>
 <blockquote class="callout question" data-callout="question">
 <div class="callout-title">
                   <div class="callout-icon"></div>
-                  <div class="callout-title-inner"><p>Why are we doing this? <code>SetAllLights</code> whenever we want. The player entering a trigger, exiting it, or starting the game—all can use this same code.</p></div>
+                  <div class="callout-title-inner"><p>Why are we doing this? </p></div>
                   
                 </div>
+<div class="callout-content">
 <p>What good is taking this script out of the Event Graph and placing it in a function?
-Answer: We can now call </p>
+Answer: We can now call <code>SetAllLights</code> whenever we want. The player entering a trigger, exiting it, or starting the game—all can use this same code.</p>
+</div>
 </blockquote>
 <p>In the <code>SetAllLights</code> function, select the purple node. In the Details panel, add an input named <code>InTargetIntensity</code> of type <code>Float</code> . Also rename <code>Alpha</code> to <code>InAlpha</code>.</p>
 <p>(The <code>In</code> prefix communicates these are <strong>Inputs</strong> - often called <strong>Parameters</strong>).</p>
@@ -409,10 +425,12 @@ Answer: We can now call </p>
 <blockquote class="callout info" data-callout="info">
 <div class="callout-title">
                   <div class="callout-icon"></div>
-                  <div class="callout-title-inner"><p>For the future <code>bHasTriggered</code>) to ensure certain events only fire once.</p></div>
+                  <div class="callout-title-inner"><p>For the future </p></div>
                   
                 </div>
-<p>Consider incorporating a boolean variable (e.g., </p>
+<div class="callout-content">
+<p>Consider incorporating a boolean variable (e.g., <code>bHasTriggered</code>) to ensure certain events only fire once.</p>
+</div>
 </blockquote>
 </div>
 </blockquote>
@@ -430,10 +448,11 @@ Be warned.  We will sacrifice functionality: the lights will indeed stagger, but
 <blockquote class="callout tip" data-callout="tip">
 <div class="callout-title">
                   <div class="callout-icon"></div>
-                  <div class="callout-title-inner"><p>Hold On — why? <code>Delay</code> is a <strong>latent</strong> node — its execution spans multiple frames. <strong>Functions in Blueprints do not allow latent nodes.</strong></p></div>
+                  <div class="callout-title-inner"><p>Hold On — why? </p></div>
                   
                 </div>
 <div class="callout-content">
+<p><code>Delay</code> is a <strong>latent</strong> node — its execution spans multiple frames. <strong>Functions in Blueprints do not allow latent nodes.</strong></p>
 <p>Even if we worked around that by leaving everything in the Event Graph and just dropping a <code>Delay</code> inside a For Each Loop there, it still would have issues. A <code>For Each Loop</code> is <strong>synchronous</strong> — it expects to run all iterations in the same frame.</p>
 <p>So we need two things:</p>
 <ol>
@@ -510,20 +529,24 @@ Be warned.  We will sacrifice functionality: the lights will indeed stagger, but
 <blockquote class="callout info" data-callout="info">
 <div class="callout-title">
                   <div class="callout-icon"></div>
-                  <div class="callout-title-inner"><p>For the future <strong><code>SetOneLight</code></strong> is a Function — discrete, fast, reusable, no time involved.
-<strong><code>LightOnSequence</code></strong> is a Custom Event in the Event Graph — it orchestrates <em>when</em> things happen using <code>Delay</code> and recursion.</p></div>
+                  <div class="callout-title-inner"><p>For the future </p></div>
                   
                 </div>
-<p>Notice the division of labor we ended up with: </p>
+<div class="callout-content">
+<p>Notice the division of labor we ended up with: <strong><code>SetOneLight</code></strong> is a Function — discrete, fast, reusable, no time involved.
+<strong><code>LightOnSequence</code></strong> is a Custom Event in the Event Graph — it orchestrates <em>when</em> things happen using <code>Delay</code> and recursion.</p>
+</div>
 </blockquote>
 <blockquote class="callout tip" data-callout="tip">
 <div class="callout-title">
                   <div class="callout-icon"></div>
-                  <div class="callout-title-inner"><p>Tip <code>SetOneLight</code>. That requires either one Timeline per light (impractical) or driving the fade with <code>SetTimerByEvent</code> or a <code>Tick</code>-based interpolation.
-We will not do this here.</p></div>
+                  <div class="callout-title-inner"><p>Tip </p></div>
                   
                 </div>
-<p>Do you miss the behavior where each light to faded in (not snap on)?  To be coupled with the staggered behavior? You’d need to call your Timeline-driven fade per light instead of </p>
+<div class="callout-content">
+<p>Do you miss the behavior where each light to faded in (not snap on)?  To be coupled with the staggered behavior? You’d need to call your Timeline-driven fade per light instead of <code>SetOneLight</code>. That requires either one Timeline per light (impractical) or driving the fade with <code>SetTimerByEvent</code> or a <code>Tick</code>-based interpolation.
+We will not do this here.</p>
+</div>
 </blockquote>
 </div>
 </blockquote>
@@ -611,7 +634,9 @@ The two created nodes - move them far to the right.  See below.
                   <div class="callout-title-inner"><p>Ask your LLM why </p></div>
                   
                 </div>
+<div class="callout-content">
 <p>In the Unreal tutorial I’m following, I’m using “Split Struct Pin” on a Rotation value. Why is it often better to split a pin into X, Y, and Z instead of just plugging in a single Rotation wire?</p>
+</div>
 </blockquote>
 <p>Wire <code>Lerp</code>’s return value to <code>Set Relative Rotation</code>’s <code>New Rotation Z (Yaw)</code>.
 This blueprint script is complete.

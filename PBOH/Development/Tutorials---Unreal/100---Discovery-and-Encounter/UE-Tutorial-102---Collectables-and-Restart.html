@@ -168,10 +168,12 @@ And the game restarts after 5 seconds.</p>
 <blockquote class="callout question" data-callout="question">
 <div class="callout-title">
                   <div class="callout-icon"></div>
-                  <div class="callout-title-inner"><p>Ask your LLM why <code>GameModeBase</code>, one called <code>GameStateBase</code>, and one called <code>PlayerState</code> — and I don't know what any of them do. Before I go further, can you explain what each one is responsible for in a game?</p></div>
+                  <div class="callout-title-inner"><p>Ask your LLM why </p></div>
                   
                 </div>
-<p>In the Unreal tutorial I’m following, I just created three framework blueprints — one called </p>
+<div class="callout-content">
+<p>In the Unreal tutorial I’m following, I just created three framework blueprints — one called <code>GameModeBase</code>, one called <code>GameStateBase</code>, and one called <code>PlayerState</code> — and I don’t know what any of them do. Before I go further, can you explain what each one is responsible for in a game?</p>
+</div>
 </blockquote>
 </div>
 </blockquote>
@@ -188,8 +190,8 @@ And the game restarts after 5 seconds.</p>
                   <div class="callout-title-inner"><p>Hold On </p></div>
                   
                 </div>
-<p>Unreal’s UI and common usage refer to this system generically as “GameMode” — the dropdown in World Settings, blueprint naming conventions, etc.</p>
 <div class="callout-content">
+<p>Unreal’s UI and common usage refer to this system generically as “GameMode” — the dropdown in World Settings, blueprint naming conventions, etc.</p>
 <p>GameMode is also a class, specifically a subclass of GameModeBase.</p>
 <p>Therefore, the answer to “What class is the GameMode?” might be “GameMode” or “GameModeBase”.</p>
 </div>
@@ -211,11 +213,13 @@ And the game restarts after 5 seconds.</p>
 <blockquote class="callout tip" data-callout="tip">
 <div class="callout-title">
                   <div class="callout-icon"></div>
-                  <div class="callout-title-inner"><p>Hold On <a href="../../../../PBOH/Development/Wiki---Unreal/Event-Graph" class="internal alias" data-slug="PBOH/Development/Wiki---Unreal/Event-Graph">Event Graph</a> or Viewport? Look for this:
-<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_02_109.webp" width="auto" height="auto" alt/></p></div>
+                  <div class="callout-title-inner"><p>Hold On </p></div>
                   
                 </div>
-<p>When opening a blueprint for the first time, not seeing the </p>
+<div class="callout-content">
+<p>When opening a blueprint for the first time, not seeing the <a href="../../../../PBOH/Development/Wiki---Unreal/Event-Graph" class="internal alias" data-slug="PBOH/Development/Wiki---Unreal/Event-Graph">Event Graph</a> or Viewport? Look for this:
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_02_109.webp" width="auto" height="auto" alt/></p>
+</div>
 </blockquote>
 <p>Here are the 4 values you are setting:
 <img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_02_104.webp" width="auto" height="auto" alt/></p>
@@ -225,15 +229,19 @@ And the game restarts after 5 seconds.</p>
                   <div class="callout-title-inner"><p>Tip </p></div>
                   
                 </div>
+<div class="callout-content">
 <p>When editing a blueprint, above the details panel, the Parent class is listed. Pay attention to parent classes in general, moving forward.</p>
+</div>
 </blockquote>
 <blockquote class="callout question" data-callout="question">
 <div class="callout-title">
                   <div class="callout-icon"></div>
-                  <div class="callout-title-inner"><p>Ask your LLM why <code>GameMode</code> blueprint has settings for <code>Player State Class</code>, <code>Default Pawn Class</code>, and <code>Player Controller Class</code>.  Why does it have this control?</p></div>
+                  <div class="callout-title-inner"><p>Ask your LLM why </p></div>
                   
                 </div>
-<p>Following up from my previous question, in the Unreal tutorial I’m following, the </p>
+<div class="callout-content">
+<p>Following up from my previous question, in the Unreal tutorial I’m following, the <code>GameMode</code> blueprint has settings for <code>Player State Class</code>, <code>Default Pawn Class</code>, and <code>Player Controller Class</code>.  Why does it have this control?</p>
+</div>
 </blockquote>
 </div>
 </blockquote>
@@ -334,10 +342,12 @@ You do not need the 3 nodes provided when the blueprint is new</p>
 <blockquote class="callout question" data-callout="question">
 <div class="callout-title">
                   <div class="callout-icon"></div>
-                  <div class="callout-title-inner"><p>Ask your LLM why <code>BP_PlatformingCharacter</code>, then to <code>BP_InClassPlatforming_PlayerState</code>. Why does it need to cast twice instead of going directly to the <code>PlayerState</code>?</p></div>
+                  <div class="callout-title-inner"><p>Ask your LLM why </p></div>
                   
                 </div>
-<p>In the Unreal tutorial I’m following, the collectable’s Event Graph casts twice — first to </p>
+<div class="callout-content">
+<p>In the Unreal tutorial I’m following, the collectable’s Event Graph casts twice — first to <code>BP_PlatformingCharacter</code>, then to <code>BP_InClassPlatforming_PlayerState</code>. Why does it need to cast twice instead of going directly to the <code>PlayerState</code>?</p>
+</div>
 </blockquote>
 <p><span class="save">Save All</span></p>
 <p>Place a collectable in the scene and test it.   Place more collectables and test again.</p>

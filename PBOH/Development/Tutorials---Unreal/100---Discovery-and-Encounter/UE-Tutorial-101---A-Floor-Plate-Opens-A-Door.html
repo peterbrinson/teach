@@ -213,10 +213,13 @@ Add the Platforming “Variant”.  This is not critical to the project, but thi
 <blockquote class="callout tip" data-callout="tip">
 <div class="callout-title">
                   <div class="callout-icon"></div>
-                  <div class="callout-title-inner"><p>Hold On! <br/>
-If you are new to Unreal, become familiar with basic viewport navigation <a href="../../../../PBOH/Development/Tutorials---Unreal/UE-Editor-Navigation" class="internal alias" data-slug="PBOH/Development/Tutorials---Unreal/UE-Editor-Navigation">UE Editor Navigation</a></p></div>
+                  <div class="callout-title-inner"><p>Hold On! </p></div>
                   
                 </div>
+<div class="callout-content">
+<br/>
+If you are new to Unreal, become familiar with basic viewport navigation [[UE Editor Navigation]]
+</div>
 </blockquote>
 <p>Follow this dropdown to change the <a href="../../../../PBOH/Development/Wiki---Unreal/Pawn" class="internal alias" data-slug="PBOH/Development/Wiki---Unreal/Pawn">pawn</a> from <code>BP_ThirdPersonPlayer</code> to <code>BP_PlatformingCharacter</code>. The pawn is the player character that will be spawned on play.</p>
 <p><span class="hint">To enlarge any image on this page: Right-click to choose “Open image in new tab”.</span></p>
@@ -229,7 +232,9 @@ If you do not find <code>BP_PlatformingCharacter</code>, that is likely because 
                   <div class="callout-title-inner"><p>Ask your LLM why </p></div>
                   
                 </div>
+<div class="callout-content">
 <p>In Unreal, why might the tutorial I’m following change the pawn blueprint from a third person character to the platforming character?</p>
+</div>
 </blockquote>
 </div>
 </blockquote>
@@ -254,7 +259,9 @@ If you do not find <code>BP_PlatformingCharacter</code>, that is likely because 
                   <div class="callout-title-inner"><p>Tip </p></div>
                   
                 </div>
+<div class="callout-content">
 <p>When you want to rename a file in the Content Browser, after selecting it, click F2.</p>
+</div>
 </blockquote>
 <blockquote class="callout question" data-callout="question">
 <div class="callout-title">
@@ -262,7 +269,9 @@ If you do not find <code>BP_PlatformingCharacter</code>, that is likely because 
                   <div class="callout-title-inner"><p>Ask your LLM what </p></div>
                   
                 </div>
+<div class="callout-content">
 <p>In Unreal, what is an actor and what is a blueprint?</p>
+</div>
 </blockquote>
 </div>
 </blockquote>
@@ -284,7 +293,9 @@ If you do not find <code>BP_PlatformingCharacter</code>, that is likely because 
                   <div class="callout-title-inner"><p>Tip </p></div>
                   
                 </div>
+<div class="callout-content">
 <p>If the transform gizmo is too sensitive, you can adjust.</p>
+</div>
 </blockquote>
 <p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_01_125.webp" width="auto" height="auto" alt/></p>
 <p>Next, create another <code>Cube</code> component, name it <code>PressurePlate</code> and configure it as such. Adjust the parent/child hierarchy by dragging in the Components window.</p>
@@ -303,7 +314,9 @@ If you do not find <code>BP_PlatformingCharacter</code>, that is likely because 
                   <div class="callout-title-inner"><p>Tip </p></div>
                   
                 </div>
+<div class="callout-content">
 <p>The terms ‘scene’, ‘level’, and ‘map’ are interchangeable in Unreal.</p>
+</div>
 </blockquote>
 <p>Finally, <span class="save">Save All</span> is under File…</p>
 </div>
@@ -325,10 +338,12 @@ If you do not find <code>BP_PlatformingCharacter</code>, that is likely because 
 <blockquote class="callout question" data-callout="question">
 <div class="callout-title">
                   <div class="callout-icon"></div>
-                  <div class="callout-title-inner"><p>Ask your LLM why <code>OnComponentBeginOverlap</code> by right clicking a collider component, then choosing <code>Add Event</code>.  I thought the way to add nodes to the event graph was by right-clicking there and searching.  Why do it this way this time?</p></div>
+                  <div class="callout-title-inner"><p>Ask your LLM why </p></div>
                   
                 </div>
-<p>In the Unreal tutorial I’m following, I’m working on a blueprint.  The tutorial says to add </p>
+<div class="callout-content">
+<p>In the Unreal tutorial I’m following, I’m working on a blueprint.  The tutorial says to add <code>OnComponentBeginOverlap</code> by right clicking a collider component, then choosing <code>Add Event</code>.  I thought the way to add nodes to the event graph was by right-clicking there and searching.  Why do it this way this time?</p>
+</div>
 </blockquote>
 <p>On the resulting <code>OnComponentBeginOverlap</code> node, find its execution pin — the white arrow shape on the top right. Drag out and search for <a href="../../../../PBOH/Development/Wiki---Unreal/Print-String" class="internal alias" data-slug="PBOH/Development/Wiki---Unreal/Print-String">Print String</a>.</p>
 <p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_01_146.webp" width="auto" height="auto" alt/></p>
@@ -338,7 +353,9 @@ If you do not find <code>BP_PlatformingCharacter</code>, that is likely because 
                   <div class="callout-title-inner"><p>Tip </p></div>
                   
                 </div>
+<div class="callout-content">
 <p>Remember the terms “node” and “execution pin” (or just “pin”). These are essential moving forward.</p>
+</div>
 </blockquote>
 <p>In the <code>Print String</code> node, type in the field (In String) <code>Begin Overlap</code>.</p>
 <p><span class="action">Compile</span></p>
@@ -360,20 +377,24 @@ If you do not find <code>BP_PlatformingCharacter</code>, that is likely because 
 <blockquote class="callout tip" data-callout="tip">
 <div class="callout-title">
                   <div class="callout-icon"></div>
-                  <div class="callout-title-inner"><p>Tip <code>BP_PlatformingCharacter</code>, it is because you skipped Step 1D, above.</p></div>
+                  <div class="callout-title-inner"><p>Tip </p></div>
                   
                 </div>
-<p>If you could not find </p>
+<div class="callout-content">
+<p>If you could not find <code>BP_PlatformingCharacter</code>, it is because you skipped Step 1D, above.</p>
+</div>
 </blockquote>
 <p>Also, connect the parameter <code>Other Actor to Object</code> of the middle node, as in the above image. See the blue wire?</p>
 <p>Play the game again and ensure <code>Begin Overlap</code> still appears.</p>
 <blockquote class="callout question" data-callout="question">
 <div class="callout-title">
                   <div class="callout-icon"></div>
-                  <div class="callout-title-inner"><p>What is &quot;cast&quot;? <code>BP_PlatformingCharacter</code>, the cast works like a question. This cast only lets the blueprint script proceed - from one node to the next - if the <code>Object</code> (parameter) matches.</p></div>
+                  <div class="callout-title-inner"><p>What is &quot;cast&quot;? </p></div>
                   
                 </div>
-<p>The pressure plate should only be sensitive to the player character. In order to determine if the actor that just touched (the overlap) is indeed </p>
+<div class="callout-content">
+<p>The pressure plate should only be sensitive to the player character. In order to determine if the actor that just touched (the overlap) is indeed <code>BP_PlatformingCharacter</code>, the cast works like a question. This cast only lets the blueprint script proceed - from one node to the next - if the <code>Object</code> (parameter) matches.</p>
+</div>
 </blockquote>
 <p>Because this project is currently so simple, this additional functionality is not needed. But it is good practice moving forward.</p>
 <p><span class="save">Save All</span></p>
@@ -401,10 +422,12 @@ See how one of the parameters is being passed in with the green wire that gets c
 <blockquote class="callout question" data-callout="question">
 <div class="callout-title">
                   <div class="callout-icon"></div>
-                  <div class="callout-title-inner"><p>Ask your LLM why <code>PressurePlateTimeline</code> node's parameter, <code>Pressure Plate Height</code> passes to the node <code>Print String</code>'s <code>In String</code> parameter.  It created a small node between those two wires when I did so.  Why does it change the data type?</p></div>
+                  <div class="callout-title-inner"><p>Ask your LLM why </p></div>
                   
                 </div>
-<p>In the Unreal tutorial I’m following, the </p>
+<div class="callout-content">
+<p>In the Unreal tutorial I’m following, the <code>PressurePlateTimeline</code> node’s parameter, <code>Pressure Plate Height</code> passes to the node <code>Print String</code>’s <code>In String</code> parameter.  It created a small node between those two wires when I did so.  Why does it change the data type?</p>
+</div>
 </blockquote>
 <p><span class="action">Compile</span></p>
 <p>Play again to see integer values printed.</p>
@@ -421,10 +444,12 @@ Test the game. The pressure plate now changes location, but there is more work t
 <blockquote class="callout question" data-callout="question">
 <div class="callout-title">
                   <div class="callout-icon"></div>
-                  <div class="callout-title-inner"><p>Ask your LLM why <code>Lerp</code> node between a <code>Timeline</code> node and a <code>Set Relative Location</code> node's <code>New Location Z</code> input value.  Why?</p></div>
+                  <div class="callout-title-inner"><p>Ask your LLM why </p></div>
                   
                 </div>
-<p>In the Unreal tutorial I’m following, it says to insert a </p>
+<div class="callout-content">
+<p>In the Unreal tutorial I’m following, it says to insert a <code>Lerp</code> node between a <code>Timeline</code> node and a <code>Set Relative Location</code> node’s <code>New Location Z</code> input value.  Why?</p>
+</div>
 </blockquote>
 </div>
 </blockquote>
@@ -472,10 +497,12 @@ Refer back to Steps 2A and 2B for general guidance on making a new blueprint and
 <blockquote class="callout question" data-callout="question">
 <div class="callout-title">
                   <div class="callout-icon"></div>
-                  <div class="callout-title-inner"><p>Ask your LLM why <code>call</code> upon adding it to the event graph.  Why?</p></div>
+                  <div class="callout-title-inner"><p>Ask your LLM why </p></div>
                   
                 </div>
-<p>In the Unreal tutorial I’m following, it says to add a dispatcher, and choose </p>
+<div class="callout-content">
+<p>In the Unreal tutorial I’m following, it says to add a dispatcher, and choose <code>call</code> upon adding it to the event graph.  Why?</p>
+</div>
 </blockquote>
 </div>
 </blockquote>
@@ -493,10 +520,12 @@ This makes the connection to the work in Step 3B, the event dispatcher.</p>
 <blockquote class="callout question" data-callout="question">
 <div class="callout-title">
                   <div class="callout-icon"></div>
-                  <div class="callout-title-inner"><p>Ask your LLM <code>Bind Event to On Begin Pressure Plate</code>.  I needed to check untrue <code>Context Sensative</code> in that interface.  Why?</p></div>
+                  <div class="callout-title-inner"><p>Ask your LLM </p></div>
                   
                 </div>
-<p>In the Unreal tutorial I’m following, it says to add the node </p>
+<div class="callout-content">
+<p>In the Unreal tutorial I’m following, it says to add the node <code>Bind Event to On Begin Pressure Plate</code>.  I needed to check untrue <code>Context Sensative</code> in that interface.  Why?</p>
+</div>
 </blockquote>
 <p>What we are doing here: when the game starts, set the door to be “listening” for the pressure plate to <code>Call On Begin Pressure Plate</code>.</p>
 <p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_01_182.webp" width="auto" height="auto" alt/></p>
@@ -524,7 +553,9 @@ Success: the door has a reference to the pressure plate.</p>
                   <div class="callout-title-inner"><p>Ask your LLM why </p></div>
                   
                 </div>
+<div class="callout-content">
 <p>In an Unreal tutorial I’m following, why might it ask me to make a blueprint variable Instance Editable?</p>
+</div>
 </blockquote>
 </div>
 </blockquote>
@@ -549,7 +580,9 @@ That is, this section - 3D - does not tell you how to animate and call the door,
                   <div class="callout-title-inner"><p>Tip </p></div>
                   
                 </div>
+<div class="callout-content">
 <p>If you double-click a wire, it will add a dot - a reroute node - which is a way to shape your wires for orderliness.</p>
+</div>
 </blockquote>
 <p><em>Below are the two completed event graphs.</em></p>
 <p><span class="hint">To enlarge any image on this page: Right-click to choose “Open image in new tab”.</span></p>
