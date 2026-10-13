@@ -6,6 +6,24 @@
       <description>Last 10 notes on PB Teach</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Assignments</title>
+    <link>https://peterbrinson.github.io/teach/389/Assignments/Assignments-and-Readings</link>
+    <guid>https://peterbrinson.github.io/teach/389/Assignments/Assignments-and-Readings</guid>
+    <description><![CDATA[ Assignments and Readings DueAssignment or readingTypeTeamEngine1.2Student Details formForm / setupSolo—1.2CTIN 389 — The Other Shoe MilestoneMilestoneSoloUnity URP2.1The Other Shoe — Expectation and PayoffProjectSoloUnity URP2.2Steps 1–3 of Tutorial 2020 — Your First Persistent Workspace (with Codex... ]]></description>
+    <pubDate>Tue, 13 Oct 2026 23:29:37 GMT</pubDate>
+  </item><item>
+    <title>CTIN 389</title>
+    <link>https://peterbrinson.github.io/teach/389/</link>
+    <guid>https://peterbrinson.github.io/teach/389/</guid>
+    <description><![CDATA[ Units: 4 Fall 2026 Section: Tue, Thu, 4:00–5:50 pm Room: SCI 113 Go To Schedule Instructor: Peter Brinson Student Assistant: Luke Pannell Course Description This course teaches fundamental skills of digital game development alongside the basic principles of level design. ]]></description>
+    <pubDate>Tue, 13 Oct 2026 23:29:37 GMT</pubDate>
+  </item><item>
+    <title>W09 — Haunted House</title>
+    <link>https://peterbrinson.github.io/teach/389/Assignments/W09-Assignment---Haunted-House</link>
+    <guid>https://peterbrinson.github.io/teach/389/Assignments/W09-Assignment---Haunted-House</guid>
+    <description><![CDATA[ Due: Tuesday, October 20 at 1:00 p.m. ]]></description>
+    <pubDate>Tue, 13 Oct 2026 23:29:10 GMT</pubDate>
+  </item><item>
     <title>CTIN 534</title>
     <link>https://peterbrinson.github.io/teach/534/</link>
     <guid>https://peterbrinson.github.io/teach/534/</guid>
@@ -36,18 +54,6 @@
     <description><![CDATA[  Effort and models Get to know your LLM’s effort: how much thinking it does before it answers. ]]></description>
     <pubDate>Tue, 13 Oct 2026 00:07:49 GMT</pubDate>
   </item><item>
-    <title>CTIN 389</title>
-    <link>https://peterbrinson.github.io/teach/389/</link>
-    <guid>https://peterbrinson.github.io/teach/389/</guid>
-    <description><![CDATA[ Units: 4 Fall 2026 Section: Tue, Thu, 4:00–5:50 pm Room: SCI 113 Go To Schedule Instructor: Peter Brinson Student Assistant: Luke Pannell Course Description This course teaches fundamental skills of digital game development alongside the basic principles of level design. ]]></description>
-    <pubDate>Mon, 12 Oct 2026 20:15:15 GMT</pubDate>
-  </item><item>
-    <title>Assignments</title>
-    <link>https://peterbrinson.github.io/teach/389/Assignments/Assignments-and-Readings</link>
-    <guid>https://peterbrinson.github.io/teach/389/Assignments/Assignments-and-Readings</guid>
-    <description><![CDATA[ Assignments and Readings DueAssignment or readingTypeTeamEngine1.2Student Details formForm / setupSolo—1.2CTIN 389 — The Other Shoe MilestoneMilestoneSoloUnity URP2.1The Other Shoe — Expectation and PayoffProjectSoloUnity URP2.2Steps 1–3 of Tutorial 2020 — Your First Persistent Workspace (with Codex... ]]></description>
-    <pubDate>Mon, 12 Oct 2026 18:58:21 GMT</pubDate>
-  </item><item>
     <title>(Let&#039;s Put Our) Tokens on the Table</title>
     <link>https://peterbrinson.github.io/teach/TOTT/</link>
     <guid>https://peterbrinson.github.io/teach/TOTT/</guid>
@@ -58,12 +64,6 @@
     <link>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Context-Engineering</link>
     <guid>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Context-Engineering</guid>
     <description><![CDATA[ Context engineering is the craft of arranging your files so an AI finds what matters without being told every time: which files it reads, in what order, and how much it can hold at once. ]]></description>
-    <pubDate>Fri, 09 Oct 2026 23:22:35 GMT</pubDate>
-  </item><item>
-    <title>Queryable Knowledge Base</title>
-    <link>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Queryable-Knowledge-Base</link>
-    <guid>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Queryable-Knowledge-Base</guid>
-    <description><![CDATA[ A student looking for Peter Brinson&#039;s Office Hours, the game design guide itself? Click here.Here to learn what a queryable knowledge base is, and build one? Read on. ]]></description>
     <pubDate>Fri, 09 Oct 2026 23:22:35 GMT</pubDate>
   </item>
     </channel>
