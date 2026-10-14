@@ -6,11 +6,35 @@
       <description>Last 10 notes on PB Teach</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>W10 — Bounded Worlds</title>
+    <link>https://peterbrinson.github.io/teach/389/Assignments/W10-Assignment---Bounded-Worlds</link>
+    <guid>https://peterbrinson.github.io/teach/389/Assignments/W10-Assignment---Bounded-Worlds</guid>
+    <description><![CDATA[ Due: Tuesday, October 27 at 1:00 p.m. ]]></description>
+    <pubDate>Wed, 14 Oct 2026 22:29:21 GMT</pubDate>
+  </item><item>
+    <title>Assignments</title>
+    <link>https://peterbrinson.github.io/teach/389/Assignments/Assignments-and-Readings</link>
+    <guid>https://peterbrinson.github.io/teach/389/Assignments/Assignments-and-Readings</guid>
+    <description><![CDATA[ Assignments and Readings DueAssignment or readingTypeTeamEngine1.2Student Details formForm / setupSolo—1.2CTIN 389 — The Other Shoe MilestoneMilestoneSoloUnity URP2.1The Other Shoe — Expectation and PayoffProjectSoloUnity URP2.2Steps 1–3 of Tutorial 2020 — Your First Persistent Workspace (with Codex... ]]></description>
+    <pubDate>Wed, 14 Oct 2026 22:22:16 GMT</pubDate>
+  </item><item>
+    <title>CTIN 389</title>
+    <link>https://peterbrinson.github.io/teach/389/</link>
+    <guid>https://peterbrinson.github.io/teach/389/</guid>
+    <description><![CDATA[ Units: 4 Fall 2026 Section: Tue, Thu, 4:00–5:50 pm Room: SCI 113 Go To Schedule Instructor: Peter Brinson Student Assistant: Luke Pannell Course Description This course teaches fundamental skills of digital game development alongside the basic principles of level design. ]]></description>
+    <pubDate>Wed, 14 Oct 2026 22:22:11 GMT</pubDate>
+  </item><item>
+    <title>Tutorial 1015 - Claude Code Desktop Quick Start</title>
+    <link>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---LLM/Tutorial-1015---Claude-Code-Desktop-Quick-Start</link>
+    <guid>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---LLM/Tutorial-1015---Claude-Code-Desktop-Quick-Start</guid>
+    <description><![CDATA[ 0. Introduction Outcome. ]]></description>
+    <pubDate>Wed, 14 Oct 2026 22:15:07 GMT</pubDate>
+  </item><item>
     <title>Situated Player Role 3 - The Entrant, World as Threshold</title>
     <link>https://peterbrinson.github.io/teach/PBOH/Design/Storytelling/Situated-Player-Role-3---The-Entrant,-World-as-Threshold</link>
     <guid>https://peterbrinson.github.io/teach/PBOH/Design/Storytelling/Situated-Player-Role-3---The-Entrant,-World-as-Threshold</guid>
     <description><![CDATA[ Summarized in: Situated Player Roles Previous: Situated Player Role 2: The Traveler | Next: Situated Player Role 4: The Dreamer The Entrant has arrived at a boundary. ]]></description>
-    <pubDate>Wed, 14 Oct 2026 19:29:23 GMT</pubDate>
+    <pubDate>Wed, 14 Oct 2026 22:08:38 GMT</pubDate>
   </item><item>
     <title>Game - Papers Please</title>
     <link>https://peterbrinson.github.io/teach/PBOH/Design/_References/Game---Papers-Please</link>
@@ -30,12 +54,6 @@
     <description><![CDATA[ Monday, October 26, 12pm. SCI 108. Part of Tokens on the Table. ]]></description>
     <pubDate>Wed, 14 Oct 2026 18:22:17 GMT</pubDate>
   </item><item>
-    <title>CTIN 389</title>
-    <link>https://peterbrinson.github.io/teach/389/</link>
-    <guid>https://peterbrinson.github.io/teach/389/</guid>
-    <description><![CDATA[ Units: 4 Fall 2026 Section: Tue, Thu, 4:00–5:50 pm Room: SCI 113 Go To Schedule Instructor: Peter Brinson Student Assistant: Luke Pannell Course Description This course teaches fundamental skills of digital game development alongside the basic principles of level design. ]]></description>
-    <pubDate>Wed, 14 Oct 2026 00:44:32 GMT</pubDate>
-  </item><item>
     <title>UE Tutorial 102 - Collectables and Restart</title>
     <link>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-102---Collectables-and-Restart</link>
     <guid>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-102---Collectables-and-Restart</guid>
@@ -47,24 +65,6 @@
     <guid>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-103---Scoring-and-UI</guid>
     <description><![CDATA[ Continuing from: Tutorial 102: Collectables and Restart By Aaron Cheney &amp; Peter Brinson 0. Introduction A. ]]></description>
     <pubDate>Wed, 14 Oct 2026 00:27:16 GMT</pubDate>
-  </item><item>
-    <title>UE Tutorial 104 - Haunted House Triggers and Events</title>
-    <link>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-104---Haunted-House-Triggers-and-Events</link>
-    <guid>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-104---Haunted-House-Triggers-and-Events</guid>
-    <description><![CDATA[ Previous: Tutorial 103: Scoring and UI By Yibei He &amp; Peter Brinson 0. Introduction A. ]]></description>
-    <pubDate>Wed, 14 Oct 2026 00:08:40 GMT</pubDate>
-  </item><item>
-    <title>UE Tutorial 101 - A Floor Plate Opens A Door</title>
-    <link>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-101---A-Floor-Plate-Opens-A-Door</link>
-    <guid>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-101---A-Floor-Plate-Opens-A-Door</guid>
-    <description><![CDATA[ By Aaron Cheney &amp; Peter Brinson 0. Introduction A. ]]></description>
-    <pubDate>Tue, 13 Oct 2026 23:58:13 GMT</pubDate>
-  </item><item>
-    <title>UE Tutorial 801 - Inspect an Object</title>
-    <link>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/800---Interactive-Systems/UE-Tutorial-801---Inspect-an-Object</link>
-    <guid>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/800---Interactive-Systems/UE-Tutorial-801---Inspect-an-Object</guid>
-    <description><![CDATA[ By Yibei He &amp; Peter Brinson 0. Introduction A. Outcome Build a readable item system — the foundational mechanic of the Investigator role. ]]></description>
-    <pubDate>Tue, 13 Oct 2026 23:55:13 GMT</pubDate>
   </item>
     </channel>
   </rss>

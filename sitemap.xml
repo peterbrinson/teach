@@ -1,6 +1,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
     <loc>https://peterbrinson.github.io/teach/389/Assignments/Assignments-and-Readings</loc>
-    <lastmod>2026-10-13T23:29:37.035Z</lastmod>
+    <lastmod>2026-10-14T22:22:16.318Z</lastmod>
   </url><url>
     <loc>https://peterbrinson.github.io/teach/389/Assignments/W02-Assignment---The-Other-Shoe</loc>
     <lastmod>2026-10-07T22:27:13.428Z</lastmod>
@@ -22,6 +22,9 @@
   </url><url>
     <loc>https://peterbrinson.github.io/teach/389/Assignments/W09-Assignment---Haunted-House</loc>
     <lastmod>2026-10-13T23:29:10.987Z</lastmod>
+  </url><url>
+    <loc>https://peterbrinson.github.io/teach/389/Assignments/W10-Assignment---Bounded-Worlds</loc>
+    <lastmod>2026-10-14T22:29:21.662Z</lastmod>
   </url><url>
     <loc>https://peterbrinson.github.io/teach/389/Assignments/W11-Assignment---Engine-Exploration-Project</loc>
     <lastmod>2026-10-07T22:27:13.428Z</lastmod>
@@ -264,7 +267,7 @@
     <lastmod>2026-10-05T23:40:23.071Z</lastmod>
   </url><url>
     <loc>https://peterbrinson.github.io/teach/389/</loc>
-    <lastmod>2026-10-14T00:44:32.923Z</lastmod>
+    <lastmod>2026-10-14T22:22:11.171Z</lastmod>
   </url><url>
     <loc>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Project-1</loc>
     <lastmod>2026-10-07T22:40:31.309Z</lastmod>
@@ -348,7 +351,7 @@
     <lastmod>2026-10-05T23:40:23.793Z</lastmod>
   </url><url>
     <loc>https://peterbrinson.github.io/teach/PBOH/Design/Storytelling/Situated-Player-Role-3---The-Entrant,-World-as-Threshold</loc>
-    <lastmod>2026-10-14T19:29:23.922Z</lastmod>
+    <lastmod>2026-10-14T22:08:38.110Z</lastmod>
   </url><url>
     <loc>https://peterbrinson.github.io/teach/PBOH/Design/Storytelling/Situated-Player-Role-4---The-Dreamer,-World-as-Enigma</loc>
     <lastmod>2026-10-05T23:40:23.800Z</lastmod>
@@ -945,7 +948,7 @@
     <lastmod>2026-09-28T17:54:21.306Z</lastmod>
   </url><url>
     <loc>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---LLM/Tutorial-1015---Claude-Code-Desktop-Quick-Start</loc>
-    <lastmod>2026-09-28T17:54:21.306Z</lastmod>
+    <lastmod>2026-10-14T22:15:07.714Z</lastmod>
   </url><url>
     <loc>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---LLM/Tutorial-1021---Codex-Terminal-Quick-Start</loc>
     <lastmod>2026-09-28T17:54:21.306Z</lastmod>
