@@ -6,6 +6,12 @@
       <description>Last 10 notes on PB Teach</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>UE Tutorial 102 - Collectables and Restart</title>
+    <link>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-102---Collectables-and-Restart</link>
+    <guid>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-102---Collectables-and-Restart</guid>
+    <description><![CDATA[ Continuing From: Tutorial 101: A Floor Plate Opens A Door By Aaron Cheney &amp; Peter Brinson 0. Introduction A. ]]></description>
+    <pubDate>Wed, 14 Oct 2026 00:30:28 GMT</pubDate>
+  </item><item>
     <title>UE Tutorial 103 - Scoring and UI</title>
     <link>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-103---Scoring-and-UI</link>
     <guid>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-103---Scoring-and-UI</guid>
@@ -28,12 +34,6 @@
     <link>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/800---Interactive-Systems/UE-Tutorial-801---Inspect-an-Object</link>
     <guid>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/800---Interactive-Systems/UE-Tutorial-801---Inspect-an-Object</guid>
     <description><![CDATA[ By Yibei He &amp; Peter Brinson 0. Introduction A. Outcome Build a readable item system — the foundational mechanic of the Investigator role. ]]></description>
-    <pubDate>Tue, 13 Oct 2026 23:55:13 GMT</pubDate>
-  </item><item>
-    <title>UE Tutorial 102 - Collectables and Restart</title>
-    <link>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-102---Collectables-and-Restart</link>
-    <guid>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-102---Collectables-and-Restart</guid>
-    <description><![CDATA[ Continuing From: Tutorial 101: A Floor Plate Opens A Door By Aaron Cheney &amp; Peter Brinson 0. Introduction A. ]]></description>
     <pubDate>Tue, 13 Oct 2026 23:55:13 GMT</pubDate>
   </item><item>
     <title>UE Tutorial 501 - Simple Physics</title>

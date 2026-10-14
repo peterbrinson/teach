@@ -274,7 +274,7 @@ This <em>current</em> step is changing something bigger and broader - the <code>
 <li>Drag from <code>BeginPlay</code>’s pin and create <code>[[Set Timer by Event|SetTimerByEvent]]</code>.  This will count down in seconds.</li>
 <li>To create the variable, <code>ModeTimer</code>, look to the left side, under My Blueprint.  Click the plus button by <a href="../../../../PBOH/Development/Wiki---Unreal/Variables" class="internal alias" data-slug="PBOH/Development/Wiki---Unreal/Variables">VARIABLES</a>.  Name it ModeTimer of type Float.  <span class="action">Compile</span>.  Next, set Details > Default Value > Mode Timer to 5.0.</li>
 <li>Drag <code>ModeTimer</code> into the Event Graph and choose Get.</li>
-<li>Create a <a href="../../../../Custom-Event" class="internal alias" data-slug="Custom-Event">custom event</a> - <code>OnTimerExpired</code>.</li>
+<li>Create a <a href="../../../../Custom-Event" class="internal alias" data-slug="Custom-Event">custom event</a> - <code>OnTimerExpired</code>.  To make one, right-click in empty space in the Event Graph and choose <code>Add Custom Event</code>, then name it.</li>
 <li>Drag off <code>OnTimerExpired</code> and create <code>Open Level</code>.  <code>Open Level</code> will restart the game - make sure you choose the option that includes “by Object Reference”.  And set the level parameter to your current level name.  (By the way, a multiplayer game will do this differently).</li>
 </ul>
 <p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_02_110.webp" width="auto" height="auto" alt/></p>
@@ -294,7 +294,7 @@ This <em>current</em> step is changing something bigger and broader - the <code>
 <p>Using what you have learned, use these instructions and screenshot to create the below blueprint script in <code>BP_InClassPlatforming_PlayerState</code>’s <a href="../../../../PBOH/Development/Wiki---Unreal/Event-Graph" class="internal alias" data-slug="PBOH/Development/Wiki---Unreal/Event-Graph">Event Graph</a>.</p>
 <p>The instructions:</p>
 <ul>
-<li><code>OnCollectedCollectable</code> is a <a href="../../../../Custom-Event" class="internal alias" data-slug="Custom-Event">custom event</a>.</li>
+<li><code>OnCollectedCollectable</code> is a <a href="../../../../Custom-Event" class="internal alias" data-slug="Custom-Event">custom event</a> - right-click in empty space and choose <code>Add Custom Event</code>.</li>
 <li>The node with the <code>++</code> is <code>Increment Int</code>.</li>
 <li>Creating the variable <code>NumberOfCollectables</code> is similar to how you did so in Step 2C.  But this one is an <code>Int</code>.</li>
 <li>The short node with the green and purple (and no words or symbols) is casting the <code>Int</code> to <code>String</code>.  It gets created when you connect the <code>Increment Int</code> to <code>Print String</code>.</li>
