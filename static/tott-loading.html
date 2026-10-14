@@ -6,10 +6,9 @@
 <title>TOTT Loading</title>
 <!--
   Tokens on the Table: game-style loading screen with a rotating tip.
-  Embedded in TOTT pages as a wide, short strip (iframe); the ⤢ button
-  or opening this file directly gives the full-screen version.
-  PROTOTYPE: tips are hard-coded below. Later they should be pulled at
-  build time from Tips/Tips and Insights.md and Tools/Which AI.md.
+  Embedded in TOTT pages as a wide, short strip (iframe). Tips are read
+  live from the Tips page (first sentence of each ### tip). "Next" moves
+  to the next tip; clicking the tip opens it on the Tips page.
   Placeholder art is CSS gradients; swap in real art via --art.
 -->
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
@@ -29,7 +28,6 @@
     color: var(--cream);
     font-family: "Source Sans 3", system-ui, sans-serif;
     overflow: hidden;
-    cursor: pointer;
     user-select: none;
   }
   .screen {
@@ -149,6 +147,8 @@
     align-items: flex-end;
     transition: opacity 0.4s;
   }
+  .tip { cursor: pointer; }
+  .tip:hover span { text-decoration: underline; text-decoration-color: rgba(255, 201, 120, 0.6); text-underline-offset: 3px; }
   .tip b { color: var(--gold); font-weight: 600; margin-right: 0.3em; }
   .tip.fade { opacity: 0; }
 
@@ -169,20 +169,6 @@
   .fill.run { animation: load var(--dwell) linear forwards; }
   @keyframes load { from { width: 0; } to { width: 100%; } }
 
-  .full {
-    position: absolute;
-    top: 12px; right: calc(clamp(34px, 9vh, 90px) + 4px);
-    background: rgba(0, 0, 0, 0.35);
-    color: var(--cream);
-    border: 1px solid rgba(247, 238, 241, 0.3);
-    border-radius: 4px;
-    font-size: 14px;
-    line-height: 1;
-    padding: 4px 7px;
-    cursor: pointer;
-    opacity: 0.6;
-  }
-  .full:hover { opacity: 1; }
   /* Phones: the frame is narrow, so give the tip and button the full width
      inside it -- small side margins, smaller corners, tighter bar caps. */
   @media (max-width: 560px) {
@@ -192,12 +178,11 @@
     .tiprow { gap: 0.6rem; }
     .tip { font-size: 0.95rem; line-height: 1.3; }
     .more { font-size: 0.8rem; padding: 0.15em 0.55em 0.2em; }
-    .full { right: 44px; }
   }
 </style>
 </head>
 <body>
-<div class="screen" id="screen" title="Click for the next tip">
+<div class="screen" id="screen">
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <defs>
       <linearGradient id="gilt" x1="0" y1="0" x2="0" y2="1">
@@ -254,10 +239,9 @@
     <path d="M147 22 L150 19 L153 23 Z" fill="#fff" opacity=".7"/>
   </svg>
   <div class="title"><small>(Let's Put Our)</small>Tokens on the Table</div>
-  <button class="full" id="full" title="Full screen">⤢</button>
   <div class="tiprow">
-    <p class="tip" id="tip"></p>
-    <button class="more" id="more" title="Open this tip in a new tab">Click for more ›</button>
+    <p class="tip" id="tip" title="Read more about this tip"></p>
+    <button class="more" id="more" title="Next tip">Next ›</button>
   </div>
   <div class="barwrap"><svg class="cap l" aria-hidden="true"><use href="#endcap"/></svg><div class="bar"><div class="fill" id="fill"></div></div><svg class="cap r" aria-hidden="true"><use href="#endcap"/></svg></div>
 </div>
@@ -310,15 +294,17 @@
   function next() { i = (i + 1) % tips.length; show(); }
 
   fill.addEventListener("animationend", next);
-  document.getElementById("screen").addEventListener("click", next);
   document.addEventListener("keydown", (e) => {
     if (e.key === "ArrowRight" || e.key === " ") { e.preventDefault(); next(); }
   });
-  // "Click for more": show this tip on the Tips and Insights page. The page
+
+  // "Next": the next tip.
+  document.getElementById("more").addEventListener("click", next);
+
+  // Clicking the tip itself: read more about it on the Tips page. The page
   // opens in a tab named "tott-tips"; if that tab is already open on the
-  // tips page, bring it forward and glide to the tip without reloading.
-  document.getElementById("more").addEventListener("click", (e) => {
-    e.stopPropagation();
+  // Tips page, bring it forward and glide to the tip without reloading.
+  tipEl.addEventListener("click", () => {
     const id = tips[i][1];
     const url = new URL(TIPS_PAGE, location.href);
     url.searchParams.set("go", id);
@@ -329,11 +315,6 @@
     } catch (err) { /* different page in that tab: just navigate it */ }
     w.location.href = url.href;
     w.focus();
-  });
-  document.getElementById("full").addEventListener("click", (e) => {
-    e.stopPropagation();
-    if (document.fullscreenElement) document.exitFullscreen();
-    else document.documentElement.requestFullscreen?.();
   });
   loadTips()
     .catch(() => {})                       // keep FALLBACK if the page can't be read
