@@ -6,11 +6,23 @@
       <description>Last 10 notes on PB Teach</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>(Let&#039;s Put Our) Tokens on the Table</title>
+    <link>https://peterbrinson.github.io/teach/TOTT/</link>
+    <guid>https://peterbrinson.github.io/teach/TOTT/</guid>
+    <description><![CDATA[ (Let’s Put Our) Tokens on the Table A Seminar Series About AI and Games Are you using AI for game development and want to talk about it? What about game design and (pre)production? You mostly work in the browser chat but have heard there are smarter ways to work? You hesitate to tell your professors... ]]></description>
+    <pubDate>Thu, 15 Oct 2026 16:51:03 GMT</pubDate>
+  </item><item>
+    <title>Seminar 2 - Thinking and Doing</title>
+    <link>https://peterbrinson.github.io/teach/TOTT/Seminars/TOTT-Seminar-2---Thinking-and-Doing</link>
+    <guid>https://peterbrinson.github.io/teach/TOTT/Seminars/TOTT-Seminar-2---Thinking-and-Doing</guid>
+    <description><![CDATA[ Monday, November 9. SCI 108. Part of Tokens on the Table. ]]></description>
+    <pubDate>Thu, 15 Oct 2026 16:50:40 GMT</pubDate>
+  </item><item>
     <title>Seminar 1 - Your First Upgrades</title>
     <link>https://peterbrinson.github.io/teach/TOTT/Seminars/TOTT-Seminar-1---Your-First-Upgrades</link>
     <guid>https://peterbrinson.github.io/teach/TOTT/Seminars/TOTT-Seminar-1---Your-First-Upgrades</guid>
-    <description><![CDATA[ Monday, October 26, 12pm. SCI 108. Part of Tokens on the Table. ]]></description>
-    <pubDate>Thu, 15 Oct 2026 15:36:42 GMT</pubDate>
+    <description><![CDATA[ Monday, October 26. SCI 108. Part of Tokens on the Table. ]]></description>
+    <pubDate>Thu, 15 Oct 2026 16:49:39 GMT</pubDate>
   </item><item>
     <title>Week 8.2 - Creativity</title>
     <link>https://peterbrinson.github.io/teach/534/Lectures/Week-8.2---Creativity</link>
@@ -23,12 +35,6 @@
     <guid>https://peterbrinson.github.io/teach/TOTT/Seminars/Talks/Queryable-Knowledge-Base</guid>
     <description><![CDATA[ A queryable knowledge base is a folder of plain text files on your own computer that you can ask questions of — your course material, your research, your production notes, your team’s scattered documents, gathered in one place and written so an AI can read all of it. ]]></description>
     <pubDate>Thu, 15 Oct 2026 00:54:32 GMT</pubDate>
-  </item><item>
-    <title>(Let&#039;s Put Our) Tokens on the Table</title>
-    <link>https://peterbrinson.github.io/teach/TOTT/</link>
-    <guid>https://peterbrinson.github.io/teach/TOTT/</guid>
-    <description><![CDATA[ (Let’s Put Our) Tokens on the Table A Seminar Series About AI and Games Are you using AI for game development and want to talk about it? What about game design and (pre)production? You mostly work in the browser chat but have heard there are smarter ways to work? You hesitate to tell your professors... ]]></description>
-    <pubDate>Thu, 15 Oct 2026 00:38:07 GMT</pubDate>
   </item><item>
     <title>Frontmatter</title>
     <link>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Frontmatter</link>
@@ -59,12 +65,6 @@
     <guid>https://peterbrinson.github.io/teach/PBOH/Design/Storytelling/Situated-Player-Role-3---The-Entrant,-World-as-Threshold</guid>
     <description><![CDATA[ Summarized in: Situated Player Roles Previous: Situated Player Role 2: The Traveler | Next: Situated Player Role 4: The Dreamer The Entrant has arrived at a boundary. ]]></description>
     <pubDate>Wed, 14 Oct 2026 22:08:38 GMT</pubDate>
-  </item><item>
-    <title>Game - Papers Please</title>
-    <link>https://peterbrinson.github.io/teach/PBOH/Design/_References/Game---Papers-Please</link>
-    <guid>https://peterbrinson.github.io/teach/PBOH/Design/_References/Game---Papers-Please</guid>
-    <description><![CDATA[ Developer: Lucas Pope | Year: 2013 | Platform: PC, mobile, console → Steam What It Is A border-checkpoint simulator set in the fictional communist state of Arstotzka. ]]></description>
-    <pubDate>Wed, 14 Oct 2026 18:53:39 GMT</pubDate>
   </item>
     </channel>
   </rss>
