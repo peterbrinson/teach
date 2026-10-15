@@ -6,6 +6,30 @@
       <description>Last 10 notes on PB Teach</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Seminar 1 - Your First Upgrades</title>
+    <link>https://peterbrinson.github.io/teach/TOTT/Seminars/TOTT-Seminar-1---Your-First-Upgrades</link>
+    <guid>https://peterbrinson.github.io/teach/TOTT/Seminars/TOTT-Seminar-1---Your-First-Upgrades</guid>
+    <description><![CDATA[ Monday, October 26, 12pm. SCI 108. Part of Tokens on the Table. ]]></description>
+    <pubDate>Thu, 15 Oct 2026 00:55:19 GMT</pubDate>
+  </item><item>
+    <title>Queryable Knowledge Bases</title>
+    <link>https://peterbrinson.github.io/teach/TOTT/Seminars/Talks/Queryable-Knowledge-Base</link>
+    <guid>https://peterbrinson.github.io/teach/TOTT/Seminars/Talks/Queryable-Knowledge-Base</guid>
+    <description><![CDATA[ A queryable knowledge base is a folder of plain text files on your own computer that you can ask questions of — your course material, your research, your production notes, your team’s scattered documents, gathered in one place and written so an AI can read all of it. ]]></description>
+    <pubDate>Thu, 15 Oct 2026 00:54:32 GMT</pubDate>
+  </item><item>
+    <title>(Let&#039;s Put Our) Tokens on the Table</title>
+    <link>https://peterbrinson.github.io/teach/TOTT/</link>
+    <guid>https://peterbrinson.github.io/teach/TOTT/</guid>
+    <description><![CDATA[ (Let’s Put Our) Tokens on the Table A Seminar Series About AI and Games Are you using AI for game development and want to talk about it? What about game design and (pre)production? You mostly work in the browser chat but have heard there are smarter ways to work? You hesitate to tell your professors... ]]></description>
+    <pubDate>Thu, 15 Oct 2026 00:38:07 GMT</pubDate>
+  </item><item>
+    <title>Frontmatter</title>
+    <link>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Frontmatter</link>
+    <guid>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Frontmatter</guid>
+    <description><![CDATA[ Frontmatter is a short block of labels at the very top of a markdown file, set off by two lines of dashes. ]]></description>
+    <pubDate>Thu, 15 Oct 2026 00:38:06 GMT</pubDate>
+  </item><item>
     <title>CTIN 389</title>
     <link>https://peterbrinson.github.io/teach/389/</link>
     <guid>https://peterbrinson.github.io/teach/389/</guid>
@@ -41,30 +65,6 @@
     <guid>https://peterbrinson.github.io/teach/534/</guid>
     <description><![CDATA[ Units: 4 Fall 2026 Breakfast Section: Tue, Thu, 10:00 am–12:20 pm Lunch Section: Tue, Thu, 1:00–3:20 pm Go To Schedule Instructor: Peter Brinson Student Assistant: Yinuo Chen Student Assistant: George Zou Course Description Is Life A Story or a Game? We will study and practice how narrative video ga... ]]></description>
     <pubDate>Wed, 14 Oct 2026 18:25:02 GMT</pubDate>
-  </item><item>
-    <title>Seminar 1 - Your First Upgrades</title>
-    <link>https://peterbrinson.github.io/teach/TOTT/Seminars/TOTT-Seminar-1---Your-First-Upgrades</link>
-    <guid>https://peterbrinson.github.io/teach/TOTT/Seminars/TOTT-Seminar-1---Your-First-Upgrades</guid>
-    <description><![CDATA[ Monday, October 26, 12pm. SCI 108. Part of Tokens on the Table. ]]></description>
-    <pubDate>Wed, 14 Oct 2026 18:22:17 GMT</pubDate>
-  </item><item>
-    <title>UE Tutorial 102 - Collectables and Restart</title>
-    <link>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-102---Collectables-and-Restart</link>
-    <guid>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-102---Collectables-and-Restart</guid>
-    <description><![CDATA[ Continuing From: Tutorial 101: A Floor Plate Opens A Door By Aaron Cheney &amp; Peter Brinson 0. Introduction A. ]]></description>
-    <pubDate>Wed, 14 Oct 2026 00:30:28 GMT</pubDate>
-  </item><item>
-    <title>UE Tutorial 103 - Scoring and UI</title>
-    <link>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-103---Scoring-and-UI</link>
-    <guid>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-103---Scoring-and-UI</guid>
-    <description><![CDATA[ Continuing from: Tutorial 102: Collectables and Restart By Aaron Cheney &amp; Peter Brinson 0. Introduction A. ]]></description>
-    <pubDate>Wed, 14 Oct 2026 00:27:16 GMT</pubDate>
-  </item><item>
-    <title>UE Tutorial 104 - Haunted House Triggers and Events</title>
-    <link>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-104---Haunted-House-Triggers-and-Events</link>
-    <guid>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/100---Discovery-and-Encounter/UE-Tutorial-104---Haunted-House-Triggers-and-Events</guid>
-    <description><![CDATA[ Previous: Tutorial 103: Scoring and UI By Yibei He &amp; Peter Brinson 0. Introduction A. ]]></description>
-    <pubDate>Wed, 14 Oct 2026 00:08:40 GMT</pubDate>
   </item>
     </channel>
   </rss>

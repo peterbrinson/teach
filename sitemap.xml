@@ -1251,10 +1251,13 @@
     <lastmod>2026-10-06T19:52:28.028Z</lastmod>
   </url><url>
     <loc>https://peterbrinson.github.io/teach/TOTT/Seminars/TOTT-Seminar-1---Your-First-Upgrades</loc>
-    <lastmod>2026-10-14T18:22:17.891Z</lastmod>
+    <lastmod>2026-10-15T00:55:19.441Z</lastmod>
   </url><url>
     <loc>https://peterbrinson.github.io/teach/TOTT/Seminars/TOTT-Seminar-2---Thinking-and-Doing</loc>
     <lastmod>2026-10-13T15:14:00.086Z</lastmod>
+  </url><url>
+    <loc>https://peterbrinson.github.io/teach/TOTT/Seminars/Talks/Queryable-Knowledge-Base</loc>
+    <lastmod>2026-10-15T00:54:32.619Z</lastmod>
   </url><url>
     <loc>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Artifact</loc>
     <lastmod>2026-10-07T19:01:24.440Z</lastmod>
@@ -1267,6 +1270,9 @@
   </url><url>
     <loc>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Effort</loc>
     <lastmod>2026-10-07T19:01:24.498Z</lastmod>
+  </url><url>
+    <loc>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Frontmatter</loc>
+    <lastmod>2026-10-15T00:38:06.999Z</lastmod>
   </url><url>
     <loc>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Harness</loc>
     <lastmod>2026-10-09T18:48:26.653Z</lastmod>
@@ -1286,9 +1292,6 @@
     <loc>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Plan-Mode</loc>
     <lastmod>2026-10-07T19:01:24.596Z</lastmod>
   </url><url>
-    <loc>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Queryable-Knowledge-Base</loc>
-    <lastmod>2026-10-09T23:22:35.636Z</lastmod>
-  </url><url>
     <loc>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Session-Limits</loc>
     <lastmod>2026-10-07T19:01:24.613Z</lastmod>
   </url><url>
@@ -1296,7 +1299,7 @@
     <lastmod>2026-10-13T00:07:49.774Z</lastmod>
   </url><url>
     <loc>https://peterbrinson.github.io/teach/TOTT/</loc>
-    <lastmod>2026-10-10T00:28:55.971Z</lastmod>
+    <lastmod>2026-10-15T00:38:07.158Z</lastmod>
   </url><url>
     <loc>https://peterbrinson.github.io/teach/geidai/Assignment-A---Playable-Maze</loc>
     <lastmod>2026-07-31T23:22:01.273Z</lastmod>
