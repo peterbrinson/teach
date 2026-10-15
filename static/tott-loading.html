@@ -150,6 +150,7 @@
   .tip { cursor: pointer; }
   .tip:hover span { text-decoration: underline; text-decoration-color: rgba(255, 201, 120, 0.6); text-underline-offset: 3px; }
   .tip b { color: var(--gold); font-weight: 600; margin-right: 0.3em; }
+  .tip .more-hint { color: var(--gold); opacity: 0.75; font-style: normal; font-size: 0.85em; margin-right: 0.4em; }
   .tip.fade { opacity: 0; }
 
   .bar {
@@ -284,7 +285,7 @@
   function show() {
     tipEl.classList.add("fade");
     setTimeout(() => {
-      tipEl.innerHTML = "<span><b>Tip:</b> " + tips[i][0] + "</span>";
+      tipEl.innerHTML = "<span><b>Tip:</b> <i class=\"more-hint\">(Click for more)</i> " + tips[i][0] + "</span>";
       tipEl.classList.remove("fade");
       fill.classList.remove("run");
       void fill.offsetWidth;          // restart the animation
