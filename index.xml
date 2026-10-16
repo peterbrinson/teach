@@ -6,17 +6,29 @@
       <description>Last 10 notes on PB Teach</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Queryable Knowledge Bases</title>
+    <link>https://peterbrinson.github.io/teach/TOTT/Seminars/Talks/Queryable-Knowledge-Base</link>
+    <guid>https://peterbrinson.github.io/teach/TOTT/Seminars/Talks/Queryable-Knowledge-Base</guid>
+    <description><![CDATA[ A queryable knowledge base is a folder of plain text files on your own computer that you can ask questions of — your course material, your research, your production notes, your team’s scattered documents, gathered in one place and written so an AI can read all of it. ]]></description>
+    <pubDate>Fri, 16 Oct 2026 23:56:54 GMT</pubDate>
+  </item><item>
     <title>Seminar 1 - Your First Upgrades</title>
     <link>https://peterbrinson.github.io/teach/TOTT/Seminars/TOTT-Seminar-1---Your-First-Upgrades</link>
     <guid>https://peterbrinson.github.io/teach/TOTT/Seminars/TOTT-Seminar-1---Your-First-Upgrades</guid>
     <description><![CDATA[ Monday, October 26. SCI 108. (time, tbd) · Part of Tokens on the Table. ]]></description>
-    <pubDate>Thu, 15 Oct 2026 19:46:45 GMT</pubDate>
+    <pubDate>Fri, 16 Oct 2026 23:53:38 GMT</pubDate>
   </item><item>
     <title>(Let&#039;s Put Our) Tokens on the Table</title>
     <link>https://peterbrinson.github.io/teach/TOTT/</link>
     <guid>https://peterbrinson.github.io/teach/TOTT/</guid>
-    <description><![CDATA[ (Let’s Put Our) Tokens on the Table A Seminar Series About AI and Games Do you feel behind, confused, and anxious about AI today and you want to do something about it? Do you wonder if there is more you can do with AI than engineering/game (engine) development? You hesitate to tell your professors a... ]]></description>
-    <pubDate>Thu, 15 Oct 2026 19:11:18 GMT</pubDate>
+    <description><![CDATA[ (Let’s Put Our) Tokens on the Table A Seminar Series About AI and Games Do you feel behind, confused, and anxious about AI today, and you want to do something about it? Do you wonder if there is more you can do with AI than engineering/game (engine) development? You hesitate to tell your professors ... ]]></description>
+    <pubDate>Fri, 16 Oct 2026 19:44:10 GMT</pubDate>
+  </item><item>
+    <title>CTIN 534</title>
+    <link>https://peterbrinson.github.io/teach/534/</link>
+    <guid>https://peterbrinson.github.io/teach/534/</guid>
+    <description><![CDATA[ Units: 4 Fall 2026 Breakfast Section: Tue, Thu, 10:00 am–12:20 pm Lunch Section: Tue, Thu, 1:00–3:20 pm Go To Schedule Instructor: Peter Brinson Student Assistant: Yinuo Chen Student Assistant: George Zou Course Description Is Life A Story or a Game? We will study and practice how narrative video ga... ]]></description>
+    <pubDate>Fri, 16 Oct 2026 19:42:32 GMT</pubDate>
   </item><item>
     <title>Seminar 2 - Thinking and Doing</title>
     <link>https://peterbrinson.github.io/teach/TOTT/Seminars/TOTT-Seminar-2---Thinking-and-Doing</link>
@@ -29,12 +41,6 @@
     <guid>https://peterbrinson.github.io/teach/534/Lectures/Week-8.2---Creativity</guid>
     <description><![CDATA[  Let’s Review Visual and Cinematic Grammar Affords Communication The Protagonist Problems Change Narrative Roles So Far: The Investigator Engages Architecture’s Narrative Point of View: Character Knowledge (In Sync?) Our Learning Modernism (The 20th Century) Point of View (different than last slide)... ]]></description>
     <pubDate>Thu, 15 Oct 2026 15:26:03 GMT</pubDate>
-  </item><item>
-    <title>Queryable Knowledge Bases</title>
-    <link>https://peterbrinson.github.io/teach/TOTT/Seminars/Talks/Queryable-Knowledge-Base</link>
-    <guid>https://peterbrinson.github.io/teach/TOTT/Seminars/Talks/Queryable-Knowledge-Base</guid>
-    <description><![CDATA[ A queryable knowledge base is a folder of plain text files on your own computer that you can ask questions of — your course material, your research, your production notes, your team’s scattered documents, gathered in one place and written so an AI can read all of it. ]]></description>
-    <pubDate>Thu, 15 Oct 2026 00:54:32 GMT</pubDate>
   </item><item>
     <title>Frontmatter</title>
     <link>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Frontmatter</link>
@@ -59,12 +65,6 @@
     <guid>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---LLM/Tutorial-1015---Claude-Code-Desktop-Quick-Start</guid>
     <description><![CDATA[ 0. Introduction Outcome. ]]></description>
     <pubDate>Wed, 14 Oct 2026 22:15:07 GMT</pubDate>
-  </item><item>
-    <title>Situated Player Role 3 - The Entrant, World as Threshold</title>
-    <link>https://peterbrinson.github.io/teach/PBOH/Design/Storytelling/Situated-Player-Role-3---The-Entrant,-World-as-Threshold</link>
-    <guid>https://peterbrinson.github.io/teach/PBOH/Design/Storytelling/Situated-Player-Role-3---The-Entrant,-World-as-Threshold</guid>
-    <description><![CDATA[ Summarized in: Situated Player Roles Previous: Situated Player Role 2: The Traveler | Next: Situated Player Role 4: The Dreamer The Entrant has arrived at a boundary. ]]></description>
-    <pubDate>Wed, 14 Oct 2026 22:08:38 GMT</pubDate>
   </item>
     </channel>
   </rss>
