@@ -6,11 +6,17 @@
       <description>Last 10 notes on PB Teach</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>(Let&#039;s Put Our) Tokens on the Table</title>
+    <link>https://peterbrinson.github.io/teach/TOTT/</link>
+    <guid>https://peterbrinson.github.io/teach/TOTT/</guid>
+    <description><![CDATA[ (Let’s Put Our) Tokens on the Table A Seminar Series About AI and Games Do you feel behind, confused, and anxious about AI today, and you want to do something about it? Do you wonder if there is more you can do with AI than engineering/game (engine) development? You hesitate to tell your professors ... ]]></description>
+    <pubDate>Sat, 17 Oct 2026 18:40:24 GMT</pubDate>
+  </item><item>
     <title>Seminar 1 - Your First Upgrades</title>
     <link>https://peterbrinson.github.io/teach/TOTT/Seminars/TOTT-Seminar-1---Your-First-Upgrades</link>
     <guid>https://peterbrinson.github.io/teach/TOTT/Seminars/TOTT-Seminar-1---Your-First-Upgrades</guid>
-    <description><![CDATA[ Monday, October 26. SCI 108. (time, tbd) · Part of Tokens on the Table. ]]></description>
-    <pubDate>Sat, 17 Oct 2026 00:19:28 GMT</pubDate>
+    <description><![CDATA[ Monday, October 26. 12:30pm. SCI 108. · Part of Tokens on the Table. ]]></description>
+    <pubDate>Sat, 17 Oct 2026 18:39:52 GMT</pubDate>
   </item><item>
     <title>Queryable Knowledge Bases</title>
     <link>https://peterbrinson.github.io/teach/TOTT/Seminars/Talks/Queryable-Knowledge-Base</link>
@@ -29,12 +35,6 @@
     <guid>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Tips</guid>
     <description><![CDATA[  Effort and models Get to know your LLM’s effort: how much thinking it does before it answers. ]]></description>
     <pubDate>Fri, 16 Oct 2026 23:59:48 GMT</pubDate>
-  </item><item>
-    <title>(Let&#039;s Put Our) Tokens on the Table</title>
-    <link>https://peterbrinson.github.io/teach/TOTT/</link>
-    <guid>https://peterbrinson.github.io/teach/TOTT/</guid>
-    <description><![CDATA[ (Let’s Put Our) Tokens on the Table A Seminar Series About AI and Games Do you feel behind, confused, and anxious about AI today, and you want to do something about it? Do you wonder if there is more you can do with AI than engineering/game (engine) development? You hesitate to tell your professors ... ]]></description>
-    <pubDate>Fri, 16 Oct 2026 19:44:10 GMT</pubDate>
   </item><item>
     <title>CTIN 534</title>
     <link>https://peterbrinson.github.io/teach/534/</link>
