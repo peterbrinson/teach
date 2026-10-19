@@ -6,65 +6,65 @@
       <description>Last 10 notes on PB Teach</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>Seminar 2 - Thinking and Doing</title>
-    <link>https://peterbrinson.github.io/teach/TOTT/Seminars/TOTT-Seminar-2---Thinking-and-Doing</link>
-    <guid>https://peterbrinson.github.io/teach/TOTT/Seminars/TOTT-Seminar-2---Thinking-and-Doing</guid>
-    <description><![CDATA[ Monday, November 9. SCI 108. Part of Tokens on the Table. ]]></description>
-    <pubDate>Sat, 17 Oct 2026 18:46:28 GMT</pubDate>
+    <title>Meeting the World</title>
+    <link>https://peterbrinson.github.io/teach/PBOH/Design/Worldbuilding/The-Experience/Meeting-the-World</link>
+    <guid>https://peterbrinson.github.io/teach/PBOH/Design/Worldbuilding/The-Experience/Meeting-the-World</guid>
+    <description><![CDATA[ Let us focus on brief moments within a situation, steps within “the interval of play” articulated in Situational Game Design for Bounded Worlds. ]]></description>
+    <pubDate>Mon, 19 Oct 2026 17:27:38 GMT</pubDate>
   </item><item>
-    <title>Seminar 1 - Your First Upgrades</title>
-    <link>https://peterbrinson.github.io/teach/TOTT/Seminars/TOTT-Seminar-1---Your-First-Upgrades</link>
-    <guid>https://peterbrinson.github.io/teach/TOTT/Seminars/TOTT-Seminar-1---Your-First-Upgrades</guid>
-    <description><![CDATA[ Monday, October 26. 12:30pm. SCI 108. · Part of Tokens on the Table. ]]></description>
-    <pubDate>Sat, 17 Oct 2026 18:45:54 GMT</pubDate>
+    <title>Tutorial 2021 - Your First Persistent Workspace (with Antigravity)</title>
+    <link>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---LLM/Tutorial-2021---Your-First-Persistent-Workspace-(with-Antigravity)</link>
+    <guid>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---LLM/Tutorial-2021---Your-First-Persistent-Workspace-(with-Antigravity)</guid>
+    <description><![CDATA[ 0. Introduction Outcome. ]]></description>
+    <pubDate>Mon, 19 Oct 2026 17:27:04 GMT</pubDate>
   </item><item>
-    <title>(Let&#039;s Put Our) Tokens on the Table</title>
-    <link>https://peterbrinson.github.io/teach/TOTT/</link>
-    <guid>https://peterbrinson.github.io/teach/TOTT/</guid>
-    <description><![CDATA[ (Let’s Put Our) Tokens on the Table A Seminar Series About AI and Games Do you feel behind, confused, and anxious about AI today, and you want to do something about it? Do you wonder if there is more you can do with AI than engineering/game (engine) development? You hesitate to tell your professors ... ]]></description>
-    <pubDate>Sat, 17 Oct 2026 18:40:24 GMT</pubDate>
+    <title>Tutorial 2030 - Your First Queryable Knowledge Base</title>
+    <link>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---LLM/Tutorial-2030---Your-First-Queryable-Knowledge-Base</link>
+    <guid>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---LLM/Tutorial-2030---Your-First-Queryable-Knowledge-Base</guid>
+    <description><![CDATA[ 0. Introduction Outcome. ]]></description>
+    <pubDate>Mon, 19 Oct 2026 17:27:04 GMT</pubDate>
   </item><item>
-    <title>Queryable Knowledge Bases</title>
-    <link>https://peterbrinson.github.io/teach/TOTT/Seminars/Talks/Queryable-Knowledge-Base</link>
-    <guid>https://peterbrinson.github.io/teach/TOTT/Seminars/Talks/Queryable-Knowledge-Base</guid>
-    <description><![CDATA[ A queryable knowledge base is a folder of plain text files on your own computer that you can ask questions of — your course material, your research, your production notes, your team’s scattered documents, gathered in one place and written so an AI can read all of it. ]]></description>
-    <pubDate>Sat, 17 Oct 2026 00:13:21 GMT</pubDate>
+    <title>Week 6.2 — AI Workshop 2: Your Own Knowledge Base</title>
+    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-6.2---AI-Workshop-2</link>
+    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-6.2---AI-Workshop-2</guid>
+    <description><![CDATA[ AI Workshop 2 — Your Own Knowledge Base In Workshop 1 we turned Anthony and Deloris’s messy PHO project into a persistent workspace. ]]></description>
+    <pubDate>Mon, 19 Oct 2026 17:26:55 GMT</pubDate>
   </item><item>
-    <title>Session Limits: Context Window, Usage, and Compacting</title>
-    <link>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Session-Limits</link>
-    <guid>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Session-Limits</guid>
-    <description><![CDATA[ Every AI session runs out of something. ]]></description>
-    <pubDate>Sat, 17 Oct 2026 00:03:00 GMT</pubDate>
+    <title>Week 3.1 — AI Workshop 1: Persistent Workspaces</title>
+    <link>https://peterbrinson.github.io/teach/534/In-Class/534-In-Class-Week-3.1-AI-Workshop-1</link>
+    <guid>https://peterbrinson.github.io/teach/534/In-Class/534-In-Class-Week-3.1-AI-Workshop-1</guid>
+    <description><![CDATA[ AI Workshop 1 — Persistent Workspaces We will use Tutorial 2020, 2021 or 2022 to turn Anthony and Deloris’s messy PHO game-project into a persistent workspace. ]]></description>
+    <pubDate>Mon, 19 Oct 2026 17:26:40 GMT</pubDate>
   </item><item>
-    <title>Tips</title>
-    <link>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Tips</link>
-    <guid>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Tips</guid>
-    <description><![CDATA[  Effort and models Get to know your LLM’s effort: how much thinking it does before it answers. ]]></description>
-    <pubDate>Fri, 16 Oct 2026 23:59:48 GMT</pubDate>
+    <title>Week 2.2 — AI Workshop 1: Persistent Workspaces</title>
+    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-2.2---AI-Workshop-1</link>
+    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-2.2---AI-Workshop-1</guid>
+    <description><![CDATA[ AI Workshop 1 — Persistent Workspaces We will use Tutorial 2020, 2021 or 2022 to turn Anthony and Deloris’s messy PHO game-project into a persistent workspace. ]]></description>
+    <pubDate>Mon, 19 Oct 2026 17:26:40 GMT</pubDate>
+  </item><item>
+    <title>Tutorials - LLM</title>
+    <link>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---LLM/</link>
+    <guid>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---LLM/</guid>
+    <description><![CDATA[ Learning persistent-workspace fundamentals instead? Start here The first workshop comes in three versions — same project, same moves, different tool. ]]></description>
+    <pubDate>Mon, 19 Oct 2026 17:26:40 GMT</pubDate>
+  </item><item>
+    <title>Markdown</title>
+    <link>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Markdown</link>
+    <guid>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Markdown</guid>
+    <description><![CDATA[ Markdown is plain text in files ending in .md, with a couple of formatting conventions for headings and links. ]]></description>
+    <pubDate>Mon, 19 Oct 2026 17:26:28 GMT</pubDate>
   </item><item>
     <title>CTIN 534</title>
     <link>https://peterbrinson.github.io/teach/534/</link>
     <guid>https://peterbrinson.github.io/teach/534/</guid>
     <description><![CDATA[ Units: 4 Fall 2026 Breakfast Section: Tue, Thu, 10:00 am–12:20 pm Lunch Section: Tue, Thu, 1:00–3:20 pm Go To Schedule Instructor: Peter Brinson Student Assistant: Yinuo Chen Student Assistant: George Zou Course Description Is Life A Story or a Game? We will study and practice how narrative video ga... ]]></description>
-    <pubDate>Fri, 16 Oct 2026 19:42:32 GMT</pubDate>
+    <pubDate>Mon, 19 Oct 2026 17:26:28 GMT</pubDate>
   </item><item>
-    <title>Week 8.2 - Creativity</title>
-    <link>https://peterbrinson.github.io/teach/534/Lectures/Week-8.2---Creativity</link>
-    <guid>https://peterbrinson.github.io/teach/534/Lectures/Week-8.2---Creativity</guid>
-    <description><![CDATA[  Let’s Review Visual and Cinematic Grammar Affords Communication The Protagonist Problems Change Narrative Roles So Far: The Investigator Engages Architecture’s Narrative Point of View: Character Knowledge (In Sync?) Our Learning Modernism (The 20th Century) Point of View (different than last slide)... ]]></description>
-    <pubDate>Thu, 15 Oct 2026 15:26:03 GMT</pubDate>
-  </item><item>
-    <title>Frontmatter</title>
-    <link>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Frontmatter</link>
-    <guid>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Frontmatter</guid>
-    <description><![CDATA[ Frontmatter is a short block of labels at the very top of a markdown file, set off by two lines of dashes. ]]></description>
-    <pubDate>Thu, 15 Oct 2026 00:38:06 GMT</pubDate>
-  </item><item>
-    <title>CTIN 389</title>
-    <link>https://peterbrinson.github.io/teach/389/</link>
-    <guid>https://peterbrinson.github.io/teach/389/</guid>
-    <description><![CDATA[ Units: 4 Fall 2026 Section: Tue, Thu, 4:00–5:50 pm Room: SCI 113 Go To Schedule Instructor: Peter Brinson Student Assistant: Luke Pannell Course Description This course teaches fundamental skills of digital game development alongside the basic principles of level design. ]]></description>
-    <pubDate>Wed, 14 Oct 2026 22:46:23 GMT</pubDate>
+    <title>Due Week 5.2 — Bring Your Own Material</title>
+    <link>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Week-5.2</link>
+    <guid>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Week-5.2</guid>
+    <description><![CDATA[ In class we’ll work through Your First Queryable Knowledge Base together. 1. Have your agent working Ideally, you’ll use Codex on your USC account. ]]></description>
+    <pubDate>Mon, 19 Oct 2026 17:26:28 GMT</pubDate>
   </item>
     </channel>
   </rss>
