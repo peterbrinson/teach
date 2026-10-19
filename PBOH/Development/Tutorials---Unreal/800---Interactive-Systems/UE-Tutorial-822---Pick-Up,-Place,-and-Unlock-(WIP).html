@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head><title>UE Tutorial 822 - Pick Up, Place, and Unlock</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="PB Teach"/><meta property="og:title" content="UE Tutorial 822 - Pick Up, Place, and Unlock"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="UE Tutorial 822 - Pick Up, Place, and Unlock"/><meta name="twitter:description" content="By George Zou and Peter Brinson Disclaimer: this is a draft. You are welcome to ask Peter or George any questions. 0."/><meta property="og:description" content="By George Zou and Peter Brinson Disclaimer: this is a draft. You are welcome to ask Peter or George any questions. 0."/><meta property="og:image:alt" content="By George Zou and Peter Brinson Disclaimer: this is a draft. You are welcome to ask Peter or George any questions. 0."/><meta property="og:image" content="https://peterbrinson.github.io/teach/static/og-image.png"/><meta property="og:image:url" content="https://peterbrinson.github.io/teach/static/og-image.png"/><meta name="twitter:image" content="https://peterbrinson.github.io/teach/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="peterbrinson.github.io/teach"/><meta property="og:url" content="https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/800---Interactive-Systems/UE-Tutorial-822---Pick-Up,-Place,-and-Unlock-(WIP)"/><meta property="twitter:url" content="https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/800---Interactive-Systems/UE-Tutorial-822---Pick-Up,-Place,-and-Unlock-(WIP)"/><link rel="icon" href="../../../../static/icon.png"/><meta name="description" content="By George Zou and Peter Brinson Disclaimer: this is a draft. You are welcome to ask Peter or George any questions. 0."/><meta name="generator" content="Quartz"/><link href="../../../../index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiQzpcXFVzZXJzXFxicmluc1xcRG9jdW1lbnRzXFxPYnNpZGlhblxcc2l0ZVxccXVhcnR6XFxjb21wb25lbnRzXFxzdHlsZXMiLCJzb3VyY2VzIjpbIm1lcm1haWQuaW5saW5lLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUdGO0VBQ0U7OztBQUtGO0VBQ0U7RUFDQTs7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7O0FBR0Y7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFOztBQUlGO0VBQ0U7RUFDQTtFQUNBIiwic291cmNlc0NvbnRlbnQiOlsiLmV4cGFuZC1idXR0b24ge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsb2F0OiByaWdodDtcbiAgcGFkZGluZzogMC40cmVtO1xuICBtYXJnaW46IDAuM3JlbTtcbiAgcmlnaHQ6IDA7IC8vIE5PVEU6IHJpZ2h0IHdpbGwgYmUgc2V0IGluIG1lcm1haWQuaW5saW5lLnRzXG4gIGNvbG9yOiB2YXIoLS1ncmF5KTtcbiAgYm9yZGVyLWNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICBib3JkZXI6IDFweCBzb2xpZDtcbiAgYm9yZGVyLXJhZGl1czogNXB4O1xuICBvcGFjaXR5OiAwO1xuICB0cmFuc2l0aW9uOiAwLjJzO1xuXG4gICYgPiBzdmcge1xuICAgIGZpbGw6IHZhcigtLWxpZ2h0KTtcbiAgICBmaWx0ZXI6IGNvbnRyYXN0KDAuMyk7XG4gIH1cblxuICAmOmhvdmVyIHtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgYm9yZGVyLWNvbG9yOiB2YXIoLS1zZWNvbmRhcnkpO1xuICB9XG5cbiAgJjpmb2N1cyB7XG4gICAgb3V0bGluZTogMDtcbiAgfVxufVxuXG5wcmUge1xuICAmOmhvdmVyID4gLmV4cGFuZC1idXR0b24ge1xuICAgIG9wYWNpdHk6IDE7XG4gICAgdHJhbnNpdGlvbjogMC4ycztcbiAgfVxufVxuXG4jbWVybWFpZC1jb250YWluZXIge1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIGNvbnRhaW46IGxheW91dDtcbiAgei1pbmRleDogOTk5O1xuICBsZWZ0OiAwO1xuICB0b3A6IDA7XG4gIHdpZHRoOiAxMDB2dztcbiAgaGVpZ2h0OiAxMDB2aDtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgZGlzcGxheTogbm9uZTtcbiAgYmFja2Ryb3AtZmlsdGVyOiBibHVyKDRweCk7XG4gIGJhY2tncm91bmQ6IHJnYmEoMCwgMCwgMCwgMC41KTtcblxuICAmLmFjdGl2ZSB7XG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICB9XG5cbiAgJiA+ICNtZXJtYWlkLXNwYWNlIHtcbiAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0KTtcbiAgICBib3JkZXItcmFkaXVzOiA1cHg7XG4gICAgcG9zaXRpb246IGZpeGVkO1xuICAgIHRvcDogNTAlO1xuICAgIGxlZnQ6IDUwJTtcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTAlKTtcbiAgICBoZWlnaHQ6IDgwdmg7XG4gICAgd2lkdGg6IDgwdnc7XG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcblxuICAgICYgPiAubWVybWFpZC1jb250ZW50IHtcbiAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICAgIHRyYW5zZm9ybS1vcmlnaW46IDAgMDtcbiAgICAgIHRyYW5zaXRpb246IHRyYW5zZm9ybSAwLjFzIGVhc2U7XG4gICAgICBvdmVyZmxvdzogdmlzaWJsZTtcbiAgICAgIG1pbi1oZWlnaHQ6IDIwMHB4O1xuICAgICAgbWluLXdpZHRoOiAyMDBweDtcblxuICAgICAgcHJlIHtcbiAgICAgICAgbWFyZ2luOiAwO1xuICAgICAgICBib3JkZXI6IG5vbmU7XG4gICAgICB9XG5cbiAgICAgIHN2ZyB7XG4gICAgICAgIG1heC13aWR0aDogbm9uZTtcbiAgICAgICAgaGVpZ2h0OiBhdXRvO1xuICAgICAgfVxuICAgIH1cblxuICAgICYgPiAubWVybWFpZC1jb250cm9scyB7XG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICBib3R0b206IDIwcHg7XG4gICAgICByaWdodDogMjBweDtcbiAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICBnYXA6IDhweDtcbiAgICAgIHBhZGRpbmc6IDhweDtcbiAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0KTtcbiAgICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICBib3JkZXItcmFkaXVzOiA2cHg7XG4gICAgICBib3gtc2hhZG93OiAwIDJweCA0cHggcmdiYSgwLCAwLCAwLCAwLjEpO1xuICAgICAgei1pbmRleDogMjtcblxuICAgICAgLm1lcm1haWQtY29udHJvbC1idXR0b24ge1xuICAgICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICAgICAgd2lkdGg6IDMycHg7XG4gICAgICAgIGhlaWdodDogMzJweDtcbiAgICAgICAgcGFkZGluZzogMDtcbiAgICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgICBjb2xvcjogdmFyKC0tZGFyayk7XG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICAgICBmb250LXNpemU6IDE2cHg7XG4gICAgICAgIGZvbnQtZmFtaWx5OiB2YXIoLS1ib2R5Rm9udCk7XG4gICAgICAgIHRyYW5zaXRpb246IGFsbCAwLjJzIGVhc2U7XG5cbiAgICAgICAgJjpob3ZlciB7XG4gICAgICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgICAgfVxuXG4gICAgICAgICY6YWN0aXZlIHtcbiAgICAgICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoMXB4KTtcbiAgICAgICAgfVxuXG4gICAgICAgIC8vIFN0eWxlIHRoZSByZXNldCBidXR0b24gZGlmZmVyZW50bHlcbiAgICAgICAgJjpudGgtY2hpbGQoMikge1xuICAgICAgICAgIHdpZHRoOiBhdXRvO1xuICAgICAgICAgIHBhZGRpbmc6IDAgMTJweDtcbiAgICAgICAgICBmb250LXNpemU6IDE0cHg7XG4gICAgICAgIH1cbiAgICAgIH1cbiAgICB9XG4gIH1cbn1cbiJdfQ== */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../../../prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../../../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://peterbrinson.github.io/teach/index.xml"/></head><body data-slug="PBOH/Development/Tutorials---Unreal/800---Interactive-Systems/UE-Tutorial-822---Pick-Up,-Place,-and-Unlock-(WIP)"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><div class="spacer mobile-only"></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>{let rank={389:1,534:2,geidai:3,TOTT:4,PBOH:5},ra=rank[a.slugSegment]??99,rb=rank[b.slugSegment]??99;if(ra!==rb)return ra-rb;let pinA=!a.isFolder&amp;&amp;a.slugSegment===\&quot;Tips\&quot;?0:1,pinB=!b.isFolder&amp;&amp;b.slugSegment===\&quot;Tips\&quot;?0:1;return pinA!==pinB?pinA-pinB:!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1}&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>{let shortNames={TOTT:\&quot;Tokens on the Table\&quot;,PBOH:\&quot;PB Office Hours\&quot;,Storytelling:\&quot;Storytelling\&quot;,Worldbuilding:\&quot;Worldbuilding\&quot;,_References:\&quot;References\&quot;};node.isFolder&amp;&amp;shortNames[node.slugSegment]&amp;&amp;(node.displayName=shortNames[node.slugSegment])}&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-366"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2></h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-366" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../../PBOH/">PBOH</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../../PBOH/Development/">Development</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../../PBOH/Development/Tutorials---Unreal/">Tutorials   Unreal</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../../PBOH/Development/Tutorials---Unreal/800---Interactive-Systems/">800   Interactive Systems</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>UE Tutorial 822   Pick Up, Place, and Unlock</a></div></nav><h1 class="article-title">UE Tutorial 822 - Pick Up, Place, and Unlock</h1></div></div><article class="popover-hint unreal-tutorial"><p><span style="color:#d9a8b3;font-size:1.4rem;"><em>By George Zou and Peter Brinson</em></span></p>
+<blockquote>
+<p><em>Disclaimer: this is a draft. You are welcome to ask Peter or George any questions.</em></p>
+</blockquote>
+<h2 id="0-introduction">0. Introduction<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#0-introduction" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Now that we have learned how to build a basic interactable, let’s see if we can build a more complex puzzle using it. Hopefully, it can be helpful to making an Entrant game.</p>
+<p>Here’s the idea of the puzzle we’ll build in this tutorial:
+A door is locked. Two colored boxes sit in the room, and two colored pads sit on the floor. Player needs to put the corresponding colored box onto the colored pad to unlock the door. If the player removes a box from a pad, the door closes again.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_13_101.gif" width="auto" height="auto" alt/></p>
+<p><strong>Learning Objectives:</strong></p>
+<ul>
+<li>Highlight whatever the player is looking at with an outline (Custom Depth and a post-process material)</li>
+<li>Create child Blueprints that inherit hover, UI, and interaction from <code>BP_Interactable_Base</code></li>
+<li>Carry a physics object in front of the camera with a <strong>Physics Handle</strong>, the way Portal does</li>
+<li>Snap a carried object onto a pad, and take it back, with <strong>Attach Component To Component</strong></li>
+<li>Match objects to pads with an <strong>Enumeration</strong> and color them in the <strong>Construction Script</strong></li>
+<li>Open a door when every pad is solved, using an <strong>Event Dispatcher</strong> and a <strong>Timeline</strong></li>
+</ul>
+<hr/>
+<h2 id="chapter-a-prepare-the-821-system">Chapter A: Prepare the 821 System<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#chapter-a-prepare-the-821-system" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="a0-check-the-component-hierarchy">A0. Check the Component Hierarchy<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#a0-check-the-component-hierarchy" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Open <code>BP_Interactable_Base</code>. In <strong>Components</strong>, make sure <code>InteractRadius</code> and the tip widget are both children of <code>Mesh_Interactable</code>. If either is attached to <code>DefaultSceneRoot</code>, drag it onto the mesh.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_13_104.png" width="auto" height="auto" alt/></p>
+<p><span class="hint">The box you build later simulates physics. A physics object moves away from the actor’s root, and only the components parented under it come along. If the radius stays behind, the box stops being interactable once you carry it somewhere.</span></p>
+<h3 id="a1-count-overlaps-instead-of-toggling">A1. Count Overlaps Instead of Toggling<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#a1-count-overlaps-instead-of-toggling" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>In 821, entering any interact radius turns the trace on, and leaving any radius turns it off. That works with one interactable. In this tutorial the boxes and pads sit close together, so the player is often inside two radii at once. Step out of one and the trace stops, even though you are still standing next to the other.</p>
+<p>The fix is to count how many radii the player is inside.</p>
+<p>In <strong>InteractionComponent</strong>, add an <strong>Integer</strong> variable named <code>OverlapCount</code>.</p>
+<p>In the <strong>On Interactable Overlap</strong> event, replace the existing logic with:</p>
+<ul>
+<li><strong>Branch</strong> on <code>bIsOverlapped</code></li>
+<li><strong>True:</strong> set <code>OverlapCount</code> to <code>OverlapCount + 1</code></li>
+<li><strong>False:</strong> set <code>OverlapCount</code> to <strong>Max</strong> of (<code>OverlapCount - 1</code>, <code>0</code>)</li>
+<li>Both paths continue into one <strong>Draw Trace</strong> call. Plug <code>OverlapCount > 0</code> into <code>bIsDrawTrace</code>.</li>
+</ul>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_13_107.png" width="auto" height="auto" alt/></p>
+<p><span class="hint">The <strong>Max</strong> with <code>0</code> is a safety net. If an End Overlap ever fires without a matching Begin Overlap, the count can’t go negative.</span></p>
+<h3 id="a2-show-e-in-the-hover-tip">A2. Show “E” in the Hover Tip<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#a2-show-e-in-the-hover-tip" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Open <code>WB_InteractionTip</code>. Inside the Canvas Panel, add a <strong>Text</strong> widget. Set its text to <code>E</code>, size around <code>36</code>, and center it on the image from 821. You can delete the image if you prefer just the letter.</p>
+<p>To keep the letter readable against any background, open <strong>Details → Font → Outline Settings</strong> and set <strong>Outline Size</strong> to <code>2</code>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_13_110.png" width="auto" height="auto" alt/></p>
+<p><span class="save">Save All</span></p>
+<h3 id="a3-optionally-create-the-outline-material">A3. Optionally, Create the Outline Material<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#a3-optionally-create-the-outline-material" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>NOTE: This part is totally optional, and beginners might find it slightly advanced. Having an outline to show something is interactable will add juice to the puzzle, but this is not a must.</p>
+<p>The outline is a post-process effect. Any mesh that has <strong>Render Custom Depth</strong> turned on gets drawn into a hidden buffer. A post-process material finds the edges of that buffer and paints a line around them.</p>
+<p>First, check <strong>Project Settings → Rendering → Postprocessing → Custom Depth-Stencil Pass</strong>. It should be <code>Enabled</code>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_13_113.png" width="auto" height="auto" alt/></p>
+<p>Right-click in the Content Browser, create a <strong>Material</strong>, and name it <code>M_PP_Outline</code>. Open it. In <strong>Details</strong>, set <strong>Material Domain</strong> to <code>Post Process</code>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_13_116.png" width="auto" height="auto" alt/></p>
+<p>Now build the edge detection. For each pixel, the material asks two questions. Is this pixel outside the object? Is a neighboring pixel inside it? If both answers are yes, the pixel is on the outline.</p>
+<ol>
+<li>Add a <strong>ScreenPosition</strong> node. Its <code>ViewportUV</code> output is the current pixel.</li>
+<li>Add a <strong>ViewSize</strong> node and <strong>Divide</strong> <code>1</code> by it. This gives the size of one pixel. <strong>Multiply</strong> that by a <strong>Scalar Parameter</strong> named <code>Thickness</code> (default <code>2</code>).</li>
+<li>Create four <strong>Constant2Vector</strong> nodes: <code>(1, 0)</code>, <code>(-1, 0)</code>, <code>(0, 1)</code>, <code>(0, -1)</code>. <strong>Multiply</strong> each by the result of step 2, then <strong>Add</strong> each to <code>ViewportUV</code>. These are the four neighboring pixels.</li>
+<li>Add five <strong>SceneTexture</strong> nodes and set each one’s <strong>Scene Texture Id</strong> to <code>CustomDepth</code>. Wire <code>ViewportUV</code> into the first one’s <code>UVs</code>. Wire the four neighbors from step 3 into the other four.</li>
+<li>Take the <strong>R</strong> output of the four neighbor nodes and combine them with three <strong>Min</strong> nodes into one value. This is the nearest depth around the pixel.</li>
+<li>Add two <strong>If</strong> nodes, each with <code>B = 5000</code>:
+<ul>
+<li>The first gets <code>A</code> = the nearest neighbor depth from step 5, with <code>A &lt; B</code> set to <code>1</code> and the other two outputs set to <code>0</code>. It answers “is a neighbor inside an object?”</li>
+<li>The second gets <code>A</code> = the center pixel’s depth (the first SceneTexture’s <strong>R</strong>), with <code>A > B</code> and <code>A == B</code> set to <code>1</code> and <code>A &lt; B</code> set to <code>0</code>. It answers “is this pixel outside an object?”</li>
+</ul>
+</li>
+<li><strong>Multiply</strong> the two <strong>If</strong> results. The product is <code>1</code> on the outline and <code>0</code> everywhere else.</li>
+<li>Add one more <strong>SceneTexture</strong> node set to <code>PostProcessInput0</code>. This is the normal rendered image.</li>
+<li><strong>Lerp</strong> with <code>A</code> = <code>PostProcessInput0</code> <strong>Color</strong>, <code>B</code> = a <strong>Vector Parameter</strong> named <code>OutlineColor</code> (white, or any color you like), and <strong>Alpha</strong> = the result of step 7. Wire the Lerp into <strong>Emissive Color</strong>.</li>
+</ol>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_13_119.png" width="auto" height="auto" alt/></p>
+<p><span class="hint">Pixels with nothing drawn into Custom Depth report a huge depth value, which is why <code>5000</code> (50 meters) works as the “inside or outside” threshold. If Unreal complains about mixing float3 and float4, add a <strong>Component Mask</strong> (R, G, B) after each color before the Lerp.</span></p>
+<p><span class="save">Save All</span></p>
+<h3 id="a35-turn-on-the-outline">A3.5. Turn on the Outline<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#a35-turn-on-the-outline" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Drag a <strong>Post Process Volume</strong> into the level. In Details:</p>
+<ul>
+<li>Check <strong>Infinite Extent (Unbound)</strong> so it affects the whole level.</li>
+<li>Under <strong>Rendering Features → Post Process Materials</strong>, click <strong>+</strong>, choose <strong>Asset Reference</strong>, and pick <code>M_PP_Outline</code>.</li>
+</ul>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_13_122.png" width="auto" height="auto" alt/></p>
+<p>Back in <code>BP_Interactable_Base</code>, find the <code>On Hovered</code> and <code>On UnHovered</code> events from 821 B1. After the widget show/hide logic, drag in <code>Mesh_Interactable</code> and add <strong>Set Render Custom Depth</strong>. Check the box in <code>On Hovered</code> and leave it unchecked in <code>On UnHovered</code>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_13_125.png" width="auto" height="auto" alt/></p>
+<p>Test it. Look at your 821 cube: the outline and the “E” should appear together and disappear together.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_13_128.gif" width="auto" height="auto" alt/></p>
+<p><span class="hint">Because this lives in the base class, every child Blueprint you make from now on gets the outline and the “E” for free. That’s the point of the next two chapters.</span></p>
+<hr/>
+<h2 id="chapter-b-make-a-box">Chapter B: Make a Box<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#chapter-b-make-a-box" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="b0-create-a-key-enumeration">B0. Create a Key Enumeration<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#b0-create-a-key-enumeration" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>A box and a pad match when they share a <strong>key</strong>. Color is just how the key looks to the player.</p>
+<p>Right-click in the Content Browser → <strong>Blueprint → Enumeration</strong>. Name it <code>E_PuzzleKey</code>. Open it and add three entries: <code>Red</code>, <code>Blue</code>, <code>Green</code>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_13_131.png" width="auto" height="auto" alt/></p>
+<p><span class="hint">Because the logic compares keys instead of colors, you can later swap colors for shapes, symbols, or sounds without touching any of the matching logic.</span></p>
+<h3 id="b1-create-a-color-material">B1. Create a Color Material<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#b1-create-a-color-material" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Create a <strong>Material</strong> named <code>M_PuzzleColor</code>. Add a <strong>Vector Parameter</strong> named <code>Color</code> and wire it into <strong>Base Color</strong>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_13_134.png" width="auto" height="auto" alt/></p>
+<h3 id="b2-create-the-box-as-a-child-blueprint">B2. Create the Box as a Child Blueprint<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#b2-create-the-box-as-a-child-blueprint" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Right-click <code>BP_Interactable_Base</code> in the Content Browser and choose <strong>Create Child Blueprint Class</strong>. Name it <code>BP_PuzzleBox</code>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_13_137.png" width="auto" height="auto" alt/></p>
+<p>Open it. The components from 821 are already there. Inherited components can’t be renamed or reparented, but their Details can be changed.</p>
+<p>Select <code>Mesh_Interactable</code>:</p>
+<ul>
+<li>Set <strong>Scale</strong> to <code>0.5, 0.5, 0.5</code>. A full-size cube is a meter wide, too big to carry.</li>
+<li>Under <strong>Physics</strong>, check <strong>Simulate Physics</strong>.</li>
+</ul>
+<p>Select <code>InteractRadius</code> and double its <strong>Sphere Radius</strong>, since it shrank with the mesh.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_13_140.png" width="auto" height="auto" alt/></p>
+<h3 id="b3-add-variables">B3. Add Variables<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#b3-add-variables" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>In <code>BP_PuzzleBox</code>, add:</p>
+<ul>
+<li><code>Key</code>: type <strong>E_PuzzleKey</strong>. Click the eye icon to make it <strong>Instance Editable</strong>, so each box in the level can have its own key.</li>
+</ul>
+<p>The box also needs to remember which pad it sits on, but the pad doesn’t exist yet. You’ll add that in D3.</p>
+<h3 id="b4-color-the-box-in-the-construction-script">B4. Color the Box in the Construction Script<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#b4-color-the-box-in-the-construction-script" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Open the <strong>Construction Script</strong> tab. It runs in the editor every time you change the box, so the color updates as soon as you change <code>Key</code>.</p>
+<ul>
+<li>Drag in <code>Mesh_Interactable</code> and add <strong>Create Dynamic Material Instance</strong>. Set <strong>Source Material</strong> to <code>M_PuzzleColor</code>.</li>
+<li>From its Return Value, add <strong>Set Vector Parameter Value</strong>. Set <strong>Parameter Name</strong> to <code>Color</code>.</li>
+<li>Add a <strong>Select</strong> node. Wire <code>Key</code> into its <strong>Index</strong>. The options fill in automatically, one per enum entry. Set Red, Blue, and Green colors.</li>
+<li>Wire the Select output into <strong>Value</strong>.</li>
+</ul>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_13_143.png" width="auto" height="auto" alt/></p>
+<p>Drag two boxes into the level. Set one’s <code>Key</code> to <code>Red</code> and the other’s to <code>Blue</code>. They should change color in the editor right away.</p>
+<h3 id="b5-three-states-for-the-box">B5. Three States for the Box<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#b5-three-states-for-the-box" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>A box is always in one of three states:</p>
+<ul>
+<li><strong>Loose:</strong> lying in the world. Physics on, and the trace can see it.</li>
+<li><strong>Held:</strong> carried by the player. Physics on, but the trace can’t see it and it can’t bump the player.</li>
+<li><strong>Snapped:</strong> sitting on a pad. Physics off, attached to the pad.</li>
+</ul>
+<p>Make one custom event per state in <code>BP_PuzzleBox</code>.</p>
+<p><strong>To Held:</strong></p>
+<ul>
+<li><strong>Detach From Component</strong> on <code>Mesh_Interactable</code> (Location, Rotation, Scale rules all <code>Keep World</code>)</li>
+<li><strong>Set Simulate Physics</strong> → true</li>
+<li><strong>Set Collision Response to Channel</strong>: Channel <code>Visibility</code>, Response <code>Ignore</code></li>
+<li><strong>Set Collision Response to Channel</strong>: Channel <code>Pawn</code>, Response <code>Ignore</code></li>
+</ul>
+<p><strong>To Loose:</strong></p>
+<ul>
+<li><strong>Set Collision Response to Channel</strong>: <code>Visibility</code> → <code>Block</code></li>
+<li><strong>Set Collision Response to Channel</strong>: <code>Pawn</code> → <code>Block</code></li>
+</ul>
+<p><strong>To Snapped:</strong> add an input <code>SnapPoint</code> of type <strong>Scene Component</strong>.</p>
+<ul>
+<li><strong>Set Simulate Physics</strong> → false</li>
+<li><strong>Set Collision Response to Channel</strong>: <code>Visibility</code> → <code>Block</code></li>
+<li><strong>Set Collision Response to Channel</strong>: <code>Pawn</code> → <code>Block</code></li>
+<li><strong>Attach Component To Component</strong>: Target <code>Mesh_Interactable</code>, Parent <code>SnapPoint</code>. Set Location and Rotation rules to <code>Snap to Target</code> and the Scale rule to <code>Keep World</code>.</li>
+</ul>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_13_146.png" width="auto" height="auto" alt/></p>
+<p><span class="hint">Why ignore <code>Visibility</code> while held? The 821 trace runs on the Visibility channel, and a carried box floats right in front of the camera. If the trace can see it, it hits the box you’re holding every time, and you can never look past it at a pad.</span></p>
+<p><span class="save">Save All</span></p>
+<hr/>
+<h2 id="chapter-c-carry-the-box">Chapter C: Carry the Box<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#chapter-c-carry-the-box" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="c0-add-a-physics-handle">C0. Add a Physics Handle<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#c0-add-a-physics-handle" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Open <code>BP_FirstPersonCharacter</code>. In <strong>Components</strong>, add a <strong>Physics Handle</strong>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_13_149.png" width="auto" height="auto" alt/></p>
+<p>A Physics Handle holds a physics object toward a target point you set every frame. The box stays a real physics object while you carry it: it bumps into walls instead of passing through them, and it lags a little behind your view.</p>
+<h3 id="c1-cache-the-handle-and-camera">C1. Cache the Handle and Camera<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#c1-cache-the-handle-and-camera" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Open <strong>InteractionComponent</strong>. Add three variables:</p>
+<ul>
+<li><code>PhysicsHandle</code>: <strong>Physics Handle Component</strong> (Object Reference)</li>
+<li><code>Camera</code>: <strong>Camera Component</strong> (Object Reference)</li>
+<li><code>HeldBox</code>: <strong>BP_PuzzleBox</strong> (Object Reference)</li>
+</ul>
+<p>From <strong>Event BeginPlay</strong>: <strong>Get Owner</strong> → <strong>Get Component by Class</strong> (<code>PhysicsHandleComponent</code>) → <strong>Set</strong> <code>PhysicsHandle</code>. Do the same with <code>CameraComponent</code> → <strong>Set</strong> <code>Camera</code>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_13_152.png" width="auto" height="auto" alt/></p>
+<p><span class="hint">Like 821’s overlap logic, this keeps the carrying code inside InteractionComponent instead of the character. Remove the component and the whole system goes with it.</span></p>
+<h3 id="c2-hold-box">C2. Hold Box<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#c2-hold-box" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>In InteractionComponent, create a <strong>Function</strong> named <code>Hold Box</code> with an input <code>Box</code> (<strong>BP_PuzzleBox</strong>).</p>
+<ul>
+<li>Call <strong>To Held</strong> on <code>Box</code></li>
+<li>From <code>PhysicsHandle</code>, call <strong>Grab Component at Location with Rotation</strong>:
+<ul>
+<li><strong>Component:</strong> <code>Box</code> → <code>Mesh_Interactable</code></li>
+<li><strong>Location:</strong> <code>Mesh_Interactable</code> → <strong>Get World Location</strong></li>
+<li><strong>Rotation:</strong> <code>Mesh_Interactable</code> → <strong>Get World Rotation</strong></li>
+</ul>
+</li>
+<li><strong>Set</strong> <code>HeldBox</code> to <code>Box</code></li>
+</ul>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_13_155.png" width="auto" height="auto" alt/></p>
+<h3 id="c3-release-box">C3. Release Box<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#c3-release-box" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Create a second <strong>Function</strong> named <code>Release Box</code>. In its Details, add an <strong>Output</strong> named <code>Box</code> (<strong>BP_PuzzleBox</strong>).</p>
+<ul>
+<li>From <code>PhysicsHandle</code>, call <strong>Release Component</strong></li>
+<li>Set the output <code>Box</code> to <code>HeldBox</code></li>
+<li><strong>Set</strong> <code>HeldBox</code> to nothing (leave the pin empty)</li>
+</ul>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_13_158.png" width="auto" height="auto" alt/></p>
+<p><span class="hint">Release Box hands back the box it was holding, so whoever called it decides what happens next. Dropping it on the floor and snapping it onto a pad both start the same way.</span></p>
+<h3 id="c4-move-the-box-every-frame">C4. Move the Box Every Frame<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#c4-move-the-box-every-frame" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Add a <strong>Float</strong> variable <code>HoldDistance</code> with a default of <code>150</code>.</p>
+<p>From <strong>Event Tick</strong>:</p>
+<ul>
+<li><strong>Is Valid</strong> <code>HeldBox</code> (the <code>?</code> node from 821)</li>
+<li><strong>Is Valid</strong> → <code>PhysicsHandle</code> → <strong>Set Target Location and Rotation</strong>:
+<ul>
+<li><strong>Location:</strong> <code>Camera</code> <strong>Get World Location</strong> + (<code>Camera</code> <strong>Get Forward Vector</strong> × <code>HoldDistance</code>)</li>
+<li><strong>Rotation:</strong> <code>Camera</code> <strong>Get World Rotation</strong></li>
+</ul>
+</li>
+</ul>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_13_161.png" width="auto" height="auto" alt/></p>
+<p><span class="hint">If the box wobbles or trails too far behind, select the PhysicsHandle in <code>BP_FirstPersonCharacter</code> and raise <strong>Linear Stiffness</strong> and <strong>Interpolation Speed</strong>.</span></p>
+<h3 id="c5-pick-up-on-interact">C5. Pick Up on Interact<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#c5-pick-up-on-interact" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Open <code>BP_PuzzleBox</code>. In the Event Graph, right-click and search for <strong>Event Interact</strong>. This overrides the <code>Interact</code> event from the parent.</p>
+<ul>
+<li><code>Character</code> → <strong>Get Component by Class</strong> (<code>InteractionComponent</code>) → <strong>Is Valid</strong> its <code>HeldBox</code>
+<ul>
+<li><strong>Is Not Valid</strong> (hands are empty): call <strong>Hold Box</strong> on the InteractionComponent with <code>Box</code> = <strong>Self</strong></li>
+<li><strong>Is Valid</strong> (already carrying something): do nothing</li>
+</ul>
+</li>
+</ul>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_13_164.png" width="auto" height="auto" alt/></p>
+<p><span class="hint">If you added a Print String to the base <code>Interact</code> event in 821 C2, it no longer fires for boxes. Right-click Event Interact → <strong>Add Call to Parent Function</strong> if you want to keep it.</span></p>
+<h3 id="c6-drop-with-e">C6. Drop with E<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#c6-drop-with-e" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Back in <strong>InteractionComponent</strong>, find the E key logic from 821 C2. Its Branch on <code>bCanInteract</code> has nothing on the <strong>False</strong> pin. Add:</p>
+<ul>
+<li><strong>Is Valid</strong> <code>HeldBox</code> → <strong>Is Valid</strong> → <strong>Release Box</strong> → call <strong>To Loose</strong> on the returned <code>Box</code></li>
+</ul>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_13_167.png" width="auto" height="auto" alt/></p>
+<p>Pressing E while looking at nothing now drops the box.</p>
+<p><span class="save">Save All</span></p>
+<p>Test it: look at a box, press E, walk around, look at empty floor, press E.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_13_170.gif" width="auto" height="auto" alt/></p>
+<hr/>
+<h2 id="chapter-d-make-a-placement-pad">Chapter D: Make a Placement Pad<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#chapter-d-make-a-placement-pad" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="d0-create-the-pad-as-a-child-blueprint">D0. Create the Pad as a Child Blueprint<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#d0-create-the-pad-as-a-child-blueprint" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Create another child of <code>BP_Interactable_Base</code> and name it <code>BP_PlacementPad</code>.</p>
+<p>Select <code>Mesh_Interactable</code> and set <strong>Scale</strong> to <code>1.2, 1.2, 0.05</code>. This makes a flat square on the floor. Set its material to <code>M_PuzzleColor</code>.</p>
+<p>Squashing the mesh squashes its children too. Fix both inherited children:</p>
+<ul>
+<li><code>InteractRadius</code>: set <strong>Scale</strong> to <code>1, 1, 20</code>. A sphere uses its smallest scale axis, so without this the radius shrinks to almost nothing.</li>
+<li>The tip widget: raise its <strong>Location Z</strong> until the “E” floats about a meter above the pad. Its location is now multiplied by <code>0.05</code>, so the number will look large (around <code>2000</code>).</li>
+</ul>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_13_173.png" width="auto" height="auto" alt/></p>
+<p><span class="hint">When the pad is hovered, the outline from Chapter A traces the edge of this flat square.</span></p>
+<h3 id="d1-add-a-snap-point">D1. Add a Snap Point<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#d1-add-a-snap-point" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Add a <strong>Scene</strong> component named <code>SnapPoint</code> and drag it onto <code>DefaultSceneRoot</code>, not onto the mesh. This keeps the squashed scale off the box. Set its <strong>Location Z</strong> to about <code>28</code>, so a snapped box rests on top of the pad instead of sinking into it.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_13_176.png" width="auto" height="auto" alt/></p>
+<h3 id="d2-variables-and-color">D2. Variables and Color<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#d2-variables-and-color" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Add to <code>BP_PlacementPad</code>:</p>
+<ul>
+<li><code>Key</code>: <strong>E_PuzzleKey</strong>, Instance Editable</li>
+<li><code>SnappedBox</code>: <strong>BP_PuzzleBox</strong> (Object Reference)</li>
+<li><code>bSolved</code>: <strong>Boolean</strong></li>
+</ul>
+<p>Copy the Construction Script from B4 so the pad shows its key’s color.</p>
+<p>Add an <strong>Event Dispatcher</strong> named <code>OnPadChanged</code>. The door listens to it in Chapter E.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_13_179.png" width="auto" height="auto" alt/></p>
+<h3 id="d3-let-the-box-point-to-its-pad">D3. Let the Box Point to Its Pad<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#d3-let-the-box-point-to-its-pad" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Now that <code>BP_PlacementPad</code> exists, open <code>BP_PuzzleBox</code> and add a variable <code>SnappedTo</code> (<strong>BP_PlacementPad</strong> Object Reference).</p>
+<p>At the very start of the box’s <strong>Event Interact</strong> (C5), insert <strong>Is Valid</strong> <code>SnappedTo</code>:</p>
+<ul>
+<li><strong>Is Valid</strong> (the box is sitting on a pad): call <code>SnappedTo</code> → <strong>Interact</strong>, passing <code>Character</code> through. The pad handles it.</li>
+<li><strong>Is Not Valid</strong>: continue into the pickup logic from C5.</li>
+</ul>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_13_182.png" width="auto" height="auto" alt/></p>
+<h3 id="d4-place-and-take-on-interact">D4. Place and Take on Interact<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#d4-place-and-take-on-interact" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>In <code>BP_PlacementPad</code>, add <strong>Event Interact</strong> (override, as in C5).</p>
+<p><code>Character</code> → <strong>Get Component by Class</strong> (<code>InteractionComponent</code>). Then <strong>Is Valid</strong> <code>SnappedBox</code>:</p>
+<p><strong>Pad is empty (Is Not Valid)</strong> → <strong>Is Valid</strong> on the InteractionComponent’s <code>HeldBox</code>:</p>
+<ul>
+<li><strong>Is Valid</strong> (player is carrying a box). Place it:
+<ul>
+<li><strong>Release Box</strong> on the InteractionComponent. Keep its returned <code>Box</code>.</li>
+<li>Call <strong>To Snapped</strong> on <code>Box</code>, with <code>SnapPoint</code> as the input</li>
+<li>Set the box’s <code>SnappedTo</code> to <strong>Self</strong></li>
+<li><strong>Set</strong> <code>SnappedBox</code> to <code>Box</code></li>
+<li><strong>Set</strong> <code>bSolved</code> to (<code>Box</code> → <code>Key</code> <strong>==</strong> <code>Key</code>)</li>
+<li><strong>Call OnPadChanged</strong></li>
+</ul>
+</li>
+</ul>
+<p><strong>Pad has a box (Is Valid)</strong> → <strong>Is Valid</strong> on the InteractionComponent’s <code>HeldBox</code>:</p>
+<ul>
+<li><strong>Is Not Valid</strong> (hands empty). Give it back:
+<ul>
+<li>Set <code>SnappedBox</code>’s <code>SnappedTo</code> to nothing</li>
+<li>Call <strong>Hold Box</strong> on the InteractionComponent with <code>SnappedBox</code></li>
+<li><strong>Set</strong> <code>SnappedBox</code> to nothing</li>
+<li><strong>Set</strong> <code>bSolved</code> to false</li>
+<li><strong>Call OnPadChanged</strong></li>
+</ul>
+</li>
+<li><strong>Is Valid</strong> (hands full and pad full): do nothing</li>
+</ul>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_13_185.png" width="auto" height="auto" alt/>
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_13_188.png" width="auto" height="auto" alt/></p>
+<p><span class="hint">A wrong box still snaps on. The pad accepts it and quietly records <code>bSolved = false</code>. The player has to work out the right arrangement; the pad doesn’t tell them.</span></p>
+<p><span class="hint">Why does the box forward Interact to its pad (D3)? When a box sits on a pad, the player naturally looks at the box, not at the strip of pad around it. Forwarding means pressing E on either one gives the box back.</span></p>
+<p><span class="save">Save All</span></p>
+<p>Drag a red pad and a blue pad into the level and test it: carry a box over, look at the pad (outline and “E” appear even while holding), press E. Press E again to take it back.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_13_191.gif" width="auto" height="auto" alt/></p>
+<hr/>
+<h2 id="chapter-e-open-the-door">Chapter E: Open the Door<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#chapter-e-open-the-door" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="e0-create-the-door">E0. Create the Door<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#e0-create-the-door" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Create a Blueprint → <strong>Actor</strong> named <code>BP_PuzzleDoor</code>. Add a <strong>Static Mesh</strong> named <code>DoorMesh</code>, set it to a cube, and scale it to <code>2, 0.2, 3</code> (two meters wide, three meters tall).</p>
+<p>Add variables:</p>
+<ul>
+<li><code>Pads</code>: <strong>BP_PlacementPad</strong>, set to <strong>Array</strong> (click the icon next to the type), Instance Editable</li>
+<li><code>OpenOffset</code>: <strong>Vector</strong>, Instance Editable, default <code>0, 0, 300</code></li>
+<li><code>bAllSolved</code>: <strong>Boolean</strong></li>
+</ul>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_13_194.png" width="auto" height="auto" alt/></p>
+<h3 id="e1-listen-to-the-pads">E1. Listen to the Pads<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#e1-listen-to-the-pads" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>The door owns the list of pads, and the pads know nothing about the door. Each pad only announces that it changed, through <code>OnPadChanged</code>.</p>
+<p>From <strong>Event BeginPlay</strong>: <strong>For Each Loop</strong> over <code>Pads</code> → from <strong>Array Element</strong>, add <strong>Bind Event to On Pad Changed</strong>. Drag from its red <strong>Event</strong> pin and choose <strong>Add Custom Event</strong>. Name it <code>Check Pads</code>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_13_197.png" width="auto" height="auto" alt/></p>
+<h3 id="e2-judge-the-configuration">E2. Judge the Configuration<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#e2-judge-the-configuration" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>From <strong>Check Pads</strong>:</p>
+<ul>
+<li><strong>Set</strong> <code>bAllSolved</code> → true</li>
+<li><strong>For Each Loop</strong> over <code>Pads</code>. In <strong>Loop Body</strong>: <strong>Set</strong> <code>bAllSolved</code> → <code>bAllSolved</code> <strong>AND</strong> Array Element’s <code>bSolved</code></li>
+<li><strong>Completed</strong> → <strong>Branch</strong> on <code>bAllSolved</code></li>
+</ul>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_13_200.png" width="auto" height="auto" alt/></p>
+<h3 id="e3-slide-the-door">E3. Slide the Door<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#e3-slide-the-door" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Right-click → <strong>Add Timeline</strong>. Name it <code>DoorTimeline</code>. Double-click it, add a <strong>Float Track</strong> named <code>Alpha</code>, and add two keys: <code>(0, 0)</code> and <code>(1, 1)</code>. Set the length to <code>1</code>.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_13_203.png" width="auto" height="auto" alt/></p>
+<p>Wire the Branch’s <strong>True</strong> pin to the Timeline’s <strong>Play</strong> and <strong>False</strong> to <strong>Reverse</strong>.</p>
+<p>From <strong>Update</strong>: <code>DoorMesh</code> → <strong>Set Relative Location</strong>, with <strong>New Location</strong> = <strong>Lerp (Vector)</strong> of <code>A = 0, 0, 0</code>, <code>B = OpenOffset</code>, <strong>Alpha</strong> = the <code>Alpha</code> track.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_13_206.png" width="auto" height="auto" alt/></p>
+<p><span class="hint"><strong>Play</strong> and <strong>Reverse</strong> both start from wherever the timeline currently is. Pull a box off mid-opening and the door turns around smoothly instead of snapping shut.</span></p>
+<p><span class="save">Save All</span></p>
+<h3 id="e4-wire-it-up-in-the-level">E4. Wire It Up in the Level<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#e4-wire-it-up-in-the-level" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Drag <code>BP_PuzzleDoor</code> into a doorway. In its Details, click <strong>+</strong> on <code>Pads</code> twice. Use the eyedropper to pick your red pad and your blue pad from the level.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_13_209.png" width="auto" height="auto" alt/></p>
+<p><span class="hint">If the door opens the moment you press Play, its <code>Pads</code> array is empty. A loop over nothing never sets <code>bAllSolved</code> to false.</span></p>
+<p>Test the whole puzzle. Try a wrong arrangement first, then the right one, then pull a box off.</p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_13_212.gif" width="auto" height="auto" alt/></p>
+<h3 id="e5-final-blueprint-structure">E5. Final Blueprint Structure<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#e5-final-blueprint-structure" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>BP_Interactable_Base: On Hovered / On UnHovered:</strong></p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_13_215.png" width="auto" height="auto" alt/></p>
+<p><strong>InteractionComponent: On Interactable Overlap, BeginPlay, Tick, E key:</strong></p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_13_218.png" width="auto" height="auto" alt/>
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_13_221.png" width="auto" height="auto" alt/></p>
+<p><strong>InteractionComponent: Hold Box, Release Box:</strong></p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_13_224.png" width="auto" height="auto" alt/></p>
+<p><strong>BP_PuzzleBox: Construction Script, state events, Event Interact:</strong></p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_13_227.png" width="auto" height="auto" alt/>
+<img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_13_230.png" width="auto" height="auto" alt/></p>
+<p><strong>BP_PlacementPad: Event Interact:</strong></p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_13_233.png" width="auto" height="auto" alt/></p>
+<p><strong>BP_PuzzleDoor: BeginPlay, Check Pads, Timeline:</strong></p>
+<p><img src="../../../../PBOH/Development/Tutorials---Unreal/attachments/unrealTutorial_13_236.png" width="auto" height="auto" alt/></p>
+<hr/>
+<h2 id="what-you-can-now-build">What you can now build<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#what-you-can-now-build" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>An outline and “E” prompt on anything the player can interact with, inherited by every child of <code>BP_Interactable_Base</code></li>
+<li>A physics object the player can pick up, carry, and drop, which collides with the world while held</li>
+<li>Pads that accept a carried object, snap it into place, and hand it back</li>
+<li>A key system that matches objects to slots without caring what the key looks like</li>
+<li>A door, or any other actor, that reacts to the state of several other actors through an Event Dispatcher</li>
+<li>A Timeline that plays forward and backward from wherever it currently is</li>
+</ul>
+<h2 id="example-deviations-you-are-ready-for">Example deviations you are ready for<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#example-deviations-you-are-ready-for" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><strong>Wrong-answer feedback:</strong> when a box snaps with <code>bSolved</code> false, flash the pad or play a buzz.</li>
+<li><strong>Swap:</strong> if the player is holding a box and the pad is full, trade the two instead of doing nothing.</li>
+<li><strong>Stacking:</strong> give <code>BP_PuzzleBox</code> its own <code>SnapPoint</code> on top, so a box can act as a pad for another box.</li>
+<li><strong>Pressure plates:</strong> replace Interact on the pad with an overlap, so any physics object dropped on it counts.</li>
+<li><strong>Weight puzzles:</strong> compare the box’s mass against a pad threshold instead of comparing keys.</li>
+<li><strong>Order matters:</strong> have the door record which pad was solved in what order, and only open for one sequence.</li>
+<li><strong>Other rewards:</strong> the door is just one listener. A light, a bridge, a sound, or a cutscene can bind to <code>OnPadChanged</code> the same way.</li>
+<li><strong>Win and lose screens:</strong> see the upcoming UI tutorial.</li>
+<li><strong>Glowing pad VFX:</strong> coming in a later revision of this tutorial.</li>
+</ul></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>Search</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div class="search-layout" data-preview="true"></div></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-108" aria-expanded="true"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#0-introduction" data-for="0-introduction">0. Introduction</a></li><li class="depth-0"><a href="#chapter-a-prepare-the-821-system" data-for="chapter-a-prepare-the-821-system">Chapter A: Prepare the 821 System</a></li><li class="depth-1"><a href="#a0-check-the-component-hierarchy" data-for="a0-check-the-component-hierarchy">A0. Check the Component Hierarchy</a></li><li class="depth-1"><a href="#a1-count-overlaps-instead-of-toggling" data-for="a1-count-overlaps-instead-of-toggling">A1. Count Overlaps Instead of Toggling</a></li><li class="depth-1"><a href="#a2-show-e-in-the-hover-tip" data-for="a2-show-e-in-the-hover-tip">A2. Show “E” in the Hover Tip</a></li><li class="depth-1"><a href="#a3-optionally-create-the-outline-material" data-for="a3-optionally-create-the-outline-material">A3. Optionally, Create the Outline Material</a></li><li class="depth-1"><a href="#a35-turn-on-the-outline" data-for="a35-turn-on-the-outline">A3.5. Turn on the Outline</a></li><li class="depth-0"><a href="#chapter-b-make-a-box" data-for="chapter-b-make-a-box">Chapter B: Make a Box</a></li><li class="depth-1"><a href="#b0-create-a-key-enumeration" data-for="b0-create-a-key-enumeration">B0. Create a Key Enumeration</a></li><li class="depth-1"><a href="#b1-create-a-color-material" data-for="b1-create-a-color-material">B1. Create a Color Material</a></li><li class="depth-1"><a href="#b2-create-the-box-as-a-child-blueprint" data-for="b2-create-the-box-as-a-child-blueprint">B2. Create the Box as a Child Blueprint</a></li><li class="depth-1"><a href="#b3-add-variables" data-for="b3-add-variables">B3. Add Variables</a></li><li class="depth-1"><a href="#b4-color-the-box-in-the-construction-script" data-for="b4-color-the-box-in-the-construction-script">B4. Color the Box in the Construction Script</a></li><li class="depth-1"><a href="#b5-three-states-for-the-box" data-for="b5-three-states-for-the-box">B5. Three States for the Box</a></li><li class="depth-0"><a href="#chapter-c-carry-the-box" data-for="chapter-c-carry-the-box">Chapter C: Carry the Box</a></li><li class="depth-1"><a href="#c0-add-a-physics-handle" data-for="c0-add-a-physics-handle">C0. Add a Physics Handle</a></li><li class="depth-1"><a href="#c1-cache-the-handle-and-camera" data-for="c1-cache-the-handle-and-camera">C1. Cache the Handle and Camera</a></li><li class="depth-1"><a href="#c2-hold-box" data-for="c2-hold-box">C2. Hold Box</a></li><li class="depth-1"><a href="#c3-release-box" data-for="c3-release-box">C3. Release Box</a></li><li class="depth-1"><a href="#c4-move-the-box-every-frame" data-for="c4-move-the-box-every-frame">C4. Move the Box Every Frame</a></li><li class="depth-1"><a href="#c5-pick-up-on-interact" data-for="c5-pick-up-on-interact">C5. Pick Up on Interact</a></li><li class="depth-1"><a href="#c6-drop-with-e" data-for="c6-drop-with-e">C6. Drop with E</a></li><li class="depth-0"><a href="#chapter-d-make-a-placement-pad" data-for="chapter-d-make-a-placement-pad">Chapter D: Make a Placement Pad</a></li><li class="depth-1"><a href="#d0-create-the-pad-as-a-child-blueprint" data-for="d0-create-the-pad-as-a-child-blueprint">D0. Create the Pad as a Child Blueprint</a></li><li class="depth-1"><a href="#d1-add-a-snap-point" data-for="d1-add-a-snap-point">D1. Add a Snap Point</a></li><li class="depth-1"><a href="#d2-variables-and-color" data-for="d2-variables-and-color">D2. Variables and Color</a></li><li class="depth-1"><a href="#d3-let-the-box-point-to-its-pad" data-for="d3-let-the-box-point-to-its-pad">D3. Let the Box Point to Its Pad</a></li><li class="depth-1"><a href="#d4-place-and-take-on-interact" data-for="d4-place-and-take-on-interact">D4. Place and Take on Interact</a></li><li class="depth-0"><a href="#chapter-e-open-the-door" data-for="chapter-e-open-the-door">Chapter E: Open the Door</a></li><li class="depth-1"><a href="#e0-create-the-door" data-for="e0-create-the-door">E0. Create the Door</a></li><li class="depth-1"><a href="#e1-listen-to-the-pads" data-for="e1-listen-to-the-pads">E1. Listen to the Pads</a></li><li class="depth-1"><a href="#e2-judge-the-configuration" data-for="e2-judge-the-configuration">E2. Judge the Configuration</a></li><li class="depth-1"><a href="#e3-slide-the-door" data-for="e3-slide-the-door">E3. Slide the Door</a></li><li class="depth-1"><a href="#e4-wire-it-up-in-the-level" data-for="e4-wire-it-up-in-the-level">E4. Wire It Up in the Level</a></li><li class="depth-1"><a href="#e5-final-blueprint-structure" data-for="e5-final-blueprint-structure">E5. Final Blueprint Structure</a></li><li class="depth-0"><a href="#what-you-can-now-build" data-for="what-you-can-now-build">What you can now build</a></li><li class="depth-0"><a href="#example-deviations-you-are-ready-for" data-for="example-deviations-you-are-ready-for">Example deviations you are ready for</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>Backlinks</h3><ul id="list-2" class="overflow"><li><a href="../../../../PBOH/Development/Tutorials---Unreal/800---Interactive-Systems/UE-Tutorial-821---Base-Interactive-System-(WIP)" class="internal">UE Tutorial 821 - Base Interactive System</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../../../postscript.js" type="module" data-persist="true"></script></html>

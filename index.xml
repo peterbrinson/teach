@@ -10,7 +10,25 @@
     <link>https://peterbrinson.github.io/teach/PBOH/Design/Worldbuilding/The-Experience/Meeting-the-World</link>
     <guid>https://peterbrinson.github.io/teach/PBOH/Design/Worldbuilding/The-Experience/Meeting-the-World</guid>
     <description><![CDATA[ Let us focus on brief moments within a situation, steps within “the interval of play” articulated in Situational Game Design for Bounded Worlds. ]]></description>
-    <pubDate>Mon, 19 Oct 2026 17:27:38 GMT</pubDate>
+    <pubDate>Mon, 19 Oct 2026 17:30:17 GMT</pubDate>
+  </item><item>
+    <title>Game - Risk of Rain 2</title>
+    <link>https://peterbrinson.github.io/teach/PBOH/Design/_References/Game---Risk-of-Rain-2</link>
+    <guid>https://peterbrinson.github.io/teach/PBOH/Design/_References/Game---Risk-of-Rain-2</guid>
+    <description><![CDATA[ Developer: Hopoo Games | Year: 2020 | Platform: PC, console Fame tier: successful indie → Steam What It Is A third-person roguelike shooter. ]]></description>
+    <pubDate>Mon, 19 Oct 2026 17:30:17 GMT</pubDate>
+  </item><item>
+    <title>UE Tutorial 821 - Base Interactive System</title>
+    <link>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/800---Interactive-Systems/UE-Tutorial-821---Base-Interactive-System-(WIP)</link>
+    <guid>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/800---Interactive-Systems/UE-Tutorial-821---Base-Interactive-System-(WIP)</guid>
+    <description><![CDATA[ By Yibei He &amp; Peter Brinson Disclaimer: since being converted from a different platform, this document has not yet been proofread. ]]></description>
+    <pubDate>Mon, 19 Oct 2026 17:29:55 GMT</pubDate>
+  </item><item>
+    <title>UE Tutorial 822 - Pick Up, Place, and Unlock</title>
+    <link>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/800---Interactive-Systems/UE-Tutorial-822---Pick-Up,-Place,-and-Unlock-(WIP)</link>
+    <guid>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/800---Interactive-Systems/UE-Tutorial-822---Pick-Up,-Place,-and-Unlock-(WIP)</guid>
+    <description><![CDATA[ By George Zou and Peter Brinson Disclaimer: this is a draft. You are welcome to ask Peter or George any questions. 0. ]]></description>
+    <pubDate>Mon, 19 Oct 2026 17:29:55 GMT</pubDate>
   </item><item>
     <title>Tutorial 2021 - Your First Persistent Workspace (with Antigravity)</title>
     <link>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---LLM/Tutorial-2021---Your-First-Persistent-Workspace-(with-Antigravity)</link>
@@ -47,24 +65,6 @@
     <guid>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---LLM/</guid>
     <description><![CDATA[ Learning persistent-workspace fundamentals instead? Start here The first workshop comes in three versions — same project, same moves, different tool. ]]></description>
     <pubDate>Mon, 19 Oct 2026 17:26:40 GMT</pubDate>
-  </item><item>
-    <title>Markdown</title>
-    <link>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Markdown</link>
-    <guid>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Markdown</guid>
-    <description><![CDATA[ Markdown is plain text in files ending in .md, with a couple of formatting conventions for headings and links. ]]></description>
-    <pubDate>Mon, 19 Oct 2026 17:26:28 GMT</pubDate>
-  </item><item>
-    <title>CTIN 534</title>
-    <link>https://peterbrinson.github.io/teach/534/</link>
-    <guid>https://peterbrinson.github.io/teach/534/</guid>
-    <description><![CDATA[ Units: 4 Fall 2026 Breakfast Section: Tue, Thu, 10:00 am–12:20 pm Lunch Section: Tue, Thu, 1:00–3:20 pm Go To Schedule Instructor: Peter Brinson Student Assistant: Yinuo Chen Student Assistant: George Zou Course Description Is Life A Story or a Game? We will study and practice how narrative video ga... ]]></description>
-    <pubDate>Mon, 19 Oct 2026 17:26:28 GMT</pubDate>
-  </item><item>
-    <title>Due Week 5.2 — Bring Your Own Material</title>
-    <link>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Week-5.2</link>
-    <guid>https://peterbrinson.github.io/teach/534/Assignments/534-Due-Week-5.2</guid>
-    <description><![CDATA[ In class we’ll work through Your First Queryable Knowledge Base together. 1. Have your agent working Ideally, you’ll use Codex on your USC account. ]]></description>
-    <pubDate>Mon, 19 Oct 2026 17:26:28 GMT</pubDate>
   </item>
     </channel>
   </rss>
