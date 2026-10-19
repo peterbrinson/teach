@@ -6,17 +6,35 @@
       <description>Last 10 notes on PB Teach</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Seminar 1 - Your First Upgrades</title>
+    <link>https://peterbrinson.github.io/teach/TOTT/Seminars/TOTT-Seminar-1---Your-First-Upgrades</link>
+    <guid>https://peterbrinson.github.io/teach/TOTT/Seminars/TOTT-Seminar-1---Your-First-Upgrades</guid>
+    <description><![CDATA[ Monday, October 26. 12:30pm. SCI 108. · Part of Tokens on the Table. ]]></description>
+    <pubDate>Mon, 19 Oct 2026 18:37:38 GMT</pubDate>
+  </item><item>
+    <title>(Let&#039;s Put Our) Tokens on the Table</title>
+    <link>https://peterbrinson.github.io/teach/TOTT/</link>
+    <guid>https://peterbrinson.github.io/teach/TOTT/</guid>
+    <description><![CDATA[ (Let’s Put Our) Tokens on the Table A Seminar Series About AI and Games Do you feel behind, confused, and anxious about AI today, and you want to do something about it? Do you wonder if there is more you can do with AI than engineering/game (engine) development? You hesitate to tell your professors ... ]]></description>
+    <pubDate>Mon, 19 Oct 2026 18:37:25 GMT</pubDate>
+  </item><item>
+    <title>Seminar 2 - Thinking and Doing</title>
+    <link>https://peterbrinson.github.io/teach/TOTT/Seminars/TOTT-Seminar-2---Thinking-and-Doing</link>
+    <guid>https://peterbrinson.github.io/teach/TOTT/Seminars/TOTT-Seminar-2---Thinking-and-Doing</guid>
+    <description><![CDATA[ Monday, November 9. SCI 108. Part of Tokens on the Table. ]]></description>
+    <pubDate>Mon, 19 Oct 2026 18:07:45 GMT</pubDate>
+  </item><item>
     <title>Meeting the World</title>
     <link>https://peterbrinson.github.io/teach/PBOH/Design/Worldbuilding/The-Experience/Meeting-the-World</link>
     <guid>https://peterbrinson.github.io/teach/PBOH/Design/Worldbuilding/The-Experience/Meeting-the-World</guid>
     <description><![CDATA[ Let us focus on brief moments within a situation, steps within “the interval of play” articulated in Situational Game Design for Bounded Worlds. ]]></description>
-    <pubDate>Mon, 19 Oct 2026 17:30:17 GMT</pubDate>
+    <pubDate>Mon, 19 Oct 2026 17:55:11 GMT</pubDate>
   </item><item>
     <title>Game - Risk of Rain 2</title>
     <link>https://peterbrinson.github.io/teach/PBOH/Design/_References/Game---Risk-of-Rain-2</link>
     <guid>https://peterbrinson.github.io/teach/PBOH/Design/_References/Game---Risk-of-Rain-2</guid>
     <description><![CDATA[ Developer: Hopoo Games | Year: 2020 | Platform: PC, console Fame tier: successful indie → Steam What It Is A third-person roguelike shooter. ]]></description>
-    <pubDate>Mon, 19 Oct 2026 17:30:17 GMT</pubDate>
+    <pubDate>Mon, 19 Oct 2026 17:41:23 GMT</pubDate>
   </item><item>
     <title>UE Tutorial 821 - Base Interactive System</title>
     <link>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/800---Interactive-Systems/UE-Tutorial-821---Base-Interactive-System-(WIP)</link>
@@ -47,24 +65,6 @@
     <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-6.2---AI-Workshop-2</guid>
     <description><![CDATA[ AI Workshop 2 — Your Own Knowledge Base In Workshop 1 we turned Anthony and Deloris’s messy PHO project into a persistent workspace. ]]></description>
     <pubDate>Mon, 19 Oct 2026 17:26:55 GMT</pubDate>
-  </item><item>
-    <title>Week 3.1 — AI Workshop 1: Persistent Workspaces</title>
-    <link>https://peterbrinson.github.io/teach/534/In-Class/534-In-Class-Week-3.1-AI-Workshop-1</link>
-    <guid>https://peterbrinson.github.io/teach/534/In-Class/534-In-Class-Week-3.1-AI-Workshop-1</guid>
-    <description><![CDATA[ AI Workshop 1 — Persistent Workspaces We will use Tutorial 2020, 2021 or 2022 to turn Anthony and Deloris’s messy PHO game-project into a persistent workspace. ]]></description>
-    <pubDate>Mon, 19 Oct 2026 17:26:40 GMT</pubDate>
-  </item><item>
-    <title>Week 2.2 — AI Workshop 1: Persistent Workspaces</title>
-    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-2.2---AI-Workshop-1</link>
-    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-2.2---AI-Workshop-1</guid>
-    <description><![CDATA[ AI Workshop 1 — Persistent Workspaces We will use Tutorial 2020, 2021 or 2022 to turn Anthony and Deloris’s messy PHO game-project into a persistent workspace. ]]></description>
-    <pubDate>Mon, 19 Oct 2026 17:26:40 GMT</pubDate>
-  </item><item>
-    <title>Tutorials - LLM</title>
-    <link>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---LLM/</link>
-    <guid>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---LLM/</guid>
-    <description><![CDATA[ Learning persistent-workspace fundamentals instead? Start here The first workshop comes in three versions — same project, same moves, different tool. ]]></description>
-    <pubDate>Mon, 19 Oct 2026 17:26:40 GMT</pubDate>
   </item>
     </channel>
   </rss>
