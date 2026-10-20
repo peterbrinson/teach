@@ -6,65 +6,65 @@
       <description>Last 10 notes on PB Teach</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>Week 9.1 - The Dreamer and Alice in Wonderland</title>
-    <link>https://peterbrinson.github.io/teach/534/Lectures/Week-9.1---The-Dreamer-and-Alice-in-Wonderland</link>
-    <guid>https://peterbrinson.github.io/teach/534/Lectures/Week-9.1---The-Dreamer-and-Alice-in-Wonderland</guid>
-    <description><![CDATA[  Thinking and Control Paprika (Satoshi Kon, 2006). ]]></description>
-    <pubDate>Tue, 20 Oct 2026 00:36:27 GMT</pubDate>
+    <title>Seminar 3 - Aaron Cheney, Riot Games</title>
+    <link>https://peterbrinson.github.io/teach/TOTT/Seminars/TotT-Seminar-3---Aaron-Cheney,-Riot-Games</link>
+    <guid>https://peterbrinson.github.io/teach/TOTT/Seminars/TotT-Seminar-3---Aaron-Cheney,-Riot-Games</guid>
+    <description><![CDATA[ Monday, November 16, 12:30pm. SCI 108. Part of Tokens on the Table. AI and Industry Aaron Cheney, Staff Software Engineer at Riot Games. ]]></description>
+    <pubDate>Tue, 20 Oct 2026 16:36:26 GMT</pubDate>
   </item><item>
-    <title>Lecture: Situational Game Design for Bounded Worlds</title>
-    <link>https://peterbrinson.github.io/teach/PBOH/Design/Worldbuilding/Lecture---Situational-Game-Design-for-Bounded-Worlds</link>
-    <guid>https://peterbrinson.github.io/teach/PBOH/Design/Worldbuilding/Lecture---Situational-Game-Design-for-Bounded-Worlds</guid>
-    <description><![CDATA[ This page summarizes the first two chapters of Brian Upton’s Situational Game Design (2017) for the sake of building Bounded Worlds. ]]></description>
-    <pubDate>Tue, 20 Oct 2026 00:32:28 GMT</pubDate>
-  </item><item>
-    <title>CTIN 534</title>
-    <link>https://peterbrinson.github.io/teach/534/</link>
-    <guid>https://peterbrinson.github.io/teach/534/</guid>
-    <description><![CDATA[ Units: 4 Fall 2026 Breakfast Section: Tue, Thu, 10:00 am–12:20 pm Lunch Section: Tue, Thu, 1:00–3:20 pm Go To Schedule Instructor: Peter Brinson Student Assistant: Yinuo Chen Student Assistant: George Zou Course Description Is Life A Story or a Game? We will study and practice how narrative video ga... ]]></description>
-    <pubDate>Tue, 20 Oct 2026 00:27:47 GMT</pubDate>
+    <title>Tips</title>
+    <link>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Tips</link>
+    <guid>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Tips</guid>
+    <description><![CDATA[  Effort and models Get to know your LLM’s effort: how much thinking it does before it answers. ]]></description>
+    <pubDate>Tue, 20 Oct 2026 16:36:07 GMT</pubDate>
   </item><item>
     <title>(Let&#039;s Put Our) Tokens on the Table</title>
     <link>https://peterbrinson.github.io/teach/TOTT/</link>
     <guid>https://peterbrinson.github.io/teach/TOTT/</guid>
     <description><![CDATA[ (Let’s Put Our) Tokens on the Table A Seminar Series About AI and Games Do you feel behind, confused, and anxious about AI today, and you want to do something about it? Do you wonder if there is more you can do with AI than engineering/game (engine) development? You hesitate to tell your professors ... ]]></description>
-    <pubDate>Mon, 19 Oct 2026 18:41:50 GMT</pubDate>
+    <pubDate>Tue, 20 Oct 2026 16:31:45 GMT</pubDate>
+  </item><item>
+    <title>Situated Player Role 3 - The Entrant, World as Threshold</title>
+    <link>https://peterbrinson.github.io/teach/PBOH/Design/Storytelling/Situated-Player-Role-3---The-Entrant,-World-as-Threshold</link>
+    <guid>https://peterbrinson.github.io/teach/PBOH/Design/Storytelling/Situated-Player-Role-3---The-Entrant,-World-as-Threshold</guid>
+    <description><![CDATA[ Summarized in: Situated Player Roles Previous: Situated Player Role 2: The Traveler | Next: Situated Player Role 4: The Dreamer The Entrant has arrived at a boundary. ]]></description>
+    <pubDate>Tue, 20 Oct 2026 16:30:34 GMT</pubDate>
   </item><item>
     <title>Seminar 1 - Your First Upgrades</title>
-    <link>https://peterbrinson.github.io/teach/TOTT/Seminars/TOTT-Seminar-1---Your-First-Upgrades</link>
-    <guid>https://peterbrinson.github.io/teach/TOTT/Seminars/TOTT-Seminar-1---Your-First-Upgrades</guid>
+    <link>https://peterbrinson.github.io/teach/TOTT/Seminars/TotT-Seminar-1---Your-First-Upgrades</link>
+    <guid>https://peterbrinson.github.io/teach/TOTT/Seminars/TotT-Seminar-1---Your-First-Upgrades</guid>
     <description><![CDATA[ Monday, October 26. 12:30pm. SCI 108. · Part of Tokens on the Table. ]]></description>
-    <pubDate>Mon, 19 Oct 2026 18:41:32 GMT</pubDate>
+    <pubDate>Tue, 20 Oct 2026 16:28:01 GMT</pubDate>
   </item><item>
-    <title>Seminar 2 - Thinking and Doing</title>
-    <link>https://peterbrinson.github.io/teach/TOTT/Seminars/TOTT-Seminar-2---Thinking-and-Doing</link>
-    <guid>https://peterbrinson.github.io/teach/TOTT/Seminars/TOTT-Seminar-2---Thinking-and-Doing</guid>
-    <description><![CDATA[ Monday, November 9. SCI 108. Part of Tokens on the Table. ]]></description>
-    <pubDate>Mon, 19 Oct 2026 18:07:45 GMT</pubDate>
+    <title>Session Limits: Context Window, Usage, and Compacting</title>
+    <link>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Session-Limits</link>
+    <guid>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Session-Limits</guid>
+    <description><![CDATA[ Every AI session runs out of something. ]]></description>
+    <pubDate>Tue, 20 Oct 2026 16:18:41 GMT</pubDate>
   </item><item>
-    <title>Meeting the World</title>
-    <link>https://peterbrinson.github.io/teach/PBOH/Design/Worldbuilding/The-Experience/Meeting-the-World</link>
-    <guid>https://peterbrinson.github.io/teach/PBOH/Design/Worldbuilding/The-Experience/Meeting-the-World</guid>
-    <description><![CDATA[ Let us focus on brief moments within a situation, steps within “the interval of play” articulated in Situational Game Design for Bounded Worlds. ]]></description>
-    <pubDate>Mon, 19 Oct 2026 17:55:11 GMT</pubDate>
+    <title>Plan Mode</title>
+    <link>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Plan-Mode</link>
+    <guid>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Plan-Mode</guid>
+    <description><![CDATA[ Plan Mode is a setting where the AI proposes a plan before it touches anything. It reads, thinks, and lays out what it intends to do. ]]></description>
+    <pubDate>Tue, 20 Oct 2026 16:18:41 GMT</pubDate>
   </item><item>
-    <title>Game - Risk of Rain 2</title>
-    <link>https://peterbrinson.github.io/teach/PBOH/Design/_References/Game---Risk-of-Rain-2</link>
-    <guid>https://peterbrinson.github.io/teach/PBOH/Design/_References/Game---Risk-of-Rain-2</guid>
-    <description><![CDATA[ Developer: Hopoo Games | Year: 2020 | Platform: PC, console Fame tier: successful indie → Steam What It Is A third-person roguelike shooter. ]]></description>
-    <pubDate>Mon, 19 Oct 2026 17:41:23 GMT</pubDate>
+    <title>Persistent Workspace</title>
+    <link>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Persistent-Workspace</link>
+    <guid>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Persistent-Workspace</guid>
+    <description><![CDATA[ A persistent workspace is a folder on your computer that both you and an AI return to, session after session. ]]></description>
+    <pubDate>Tue, 20 Oct 2026 16:18:41 GMT</pubDate>
   </item><item>
-    <title>UE Tutorial 821 - Base Interactive System</title>
-    <link>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/800---Interactive-Systems/UE-Tutorial-821---Base-Interactive-System-(WIP)</link>
-    <guid>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/800---Interactive-Systems/UE-Tutorial-821---Base-Interactive-System-(WIP)</guid>
-    <description><![CDATA[ By Yibei He &amp; Peter Brinson Disclaimer: since being converted from a different platform, this document has not yet been proofread. ]]></description>
-    <pubDate>Mon, 19 Oct 2026 17:29:55 GMT</pubDate>
+    <title>Obsidian</title>
+    <link>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Obsidian</link>
+    <guid>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Obsidian</guid>
+    <description><![CDATA[ Obsidian is a free text editor for markdown files. It shows your folder and file structure in a sidebar, the way VS Code does for a codebase. ]]></description>
+    <pubDate>Tue, 20 Oct 2026 16:18:41 GMT</pubDate>
   </item><item>
-    <title>UE Tutorial 822 - Pick Up, Place, and Unlock</title>
-    <link>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/800---Interactive-Systems/UE-Tutorial-822---Pick-Up,-Place,-and-Unlock-(WIP)</link>
-    <guid>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/800---Interactive-Systems/UE-Tutorial-822---Pick-Up,-Place,-and-Unlock-(WIP)</guid>
-    <description><![CDATA[ By George Zou and Peter Brinson Disclaimer: this is a draft. You are welcome to ask Peter or George any questions. 0. ]]></description>
-    <pubDate>Mon, 19 Oct 2026 17:29:55 GMT</pubDate>
+    <title>Markdown</title>
+    <link>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Markdown</link>
+    <guid>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Markdown</guid>
+    <description><![CDATA[ Markdown is plain text in files ending in .md, with a couple of formatting conventions for headings and links. ]]></description>
+    <pubDate>Tue, 20 Oct 2026 16:18:41 GMT</pubDate>
   </item>
     </channel>
   </rss>
