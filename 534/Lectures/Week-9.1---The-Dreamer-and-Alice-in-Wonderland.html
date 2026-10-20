@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head><title>Week 9.1 - The Dreamer and Alice in Wonderland</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="PB Teach"/><meta property="og:title" content="Week 9.1 - The Dreamer and Alice in Wonderland"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Week 9.1 - The Dreamer and Alice in Wonderland"/><meta name="twitter:description" content="Thinking and Control Paprika (Satoshi Kon, 2006)."/><meta property="og:description" content="Thinking and Control Paprika (Satoshi Kon, 2006)."/><meta property="og:image:alt" content="Thinking and Control Paprika (Satoshi Kon, 2006)."/><meta property="og:image" content="https://peterbrinson.github.io/teach/static/og-image.png"/><meta property="og:image:url" content="https://peterbrinson.github.io/teach/static/og-image.png"/><meta name="twitter:image" content="https://peterbrinson.github.io/teach/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="peterbrinson.github.io/teach"/><meta property="og:url" content="https://peterbrinson.github.io/teach/534/Lectures/Week-9.1---The-Dreamer-and-Alice-in-Wonderland"/><meta property="twitter:url" content="https://peterbrinson.github.io/teach/534/Lectures/Week-9.1---The-Dreamer-and-Alice-in-Wonderland"/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="Thinking and Control Paprika (Satoshi Kon, 2006)."/><meta name="generator" content="Quartz"/><link href="../../index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiQzpcXFVzZXJzXFxicmluc1xcRG9jdW1lbnRzXFxPYnNpZGlhblxcc2l0ZVxccXVhcnR6XFxjb21wb25lbnRzXFxzdHlsZXMiLCJzb3VyY2VzIjpbIm1lcm1haWQuaW5saW5lLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUdGO0VBQ0U7OztBQUtGO0VBQ0U7RUFDQTs7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7O0FBR0Y7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFOztBQUlGO0VBQ0U7RUFDQTtFQUNBIiwic291cmNlc0NvbnRlbnQiOlsiLmV4cGFuZC1idXR0b24ge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsb2F0OiByaWdodDtcbiAgcGFkZGluZzogMC40cmVtO1xuICBtYXJnaW46IDAuM3JlbTtcbiAgcmlnaHQ6IDA7IC8vIE5PVEU6IHJpZ2h0IHdpbGwgYmUgc2V0IGluIG1lcm1haWQuaW5saW5lLnRzXG4gIGNvbG9yOiB2YXIoLS1ncmF5KTtcbiAgYm9yZGVyLWNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICBib3JkZXI6IDFweCBzb2xpZDtcbiAgYm9yZGVyLXJhZGl1czogNXB4O1xuICBvcGFjaXR5OiAwO1xuICB0cmFuc2l0aW9uOiAwLjJzO1xuXG4gICYgPiBzdmcge1xuICAgIGZpbGw6IHZhcigtLWxpZ2h0KTtcbiAgICBmaWx0ZXI6IGNvbnRyYXN0KDAuMyk7XG4gIH1cblxuICAmOmhvdmVyIHtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgYm9yZGVyLWNvbG9yOiB2YXIoLS1zZWNvbmRhcnkpO1xuICB9XG5cbiAgJjpmb2N1cyB7XG4gICAgb3V0bGluZTogMDtcbiAgfVxufVxuXG5wcmUge1xuICAmOmhvdmVyID4gLmV4cGFuZC1idXR0b24ge1xuICAgIG9wYWNpdHk6IDE7XG4gICAgdHJhbnNpdGlvbjogMC4ycztcbiAgfVxufVxuXG4jbWVybWFpZC1jb250YWluZXIge1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIGNvbnRhaW46IGxheW91dDtcbiAgei1pbmRleDogOTk5O1xuICBsZWZ0OiAwO1xuICB0b3A6IDA7XG4gIHdpZHRoOiAxMDB2dztcbiAgaGVpZ2h0OiAxMDB2aDtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgZGlzcGxheTogbm9uZTtcbiAgYmFja2Ryb3AtZmlsdGVyOiBibHVyKDRweCk7XG4gIGJhY2tncm91bmQ6IHJnYmEoMCwgMCwgMCwgMC41KTtcblxuICAmLmFjdGl2ZSB7XG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICB9XG5cbiAgJiA+ICNtZXJtYWlkLXNwYWNlIHtcbiAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0KTtcbiAgICBib3JkZXItcmFkaXVzOiA1cHg7XG4gICAgcG9zaXRpb246IGZpeGVkO1xuICAgIHRvcDogNTAlO1xuICAgIGxlZnQ6IDUwJTtcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTAlKTtcbiAgICBoZWlnaHQ6IDgwdmg7XG4gICAgd2lkdGg6IDgwdnc7XG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcblxuICAgICYgPiAubWVybWFpZC1jb250ZW50IHtcbiAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICAgIHRyYW5zZm9ybS1vcmlnaW46IDAgMDtcbiAgICAgIHRyYW5zaXRpb246IHRyYW5zZm9ybSAwLjFzIGVhc2U7XG4gICAgICBvdmVyZmxvdzogdmlzaWJsZTtcbiAgICAgIG1pbi1oZWlnaHQ6IDIwMHB4O1xuICAgICAgbWluLXdpZHRoOiAyMDBweDtcblxuICAgICAgcHJlIHtcbiAgICAgICAgbWFyZ2luOiAwO1xuICAgICAgICBib3JkZXI6IG5vbmU7XG4gICAgICB9XG5cbiAgICAgIHN2ZyB7XG4gICAgICAgIG1heC13aWR0aDogbm9uZTtcbiAgICAgICAgaGVpZ2h0OiBhdXRvO1xuICAgICAgfVxuICAgIH1cblxuICAgICYgPiAubWVybWFpZC1jb250cm9scyB7XG4gICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICBib3R0b206IDIwcHg7XG4gICAgICByaWdodDogMjBweDtcbiAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICBnYXA6IDhweDtcbiAgICAgIHBhZGRpbmc6IDhweDtcbiAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0KTtcbiAgICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICBib3JkZXItcmFkaXVzOiA2cHg7XG4gICAgICBib3gtc2hhZG93OiAwIDJweCA0cHggcmdiYSgwLCAwLCAwLCAwLjEpO1xuICAgICAgei1pbmRleDogMjtcblxuICAgICAgLm1lcm1haWQtY29udHJvbC1idXR0b24ge1xuICAgICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICAgICAgd2lkdGg6IDMycHg7XG4gICAgICAgIGhlaWdodDogMzJweDtcbiAgICAgICAgcGFkZGluZzogMDtcbiAgICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgICBjb2xvcjogdmFyKC0tZGFyayk7XG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICAgICBmb250LXNpemU6IDE2cHg7XG4gICAgICAgIGZvbnQtZmFtaWx5OiB2YXIoLS1ib2R5Rm9udCk7XG4gICAgICAgIHRyYW5zaXRpb246IGFsbCAwLjJzIGVhc2U7XG5cbiAgICAgICAgJjpob3ZlciB7XG4gICAgICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgICAgfVxuXG4gICAgICAgICY6YWN0aXZlIHtcbiAgICAgICAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoMXB4KTtcbiAgICAgICAgfVxuXG4gICAgICAgIC8vIFN0eWxlIHRoZSByZXNldCBidXR0b24gZGlmZmVyZW50bHlcbiAgICAgICAgJjpudGgtY2hpbGQoMikge1xuICAgICAgICAgIHdpZHRoOiBhdXRvO1xuICAgICAgICAgIHBhZGRpbmc6IDAgMTJweDtcbiAgICAgICAgICBmb250LXNpemU6IDE0cHg7XG4gICAgICAgIH1cbiAgICAgIH1cbiAgICB9XG4gIH1cbn1cbiJdfQ== */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://peterbrinson.github.io/teach/index.xml"/></head><body data-slug="534/Lectures/Week-9.1---The-Dreamer-and-Alice-in-Wonderland"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><div class="spacer mobile-only"></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>{let rank={389:1,534:2,geidai:3,TOTT:4,PBOH:5},ra=rank[a.slugSegment]??99,rb=rank[b.slugSegment]??99;if(ra!==rb)return ra-rb;let pinA=!a.isFolder&amp;&amp;a.slugSegment===\&quot;Tips\&quot;?0:1,pinB=!b.isFolder&amp;&amp;b.slugSegment===\&quot;Tips\&quot;?0:1;return pinA!==pinB?pinA-pinB:!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1}&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>{let shortNames={TOTT:\&quot;Tokens on the Table\&quot;,PBOH:\&quot;PB Office Hours\&quot;,Storytelling:\&quot;Storytelling\&quot;,Worldbuilding:\&quot;Worldbuilding\&quot;,_References:\&quot;References\&quot;};node.isFolder&amp;&amp;shortNames[node.slugSegment]&amp;&amp;(node.displayName=shortNames[node.slugSegment])}&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-148"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2></h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-148" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../534/">CTIN 534</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../534/Lectures/">Lectures</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Week 9.1   The Dreamer and Alice in Wonderland</a></div></nav><h1 class="article-title">Week 9.1 - The Dreamer and Alice in Wonderland</h1></div></div><article class="popover-hint"><br/>
+<br/>
+<br/>
+<br/>
+<h1 id="thinking-and-control">Thinking and Control<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#thinking-and-control" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><img src="../../534/Lectures/attachments/week9.1-paprika.webp" width="auto" height="auto" alt/>
+<em>Paprika (Satoshi Kon, 2006).</em></p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<h3 id="what-is-he-thinking">What is he thinking?<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#what-is-he-thinking" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><img src="../../534/Lectures/attachments/week9.1-kuleshov-effect.webp" width="auto" height="auto" alt/>
+The Kuleshov effect:</p>
+<blockquote class="callout note" data-callout="note">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Let's remember modernism: </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Freud clarified that the mind is a puzzle, ready to be unpacked and interpreted.
+It’s exciting to know what someone is thinking.</p>
+</div>
+</blockquote>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<h3 id="frank-lantz-says-that-games-are-about-thinking-and-doing">Frank Lantz says that games are about thinking and doing.<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#frank-lantz-says-that-games-are-about-thinking-and-doing" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Let’s only discuss thinking at the moment.</p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<h1 id="the-dreamer">The Dreamer<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#the-dreamer" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>The Dreamer strives to <em>control</em> their external reality.</p>
+<p>Specifically, they attempt to impact the world itself, to confront challenges embedded in their environment. How they do so acts as the game’s primary metaphors.</p>
+<blockquote class="callout note" data-callout="note">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Prior assignments were about discovery. </p></div>
+                  
+                </div>
+</blockquote>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<h1 id="control">Control<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#control" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<blockquote>
+<p><a href="https://www.youtube.com/watch?v=0b-H8oQUs1A" class="external" target="_blank">https://www.youtube.com/watch?v=0b-H8oQUs1A<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="../../PBOH/Design/_References/Film---Inception" class="internal alias" data-slug="PBOH/Design/_References/Film---Inception">Inception</a> (2010) introduces some fundamentals</p>
+</blockquote>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<h3 id="alice-in-wonderland-and-video-games">Alice In Wonderland and Video Games<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#alice-in-wonderland-and-video-games" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout note" data-callout="note">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Note</p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>We know board games and the like are huge influences on video games.
+We’ve seen how painting and film have some.</p>
+<p>I argue Alice is a huge influence.</p>
+</div>
+</blockquote>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<h2 id="metaphor">Metaphor<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#metaphor" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><img src="../../534/Lectures/attachments/week9.1-you-dont-love-me-comic.webp" width="auto" height="auto" alt/>
+Plug &amp; Play
+(don’t play yet, Peter)</p>
+<h3 id="subtext-is-a-device-used-in-every-form-of-art">Subtext is a device used in every form of art.<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#subtext-is-a-device-used-in-every-form-of-art" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>There’s a theme to be found or unlocked.</p>
+<h3 id="when-we-do-that-work">When we do that work…<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#when-we-do-that-work" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<h1 id="papo-and-yo---a-working-reference">Papo and Yo - A Working Reference<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#papo-and-yo---a-working-reference" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>Room as puzzle: <a href="https://youtu.be/73X90v0VNZI?t=50" class="external" target="_blank">https://youtu.be/73X90v0VNZI?t=50<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li>Even more dreamy: (5+ minutes) <a href="https://youtu.be/73X90v0VNZI?t=1762" class="external" target="_blank">https://youtu.be/73X90v0VNZI?t=1762<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li>Threshold and story: <a href="https://youtu.be/73X90v0VNZI?t=2194" class="external" target="_blank">https://youtu.be/73X90v0VNZI?t=2194<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+</ul>
+<br/>
+<p><br/><br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/></p>
+<h3 id="what-is-theme">What Is Theme?<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#what-is-theme" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>Theme</strong> is the idea a work is <em>about</em> beneath its events — a claim, question, or insight about life that the work keeps returning to without stating outright.</p>
+<p>It helps to separate it from its neighbors:</p>
+<ul>
+<li><strong>Subject</strong> — what the work depicts: a boy, his father, a favela, a monster.</li>
+<li><strong>Theme</strong> — what the work says or asks <em>about</em> that: in <em>Papo &amp; Yo</em>, how a child learns to live with, and finally let go of, a parent’s addiction.</li>
+<li><strong>Metaphor</strong> — the vehicle. One thing carries the qualities of another: the Monster <em>is</em> the father; the frogs <em>are</em> the drink.</li>
+<li><strong>Subtext</strong> — the layer where theme lives: meaning that sits below the surface and has to be read rather than told.</li>
+</ul>
+<p>So the chain runs: decipher a <strong>metaphor</strong> → it exposes the <strong>subtext</strong> → where the <strong>theme</strong> is found.</p>
+<p>Two tests for whether you’ve named a theme:</p>
+<ol>
+<li><strong>It survives a change of subject.</strong> “A child cannot fix their parent” could be told with a different boy, a different monster, or no game at all.</li>
+<li><strong>It’s an idea, not a topic.</strong> “Addiction” is a topic. What the work <em>says or asks</em> about addiction is the theme.</li>
+</ol>
+<p>In games, The Dreamer adds a twist: theme isn’t only read, it’s <strong>performed</strong>. When solving the puzzle requires acting out the metaphor — feeding the Monster, then being hurt by him — the player arrives at the theme through their own decisions, while the comprehension becomes their own.</p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<p><strong>We can read subtext after we decipher a metaphor. A metaphor is a comparison between two things that are otherwise unrelated. With metaphor, the qualities of one thing are figuratively carried over to another.</strong></p>
+<p><strong>This and the next few sections are by Tim Jensen, Oregon State University Associate Professor of Rhetoric</strong></p>
+<blockquote class="callout note" data-callout="note">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Note</p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>When I say, “Dude, I’m drowning in work,” I’m using qualities associated with one thing—the urgency and helplessness of drowning—to convey meaning for another thing—the work I’ve got to do.</p>
+</div>
+</blockquote>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<p><img src="../../534/Lectures/attachments/week9.1-metaphor-angles.webp" width="auto" height="auto" alt/>
+I Am Bread</p>
+<h3 id="metaphors-allow-us-to-see-things-from-different-angles-and-in-a-new-light">Metaphors allow us to see things from different angles and in a new light.<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#metaphors-allow-us-to-see-things-from-different-angles-and-in-a-new-light" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout note" data-callout="note">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>The use of ANGLES and NEW LIGHT, above, are metaphors, actually. </p></div>
+                  
+                </div>
+</blockquote>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<h3 id="three-scales-of-metaphor">Three Scales of Metaphor<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#three-scales-of-metaphor" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Short</li>
+<li>Extended</li>
+<li>Controlling</li>
+</ul>
+<blockquote class="callout note" data-callout="note">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Note</p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>“Short” is Peter’s label. The literature refers to such metaphors as “short” but only in passing, not like a label.</p>
+</div>
+</blockquote>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<h3 id="this-is-so-short-its-not-a-metaphor">This is so short its not a metaphor.<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#this-is-so-short-its-not-a-metaphor" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>But the house is a house prepares us to read one thing as another.</p>
+<p>Papo &amp; Yo
+<a href="https://youtu.be/k9bjGnqNv-U?t=399" class="external" target="_blank">https://youtu.be/k9bjGnqNv-U?t=399<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<h3 id="more-advanced-than-the-cardboard-house">More advanced than the cardboard house.<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#more-advanced-than-the-cardboard-house" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><img src="../../534/Lectures/attachments/week9.1-papo-yo-coconuts.webp" width="auto" height="auto" alt/></p>
+<h3 id="more-advanced-than-the-coconut">More advanced than the coconut.<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#more-advanced-than-the-coconut" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><img src="../../534/Lectures/attachments/week9.1-papo-yo-frogs.webp" width="auto" height="auto" alt/>
+<em>Papo &amp; Yo (2013).</em></p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<p><img src="../../534/Lectures/attachments/week9.1-papo-yo-extended.webp" width="auto" height="auto" alt/>
+<em>Papo &amp; Yo (2013).</em></p>
+<p><strong>In literary analysis, we often look at how authors use metaphors in ways that go beyond short phrases. An extended metaphor is one that goes on for several sentences.</strong></p>
+<blockquote class="callout note" data-callout="note">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Note</p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>We performed multiple steps to get here. Does that make the metaphor richer?</p>
+</div>
+</blockquote>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<h1 id="the-benefits-of-metaphors">The Benefits of Metaphors<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#the-benefits-of-metaphors" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<p><strong>Metaphors are a fundamental element of creative expression in literature, poetry, art, and other forms of artistic communication. They allow artists to convey complex emotions and ideas in novel and engaging ways.</strong></p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<p><img src="../../534/Lectures/attachments/week9.1-memorable-metaphor.webp" width="auto" height="auto" alt/>
+Inside</p>
+<p><strong>Metaphors make information more memorable because they create mental associations between concepts. People are more likely to remember a metaphorical statement than a straightforward factual one.</strong></p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<p><img src="../../534/Lectures/attachments/week9.1-object-metaphors.webp" width="auto" height="auto" alt/>
+Celeste</p>
+<p><strong>But when you’re given a puzzle made of object metaphors, it is not for the sake of simplification. Your end goal is to arrive at meaning and to make that comprehension your own.</strong></p>
+<blockquote class="callout note" data-callout="note">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Note</p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>“I’m drowning at work” is easy and immediate. But this is different.</p>
+</div>
+</blockquote>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<p><img src="../../534/Lectures/attachments/week9.1-metaphor-problems.webp" width="auto" height="auto" alt/>Brothers</p>
+<p><strong>When metaphors are coupled with problems to solve, they are inviting you to make decisions that inevitably draw parallels between a known situation and an unknown one.</strong></p>
+<p>The player gains insights and finds solutions to unfamiliar challenges.</p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<h2 id="puzzles">Puzzles<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#puzzles" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="and-now-puzzles">And now, puzzles.<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#and-now-puzzles" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><img src="../../534/Lectures/attachments/week9.1-puzzle-box.webp" width="auto" height="auto" alt/>
+<em>A puzzle box.</em></p>
+<p>From wikipedia: <strong>a puzzle is a game, problem, or toy that tests a person’s ingenuity or knowledge. In a puzzle, the solver is expected to put pieces together (or take them apart) in a logical way, in order to arrive at the correct or fun solution of the puzzle.</strong></p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<h1 id="the-entrant">The Entrant<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#the-entrant" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><br/><em>Cocoon</em> reminds us of The Entrant’s threshold
+<a href="https://www.youtube.com/watch?v=3YBd9XfDwjQ" class="external" target="_blank">https://www.youtube.com/watch?v=3YBd9XfDwjQ<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<br/>
+<br/></p>
+<h3 id="how-we-face-video-game-puzzles-in-the-entrant">How we face video game puzzles (in The Entrant)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#how-we-face-video-game-puzzles-in-the-entrant" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Remember L.O.P.</p>
+<ol>
+<li>Legibility.  The player enters a room with a locked or blocked exit.  Some of the room’s affordances<sup>†</sup> are not imminently legible. The puzzle solver tests what they can do. What do objects and items do? What parts of the space can the player access? That is, how is the space a puzzle? Indeed, sense-making is possible.</li>
+<li>Opportunity. They form a solution in their mind. Is this correct?</li>
+<li>Performance.  They execute. Can the player do it?</li>
+</ol>
+<p>…control, control, control</p>
+<p><small><sup>†</sup> Affordance is an action a person perceives as possible.  Think of a doorknob.</small></p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<h3 id="the-entrant-has-little-or-no-subtext">The Entrant Has Little or No Subtext<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#the-entrant-has-little-or-no-subtext" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><img src="../../534/Lectures/attachments/week9.1-adventure-puzzle-1.webp" width="auto" height="auto" alt/></p>
+<p><img src="../../534/Lectures/attachments/week9.1-adventure-puzzle-2.webp" width="auto" height="auto" alt/></p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<h1 id="the-dreamer-1">The Dreamer<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#the-dreamer-1" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<br/>
+<br/>
+<br/>
+<br/>
+<h2 id="surrealism">Surrealism<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#surrealism" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><img src="../../534/Lectures/attachments/week9.1-dali-persistence-of-memory.webp" width="700" height="auto" alt/>
+<em>Salvador Dalí, The Persistence of Memory (1931).</em></p>
+<h3 id="when-you-are-given-a-puzzle-as-metaphor-we-can-understand-it-as-surreal">When you are given a puzzle as metaphor, we can understand it as surreal.<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#when-you-are-given-a-puzzle-as-metaphor-we-can-understand-it-as-surreal" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<h3 id="but-we-should-be-careful-using-the-term-freely">But we should be careful using the term freely…<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#but-we-should-be-careful-using-the-term-freely" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<h3 id="rene-magritte">Rene Magritte<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#rene-magritte" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><img src="../../534/Lectures/attachments/week9.1-magritte-treachery-of-images.webp" width="auto" height="auto" alt/>
+<em>René Magritte, The Treachery of Images (1929).</em></p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<p><img src="../../534/Lectures/attachments/week9.1-magritte-son-of-man.webp" width="500" height="auto" alt/>
+<em>René Magritte, The Son of Man (1964).</em></p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<p><img src="../../534/Lectures/attachments/week9.1-magritte-not-to-be-reproduced.webp" width="500" height="auto" alt/>
+<em>René Magritte, Not to Be Reproduced (1937).</em></p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<p><img src="../../534/Lectures/attachments/week9.1-magritte-the-lovers.webp" width="500" height="auto" alt/>
+<em>René Magritte, The Lovers (1928).</em></p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<p><img src="../../534/Lectures/attachments/week9.1-magritte-golconda.webp" width="500" height="auto" alt/>
+<em>René Magritte, Golconda (1953).</em></p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<p><img src="../../534/Lectures/attachments/week9.1-magritte-clairvoyance.webp" width="500" height="auto" alt/>
+<em>René Magritte, Clairvoyance (1936).</em></p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<p><img src="../../534/Lectures/attachments/week9.1-magritte-time-transfixed.webp" width="500" height="auto" alt/>
+<em>René Magritte, Time Transfixed (1938).</em></p>
+<br/>
+<br/>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/>
+<h3 id="surreal-is-overused-in-everyday-speech">“Surreal” is overused in everyday speech.<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#surreal-is-overused-in-everyday-speech" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><img src="../../534/Lectures/attachments/week9.1-man-ray-chateau-de-de.webp" width="auto" height="auto" alt/>
+<em>Man Ray, Les Mystères du Château de Dé (1929).</em></p>
+<p><strong>Surrealism was a European art movement from about 100 years ago. It featured illogic to draw attention to the unconscious mind. Interpreting and configuring the work into a logical meaning is the role of the viewer.</strong>
+<br/>
+<br/></p>
+<p><strong>Perhaps more than any other genre, it features surprise. (Hey that sounds familiar…!?)</strong></p>
+<p><img src="../../534/Lectures/attachments/week9.1-un-chien-andalou.webp" width="auto" height="auto" alt/>
+<em>Un Chien Andalou (Luis Buñuel and Salvador Dalí, 1929).</em></p>
+<p><strong>Surprises come as both small and extended. Non sequiturs can be made meaningful if you try!</strong></p>
+<p><br/><br/>
+<br/><br/>
+<br/><br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/></p>
+<p><img src="../../534/Lectures/attachments/week9.1-surreal-game-1.webp" width="auto" height="auto" alt/>
+Back to Bed</p>
+<p><img src="../../534/Lectures/attachments/week9.1-surreal-game-2.webp" width="auto" height="auto" alt/>
+Superliminal</p>
+<h3 id="surrealism-in-games-is-common">Surrealism in games is common.<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#surrealism-in-games-is-common" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Everything</p>
+<div style="position:relative;padding-top:56.25%;margin:1rem 0;"><iframe src="https://player.vimeo.com/video/1122256656?h=8bf64a9e92" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy" title="Vimeo video"></iframe></div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<h2 id="the-unconscious">The Unconscious<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#the-unconscious" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><img src="../../534/Lectures/attachments/week9.1-freud.webp" width="500" height="auto" alt/>
+<em>Sigmund Freud.</em></p>
+<p><strong>Concurrent to surrealism in the early 20th century, (or perhaps an essential influence), psychoanalysis articulated that the mind was a puzzle waiting to be interpreted and understood.</strong></p>
+<br/>
+<br/>
+<br/>
+<br/>
+<h3 id="not-sure-you-believe-in-the-concepts-of-psychoanalysis-what-is-proports">Not sure you believe in the concepts of psychoanalysis? What is proports:<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#not-sure-you-believe-in-the-concepts-of-psychoanalysis-what-is-proports" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Events and situations in my childhood shaped how I relate to life today. Reflecting on those brings insight into my personality and emotions.</p>
+<p>And so, working to move memories, thoughts, and feelings from the unconscious mind to the conscious mind improves mental health. (Or at minimum, I feel compelled to do this).</p>
+<p><em>When that relationship is manifested as a metaphorical puzzle, it is thrilling to play…</em></p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<p>Reconciling the Unconscious and Conscious Mind Through Play</p>
+<p>Inside
+<a href="https://youtu.be/NP4AuKdb_dA?t=1181" class="external" target="_blank">https://youtu.be/NP4AuKdb_dA?t=1181<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<p><strong>Thought is projected externally. The unconscious asserts itself on to the world for us to interpret…</strong>
+…is Surrealism</p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<p><img src="../../534/Lectures/attachments/week9.1-paprika-2.webp" width="auto" height="auto" alt/>
+<em>Paprika (Satoshi Kon, 2006).</em></p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<h1 id="alice-in-wonderland">Alice in Wonderland<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#alice-in-wonderland" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h3 id="lets-continue-by-comparing-surrealism-to-dream-logic">Let’s continue by comparing surrealism to dream logic.<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#lets-continue-by-comparing-surrealism-to-dream-logic" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>(The Margini reading)</p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<p><img src="../../534/Lectures/attachments/week9.1-tenniel-cards.webp" width="500" height="auto" alt/>
+<em>John Tenniel’s illustration for Alice’s Adventures in Wonderland.</em></p>
+<h3 id="alice-in-wonderland-is-an-essential-precursor-to-video-games">Alice in Wonderland is an essential precursor to video games.<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#alice-in-wonderland-is-an-essential-precursor-to-video-games" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>We know this because when designers insert a reference in their game, they do so to signal to the player to take on a mindset – moving the incomprehensible to the understood…so that the player can proceed.</p>
+<p>Just like Alice did.</p>
+<br/>
+The player understands the expectation now put upon them. They accept they will find the situation incomprehensible, but that with effort, they can makes sense of things.
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<p><strong>WHY VIDEOGAMES LOVE ALICE IN WONDERLAND</strong></p>
+<p>by Matt Margini</p>
+<div class="img-grid-2">
+<figure><img src="../../534/Lectures/attachments/week9.1-arkham-city.webp" alt="Batman: Arkham City"/><figcaption>Batman: Arkham City (2011)</figcaption></figure>
+<figure><img src="../../534/Lectures/attachments/week9.1-far-cry-3.webp" alt="Far Cry 3"/><figcaption>Far Cry 3 (2012)</figcaption></figure>
+<figure><img src="../../534/Lectures/attachments/week9.1-smt-v.webp" alt="Shin Megami Tensei V"/><figcaption>Shin Megami Tensei V (2021)</figcaption></figure>
+<figure><img src="../../534/Lectures/attachments/week9.1-kingdom-hearts.webp" alt="Kingdom Hearts"/><figcaption>Kingdom Hearts (2002)</figcaption></figure>
+</div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<p><img src="../../534/Lectures/attachments/week9.1-tenniel-dodo.webp" width="600" height="auto" alt/>
+<em>John Tenniel’s illustration of Alice and the Dodo.</em></p>
+<p><strong>Further, in what we’ll loosely call “surrealist games”, the player takes on, essentially, Alice’s role. The player transforms the situation from the illogic of the unconscious mind to a conscious logic.</strong></p>
+<p>Again:</p>
+<blockquote>
+<p>Sometimes game designers insert a level or homage to Alice in Wonderland. This is in order to signal to the player. The player understands the expectation now put upon them. They accept they will find the situation incomprehensible, but that with effort, they can makes sense of things.</p>
+</blockquote>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<h3 id="at-first-look-we-see-nonsense-little-to-no-affordances">At first look, we see nonsense. (Little to no affordances).<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#at-first-look-we-see-nonsense-little-to-no-affordances" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>…and we make sense through play.</p>
+<p><img src="../../534/Lectures/attachments/week9.1-nonsense-room.webp" width="auto" height="auto" alt/></p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<h2 id="weve-juggled-two-parallel-principles-before">We’ve Juggled Two Parallel Principles Before<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#weve-juggled-two-parallel-principles-before" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><em>The Investigator:</em>
+<em>Plot and story</em></p>
+<p><img src="../../534/Lectures/attachments/week9.1-tacoma-2.webp" width="auto" height="auto" alt/>
+<em>Tacoma (2017).</em></p>
+<p><br/><br/><br/></p>
+<p><em>The Dreamer:</em>
+<em>Logic and metaphor</em></p>
+<p><img src="../../534/Lectures/attachments/week9.1-papo-yo-2.webp" width="auto" height="auto" alt/>
+<em>Papo &amp; Yo (2013).</em></p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<h3 id="lets-repeat">Let’s repeat…<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#lets-repeat" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><img src="../../534/Lectures/attachments/week9.1-puzzle-box-2.webp" width="auto" height="auto" alt/>
+<em>A puzzle box.</em></p>
+<p><strong>A puzzle is a game, problem, or toy that tests a person’s ingenuity or knowledge. In a puzzle, the solver is expected to put pieces together (or take them apart) in a logical way, in order to arrive at the correct or fun solution of the puzzle.</strong></p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<p><img src="../../534/Lectures/attachments/week9.1-disney-alice.webp" width="auto" height="auto" alt/>
+<em>Alice in Wonderland (Disney, 1951).</em></p>
+<h3 id="the-disney-version-isnt-ideal-but-we-need-a-visual">The Disney version isn’t ideal, but we need a visual.<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#the-disney-version-isnt-ideal-but-we-need-a-visual" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="https://www.youtube.com/watch?v=Q93VrYOXSe8" class="external" target="_blank">https://www.youtube.com/watch?v=Q93VrYOXSe8<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<p><strong>On close inspection, sense-making is possible, and after connecting elements, logic emerges.</strong>
+Many video game situations work this way: the player enters a room. In order to proceed, they must make sense of the space as puzzle before they solve it.</p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<p><img src="../../534/Lectures/attachments/week9.1-you-dont-love-me-comic-2.webp" width="auto" height="auto" alt/>
+Plug &amp; Play</p>
+<h3 id="metaphor-1">Metaphor<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#metaphor-1" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>There’s a theme or idea to be found or unlocked.</p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<p><img src="../../534/Lectures/attachments/week9.1-piranesi.webp" width="auto" height="auto" alt/>
+<em>Piranesi (Susanna Clarke, 2020).</em></p>
+<p>The world he’s in is a metaphor for the mind.</p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<h1 id="the-assignment">The Assignment<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#the-assignment" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h3 id="the-dreamer-2">The Dreamer<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#the-dreamer-2" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>The Dreamer strives to <em>control</em> their external reality.</p>
+<p>Specifically, they attempt to impact the world itself, to confront challenges embedded in their environment. How they do so act as the game’s primary metaphors.</p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<p>The Dreamer solves a place-as-puzzle…in order to proceed.</p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<h2 id="further-viewing">Further Viewing<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#further-viewing" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><img src="../../534/Lectures/attachments/week9.1-mulholland-dr.webp" width="600" height="auto" alt/>
+<em>Mulholland Dr. (David Lynch, 2001).</em></p>
+<p>This film has:</p>
+<p>The Detective Role</p>
+<p>Puzzles (enigmas)</p>
+<p>Seeking Answers</p>
+<p>Metaphors</p>
+<p>Surrealism</p>
+<p>Dreams (Logic)</p>
+<blockquote class="callout note" data-callout="note">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Note</p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>At what point do you realize you’re not getting answers to your questions?</p>
+</div>
+</blockquote>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<h2 id="related">Related<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#related" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="../../PBOH/Design/Storytelling/Situated-Player-Role-4---The-Dreamer,-World-as-Enigma" class="internal alias" data-slug="PBOH/Design/Storytelling/Situated-Player-Role-4---The-Dreamer,-World-as-Enigma">Situated Player Role 4 - The Dreamer, World as Enigma</a></li>
+<li><a href="../../534/Assignments/534-Due-Project-3" class="internal alias" data-slug="534/Assignments/534-Due-Project-3">534 Due Project 3</a></li>
+<li><a href="../../534/Lectures/Week-8.2---Creativity" class="internal alias" data-slug="534/Lectures/Week-8.2---Creativity">Week 8.2 - Creativity</a></li>
+<li><a href="../../PBOH/Design/_References/Reading---Alice's-Adventures-in-Wonderland-(Carroll)" class="internal alias" data-slug="PBOH/Design/_References/Reading---Alice's-Adventures-in-Wonderland-(Carroll)">Reading - Alice’s Adventures in Wonderland (Carroll)</a></li>
+<li><a href="../../PBOH/Design/_References/Reading---Piranesi-(Clarke)" class="internal alias" data-slug="PBOH/Design/_References/Reading---Piranesi-(Clarke)">Reading - Piranesi (Clarke)</a></li>
+<li><a href="../../PBOH/Design/_References/Film---Paprika" class="internal alias" data-slug="PBOH/Design/_References/Film---Paprika">Film - Paprika</a></li>
+</ul></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>Search</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div class="search-layout" data-preview="true"></div></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-35" aria-expanded="true"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#thinking-and-control" data-for="thinking-and-control">Thinking and Control</a></li><li class="depth-2"><a href="#what-is-he-thinking" data-for="what-is-he-thinking">What is he thinking?</a></li><li class="depth-2"><a href="#frank-lantz-says-that-games-are-about-thinking-and-doing" data-for="frank-lantz-says-that-games-are-about-thinking-and-doing">Frank Lantz says that games are about thinking and doing.</a></li><li class="depth-0"><a href="#the-dreamer" data-for="the-dreamer">The Dreamer</a></li><li class="depth-0"><a href="#control" data-for="control">Control</a></li><li class="depth-2"><a href="#alice-in-wonderland-and-video-games" data-for="alice-in-wonderland-and-video-games">Alice In Wonderland and Video Games</a></li><li class="depth-1"><a href="#metaphor" data-for="metaphor">Metaphor</a></li><li class="depth-2"><a href="#subtext-is-a-device-used-in-every-form-of-art" data-for="subtext-is-a-device-used-in-every-form-of-art">Subtext is a device used in every form of art.</a></li><li class="depth-2"><a href="#when-we-do-that-work" data-for="when-we-do-that-work">When we do that work…</a></li><li class="depth-0"><a href="#papo-and-yo---a-working-reference" data-for="papo-and-yo---a-working-reference">Papo and Yo - A Working Reference</a></li><li class="depth-2"><a href="#what-is-theme" data-for="what-is-theme">What Is Theme?</a></li><li class="depth-2"><a href="#metaphors-allow-us-to-see-things-from-different-angles-and-in-a-new-light" data-for="metaphors-allow-us-to-see-things-from-different-angles-and-in-a-new-light">Metaphors allow us to see things from different angles and in a new light.</a></li><li class="depth-2"><a href="#three-scales-of-metaphor" data-for="three-scales-of-metaphor">Three Scales of Metaphor</a></li><li class="depth-2"><a href="#this-is-so-short-its-not-a-metaphor" data-for="this-is-so-short-its-not-a-metaphor">This is so short its not a metaphor.</a></li><li class="depth-2"><a href="#more-advanced-than-the-cardboard-house" data-for="more-advanced-than-the-cardboard-house">More advanced than the cardboard house.</a></li><li class="depth-2"><a href="#more-advanced-than-the-coconut" data-for="more-advanced-than-the-coconut">More advanced than the coconut.</a></li><li class="depth-0"><a href="#the-benefits-of-metaphors" data-for="the-benefits-of-metaphors">The Benefits of Metaphors</a></li><li class="depth-1"><a href="#puzzles" data-for="puzzles">Puzzles</a></li><li class="depth-2"><a href="#and-now-puzzles" data-for="and-now-puzzles">And now, puzzles.</a></li><li class="depth-0"><a href="#the-entrant" data-for="the-entrant">The Entrant</a></li><li class="depth-2"><a href="#how-we-face-video-game-puzzles-in-the-entrant" data-for="how-we-face-video-game-puzzles-in-the-entrant">How we face video game puzzles (in The Entrant)</a></li><li class="depth-2"><a href="#the-entrant-has-little-or-no-subtext" data-for="the-entrant-has-little-or-no-subtext">The Entrant Has Little or No Subtext</a></li><li class="depth-0"><a href="#the-dreamer-1" data-for="the-dreamer-1">The Dreamer</a></li><li class="depth-1"><a href="#surrealism" data-for="surrealism">Surrealism</a></li><li class="depth-2"><a href="#when-you-are-given-a-puzzle-as-metaphor-we-can-understand-it-as-surreal" data-for="when-you-are-given-a-puzzle-as-metaphor-we-can-understand-it-as-surreal">When you are given a puzzle as metaphor, we can understand it as surreal.</a></li><li class="depth-2"><a href="#but-we-should-be-careful-using-the-term-freely" data-for="but-we-should-be-careful-using-the-term-freely">But we should be careful using the term freely…</a></li><li class="depth-2"><a href="#rene-magritte" data-for="rene-magritte">Rene Magritte</a></li><li class="depth-2"><a href="#surreal-is-overused-in-everyday-speech" data-for="surreal-is-overused-in-everyday-speech">“Surreal” is overused in everyday speech.</a></li><li class="depth-2"><a href="#surrealism-in-games-is-common" data-for="surrealism-in-games-is-common">Surrealism in games is common.</a></li><li class="depth-1"><a href="#the-unconscious" data-for="the-unconscious">The Unconscious</a></li><li class="depth-2"><a href="#not-sure-you-believe-in-the-concepts-of-psychoanalysis-what-is-proports" data-for="not-sure-you-believe-in-the-concepts-of-psychoanalysis-what-is-proports">Not sure you believe in the concepts of psychoanalysis? What is proports:</a></li><li class="depth-0"><a href="#alice-in-wonderland" data-for="alice-in-wonderland">Alice in Wonderland</a></li><li class="depth-2"><a href="#lets-continue-by-comparing-surrealism-to-dream-logic" data-for="lets-continue-by-comparing-surrealism-to-dream-logic">Let’s continue by comparing surrealism to dream logic.</a></li><li class="depth-2"><a href="#alice-in-wonderland-is-an-essential-precursor-to-video-games" data-for="alice-in-wonderland-is-an-essential-precursor-to-video-games">Alice in Wonderland is an essential precursor to video games.</a></li><li class="depth-2"><a href="#at-first-look-we-see-nonsense-little-to-no-affordances" data-for="at-first-look-we-see-nonsense-little-to-no-affordances">At first look, we see nonsense. (Little to no affordances).</a></li><li class="depth-1"><a href="#weve-juggled-two-parallel-principles-before" data-for="weve-juggled-two-parallel-principles-before">We’ve Juggled Two Parallel Principles Before</a></li><li class="depth-2"><a href="#lets-repeat" data-for="lets-repeat">Let’s repeat…</a></li><li class="depth-2"><a href="#the-disney-version-isnt-ideal-but-we-need-a-visual" data-for="the-disney-version-isnt-ideal-but-we-need-a-visual">The Disney version isn’t ideal, but we need a visual.</a></li><li class="depth-2"><a href="#metaphor-1" data-for="metaphor-1">Metaphor</a></li><li class="depth-0"><a href="#the-assignment" data-for="the-assignment">The Assignment</a></li><li class="depth-2"><a href="#the-dreamer-2" data-for="the-dreamer-2">The Dreamer</a></li><li class="depth-1"><a href="#further-viewing" data-for="further-viewing">Further Viewing</a></li><li class="depth-1"><a href="#related" data-for="related">Related</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../postscript.js" type="module" data-persist="true"></script></html>
