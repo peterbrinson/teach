@@ -6,6 +6,24 @@
       <description>Last 10 notes on PB Teach</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Seminar 2 - Thinking and Doing</title>
+    <link>https://peterbrinson.github.io/teach/TOTT/Seminars/TotT-Seminar-2---Thinking-and-Doing</link>
+    <guid>https://peterbrinson.github.io/teach/TOTT/Seminars/TotT-Seminar-2---Thinking-and-Doing</guid>
+    <description><![CDATA[ Monday, November 9. SCI 108. Part of Tokens on the Table. ]]></description>
+    <pubDate>Tue, 20 Oct 2026 16:43:33 GMT</pubDate>
+  </item><item>
+    <title>(Let&#039;s Put Our) Tokens on the Table</title>
+    <link>https://peterbrinson.github.io/teach/TOTT/</link>
+    <guid>https://peterbrinson.github.io/teach/TOTT/</guid>
+    <description><![CDATA[ (Let’s Put Our) Tokens on the Table A Seminar Series About AI and Games Do you feel behind, confused, or anxious about AI today, and you want to do something about it? Do you wonder if there is more you can do with AI than engineering/game (engine) development? You hesitate to tell your professors a... ]]></description>
+    <pubDate>Tue, 20 Oct 2026 16:42:14 GMT</pubDate>
+  </item><item>
+    <title>Seminar 1 - Your First Upgrades</title>
+    <link>https://peterbrinson.github.io/teach/TOTT/Seminars/TotT-Seminar-1---Your-First-Upgrades</link>
+    <guid>https://peterbrinson.github.io/teach/TOTT/Seminars/TotT-Seminar-1---Your-First-Upgrades</guid>
+    <description><![CDATA[ Monday, October 26. 12:30pm. SCI 108. · Part of Tokens on the Table. ]]></description>
+    <pubDate>Tue, 20 Oct 2026 16:37:17 GMT</pubDate>
+  </item><item>
     <title>Seminar 3 - Aaron Cheney, Riot Games</title>
     <link>https://peterbrinson.github.io/teach/TOTT/Seminars/TotT-Seminar-3---Aaron-Cheney,-Riot-Games</link>
     <guid>https://peterbrinson.github.io/teach/TOTT/Seminars/TotT-Seminar-3---Aaron-Cheney,-Riot-Games</guid>
@@ -18,23 +36,11 @@
     <description><![CDATA[  Effort and models Get to know your LLM’s effort: how much thinking it does before it answers. ]]></description>
     <pubDate>Tue, 20 Oct 2026 16:36:07 GMT</pubDate>
   </item><item>
-    <title>(Let&#039;s Put Our) Tokens on the Table</title>
-    <link>https://peterbrinson.github.io/teach/TOTT/</link>
-    <guid>https://peterbrinson.github.io/teach/TOTT/</guid>
-    <description><![CDATA[ (Let’s Put Our) Tokens on the Table A Seminar Series About AI and Games Do you feel behind, confused, and anxious about AI today, and you want to do something about it? Do you wonder if there is more you can do with AI than engineering/game (engine) development? You hesitate to tell your professors ... ]]></description>
-    <pubDate>Tue, 20 Oct 2026 16:31:45 GMT</pubDate>
-  </item><item>
     <title>Situated Player Role 3 - The Entrant, World as Threshold</title>
     <link>https://peterbrinson.github.io/teach/PBOH/Design/Storytelling/Situated-Player-Role-3---The-Entrant,-World-as-Threshold</link>
     <guid>https://peterbrinson.github.io/teach/PBOH/Design/Storytelling/Situated-Player-Role-3---The-Entrant,-World-as-Threshold</guid>
     <description><![CDATA[ Summarized in: Situated Player Roles Previous: Situated Player Role 2: The Traveler | Next: Situated Player Role 4: The Dreamer The Entrant has arrived at a boundary. ]]></description>
     <pubDate>Tue, 20 Oct 2026 16:30:34 GMT</pubDate>
-  </item><item>
-    <title>Seminar 1 - Your First Upgrades</title>
-    <link>https://peterbrinson.github.io/teach/TOTT/Seminars/TotT-Seminar-1---Your-First-Upgrades</link>
-    <guid>https://peterbrinson.github.io/teach/TOTT/Seminars/TotT-Seminar-1---Your-First-Upgrades</guid>
-    <description><![CDATA[ Monday, October 26. 12:30pm. SCI 108. · Part of Tokens on the Table. ]]></description>
-    <pubDate>Tue, 20 Oct 2026 16:28:01 GMT</pubDate>
   </item><item>
     <title>Session Limits: Context Window, Usage, and Compacting</title>
     <link>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Session-Limits</link>
@@ -58,12 +64,6 @@
     <link>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Obsidian</link>
     <guid>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Obsidian</guid>
     <description><![CDATA[ Obsidian is a free text editor for markdown files. It shows your folder and file structure in a sidebar, the way VS Code does for a codebase. ]]></description>
-    <pubDate>Tue, 20 Oct 2026 16:18:41 GMT</pubDate>
-  </item><item>
-    <title>Markdown</title>
-    <link>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Markdown</link>
-    <guid>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Markdown</guid>
-    <description><![CDATA[ Markdown is plain text in files ending in .md, with a couple of formatting conventions for headings and links. ]]></description>
     <pubDate>Tue, 20 Oct 2026 16:18:41 GMT</pubDate>
   </item>
     </channel>
