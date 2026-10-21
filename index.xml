@@ -6,6 +6,18 @@
       <description>Last 10 notes on PB Teach</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Bounded Worlds: The Playable and the Imagined</title>
+    <link>https://peterbrinson.github.io/teach/PBOH/Design/Worldbuilding/</link>
+    <guid>https://peterbrinson.github.io/teach/PBOH/Design/Worldbuilding/</guid>
+    <description><![CDATA[ 1. ]]></description>
+    <pubDate>Wed, 21 Oct 2026 22:27:12 GMT</pubDate>
+  </item><item>
+    <title>Film - The Zone of Interest</title>
+    <link>https://peterbrinson.github.io/teach/PBOH/Design/_References/Film---The-Zone-of-Interest</link>
+    <guid>https://peterbrinson.github.io/teach/PBOH/Design/_References/Film---The-Zone-of-Interest</guid>
+    <description><![CDATA[ Director: Jonathan Glazer · Year: 2023 · loosely based on Martin Amis’s novel Fame tier: famous (Oscars: Best International Feature, Best Sound) → Wikipedia What It Is The commandant of Auschwitz, Rudolf Höss, and his family live an ordinary domestic life in a house and garden that share a wall with... ]]></description>
+    <pubDate>Wed, 21 Oct 2026 22:27:05 GMT</pubDate>
+  </item><item>
     <title>Queryable Knowledge Bases</title>
     <link>https://peterbrinson.github.io/teach/TOTT/Seminars/Talks/Queryable-Knowledge-Base</link>
     <guid>https://peterbrinson.github.io/teach/TOTT/Seminars/Talks/Queryable-Knowledge-Base</guid>
@@ -53,18 +65,6 @@
     <guid>https://peterbrinson.github.io/teach/389/Assignments/W10-Assignment---Bounded-Worlds</guid>
     <description><![CDATA[ Due: Tuesday, October 27 at 1:00 p.m. ]]></description>
     <pubDate>Wed, 21 Oct 2026 16:58:58 GMT</pubDate>
-  </item><item>
-    <title>Week 1.2 — The Other Shoe</title>
-    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-1.2---The-Other-Shoe</link>
-    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-1.2---The-Other-Shoe</guid>
-    <description><![CDATA[ On This Page Unity Essentials Render pipelines — what are they? Render pipelines — why? Render pipelines — the three options Importing 3D models Manipulating materials Creating a particle system Playing audio Creating and instantiating prefabs Lighting a scene Setting up a camera Player Attention Un... ]]></description>
-    <pubDate>Wed, 21 Oct 2026 16:50:37 GMT</pubDate>
-  </item><item>
-    <title>Week 1.1 — Course Introduction</title>
-    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-1.1---Course-Introduction</link>
-    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-1.1---Course-Introduction</guid>
-    <description><![CDATA[ On This Page Course overview Introductions Course structure and projects Resources From pattern to prediction Assignment Share examples of playful things in this world, that aren’t games. ]]></description>
-    <pubDate>Wed, 21 Oct 2026 16:50:37 GMT</pubDate>
   </item>
     </channel>
   </rss>
