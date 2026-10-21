@@ -6,11 +6,23 @@
       <description>Last 10 notes on PB Teach</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Tips</title>
+    <link>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Tips</link>
+    <guid>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Tips</guid>
+    <description><![CDATA[  Effort and models Get to know your LLM’s effort: how much thinking it does before it answers. ]]></description>
+    <pubDate>Wed, 21 Oct 2026 19:29:17 GMT</pubDate>
+  </item><item>
     <title>Seminar 1 - Your First Upgrades</title>
     <link>https://peterbrinson.github.io/teach/TOTT/Seminars/TotT-Seminar-1---Your-First-Upgrades</link>
     <guid>https://peterbrinson.github.io/teach/TOTT/Seminars/TotT-Seminar-1---Your-First-Upgrades</guid>
     <description><![CDATA[ Monday, October 26. 12:30pm. SCI 108. · Part of Tokens on the Table. ]]></description>
-    <pubDate>Wed, 21 Oct 2026 19:23:32 GMT</pubDate>
+    <pubDate>Wed, 21 Oct 2026 19:27:22 GMT</pubDate>
+  </item><item>
+    <title>(Let&#039;s Put Our) Tokens on the Table</title>
+    <link>https://peterbrinson.github.io/teach/TOTT/</link>
+    <guid>https://peterbrinson.github.io/teach/TOTT/</guid>
+    <description><![CDATA[ (Let’s Put Our) Tokens on the Table A Seminar Series About AI and Games Do you feel behind, confused, or anxious about AI today, and you want to discuss? Do you wonder if there is more you can do with AI than engineering/game (engine) development? You hesitate to tell your professors about your AI u... ]]></description>
+    <pubDate>Wed, 21 Oct 2026 19:26:17 GMT</pubDate>
   </item><item>
     <title>CTIN 534</title>
     <link>https://peterbrinson.github.io/teach/534/</link>
@@ -53,18 +65,6 @@
     <guid>https://peterbrinson.github.io/teach/389/</guid>
     <description><![CDATA[ Units: 4 Fall 2026 Section: Tue, Thu, 4:00–5:50 pm Room: SCI 113 Go To Schedule Instructor: Peter Brinson Student Assistant: Luke Pannell Course Description This course teaches fundamental skills of digital game development alongside the basic principles of level design. ]]></description>
     <pubDate>Wed, 21 Oct 2026 16:03:09 GMT</pubDate>
-  </item><item>
-    <title>Seminar 3 - Aaron Cheney, Riot Games</title>
-    <link>https://peterbrinson.github.io/teach/TOTT/Seminars/TotT-Seminar-3---Aaron-Cheney,-Riot-Games</link>
-    <guid>https://peterbrinson.github.io/teach/TOTT/Seminars/TotT-Seminar-3---Aaron-Cheney,-Riot-Games</guid>
-    <description><![CDATA[ Monday, November 16, 12:30pm. SCI 108. Part of Tokens on the Table. AI and Industry Aaron Cheney, Staff Software Engineer at Riot Games . ]]></description>
-    <pubDate>Tue, 20 Oct 2026 22:37:59 GMT</pubDate>
-  </item><item>
-    <title>Seminar 2 - Thinking and Doing</title>
-    <link>https://peterbrinson.github.io/teach/TOTT/Seminars/TotT-Seminar-2---Thinking-and-Doing</link>
-    <guid>https://peterbrinson.github.io/teach/TOTT/Seminars/TotT-Seminar-2---Thinking-and-Doing</guid>
-    <description><![CDATA[ Monday, November 9. SCI 108. Part of Tokens on the Table. ]]></description>
-    <pubDate>Tue, 20 Oct 2026 22:37:59 GMT</pubDate>
   </item>
     </channel>
   </rss>
