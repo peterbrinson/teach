@@ -6,11 +6,35 @@
       <description>Last 10 notes on PB Teach</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>CTIN 389</title>
+    <link>https://peterbrinson.github.io/teach/389/</link>
+    <guid>https://peterbrinson.github.io/teach/389/</guid>
+    <description><![CDATA[ Units: 4 Fall 2026 Section: Tue, Thu, 4:00–5:50 pm Room: SCI 113 Go To Schedule Instructor: Peter Brinson Student Assistant: Luke Pannell Course Description This course teaches fundamental skills of digital game development alongside the basic principles of level design. ]]></description>
+    <pubDate>Wed, 21 Oct 2026 23:46:25 GMT</pubDate>
+  </item><item>
     <title>Bounded Worlds: The Playable and the Imagined</title>
     <link>https://peterbrinson.github.io/teach/PBOH/Design/Worldbuilding/</link>
     <guid>https://peterbrinson.github.io/teach/PBOH/Design/Worldbuilding/</guid>
     <description><![CDATA[ 1. ]]></description>
-    <pubDate>Wed, 21 Oct 2026 22:27:12 GMT</pubDate>
+    <pubDate>Wed, 21 Oct 2026 23:43:59 GMT</pubDate>
+  </item><item>
+    <title>W10 — Bounded Worlds</title>
+    <link>https://peterbrinson.github.io/teach/389/Assignments/W10-Assignment---Bounded-Worlds</link>
+    <guid>https://peterbrinson.github.io/teach/389/Assignments/W10-Assignment---Bounded-Worlds</guid>
+    <description><![CDATA[ Due: Tuesday, October 27 at 1:00 p.m. ]]></description>
+    <pubDate>Wed, 21 Oct 2026 23:41:44 GMT</pubDate>
+  </item><item>
+    <title>Game - Monument Valley</title>
+    <link>https://peterbrinson.github.io/teach/PBOH/Design/_References/Game---Monument-Valley</link>
+    <guid>https://peterbrinson.github.io/teach/PBOH/Design/_References/Game---Monument-Valley</guid>
+    <description><![CDATA[ Developer: Ustwo Games | Year: 2014 | Platform: Mobile → App Store What It Is A puzzle game in which you guide a small princess through impossible architecture. ]]></description>
+    <pubDate>Wed, 21 Oct 2026 23:40:11 GMT</pubDate>
+  </item><item>
+    <title>Game - What Remains of Edith Finch</title>
+    <link>https://peterbrinson.github.io/teach/PBOH/Design/_References/Game---What-Remains-of-Edith-Finch</link>
+    <guid>https://peterbrinson.github.io/teach/PBOH/Design/_References/Game---What-Remains-of-Edith-Finch</guid>
+    <description><![CDATA[ Developer: Giant Sparrow | Year: 2017 | Platform: PC, console Fame tier: successful indie → Steam What It Is A narrative exploration game that unfolds room by room through the Finch family house, each room belonging to a different member of the family. ]]></description>
+    <pubDate>Wed, 21 Oct 2026 23:38:17 GMT</pubDate>
   </item><item>
     <title>Film - The Zone of Interest</title>
     <link>https://peterbrinson.github.io/teach/PBOH/Design/_References/Film---The-Zone-of-Interest</link>
@@ -41,30 +65,6 @@
     <guid>https://peterbrinson.github.io/teach/TOTT/</guid>
     <description><![CDATA[ (Let’s Put Our) Tokens on the Table A Seminar Series About AI and Games Do you feel behind, confused, or anxious about AI today, and you want to discuss? Do you wonder if there is more you can do with AI than engineering/game (engine) development? You hesitate to tell your professors about your AI u... ]]></description>
     <pubDate>Wed, 21 Oct 2026 19:26:17 GMT</pubDate>
-  </item><item>
-    <title>CTIN 534</title>
-    <link>https://peterbrinson.github.io/teach/534/</link>
-    <guid>https://peterbrinson.github.io/teach/534/</guid>
-    <description><![CDATA[ Units: 4 Fall 2026 Breakfast Section: Tue, Thu, 10:00 am–12:20 pm Lunch Section: Tue, Thu, 1:00–3:20 pm Go To Schedule Instructor: Peter Brinson Student Assistant: Yinuo Chen Student Assistant: George Zou Course Description Is Life A Story or a Game? We will study and practice how narrative video ga... ]]></description>
-    <pubDate>Wed, 21 Oct 2026 18:56:33 GMT</pubDate>
-  </item><item>
-    <title>Week 9.2 — Creative ML Balderdash</title>
-    <link>https://peterbrinson.github.io/teach/534/In-Class/534-In-Class-Week-9.2-Creative-ML-Balderdash</link>
-    <guid>https://peterbrinson.github.io/teach/534/In-Class/534-In-Class-Week-9.2-Creative-ML-Balderdash</guid>
-    <description><![CDATA[ AI image generation tools, if you don’t want to use your Google Flow account: Midjourney ChatGPT Leonardo.Ai Canva AI Image Generator (works with a USC email) In your group, play this version of Balderdash: During each round, one person is the Dasher. ]]></description>
-    <pubDate>Wed, 21 Oct 2026 18:09:03 GMT</pubDate>
-  </item><item>
-    <title>Lecture: Building Imaginary Worlds</title>
-    <link>https://peterbrinson.github.io/teach/PBOH/Design/Worldbuilding/Lecture---Building-Imaginary-Worlds</link>
-    <guid>https://peterbrinson.github.io/teach/PBOH/Design/Worldbuilding/Lecture---Building-Imaginary-Worlds</guid>
-    <description><![CDATA[ This page covers the core vocabulary from Mark Wolf’s Building Imaginary Worlds — a strong reference for worldbuilding terms. ]]></description>
-    <pubDate>Wed, 21 Oct 2026 18:02:07 GMT</pubDate>
-  </item><item>
-    <title>W10 — Bounded Worlds</title>
-    <link>https://peterbrinson.github.io/teach/389/Assignments/W10-Assignment---Bounded-Worlds</link>
-    <guid>https://peterbrinson.github.io/teach/389/Assignments/W10-Assignment---Bounded-Worlds</guid>
-    <description><![CDATA[ Due: Tuesday, October 27 at 1:00 p.m. ]]></description>
-    <pubDate>Wed, 21 Oct 2026 16:58:58 GMT</pubDate>
   </item>
     </channel>
   </rss>
