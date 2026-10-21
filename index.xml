@@ -6,6 +6,12 @@
       <description>Last 10 notes on PB Teach</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Queryable Knowledge Bases</title>
+    <link>https://peterbrinson.github.io/teach/TOTT/Seminars/Talks/Queryable-Knowledge-Base</link>
+    <guid>https://peterbrinson.github.io/teach/TOTT/Seminars/Talks/Queryable-Knowledge-Base</guid>
+    <description><![CDATA[ A queryable knowledge base is a folder of plain text files on your own computer that you can ask questions of — your course material, your research, your production notes, your team’s scattered documents, gathered in one place and written so an AI can read all of it. ]]></description>
+    <pubDate>Wed, 21 Oct 2026 19:52:21 GMT</pubDate>
+  </item><item>
     <title>Tips</title>
     <link>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Tips</link>
     <guid>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Tips</guid>
@@ -59,12 +65,6 @@
     <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-1.1---Course-Introduction</guid>
     <description><![CDATA[ On This Page Course overview Introductions Course structure and projects Resources From pattern to prediction Assignment Share examples of playful things in this world, that aren’t games. ]]></description>
     <pubDate>Wed, 21 Oct 2026 16:50:37 GMT</pubDate>
-  </item><item>
-    <title>CTIN 389</title>
-    <link>https://peterbrinson.github.io/teach/389/</link>
-    <guid>https://peterbrinson.github.io/teach/389/</guid>
-    <description><![CDATA[ Units: 4 Fall 2026 Section: Tue, Thu, 4:00–5:50 pm Room: SCI 113 Go To Schedule Instructor: Peter Brinson Student Assistant: Luke Pannell Course Description This course teaches fundamental skills of digital game development alongside the basic principles of level design. ]]></description>
-    <pubDate>Wed, 21 Oct 2026 16:03:09 GMT</pubDate>
   </item>
     </channel>
   </rss>
