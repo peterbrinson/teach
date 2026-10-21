@@ -6,11 +6,35 @@
       <description>Last 10 notes on PB Teach</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Lecture: Building Imaginary Worlds</title>
+    <link>https://peterbrinson.github.io/teach/PBOH/Design/Worldbuilding/Lecture---Building-Imaginary-Worlds</link>
+    <guid>https://peterbrinson.github.io/teach/PBOH/Design/Worldbuilding/Lecture---Building-Imaginary-Worlds</guid>
+    <description><![CDATA[ This page covers the core vocabulary from Mark Wolf’s Building Imaginary Worlds — a strong reference for worldbuilding terms. ]]></description>
+    <pubDate>Wed, 21 Oct 2026 17:05:09 GMT</pubDate>
+  </item><item>
+    <title>W10 — Bounded Worlds</title>
+    <link>https://peterbrinson.github.io/teach/389/Assignments/W10-Assignment---Bounded-Worlds</link>
+    <guid>https://peterbrinson.github.io/teach/389/Assignments/W10-Assignment---Bounded-Worlds</guid>
+    <description><![CDATA[ Due: Tuesday, October 27 at 1:00 p.m. ]]></description>
+    <pubDate>Wed, 21 Oct 2026 16:58:58 GMT</pubDate>
+  </item><item>
+    <title>Week 1.2 — The Other Shoe</title>
+    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-1.2---The-Other-Shoe</link>
+    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-1.2---The-Other-Shoe</guid>
+    <description><![CDATA[ On This Page Unity Essentials Render pipelines — what are they? Render pipelines — why? Render pipelines — the three options Importing 3D models Manipulating materials Creating a particle system Playing audio Creating and instantiating prefabs Lighting a scene Setting up a camera Player Attention Un... ]]></description>
+    <pubDate>Wed, 21 Oct 2026 16:50:37 GMT</pubDate>
+  </item><item>
+    <title>Week 1.1 — Course Introduction</title>
+    <link>https://peterbrinson.github.io/teach/389/Lectures/Week-1.1---Course-Introduction</link>
+    <guid>https://peterbrinson.github.io/teach/389/Lectures/Week-1.1---Course-Introduction</guid>
+    <description><![CDATA[ On This Page Course overview Introductions Course structure and projects Resources From pattern to prediction Assignment Share examples of playful things in this world, that aren’t games. ]]></description>
+    <pubDate>Wed, 21 Oct 2026 16:50:37 GMT</pubDate>
+  </item><item>
     <title>CTIN 389</title>
     <link>https://peterbrinson.github.io/teach/389/</link>
     <guid>https://peterbrinson.github.io/teach/389/</guid>
     <description><![CDATA[ Units: 4 Fall 2026 Section: Tue, Thu, 4:00–5:50 pm Room: SCI 113 Go To Schedule Instructor: Peter Brinson Student Assistant: Luke Pannell Course Description This course teaches fundamental skills of digital game development alongside the basic principles of level design. ]]></description>
-    <pubDate>Wed, 21 Oct 2026 00:36:49 GMT</pubDate>
+    <pubDate>Wed, 21 Oct 2026 16:03:09 GMT</pubDate>
   </item><item>
     <title>Seminar 3 - Aaron Cheney, Riot Games</title>
     <link>https://peterbrinson.github.io/teach/TOTT/Seminars/TotT-Seminar-3---Aaron-Cheney,-Riot-Games</link>
@@ -41,30 +65,6 @@
     <guid>https://peterbrinson.github.io/teach/TOTT/</guid>
     <description><![CDATA[ (Let’s Put Our) Tokens on the Table A Seminar Series About AI and Games Do you feel behind, confused, or anxious about AI today, and you want to do something about it? Do you wonder if there is more you can do with AI than engineering/game (engine) development? You hesitate to tell your professors a... ]]></description>
     <pubDate>Tue, 20 Oct 2026 16:42:14 GMT</pubDate>
-  </item><item>
-    <title>Seminar 1 - Your First Upgrades</title>
-    <link>https://peterbrinson.github.io/teach/TOTT/Seminars/TotT-Seminar-1---Your-First-Upgrades</link>
-    <guid>https://peterbrinson.github.io/teach/TOTT/Seminars/TotT-Seminar-1---Your-First-Upgrades</guid>
-    <description><![CDATA[ Monday, October 26. 12:30pm. SCI 108. · Part of Tokens on the Table. ]]></description>
-    <pubDate>Tue, 20 Oct 2026 16:37:17 GMT</pubDate>
-  </item><item>
-    <title>Tips</title>
-    <link>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Tips</link>
-    <guid>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Tips</guid>
-    <description><![CDATA[  Effort and models Get to know your LLM’s effort: how much thinking it does before it answers. ]]></description>
-    <pubDate>Tue, 20 Oct 2026 16:36:07 GMT</pubDate>
-  </item><item>
-    <title>Situated Player Role 3 - The Entrant, World as Threshold</title>
-    <link>https://peterbrinson.github.io/teach/PBOH/Design/Storytelling/Situated-Player-Role-3---The-Entrant,-World-as-Threshold</link>
-    <guid>https://peterbrinson.github.io/teach/PBOH/Design/Storytelling/Situated-Player-Role-3---The-Entrant,-World-as-Threshold</guid>
-    <description><![CDATA[ Summarized in: Situated Player Roles Previous: Situated Player Role 2: The Traveler | Next: Situated Player Role 4: The Dreamer The Entrant has arrived at a boundary. ]]></description>
-    <pubDate>Tue, 20 Oct 2026 16:30:34 GMT</pubDate>
-  </item><item>
-    <title>Session Limits: Context Window, Usage, and Compacting</title>
-    <link>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Session-Limits</link>
-    <guid>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Session-Limits</guid>
-    <description><![CDATA[ Every AI session runs out of something. ]]></description>
-    <pubDate>Tue, 20 Oct 2026 16:18:41 GMT</pubDate>
   </item>
     </channel>
   </rss>
