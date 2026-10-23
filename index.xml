@@ -6,6 +6,24 @@
       <description>Last 10 notes on PB Teach</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>W10 — Bounded Worlds</title>
+    <link>https://peterbrinson.github.io/teach/389/Assignments/W10-Assignment---Bounded-Worlds</link>
+    <guid>https://peterbrinson.github.io/teach/389/Assignments/W10-Assignment---Bounded-Worlds</guid>
+    <description><![CDATA[ Due: Tuesday, October 27 at 1:00 p.m. ]]></description>
+    <pubDate>Fri, 23 Oct 2026 00:07:16 GMT</pubDate>
+  </item><item>
+    <title>Seminar 1 - Your First Upgrades</title>
+    <link>https://peterbrinson.github.io/teach/TOTT/Seminars/TotT-Seminar-1---Your-First-Upgrades</link>
+    <guid>https://peterbrinson.github.io/teach/TOTT/Seminars/TotT-Seminar-1---Your-First-Upgrades</guid>
+    <description><![CDATA[ Monday, October 26. 12:30pm. SCI 108. · Part of Tokens on the Table. ]]></description>
+    <pubDate>Wed, 21 Oct 2026 23:51:41 GMT</pubDate>
+  </item><item>
+    <title>Queryable Knowledge Bases</title>
+    <link>https://peterbrinson.github.io/teach/TOTT/Seminars/Talks/Queryable-Knowledge-Base</link>
+    <guid>https://peterbrinson.github.io/teach/TOTT/Seminars/Talks/Queryable-Knowledge-Base</guid>
+    <description><![CDATA[ A queryable knowledge base is a folder of plain text files on your own computer that you can ask questions of — your course material, your research, your production notes, your team’s scattered documents, gathered in one place and written so an AI can read all of it. ]]></description>
+    <pubDate>Wed, 21 Oct 2026 23:50:11 GMT</pubDate>
+  </item><item>
     <title>CTIN 389</title>
     <link>https://peterbrinson.github.io/teach/389/</link>
     <guid>https://peterbrinson.github.io/teach/389/</guid>
@@ -17,12 +35,6 @@
     <guid>https://peterbrinson.github.io/teach/PBOH/Design/Worldbuilding/</guid>
     <description><![CDATA[ 1. ]]></description>
     <pubDate>Wed, 21 Oct 2026 23:43:59 GMT</pubDate>
-  </item><item>
-    <title>W10 — Bounded Worlds</title>
-    <link>https://peterbrinson.github.io/teach/389/Assignments/W10-Assignment---Bounded-Worlds</link>
-    <guid>https://peterbrinson.github.io/teach/389/Assignments/W10-Assignment---Bounded-Worlds</guid>
-    <description><![CDATA[ Due: Tuesday, October 27 at 1:00 p.m. ]]></description>
-    <pubDate>Wed, 21 Oct 2026 23:41:44 GMT</pubDate>
   </item><item>
     <title>Game - Monument Valley</title>
     <link>https://peterbrinson.github.io/teach/PBOH/Design/_References/Game---Monument-Valley</link>
@@ -42,23 +54,11 @@
     <description><![CDATA[ Director: Jonathan Glazer · Year: 2023 · loosely based on Martin Amis’s novel Fame tier: famous (Oscars: Best International Feature, Best Sound) → Wikipedia What It Is The commandant of Auschwitz, Rudolf Höss, and his family live an ordinary domestic life in a house and garden that share a wall with... ]]></description>
     <pubDate>Wed, 21 Oct 2026 22:27:05 GMT</pubDate>
   </item><item>
-    <title>Queryable Knowledge Bases</title>
-    <link>https://peterbrinson.github.io/teach/TOTT/Seminars/Talks/Queryable-Knowledge-Base</link>
-    <guid>https://peterbrinson.github.io/teach/TOTT/Seminars/Talks/Queryable-Knowledge-Base</guid>
-    <description><![CDATA[ A queryable knowledge base is a folder of plain text files on your own computer that you can ask questions of — your course material, your research, your production notes, your team’s scattered documents, gathered in one place and written so an AI can read all of it. ]]></description>
-    <pubDate>Wed, 21 Oct 2026 19:52:21 GMT</pubDate>
-  </item><item>
     <title>Tips</title>
     <link>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Tips</link>
     <guid>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Tips</guid>
     <description><![CDATA[  Effort and models Get to know your LLM’s effort: how much thinking it does before it answers. ]]></description>
     <pubDate>Wed, 21 Oct 2026 19:29:17 GMT</pubDate>
-  </item><item>
-    <title>Seminar 1 - Your First Upgrades</title>
-    <link>https://peterbrinson.github.io/teach/TOTT/Seminars/TotT-Seminar-1---Your-First-Upgrades</link>
-    <guid>https://peterbrinson.github.io/teach/TOTT/Seminars/TotT-Seminar-1---Your-First-Upgrades</guid>
-    <description><![CDATA[ Monday, October 26. 12:30pm. SCI 108. · Part of Tokens on the Table. ]]></description>
-    <pubDate>Wed, 21 Oct 2026 19:27:22 GMT</pubDate>
   </item><item>
     <title>(Let&#039;s Put Our) Tokens on the Table</title>
     <link>https://peterbrinson.github.io/teach/TOTT/</link>
