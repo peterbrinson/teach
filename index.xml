@@ -6,6 +6,18 @@
       <description>Last 10 notes on PB Teach</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>UE Tutorial 822 - Pick Up, Place, and Unlock</title>
+    <link>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/800---Interactive-Systems/UE-Tutorial-822---Pick-Up,-Place,-and-Unlock-(WIP)</link>
+    <guid>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/800---Interactive-Systems/UE-Tutorial-822---Pick-Up,-Place,-and-Unlock-(WIP)</guid>
+    <description><![CDATA[ By George Zou and Peter Brinson Disclaimer: this is a draft. You are welcome to ask Peter or George any questions. 0. ]]></description>
+    <pubDate>Fri, 23 Oct 2026 20:04:47 GMT</pubDate>
+  </item><item>
+    <title>UE Tutorial 821 - Base Interactive System</title>
+    <link>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/800---Interactive-Systems/UE-Tutorial-821---Base-Interactive-System-(WIP)</link>
+    <guid>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/800---Interactive-Systems/UE-Tutorial-821---Base-Interactive-System-(WIP)</guid>
+    <description><![CDATA[ By Yibei He, Peter Brinson, and George Zou 0. ]]></description>
+    <pubDate>Fri, 23 Oct 2026 20:04:47 GMT</pubDate>
+  </item><item>
     <title>W10 — Bounded Worlds</title>
     <link>https://peterbrinson.github.io/teach/389/Assignments/W10-Assignment---Bounded-Worlds</link>
     <guid>https://peterbrinson.github.io/teach/389/Assignments/W10-Assignment---Bounded-Worlds</guid>
@@ -53,18 +65,6 @@
     <guid>https://peterbrinson.github.io/teach/PBOH/Design/_References/Film---The-Zone-of-Interest</guid>
     <description><![CDATA[ Director: Jonathan Glazer · Year: 2023 · loosely based on Martin Amis’s novel Fame tier: famous (Oscars: Best International Feature, Best Sound) → Wikipedia What It Is The commandant of Auschwitz, Rudolf Höss, and his family live an ordinary domestic life in a house and garden that share a wall with... ]]></description>
     <pubDate>Wed, 21 Oct 2026 22:27:05 GMT</pubDate>
-  </item><item>
-    <title>Tips</title>
-    <link>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Tips</link>
-    <guid>https://peterbrinson.github.io/teach/TOTT/Topics-and-Tips/Tips</guid>
-    <description><![CDATA[  Effort and models Get to know your LLM’s effort: how much thinking it does before it answers. ]]></description>
-    <pubDate>Wed, 21 Oct 2026 19:29:17 GMT</pubDate>
-  </item><item>
-    <title>(Let&#039;s Put Our) Tokens on the Table</title>
-    <link>https://peterbrinson.github.io/teach/TOTT/</link>
-    <guid>https://peterbrinson.github.io/teach/TOTT/</guid>
-    <description><![CDATA[ (Let’s Put Our) Tokens on the Table A Seminar Series About AI and Games Do you feel behind, confused, or anxious about AI today, and you want to discuss? Do you wonder if there is more you can do with AI than engineering/game (engine) development? You hesitate to tell your professors about your AI u... ]]></description>
-    <pubDate>Wed, 21 Oct 2026 19:26:17 GMT</pubDate>
   </item>
     </channel>
   </rss>
