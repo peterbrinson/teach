@@ -6,6 +6,12 @@
       <description>Last 10 notes on PB Teach</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Lecture: Building Imaginary Worlds</title>
+    <link>https://peterbrinson.github.io/teach/PBOH/Design/Worldbuilding/Lecture---Building-Imaginary-Worlds</link>
+    <guid>https://peterbrinson.github.io/teach/PBOH/Design/Worldbuilding/Lecture---Building-Imaginary-Worlds</guid>
+    <description><![CDATA[ This page covers the core vocabulary from Mark Wolf’s Building Imaginary Worlds — a strong reference for worldbuilding terms. ]]></description>
+    <pubDate>Mon, 26 Oct 2026 18:22:15 GMT</pubDate>
+  </item><item>
     <title>Queryable Knowledge Bases</title>
     <link>https://peterbrinson.github.io/teach/TOTT/Seminars/Talks/Queryable-Knowledge-Base</link>
     <guid>https://peterbrinson.github.io/teach/TOTT/Seminars/Talks/Queryable-Knowledge-Base</guid>
@@ -59,12 +65,6 @@
     <guid>https://peterbrinson.github.io/teach/PBOH/Design/Worldbuilding/</guid>
     <description><![CDATA[ 1. ]]></description>
     <pubDate>Wed, 21 Oct 2026 23:43:59 GMT</pubDate>
-  </item><item>
-    <title>Game - Monument Valley</title>
-    <link>https://peterbrinson.github.io/teach/PBOH/Design/_References/Game---Monument-Valley</link>
-    <guid>https://peterbrinson.github.io/teach/PBOH/Design/_References/Game---Monument-Valley</guid>
-    <description><![CDATA[ Developer: Ustwo Games | Year: 2014 | Platform: Mobile → App Store What It Is A puzzle game in which you guide a small princess through impossible architecture. ]]></description>
-    <pubDate>Wed, 21 Oct 2026 23:40:11 GMT</pubDate>
   </item>
     </channel>
   </rss>
