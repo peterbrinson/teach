@@ -6,6 +6,18 @@
       <description>Last 10 notes on PB Teach</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Seminar 2 - Thinking and Doing</title>
+    <link>https://peterbrinson.github.io/teach/TOTT/Seminars/TotT-Seminar-2---Thinking-and-Doing</link>
+    <guid>https://peterbrinson.github.io/teach/TOTT/Seminars/TotT-Seminar-2---Thinking-and-Doing</guid>
+    <description><![CDATA[ Monday, November 9. SCI 108. Part of Tokens on the Table. John Brennan - Artist; Collaborator; Tool Open Weight vs Frontier Models . ]]></description>
+    <pubDate>Fri, 23 Oct 2026 23:57:32 GMT</pubDate>
+  </item><item>
+    <title>(Let&#039;s Put Our) Tokens on the Table</title>
+    <link>https://peterbrinson.github.io/teach/TOTT/</link>
+    <guid>https://peterbrinson.github.io/teach/TOTT/</guid>
+    <description><![CDATA[ (Let’s Put Our) Tokens on the Table A Seminar Series About AI and Games Do you feel behind, confused, or anxious about AI today, and you want to discuss? Do you wonder if there is more you can do with AI than engineering/game (engine) development? You hesitate to tell your professors about your AI u... ]]></description>
+    <pubDate>Fri, 23 Oct 2026 23:57:11 GMT</pubDate>
+  </item><item>
     <title>UE Tutorial 822 - Pick Up, Place, and Unlock</title>
     <link>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/800---Interactive-Systems/UE-Tutorial-822---Pick-Up,-Place,-and-Unlock-(WIP)</link>
     <guid>https://peterbrinson.github.io/teach/PBOH/Development/Tutorials---Unreal/800---Interactive-Systems/UE-Tutorial-822---Pick-Up,-Place,-and-Unlock-(WIP)</guid>
@@ -53,18 +65,6 @@
     <guid>https://peterbrinson.github.io/teach/PBOH/Design/_References/Game---Monument-Valley</guid>
     <description><![CDATA[ Developer: Ustwo Games | Year: 2014 | Platform: Mobile → App Store What It Is A puzzle game in which you guide a small princess through impossible architecture. ]]></description>
     <pubDate>Wed, 21 Oct 2026 23:40:11 GMT</pubDate>
-  </item><item>
-    <title>Game - What Remains of Edith Finch</title>
-    <link>https://peterbrinson.github.io/teach/PBOH/Design/_References/Game---What-Remains-of-Edith-Finch</link>
-    <guid>https://peterbrinson.github.io/teach/PBOH/Design/_References/Game---What-Remains-of-Edith-Finch</guid>
-    <description><![CDATA[ Developer: Giant Sparrow | Year: 2017 | Platform: PC, console Fame tier: successful indie → Steam What It Is A narrative exploration game that unfolds room by room through the Finch family house, each room belonging to a different member of the family. ]]></description>
-    <pubDate>Wed, 21 Oct 2026 23:38:17 GMT</pubDate>
-  </item><item>
-    <title>Film - The Zone of Interest</title>
-    <link>https://peterbrinson.github.io/teach/PBOH/Design/_References/Film---The-Zone-of-Interest</link>
-    <guid>https://peterbrinson.github.io/teach/PBOH/Design/_References/Film---The-Zone-of-Interest</guid>
-    <description><![CDATA[ Director: Jonathan Glazer · Year: 2023 · loosely based on Martin Amis’s novel Fame tier: famous (Oscars: Best International Feature, Best Sound) → Wikipedia What It Is The commandant of Auschwitz, Rudolf Höss, and his family live an ordinary domestic life in a house and garden that share a wall with... ]]></description>
-    <pubDate>Wed, 21 Oct 2026 22:27:05 GMT</pubDate>
   </item>
     </channel>
   </rss>
